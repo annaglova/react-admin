@@ -1,0 +1,68 @@
+# Node modules
+node_modules/
+.pnpm/
+.pnpm-debug.log
+*.tsbuildinfo
+
+# Build output
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+
+# Vite
+.vite/
+.vitest/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env*
+!.env.example
+
+# VSCode / JetBrains IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Mac
+*.DS_Store
+
+# NX/Monorepo stuff
+nx-cache/
+.cache/
+tmp/
+temp/
+
+# Misc
+*.log
+*.local
+*.tgz
+
+# Tests
+coverage/
+*.snap
+
+# Optional: Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Optional: lock files (якщо хочеш, щоб кожен dev мав свою версію)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

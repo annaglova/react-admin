@@ -120,6 +120,9 @@ export const CustomMenu = () => (
     >
       Pet
     </div>
+    <div className="bg-pink-500 text-white p-8 text-3xl">
+      Tailwind працює! 🎉
+    </div>
     <Menu.Item to="/pet_type" primaryText="Pet Types" leftIcon={<PetsIcon />} />
     {/* Додавай ще довідники тут */}
   </Menu>

@@ -113,6 +113,12 @@ export default function App() {
         show={ShowGuesser}
       />
       <Resource
+        name="invoice"
+        list={ListGuesser}
+        edit={EditGuesser}
+        show={ShowGuesser}
+      />
+      <Resource
         name="cashflow"
         list={ListGuesser}
         edit={EditGuesser}

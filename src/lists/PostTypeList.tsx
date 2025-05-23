@@ -11,13 +11,13 @@ import {
   UrlField,
 } from "react-admin";
 
-const ProductFilters = [ 
+const PostTypeFilters = [ 
   <TextInput label="Пошук по імені" source="name" />,
   <TextInput label="Пошук по id" source="id" />,
   ];
 
-export const ProductList = () => (
-  <List filters={ProductFilters}>
+export const PostTypeList = () => (
+  <List filters={PostTypeFilters}>
     <Datagrid>
       {/* Додай потрібні поля */}
     </Datagrid>

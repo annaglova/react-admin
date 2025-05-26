@@ -7,6 +7,8 @@ import {
   ShowGuesser,
 } from "react-admin";
 import { CustomLayout } from "./CustomLayout";
+import { GenderList } from "./resources/GenderList";
+import { SexList } from "./resources/SexList";
 
 const instanceUrl = import.meta.env.VITE_SUPABASE_URL as string;
 const apiKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
@@ -529,7 +531,7 @@ export default function App() {
       />
       <Resource
         name="gender"
-        list={ListGuesser}
+        list={GenderList}
         edit={EditGuesser}
         show={ShowGuesser}
       />
@@ -895,7 +897,7 @@ export default function App() {
       />
       <Resource
         name="sex"
-        list={ListGuesser}
+        list={SexList}
         edit={EditGuesser}
         show={ShowGuesser}
       />

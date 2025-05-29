@@ -7,8 +7,8 @@ import {
   ShowGuesser,
 } from "react-admin";
 import { CustomLayout } from "./CustomLayout";
-import { GenderList } from "./resources/GenderList";
-import { SexList } from "./resources/SexList";
+import { GenderList } from "./resources/gender/GenderList";
+import { GenderShow } from "./resources/gender/GenderShow";
 
 const instanceUrl = import.meta.env.VITE_SUPABASE_URL as string;
 const apiKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
@@ -533,7 +533,7 @@ export default function App() {
         name="gender"
         list={GenderList}
         edit={EditGuesser}
-        show={ShowGuesser}
+        show={GenderShow}
       />
       <Resource
         name="geo_names_time_zone"
@@ -897,7 +897,7 @@ export default function App() {
       />
       <Resource
         name="sex"
-        list={SexList}
+        list={ListGuesser}
         edit={EditGuesser}
         show={ShowGuesser}
       />

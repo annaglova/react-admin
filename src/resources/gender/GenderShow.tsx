@@ -1,28 +1,21 @@
-import * as React from "react";
 import {
-    Show,
-    SimpleShowLayout,
-    TextField,
-    NumberField,
-    DateField,
-    BooleanField,
-    UrlField,
-    EmailField,
-    RichTextField,
-    ImageField,
-    FileField,
-    ChipField,
-    ReferenceField,
-    ArrayField,
-    SingleFieldList,
-    ChipField as ArrayChipField,
-    FunctionField,
+  DateField,
+  ReferenceField,
+  Show,
+  SimpleShowLayout,
+  TextField,
 } from "react-admin";
 
 export const GenderShow = () => (
-    <Show>
-        <SimpleShowLayout>
-           
-        </SimpleShowLayout>
-    </Show>
+  <Show>
+    <SimpleShowLayout>
+      <TextField source="id" />
+      <DateField source="created_on" />
+      <ReferenceField source="created_by_id" reference="created_bies" />
+      <DateField source="modified_on" />
+      <ReferenceField source="modified_by_id" reference="modified_bies" />
+      <TextField source="name" />
+      <DateField source="description" />
+    </SimpleShowLayout>
+  </Show>
 );

@@ -1,4 +1,4 @@
-const { ALL_RESOURCES } = require("./src/resourcesList");
+const resources = require("./src/resourcesList.json");
 
 const code = `
 import { supabaseDataProvider } from "ra-supabase";
@@ -27,5 +27,5 @@ export default function App() {
 }
 `;
 
-require("fs").writeFileSync("src/app.tsx", code);
-console.log("✅ src/app.tsx згенеровано!");
+require("fs").writeFileSync("src/App.tsx", code);
+console.log("✅ src/App.tsx згенеровано!");

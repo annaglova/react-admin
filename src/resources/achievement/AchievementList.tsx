@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const AchievementFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,7 +11,9 @@ export const AchievementList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="category_id" />
+      <ReferenceField source="category_id" reference="achievement_category">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="int_value" />
       <NumberField source="position" />
     </Datagrid>

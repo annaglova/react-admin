@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CompetitionBackupFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -14,9 +14,15 @@ export const CompetitionBackupList = () => (
       <BooleanField source="exists_award" />
       <BooleanField source="exists_place" />
       <BooleanField source="exists_qualification" />
-      <TextField source="pet_type_id" />
-      <TextField source="provider_id" />
-      <TextField source="type_id" />
+      <ReferenceField source="pet_type_id" reference="pet_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="provider_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="type_id" reference="competition_type">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

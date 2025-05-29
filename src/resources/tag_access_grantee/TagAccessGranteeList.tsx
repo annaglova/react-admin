@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const TagAccessGranteeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -9,7 +9,9 @@ export const TagAccessGranteeList = () => (
   <List filters={TagAccessGranteeFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
-      <TextField source="tag_access_id" />
+      <ReferenceField source="tag_access_id" reference="tag_access">
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="can_tag" />
       <BooleanField source="can_create" />
       <BooleanField source="can_delete" />

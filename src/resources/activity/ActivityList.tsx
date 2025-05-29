@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ActivityFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,21 +12,35 @@ export const ActivityList = () => (
       <TextField source="title" />
       <DateField source="start_date" />
       <DateField source="due_date" />
-      <TextField source="priority_id" />
+      <ReferenceField source="priority_id" reference="activity_priority">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="author_id" />
       <BooleanField source="remind_to_author" />
       <DateField source="remind_to_author_date" />
       <TextField source="owner_id" />
       <BooleanField source="remind_to_owner" />
       <DateField source="remind_to_owner_date" />
-      <TextField source="type_id" />
-      <TextField source="activity_category_id" />
+      <ReferenceField source="type_id" reference="activity_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="activity_category_id" reference="activity_category">
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="show_in_scheduler" />
-      <TextField source="status_id" />
-      <TextField source="result_id" />
+      <ReferenceField source="status_id" reference="activity_status">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="result_id" reference="activity_result">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="detailed_result" />
-      <TextField source="time_zone_id" />
-      <TextField source="account_id" />
+      <ReferenceField source="time_zone_id" reference="time_zone">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="account_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="contact_id" />
       <TextField source="sender" />
       <TextField source="recepient" />
@@ -46,7 +60,9 @@ export const ActivityList = () => (
       <TextField source="process_element_id" />
       <TextField source="global_activity_id" />
       <BooleanField source="is_need_process" />
-      <TextField source="activity_connection_id" />
+      <ReferenceField source="activity_connection_id" reference="activity">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="organizer_id" />
       <TextField source="header_properties" />
       <BooleanField source="is_auto_submitted" />
@@ -57,22 +73,42 @@ export const ActivityList = () => (
       <TextField source="enrich_status" />
       <BooleanField source="service_processed" />
       <BooleanField source="is_not_published" />
-      <TextField source="conf_item_id" />
-      <TextField source="invoice_id" />
-      <TextField source="event_id" />
+      <ReferenceField source="conf_item_id" reference="conf_item">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="invoice_id" reference="invoice">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="event_id" reference="event">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="queue_item_id" />
-      <TextField source="order_id" />
-      <TextField source="project_id" />
+      <ReferenceField source="order_id" reference=""order"">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="project_id" reference="project">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="full_project_name" />
-      <TextField source="litter_id" />
+      <ReferenceField source="litter_id" reference="litter">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="pet_id" />
       <BooleanField source="is_template" />
       <TextField source="owner_role_id" />
       <DateField source="remote_created_on" />
-      <TextField source="competition_backup_id" />
-      <TextField source="competition_id" />
-      <TextField source="issue_type_id" />
-      <TextField source="user_quest_id" />
+      <ReferenceField source="competition_backup_id" reference="competition_backup">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="competition_id" reference="competition">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="issue_type_id" reference="issue_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="user_quest_id" reference="user_quest">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="pet_breed_id" />
     </Datagrid>
   </List>

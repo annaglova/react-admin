@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const AccountFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,23 +12,41 @@ export const AccountList = () => (
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="owner_id" />
-      <TextField source="ownership_id" />
+      <ReferenceField source="ownership_id" reference="account_ownership">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="primary_contact_id" />
-      <TextField source="parent_id" />
-      <TextField source="industry_id" />
+      <ReferenceField source="parent_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="industry_id" reference="account_industry">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="code" />
-      <TextField source="type_id" />
+      <ReferenceField source="type_id" reference="account_type">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="phone" />
       <TextField source="additional_phone" />
       <TextField source="fax" />
       <TextField source="web" />
-      <TextField source="address_type_id" />
+      <ReferenceField source="address_type_id" reference="address_type">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="address" />
-      <TextField source="city_id" />
-      <TextField source="region_id" />
+      <ReferenceField source="city_id" reference="city">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="region_id" reference="region">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="zip" />
-      <TextField source="country_id" />
-      <TextField source="account_category_id" />
+      <ReferenceField source="country_id" reference="country">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="account_category_id" reference="account_category">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="notes" />
       <TextField source="logo" />
       <TextField source="alternative_name" />
@@ -37,13 +55,21 @@ export const AccountList = () => (
       <NumberField source="completeness" />
       <TextField source="aum" />
       <TextField source="trim_code" />
-      <TextField source="status_id" />
-      <TextField source="affix_type_id" />
-      <TextField source="federation_id" />
+      <ReferenceField source="status_id" reference="account_status">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="affix_type_id" reference="affix_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="federation_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="about_us" />
       <TextField source="url" />
       <TextField source="duplicate_group_id" />
-      <TextField source="verified_stage_id" />
+      <ReferenceField source="verified_stage_id" reference="verified_stage">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="duplicate_id" />
       <TextField source="avatar_url" />
       <BooleanField source="has_kennel_name" />
@@ -51,10 +77,14 @@ export const AccountList = () => (
       <DateField source="since" />
       <BooleanField source="verfied" />
       <BooleanField source="verified" />
-      <TextField source="verification_status_id" />
+      <ReferenceField source="verification_status_id" reference="verification_status">
+        <TextField source="name" />
+      </ReferenceField>
       <DateField source="company_foundation_date" />
       <NumberField source="rating_placement_in_breed" />
-      <TextField source="cover_id" />
+      <ReferenceField source="cover_id" reference="cover">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="lead_conversion_score" />
     </Datagrid>
   </List>

@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CompetitionFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,17 +11,31 @@ export const CompetitionList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
-      <TextField source="provider_id" />
-      <TextField source="parent_id" />
-      <TextField source="type_id" />
-      <TextField source="template_id" />
+      <ReferenceField source="provider_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="parent_id" reference="competition">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="type_id" reference="competition_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="template_id" reference="competition">
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="exists_qualification" />
       <BooleanField source="exists_place" />
       <BooleanField source="exists_award" />
-      <TextField source="pet_type_id" />
+      <ReferenceField source="pet_type_id" reference="pet_type">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="order" />
-      <TextField source="category_id" />
-      <TextField source="breed_id" />
+      <ReferenceField source="category_id" reference="competition_category">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="breed_id" reference="breed">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

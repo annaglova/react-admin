@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ServiceItemFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -18,9 +18,15 @@ export const ServiceItemList = () => (
       <TextField source="reaction_time" />
       <TextField source="solution_time" />
       <TextField source="owner_id" />
-      <TextField source="calendar_id" />
-      <TextField source="category_id" />
-      <TextField source="provider_id" />
+      <ReferenceField source="calendar_id" reference="calendar">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="category_id" reference="service_category">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="provider_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="sort_order" />
       <TextField source="description" />
     </Datagrid>

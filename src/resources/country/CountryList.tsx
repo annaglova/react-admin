@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CountryFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -13,17 +13,23 @@ export const CountryList = () => (
       <TextField source="description" />
       <TextField source="image" />
       <TextField source="billing_info" />
-      <TextField source="time_zone_id" />
+      <ReferenceField source="time_zone_id" reference="time_zone">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="code" />
       <TextField source="alternate_names" />
-      <TextField source="geo_names_time_zone_id" />
+      <ReferenceField source="geo_names_time_zone_id" reference="geo_names_time_zone">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="geo_names_country_code" />
       <TextField source="geo_names_id" />
       <NumberField source="dem" />
       <NumberField source="latitude" />
       <NumberField source="longitude" />
       <TextField source="alpha2_code" />
-      <TextField source="public_data_id" />
+      <ReferenceField source="public_data_id" reference="public_data">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="url" />
     </Datagrid>
   </List>

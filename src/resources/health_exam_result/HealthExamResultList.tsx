@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const HealthExamResultFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,7 +11,9 @@ export const HealthExamResultList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="object_id" />
+      <ReferenceField source="object_id" reference="health_exam_object">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

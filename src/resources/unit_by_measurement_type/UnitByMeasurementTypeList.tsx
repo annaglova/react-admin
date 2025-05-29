@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const UnitByMeasurementTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,8 +11,12 @@ export const UnitByMeasurementTypeList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="measurement_type_id" />
-      <TextField source="unit_id" />
+      <ReferenceField source="measurement_type_id" reference="measurement_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="unit_id" reference="unit">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

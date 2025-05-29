@@ -3,10 +3,14 @@ const { createClient } = require("@supabase/supabase-js");
 const fs = require("fs");
 const path = require("path");
 
-// Всі ресурси
-const { ALL_RESOURCES } = require("./src/resourcesList");
+// 1. Читаємо ресурси з JSON
+const resources = require("./src/resourcesList.json");
+const ALL_RESOURCES = [
+  ...resources.MAIN_RESOURCES,
+  ...resources.DICT_RESOURCES,
+];
 
-// Поля для виключення
+// 2. Поля для виключення
 const EXCLUDE_FIELDS = [
   "created_on",
   "created_by_id",
@@ -14,7 +18,7 @@ const EXCLUDE_FIELDS = [
   "modified_by_id",
 ];
 
-// Мапа postgres → React Admin Field
+// 3. Мапа postgres → React Admin Field
 const typeMap = {
   integer: "NumberField",
   bigint: "NumberField",
@@ -41,7 +45,7 @@ function toPascalCase(str) {
     .join("");
 }
 
-// Підключення до Supabase
+// 4. Підключення до Supabase
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -51,9 +55,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     // 1. Колонки таблиці
     const { data: columns, error: colErr } = await supabase.rpc(
       "get_table_columns",
-      {
-        tablename: table,
-      }
+      { tablename: table }
     );
     if (colErr) {
       console.error(`Помилка колонок ${table}:`, colErr);
@@ -64,27 +66,24 @@ const supabase = createClient(supabaseUrl, supabaseKey);
       continue;
     }
 
-    // 2. Foreign keys
+    // 2. Foreign keys для цієї таблиці (RPC get_foreign_keys_from)
     const { data: foreignKeys, error: fkErr } = await supabase.rpc(
-      "get_foreign_keys_to",
-      {
-        table_name: table,
-      }
+      "get_foreign_keys_from",
+      { table_name: table }
     );
     if (fkErr) {
       console.error(`Помилка foreign keys ${table}:`, fkErr);
       continue;
     }
-    // Формуємо map: column_name -> ref_table
+    // формуємо map: column_name -> ref_table
     const fkMap = {};
     if (Array.isArray(foreignKeys)) {
       for (const fk of foreignKeys) {
-        fkMap[fk.column_name] = fk.confrelid; // confrelid — назва реф. таблиці
+        fkMap[fk.column_name] = fk.ref_table;
       }
     }
 
     // 3. Генеруємо імпорт
-    const hasReference = columns.some((col) => fkMap[col.column_name]);
     const uniqueFieldTypes = Array.from(
       new Set(
         columns
@@ -93,7 +92,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
               ? "ReferenceField"
               : typeMap[f.data_type] || "TextField"
           )
-          .concat("Datagrid", "List", "TextInput")
+          .concat(["Datagrid", "List", "TextInput"])
       )
     );
     const imports = [...uniqueFieldTypes].sort().join(", ");
@@ -111,7 +110,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     const datagridFields = fields
       .map((col) => {
         if (fkMap[col.column_name]) {
-          // Якщо є форейн кей — ReferenceField
+          // ReferenceField якщо є зовнішній ключ
           const refTable = fkMap[col.column_name];
           return `      <ReferenceField source="${col.column_name}" reference="${refTable}">
         <TextField source="name" />

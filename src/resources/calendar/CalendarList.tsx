@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CalendarFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,8 +11,12 @@ export const CalendarList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="parent_id" />
-      <TextField source="time_zone_id" />
+      <ReferenceField source="parent_id" reference="calendar">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="time_zone_id" reference="time_zone">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="depth" />
       <BooleanField source="around_clock" />
       <BooleanField source="without_day_off" />

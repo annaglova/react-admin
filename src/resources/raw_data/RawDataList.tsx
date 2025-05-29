@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const RawDataFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,9 +12,13 @@ export const RawDataList = () => (
       <TextField source="name" />
       <TextField source="notes" />
       <TextField source="json" />
-      <TextField source="status_id" />
+      <ReferenceField source="status_id" reference="raw_data_status">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="log" />
-      <TextField source="conf_item_id" />
+      <ReferenceField source="conf_item_id" reference="conf_item">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="redirect_url" />
       <TextField source="record_id" />
       <TextField source="entity_name" />
@@ -22,9 +26,15 @@ export const RawDataList = () => (
       <TextField source="hash_md5" />
       <TextField source="contact_id" />
       <TextField source="account_id" />
-      <TextField source="breed_id" />
-      <TextField source="event_id" />
-      <TextField source="project_id" />
+      <ReferenceField source="breed_id" reference="breed">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="event_id" reference="event">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="project_id" reference="project">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="pet_id" />
     </Datagrid>
   </List>

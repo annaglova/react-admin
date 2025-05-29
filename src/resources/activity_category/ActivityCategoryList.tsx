@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ActivityCategoryFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,7 +11,9 @@ export const ActivityCategoryList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="activity_type_id" />
+      <ReferenceField source="activity_type_id" reference="activity_type">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

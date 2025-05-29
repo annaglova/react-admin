@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const PublicDataFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,20 +11,36 @@ export const PublicDataList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="hash_md5" />
-      <TextField source="account_id" />
+      <ReferenceField source="account_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="contact_id" />
       <TextField source="pet_id" />
-      <TextField source="breed_id" />
-      <TextField source="event_id" />
-      <TextField source="project_id" />
+      <ReferenceField source="breed_id" reference="breed">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="event_id" reference="event">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="project_id" reference="project">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="record_id" />
       <TextField source="model" />
       <TextField source="entity_name" />
       <BooleanField source="primary" />
-      <TextField source="redirect_id" />
-      <TextField source="pet_type_id" />
-      <TextField source="country_id" />
-      <TextField source="pet_titles_id" />
+      <ReferenceField source="redirect_id" reference="public_data">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="pet_type_id" reference="pet_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="country_id" reference="country">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="pet_titles_id" reference="title_in_pet">
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="has_owner" />
       <TextField source="pet_breed_id" />
     </Datagrid>

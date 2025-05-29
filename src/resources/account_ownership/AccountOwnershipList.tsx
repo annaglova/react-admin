@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const AccountOwnershipFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,7 +11,9 @@ export const AccountOwnershipList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="country_id" />
+      <ReferenceField source="country_id" reference="country">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

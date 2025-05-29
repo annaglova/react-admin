@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const RelationTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -15,7 +15,9 @@ export const RelationTypeList = () => (
       <BooleanField source="for_account_contact" />
       <BooleanField source="for_contact_account" />
       <BooleanField source="for_account_account" />
-      <TextField source="reverse_relation_type_id" />
+      <ReferenceField source="reverse_relation_type_id" reference="relation_type">
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="include_into_container" />
     </Datagrid>
   </List>

@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const EventFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -10,14 +10,22 @@ export const EventList = () => (
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
-      <TextField source="type_id" />
+      <ReferenceField source="type_id" reference="event_type">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="owner_id" />
-      <TextField source="status_id" />
+      <ReferenceField source="status_id" reference="event_status">
+        <TextField source="name" />
+      </ReferenceField>
       <DateField source="start_date" />
       <DateField source="end_date" />
       <TextField source="goal" />
-      <TextField source="territory_id" />
-      <TextField source="industry_id" />
+      <ReferenceField source="territory_id" reference="territory">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="industry_id" reference="account_industry">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="actual_response" />
       <NumberField source="primary_budgeted_cost" />
       <NumberField source="primary_expected_revenue" />
@@ -26,15 +34,29 @@ export const EventList = () => (
       <TextField source="notes" />
       <DateField source="last_actualize_date" />
       <NumberField source="recipient_count" />
-      <TextField source="organizer_id" />
+      <ReferenceField source="organizer_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="address" />
-      <TextField source="city_id" />
-      <TextField source="region_id" />
-      <TextField source="country_id" />
-      <TextField source="account_id" />
+      <ReferenceField source="city_id" reference="city">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="region_id" reference="region">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="country_id" reference="country">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="account_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="url" />
-      <TextField source="pet_type_id" />
-      <TextField source="cover_id" />
+      <ReferenceField source="pet_type_id" reference="pet_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="cover_id" reference="cover">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

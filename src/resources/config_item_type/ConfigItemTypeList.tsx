@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ConfigItemTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,7 +11,9 @@ export const ConfigItemTypeList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="conf_item_category_id" />
+      <ReferenceField source="conf_item_category_id" reference="config_item_category">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

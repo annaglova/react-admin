@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ProductFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,18 +11,28 @@ export const ProductList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="code" />
-      <TextField source="unit_id" />
-      <TextField source="currency_id" />
+      <ReferenceField source="unit_id" reference="unit">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="currency_id" reference="currency">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="price" />
       <TextField source="url" />
-      <TextField source="type_id" />
+      <ReferenceField source="type_id" reference="product_type">
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="active" />
       <TextField source="owner_id" />
       <TextField source="description" />
-      <TextField source="product_source_id" />
+      <ReferenceField source="product_source_id" reference="product_source">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="notes" />
       <BooleanField source="is_archive" />
-      <TextField source="category_id" />
+      <ReferenceField source="category_id" reference="product_category">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="short_description" />
       <TextField source="pet_id" />
       <TextField source="benefits" />

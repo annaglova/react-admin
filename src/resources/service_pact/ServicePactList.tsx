@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ServicePactFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -10,17 +10,29 @@ export const ServicePactList = () => (
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
-      <TextField source="status_id" />
+      <ReferenceField source="status_id" reference="service_pact_status">
+        <TextField source="name" />
+      </ReferenceField>
       <DateField source="start_date" />
       <DateField source="end_date" />
       <TextField source="owner_id" />
       <TextField source="number" />
-      <TextField source="service_provider_id" />
-      <TextField source="service_provider_contact_id" />
+      <ReferenceField source="service_provider_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="service_provider_contact_id" reference="contact">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="notes" />
-      <TextField source="calendar_id" />
-      <TextField source="provider_id" />
-      <TextField source="product_id" />
+      <ReferenceField source="calendar_id" reference="calendar">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="provider_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="product_id" reference="product">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

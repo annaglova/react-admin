@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const PetStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,7 +12,9 @@ export const PetStatusList = () => (
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="code" />
-      <TextField source="pet_type_id" />
+      <ReferenceField source="pet_type_id" reference="pet_type">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const StudbookFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,9 +11,15 @@ export const StudbookList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-      <TextField source="account_id" />
-      <TextField source="status_id" />
-      <TextField source="type_id" />
+      <ReferenceField source="account_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="status_id" reference="studbook_status">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="type_id" reference="studbook_type">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="alternate_names" />
     </Datagrid>
   </List>

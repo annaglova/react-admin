@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CollectionFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,13 +12,17 @@ export const CollectionList = () => (
       <BooleanField source="private" />
       <TextField source="entity_name" />
       <BooleanField source="auto" />
-      <TextField source="type_id" />
+      <ReferenceField source="type_id" reference="collection_type">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="avatar_url" />
       <TextField source="url" />
       <TextField source="name" />
       <TextField source="notes" />
       <DateField source="update_date" />
-      <TextField source="cover_id" />
+      <ReferenceField source="cover_id" reference="cover">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="owner_id" />
     </Datagrid>
   </List>

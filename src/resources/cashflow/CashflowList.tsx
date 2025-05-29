@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CashflowFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -9,22 +9,40 @@ export const CashflowList = () => (
   <List filters={CashflowFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
-      <TextField source="project_id" />
+      <ReferenceField source="project_id" reference="project">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="number" />
-      <TextField source="type_id" />
+      <ReferenceField source="type_id" reference="cashflow_type">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="details" />
-      <TextField source="category_id" />
-      <TextField source="status_id" />
+      <ReferenceField source="category_id" reference="cashflow_category">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="status_id" reference="cashflow_status">
+        <TextField source="name" />
+      </ReferenceField>
       <DateField source="date" />
-      <TextField source="currency_id" />
+      <ReferenceField source="currency_id" reference="currency">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="currency_rate" />
       <NumberField source="amount" />
       <NumberField source="primary_amount" />
       <TextField source="notes" />
-      <TextField source="invoice_id" />
-      <TextField source="conf_item_id" />
-      <TextField source="income_fin_account_id" />
-      <TextField source="outcome_fin_account_id" />
+      <ReferenceField source="invoice_id" reference="invoice">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="conf_item_id" reference="conf_item">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="income_fin_account_id" reference="fin_account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="outcome_fin_account_id" reference="fin_account">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

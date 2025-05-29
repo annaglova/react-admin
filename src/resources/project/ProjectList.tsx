@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ProjectFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,18 +11,32 @@ export const ProjectList = () => (
       <TextField source="id" />
       <TextField source="notes" />
       <TextField source="name" />
-      <TextField source="account_id" />
-      <TextField source="contact_id" />
-      <TextField source="project_entry_type_id" />
-      <TextField source="type_id" />
+      <ReferenceField source="account_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="contact_id" reference="contact">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="project_entry_type_id" reference="project_entry_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="type_id" reference="project_type">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="owner_id" />
-      <TextField source="status_id" />
+      <ReferenceField source="status_id" reference="project_status">
+        <TextField source="name" />
+      </ReferenceField>
       <DateField source="start_date" />
       <DateField source="end_date" />
       <NumberField source="duration" />
       <DateField source="deadline" />
-      <TextField source="supplier_id" />
-      <TextField source="parent_project_id" />
+      <ReferenceField source="supplier_id" reference="account">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="parent_project_id" reference="project">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="actual_completion" />
       <BooleanField source="is_auto_calc_completion" />
       <NumberField source="plan_income" />
@@ -48,12 +62,22 @@ export const ProjectList = () => (
       <NumberField source="margin_dev" />
       <NumberField source="margin_dev_perc" />
       <NumberField source="position" />
-      <TextField source="event_id" />
-      <TextField source="category_id" />
-      <TextField source="breed_id" />
+      <ReferenceField source="event_id" reference="event">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="category_id" reference="project_category">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="breed_id" reference="breed">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="url" />
-      <TextField source="pet_type_id" />
-      <TextField source="cover_id" />
+      <ReferenceField source="pet_type_id" reference="pet_type">
+        <TextField source="name" />
+      </ReferenceField>
+      <ReferenceField source="cover_id" reference="cover">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

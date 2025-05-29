@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
 const QuestFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -11,10 +11,14 @@ export const QuestList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="url" />
-      <TextField source="type_id" />
+      <ReferenceField source="type_id" reference="quest_type">
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="reward" />
       <NumberField source="frequency_interval" />
-      <TextField source="frequency_id" />
+      <ReferenceField source="frequency_id" reference="quest_frequency">
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="deactivated" />
       <TextField source="description" />
       <NumberField source="total_steps" />

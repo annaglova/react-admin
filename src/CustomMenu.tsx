@@ -816,5 +816,10 @@ export const CustomMenu = () => (
       primaryText="Time Zones*"
       leftIcon={<TimelineIcon />}
     />
+    <Menu.Item
+      to="/rating_type"
+      primaryText="Rating type*"
+      leftIcon={<TimelineIcon />}
+    />
   </Menu>
 );

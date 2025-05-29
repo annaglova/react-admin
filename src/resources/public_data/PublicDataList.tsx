@@ -1,8 +1,8 @@
 import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
 
 const PublicDataFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />
-  <TextInput label="Пошук по id" source="id" />
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
 ];
 
 export const PublicDataList = () => (

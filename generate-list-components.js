@@ -100,8 +100,8 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
     // 4. Фільтри
     const filterInputs = [
-      `<TextInput label="Пошук по імені" source="name" alwaysOn />`,
-      `<TextInput label="Пошук по id" source="id" />`,
+      `<TextInput label="Пошук по імені" source="name" alwaysOn />,`,
+      `<TextInput label="Пошук по id" source="id" />,`,
     ].join("\n  ");
 
     // 5. Генерація полів

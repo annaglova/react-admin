@@ -1,11 +1,8 @@
+const { ALL_RESOURCES } = require("./src/resourcesList");
+
+const code = `
 import { supabaseDataProvider } from "ra-supabase";
-import {
-  Admin,
-  EditGuesser,
-  ListGuesser,
-  Resource,
-  ShowGuesser,
-} from "react-admin";
+import { Admin, ListGuesser, EditGuesser, ShowGuesser, Resource } from "react-admin";
 import { CustomLayout } from "./CustomLayout";
 import { ALL_RESOURCES } from "./resourcesList";
 
@@ -16,7 +13,7 @@ const dataProvider = supabaseDataProvider({ instanceUrl, apiKey });
 export default function App() {
   return (
     <Admin dataProvider={dataProvider} layout={CustomLayout}>
-      {ALL_RESOURCES.map((resource: string) => (
+      {ALL_RESOURCES.map((resource) => (
         <Resource
           key={resource}
           name={resource}
@@ -28,3 +25,7 @@ export default function App() {
     </Admin>
   );
 }
+`;
+
+require("fs").writeFileSync("src/app.tsx", code);
+console.log("✅ src/app.tsx згенеровано!");

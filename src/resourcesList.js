@@ -1,7 +1,7 @@
 // src/resourcesList.ts
 
 /** Основні ресурси — ті, з якими працює бізнес-логіка */
-exports.MAIN_RESOURCES = [
+export const MAIN_RESOURCES = [
   "breed",
   "pet",
   "litter",
@@ -30,7 +30,7 @@ exports.MAIN_RESOURCES = [
 ];
 
 /** Довідники (lookup/dictionary) */
-exports.DICT_RESOURCES = [
+export const DICT_RESOURCES = [
   "pet_type",
   "account_category",
   "account_industry",
@@ -167,4 +167,4 @@ exports.DICT_RESOURCES = [
 ];
 
 /** Всі ресурси */
-exports.ALL_RESOURCES = [...exports.MAIN_RESOURCES, ...exports.DICT_RESOURCES];
+export const ALL_RESOURCES = [...MAIN_RESOURCES, ...DICT_RESOURCES];

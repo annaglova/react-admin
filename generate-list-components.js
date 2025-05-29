@@ -110,13 +110,19 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     const datagridFields = fields
       .map((col) => {
         if (fkMap[col.column_name]) {
-          // ReferenceField якщо є зовнішній ключ
           const refTable = fkMap[col.column_name];
-          return `      <ReferenceField source="${col.column_name}" reference="${refTable}">
+          if (refTable && /^[a-zA-Z0-9_]+$/.test(refTable)) {
+            return `      <ReferenceField source="${col.column_name}" reference="${refTable}">
         <TextField source="name" />
       </ReferenceField>`;
+          } else {
+            // Логування якщо refTable некоректне
+            console.warn(
+              `⚠️ Для поля ${col.column_name} у таблиці ${table} некоректний reference: "${refTable}"`
+            );
+            return `      <TextField source="${col.column_name}" />`;
+          }
         } else {
-          // Звичайне поле
           const type = typeMap[col.data_type] || "TextField";
           return `      <${type} source="${col.column_name}" />`;
         }

@@ -83,7 +83,7 @@ export const ActivityList = () => (
         <TextField source="name" />
       </ReferenceField>
       <TextField source="queue_item_id" />
-      <ReferenceField source="order_id" reference=""order"">
+      <ReferenceField source="order_id" reference="order">
         <TextField source="name" />
       </ReferenceField>
       <ReferenceField source="project_id" reference="project">

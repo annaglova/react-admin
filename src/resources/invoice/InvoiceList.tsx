@@ -43,7 +43,7 @@ export const InvoiceList = () => (
       <ReferenceField source="project_id" reference="project">
         <TextField source="name" />
       </ReferenceField>
-      <ReferenceField source="order_id" reference=""order"">
+      <ReferenceField source="order_id" reference="order">
         <TextField source="name" />
       </ReferenceField>
       <NumberField source="amount_without_tax" />

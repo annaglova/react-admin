@@ -1,18 +1,8 @@
-import {
-  BooleanField,
-  Datagrid,
-  DateField,
-  List,
-  NumberField,
-  ReferenceField,
-  TextField,
-  TextInput,
-  UrlField,
-} from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
 
 const CalendarFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
+  <TextInput label="Пошук по імені" source="name" alwaysOn />
+  <TextInput label="Пошук по id" source="id" />
 ];
 
 export const CalendarList = () => (
@@ -20,7 +10,12 @@ export const CalendarList = () => (
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
-      {/* Додай тут інші поля для цього ресурсу */}
+      <TextField source="description" />
+      <TextField source="parent_id" />
+      <TextField source="time_zone_id" />
+      <NumberField source="depth" />
+      <BooleanField source="around_clock" />
+      <BooleanField source="without_day_off" />
     </Datagrid>
   </List>
 );

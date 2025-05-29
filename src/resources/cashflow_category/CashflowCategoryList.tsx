@@ -1,18 +1,8 @@
-import {
-  BooleanField,
-  Datagrid,
-  DateField,
-  List,
-  NumberField,
-  ReferenceField,
-  TextField,
-  TextInput,
-  UrlField,
-} from "react-admin";
+import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
 
 const CashflowCategoryFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
+  <TextInput label="Пошук по імені" source="name" alwaysOn />
+  <TextInput label="Пошук по id" source="id" />
 ];
 
 export const CashflowCategoryList = () => (
@@ -20,7 +10,8 @@ export const CashflowCategoryList = () => (
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
-      {/* Додай тут інші поля для цього ресурсу */}
+      <TextField source="description" />
+      <TextField source="cashflow_type_id" />
     </Datagrid>
   </List>
 );

@@ -1,26 +1,16 @@
-import {
-  BooleanField,
-  Datagrid,
-  DateField,
-  List,
-  NumberField,
-  ReferenceField,
-  TextField,
-  TextInput,
-  UrlField,
-} from "react-admin";
+import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
 
 const ReferralLinkFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
+  <TextInput label="Пошук по імені" source="name" alwaysOn />
+  <TextInput label="Пошук по id" source="id" />
 ];
 
 export const ReferralLinkList = () => (
   <List filters={ReferralLinkFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
-      <TextField source="name" />
-      {/* Додай тут інші поля для цього ресурсу */}
+      <TextField source="contact_id" />
+      <TextField source="code" />
     </Datagrid>
   </List>
 );

@@ -1,26 +1,25 @@
-import {
-  BooleanField,
-  Datagrid,
-  DateField,
-  List,
-  NumberField,
-  ReferenceField,
-  TextField,
-  TextInput,
-  UrlField,
-} from "react-admin";
+import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
 
 const CollectionFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
+  <TextInput label="Пошук по імені" source="name" alwaysOn />
+  <TextInput label="Пошук по id" source="id" />
 ];
 
 export const CollectionList = () => (
   <List filters={CollectionFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
+      <BooleanField source="private" />
+      <TextField source="entity_name" />
+      <BooleanField source="auto" />
+      <TextField source="type_id" />
+      <TextField source="avatar_url" />
+      <TextField source="url" />
       <TextField source="name" />
-      {/* Додай тут інші поля для цього ресурсу */}
+      <TextField source="notes" />
+      <DateField source="update_date" />
+      <TextField source="cover_id" />
+      <TextField source="owner_id" />
     </Datagrid>
   </List>
 );

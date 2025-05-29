@@ -1,18 +1,8 @@
-import {
-  BooleanField,
-  Datagrid,
-  DateField,
-  List,
-  NumberField,
-  ReferenceField,
-  TextField,
-  TextInput,
-  UrlField,
-} from "react-admin";
+import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
 
 const VerifiedStageFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
+  <TextInput label="Пошук по імені" source="name" alwaysOn />
+  <TextInput label="Пошук по id" source="id" />
 ];
 
 export const VerifiedStageList = () => (
@@ -20,7 +10,8 @@ export const VerifiedStageList = () => (
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
-      {/* Додай тут інші поля для цього ресурсу */}
+      <TextField source="description" />
+      <NumberField source="priority" />
     </Datagrid>
   </List>
 );

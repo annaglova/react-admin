@@ -18,19 +18,21 @@ export const MainResourceShowLayout = ({
   value,
 }: MainResourceShowLayoutProps) => (
   <Show>
-    <SimpleShowLayout>
-      <div className="flex justify-between items-end mb-4 px-6 pt-4">
-        <span className="">{name}</span>
-        <span className="">{id}</span>
-      </div>
-    </SimpleShowLayout>
-    <TabbedShowLayout>
-      <Tab label="General">
-        <div className="grid grid-cols-2 gap-8 px-6 pt-5 pb-6">
-          <div className="space-y-3">{fieldsLeft}</div>
-          <div className="space-y-3">{fieldsRight}</div>
+    <div className="p-3 bg-gray-100">
+      <SimpleShowLayout className="bg-white rounded-md mb-2">
+        <div className="flex justify-between items-end mb-4 px-6 pt-4">
+          <span className="">{name}</span>
+          <span className="">{id}</span>
         </div>
-      </Tab>
-    </TabbedShowLayout>
+      </SimpleShowLayout>
+      <TabbedShowLayout className="bg-white rounded-md">
+        <Tab label="General">
+          <div className="grid grid-cols-2 gap-8 px-6 pt-5 pb-6">
+            <div className="space-y-3">{fieldsLeft}</div>
+            <div className="space-y-3">{fieldsRight}</div>
+          </div>
+        </Tab>
+      </TabbedShowLayout>
+    </div>
   </Show>
 );

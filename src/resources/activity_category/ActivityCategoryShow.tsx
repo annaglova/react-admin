@@ -1,14 +1,25 @@
-import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { ReferenceField, TextField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const ActivityCategoryShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="activity_type_id" reference="activity_type">
-        <TextField source="name" />
-      </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+export const ActivityCategoryShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Description" value={<TextField source="description" />} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Activity Type Id" value={<ReferenceField source="activity_type_id" reference="activity_type"><TextField source="name" /></ReferenceField>} />
+      </>
+    }
+  />
 );

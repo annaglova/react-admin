@@ -1,18 +1,27 @@
-import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { ReferenceField, TextField, NumberField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const BreedSubsectionShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="breed_section_id" reference="breed_section">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="breed_group_id" reference="breed_group">
-        <TextField source="name" />
-      </ReferenceField>
-      <NumberField source="code" />
-    </SimpleShowLayout>
-  </Show>
+export const BreedSubsectionShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Description" value={<TextField source="description" />} />
+        <Labeled label="Breed Section Id" value={<ReferenceField source="breed_section_id" reference="breed_section"><TextField source="name" /></ReferenceField>} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Breed Group Id" value={<ReferenceField source="breed_group_id" reference="breed_group"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Code" value={<NumberField source="code" />} />
+      </>
+    }
+  />
 );

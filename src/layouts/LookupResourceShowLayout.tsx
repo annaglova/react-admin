@@ -1,37 +1,32 @@
+// src/layouts/LookupResourceShowLayout.tsx
 import { ReactNode } from "react";
 import { Show, SimpleShowLayout } from "react-admin";
 
-interface MainResourceShowLayoutProps {
-  name: string;
-  id: string | number;
+interface LookupResourceShowLayoutProps {
+  name: ReactNode;
+  id: ReactNode;
   fieldsLeft: ReactNode;
   fieldsRight: ReactNode;
-  children?: ReactNode;
+  value?: ReactNode;
 }
 
-export const MainResourceShowLayout = ({
+export const LookupResourceShowLayout = ({
   name,
   id,
   fieldsLeft,
   fieldsRight,
-  children,
-}: MainResourceShowLayoutProps) => (
+  value,
+}: LookupResourceShowLayoutProps) => (
   <Show>
     <SimpleShowLayout>
-      {/* Header */}
-      <div className="flex justify-between items-end mb-4">
-        <h1 className="text-3xl font-bold">{name}</h1>
-        <span className="text-xs text-gray-400">ID: {id}</span>
+      <div className="flex justify-between items-end mb-4 px-6 pt-4">
+        <span className="">{name}</span>
+        <span className="">{id}</span>
       </div>
-
-      {/* Two Columns */}
-      <div className="grid grid-cols-2 gap-6">
-        <div className="space-y-3">{fieldsLeft}</div>
-        <div className="space-y-3">{fieldsRight}</div>
+      <div className="grid grid-cols-2 gap-8 p-6 bg-white rounded-lg shadow-sm">
+        <div className="space-y-4">{fieldsLeft}</div>
+        <div className="space-y-4">{fieldsRight}</div>
       </div>
-      {children}
-
-      {/* Tabs for future */}
     </SimpleShowLayout>
   </Show>
 );

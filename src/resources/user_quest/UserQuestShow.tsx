@@ -1,17 +1,30 @@
-import { BooleanField, DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { TextField, NumberField, BooleanField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 
-export const UserQuestShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <DateField source="finish_date" />
-      <TextField source="contact_id" />
-      <DateField source="deadline_date" />
-      <BooleanField source="deactivated" />
-      <NumberField source="reward" />
-      <TextField source="description" />
-      <NumberField source="frequency_interval" />
-    </SimpleShowLayout>
-  </Show>
+export const UserQuestShow = ({ record }: any) => (
+  <MainResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Finish Date" value={<DateField source="finish_date" />} />
+        <Labeled label="Contact Id" value={<TextField source="contact_id" />} />
+        <Labeled label="Deadline Date" value={<DateField source="deadline_date" />} />
+        <Labeled label="Deactivated" value={<BooleanField source="deactivated" />} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Reward" value={<NumberField source="reward" />} />
+        <Labeled label="Description" value={<TextField source="description" />} />
+        <Labeled label="Frequency Interval" value={<NumberField source="frequency_interval" />} />
+      </>
+    }
+  />
 );

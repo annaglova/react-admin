@@ -1,16 +1,27 @@
-import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { ReferenceField, TextField, NumberField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const SexShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="pet_type_id" reference="pet_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="code" />
-      <NumberField source="order" />
-    </SimpleShowLayout>
-  </Show>
+export const SexShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Description" value={<TextField source="description" />} />
+        <Labeled label="Pet Type Id" value={<ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Code" value={<TextField source="code" />} />
+        <Labeled label="Order" value={<NumberField source="order" />} />
+      </>
+    }
+  />
 );

@@ -1,12 +1,25 @@
-import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { TextField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const UnitShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <TextField source="short_name" />
-    </SimpleShowLayout>
-  </Show>
+export const UnitShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Description" value={<TextField source="description" />} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Short Name" value={<TextField source="short_name" />} />
+      </>
+    }
+  />
 );

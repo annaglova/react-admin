@@ -1,15 +1,27 @@
-import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { ReferenceField, TextField, BooleanField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const PetServiceTypeByEntityShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="entity_name" />
-      <ReferenceField source="pet_service_type_id" reference="pet_service_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <BooleanField source="transfer_to_litter" />
-      <BooleanField source="transfer_to_account" />
-    </SimpleShowLayout>
-  </Show>
+export const PetServiceTypeByEntityShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Entity Name" value={<TextField source="entity_name" />} />
+        <Labeled label="Pet Service Type Id" value={<ReferenceField source="pet_service_type_id" reference="pet_service_type"><TextField source="name" /></ReferenceField>} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Transfer To Litter" value={<BooleanField source="transfer_to_litter" />} />
+        <Labeled label="Transfer To Account" value={<BooleanField source="transfer_to_account" />} />
+      </>
+    }
+  />
 );

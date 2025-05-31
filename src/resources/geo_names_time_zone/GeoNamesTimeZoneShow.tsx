@@ -1,13 +1,26 @@
-import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { TextField, NumberField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const GeoNamesTimeZoneShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <NumberField source="gmt_offset" />
-      <TextField source="country_code" />
-    </SimpleShowLayout>
-  </Show>
+export const GeoNamesTimeZoneShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Description" value={<TextField source="description" />} />
+        <Labeled label="Gmt Offset" value={<NumberField source="gmt_offset" />} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Country Code" value={<TextField source="country_code" />} />
+      </>
+    }
+  />
 );

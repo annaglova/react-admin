@@ -1,12 +1,25 @@
-import { BooleanField, DateField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { TextField, BooleanField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const PetIdentifierTypeShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="is_public" />
-    </SimpleShowLayout>
-  </Show>
+export const PetIdentifierTypeShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Description" value={<TextField source="description" />} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Is Public" value={<BooleanField source="is_public" />} />
+      </>
+    }
+  />
 );

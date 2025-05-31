@@ -1,13 +1,26 @@
-import { BooleanField, DateField, Show, SimpleShowLayout, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+import { TextField, BooleanField, DateField } from "react-admin";
+import { Labeled } from "@/components/Labeled";
+import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
-export const InvoicePaymentStatusShow = () => (
-  <Show>
-    <SimpleShowLayout>
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="final_status" />
-      <TextField source="color" />
-    </SimpleShowLayout>
-  </Show>
+export const InvoicePaymentStatusShow = ({ record }: any) => (
+  <LookupResourceShowLayout
+    name={
+      <Labeled label="Name" value={<TextField source="name" />} />
+    }
+    id={
+      <Labeled label="ID" value={<TextField source="id" />} />
+    }
+    fieldsLeft={
+      <>
+        <Labeled label="Description" value={<TextField source="description" />} />
+        <Labeled label="Final Status" value={<BooleanField source="final_status" />} />
+      </>
+    }
+    fieldsRight={
+      <>
+        <Labeled label="Color" value={<TextField source="color" />} />
+      </>
+    }
+  />
 );

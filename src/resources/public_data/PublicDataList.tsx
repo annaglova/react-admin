@@ -1,13 +1,8 @@
-import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const PublicDataFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const PublicDataList = () => (
-  <List filters={PublicDataFilters}>
-    <Datagrid rowClick="show">
+export const PublicDataShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="hash_md5" />
@@ -43,6 +38,6 @@ export const PublicDataList = () => (
       </ReferenceField>
       <BooleanField source="has_owner" />
       <TextField source="pet_breed_id" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

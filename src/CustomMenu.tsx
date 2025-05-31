@@ -560,11 +560,6 @@ export const CustomMenu = () => (
     {/* Product */}
     <MenuSection title="Product" />
     <Menu.Item
-      to="/product"
-      primaryText="Products*"
-      leftIcon={<CategoryIcon />}
-    />
-    <Menu.Item
       to="/product_category"
       primaryText="Product Categories*"
       leftIcon={<CategoryIcon />}

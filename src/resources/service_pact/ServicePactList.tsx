@@ -1,13 +1,8 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const ServicePactFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const ServicePactList = () => (
-  <List filters={ServicePactFilters}>
-    <Datagrid rowClick="show">
+export const ServicePactShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <ReferenceField source="status_id" reference="service_pact_status">
@@ -33,6 +28,6 @@ export const ServicePactList = () => (
       <ReferenceField source="product_id" reference="product">
         <TextField source="name" />
       </ReferenceField>
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

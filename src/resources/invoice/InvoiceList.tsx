@@ -1,13 +1,8 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const InvoiceFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const InvoiceList = () => (
-  <List filters={InvoiceFilters}>
-    <Datagrid rowClick="show">
+export const InvoiceShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="number" />
       <DateField source="start_date" />
@@ -54,6 +49,6 @@ export const InvoiceList = () => (
         <TextField source="name" />
       </ReferenceField>
       <BooleanField source="created_from_order" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

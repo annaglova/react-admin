@@ -1,19 +1,14 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const HealthExamResultFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const HealthExamResultList = () => (
-  <List filters={HealthExamResultFilters}>
-    <Datagrid rowClick="show">
+export const HealthExamResultShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <ReferenceField source="object_id" reference="health_exam_object">
         <TextField source="name" />
       </ReferenceField>
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

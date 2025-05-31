@@ -1,13 +1,8 @@
-import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const PetClassFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const PetClassList = () => (
-  <List filters={PetClassFilters}>
-    <Datagrid rowClick="show">
+export const PetClassShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -20,6 +15,6 @@ export const PetClassList = () => (
       <ReferenceField source="provider_id" reference="account">
         <TextField source="name" />
       </ReferenceField>
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

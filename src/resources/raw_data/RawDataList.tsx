@@ -1,13 +1,8 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const RawDataFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const RawDataList = () => (
-  <List filters={RawDataFilters}>
-    <Datagrid rowClick="show">
+export const RawDataShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
@@ -36,6 +31,6 @@ export const RawDataList = () => (
         <TextField source="name" />
       </ReferenceField>
       <TextField source="pet_id" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

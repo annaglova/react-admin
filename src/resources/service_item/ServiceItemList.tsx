@@ -1,13 +1,8 @@
-import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const ServiceItemFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const ServiceItemList = () => (
-  <List filters={ServiceItemFilters}>
-    <Datagrid rowClick="show">
+export const ServiceItemShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <NumberField source="reaction_time_value" />
@@ -29,6 +24,6 @@ export const ServiceItemList = () => (
       </ReferenceField>
       <NumberField source="sort_order" />
       <TextField source="description" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

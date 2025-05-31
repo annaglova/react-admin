@@ -1,13 +1,8 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const PetFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const PetList = () => (
-  <List filters={PetFilters}>
-    <Datagrid rowClick="show">
+export const PetShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
@@ -55,6 +50,6 @@ export const PetList = () => (
       <NumberField source="test_int_index" />
       <TextField source="mother_breed_id" />
       <TextField source="father_breed_id" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

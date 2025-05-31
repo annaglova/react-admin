@@ -1,17 +1,12 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const ActivityResultFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const ActivityResultList = () => (
-  <List filters={ActivityResultFilters}>
-    <Datagrid rowClick="show">
+export const ActivityResultShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <BooleanField source="business_process_only" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

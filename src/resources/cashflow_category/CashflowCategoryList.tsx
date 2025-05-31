@@ -1,19 +1,14 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const CashflowCategoryFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const CashflowCategoryList = () => (
-  <List filters={CashflowCategoryFilters}>
-    <Datagrid rowClick="show">
+export const CashflowCategoryShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <ReferenceField source="cashflow_type_id" reference="cashflow_type">
         <TextField source="name" />
       </ReferenceField>
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

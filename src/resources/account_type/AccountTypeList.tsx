@@ -1,19 +1,14 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const AccountTypeFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const AccountTypeList = () => (
-  <List filters={AccountTypeFilters}>
-    <Datagrid rowClick="show">
+export const AccountTypeShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <NumberField source="priority" />
       <TextField source="raw_data_model" />
       <TextField source="color" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

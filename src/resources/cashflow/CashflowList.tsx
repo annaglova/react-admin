@@ -1,13 +1,8 @@
-import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const CashflowFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const CashflowList = () => (
-  <List filters={CashflowFilters}>
-    <Datagrid rowClick="show">
+export const CashflowShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <ReferenceField source="project_id" reference="project">
         <TextField source="name" />
@@ -43,6 +38,6 @@ export const CashflowList = () => (
       <ReferenceField source="outcome_fin_account_id" reference="fin_account">
         <TextField source="name" />
       </ReferenceField>
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

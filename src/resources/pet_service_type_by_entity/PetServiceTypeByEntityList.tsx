@@ -1,13 +1,8 @@
-import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const PetServiceTypeByEntityFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const PetServiceTypeByEntityList = () => (
-  <List filters={PetServiceTypeByEntityFilters}>
-    <Datagrid rowClick="show">
+export const PetServiceTypeByEntityShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="entity_name" />
       <ReferenceField source="pet_service_type_id" reference="pet_service_type">
@@ -15,6 +10,6 @@ export const PetServiceTypeByEntityList = () => (
       </ReferenceField>
       <BooleanField source="transfer_to_litter" />
       <BooleanField source="transfer_to_account" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

@@ -1,18 +1,13 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const GeoNamesTimeZoneFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const GeoNamesTimeZoneList = () => (
-  <List filters={GeoNamesTimeZoneFilters}>
-    <Datagrid rowClick="show">
+export const GeoNamesTimeZoneShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <NumberField source="gmt_offset" />
       <TextField source="country_code" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

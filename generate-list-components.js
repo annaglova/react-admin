@@ -3,6 +3,8 @@ const { createClient } = require("@supabase/supabase-js");
 const fs = require("fs");
 const path = require("path");
 
+const SKIP_MARK = "// @MANUAL";
+
 // 1. Читаємо ресурси з JSON
 const resources = require("./src/resourcesList.json");
 const ALL_RESOURCES = [
@@ -149,7 +151,18 @@ ${datagridFields}
 );
 `;
     const fileName = `${Name}List.tsx`;
-    fs.writeFileSync(path.join(dir, fileName), code);
+    const filePath = path.join(dir, fileName);
+
+    // --- SKIP якщо ручна мітка ---
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, "utf-8");
+      if (content.includes(SKIP_MARK)) {
+        console.log(`⏭️ Пропущено ${fileName} (ручна мітка @MANUAL)`);
+        continue;
+      }
+    }
+
+    fs.writeFileSync(filePath, code);
     console.log(`✅ Створено: ${fileName} у ${dir}`);
   }
   console.log(

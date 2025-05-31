@@ -1,16 +1,11 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const DependencyCategoryFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const DependencyCategoryList = () => (
-  <List filters={DependencyCategoryFilters}>
-    <Datagrid rowClick="show">
+export const DependencyCategoryShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

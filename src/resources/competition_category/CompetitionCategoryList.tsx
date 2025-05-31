@@ -1,16 +1,11 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const CompetitionCategoryFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const CompetitionCategoryList = () => (
-  <List filters={CompetitionCategoryFilters}>
-    <Datagrid rowClick="show">
+export const CompetitionCategoryShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

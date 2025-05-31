@@ -1,13 +1,8 @@
-import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const CompetitionBackupFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const CompetitionBackupList = () => (
-  <List filters={CompetitionBackupFilters}>
-    <Datagrid rowClick="show">
+export const CompetitionBackupShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -23,6 +18,6 @@ export const CompetitionBackupList = () => (
       <ReferenceField source="type_id" reference="competition_type">
         <TextField source="name" />
       </ReferenceField>
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

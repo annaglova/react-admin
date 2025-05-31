@@ -1,13 +1,8 @@
-import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const BreedSubsectionFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const BreedSubsectionList = () => (
-  <List filters={BreedSubsectionFilters}>
-    <Datagrid rowClick="show">
+export const BreedSubsectionShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -18,6 +13,6 @@ export const BreedSubsectionList = () => (
         <TextField source="name" />
       </ReferenceField>
       <NumberField source="code" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

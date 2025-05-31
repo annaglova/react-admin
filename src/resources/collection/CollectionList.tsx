@@ -1,13 +1,8 @@
-import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const CollectionFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const CollectionList = () => (
-  <List filters={CollectionFilters}>
-    <Datagrid rowClick="show">
+export const CollectionShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <BooleanField source="private" />
       <TextField source="entity_name" />
@@ -24,6 +19,6 @@ export const CollectionList = () => (
         <TextField source="name" />
       </ReferenceField>
       <TextField source="owner_id" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

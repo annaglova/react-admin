@@ -1,13 +1,8 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const UnitByMeasurementTypeFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const UnitByMeasurementTypeList = () => (
-  <List filters={UnitByMeasurementTypeFilters}>
-    <Datagrid rowClick="show">
+export const UnitByMeasurementTypeShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -17,6 +12,6 @@ export const UnitByMeasurementTypeList = () => (
       <ReferenceField source="unit_id" reference="unit">
         <TextField source="name" />
       </ReferenceField>
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

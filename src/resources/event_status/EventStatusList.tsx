@@ -1,17 +1,12 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const EventStatusFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const EventStatusList = () => (
-  <List filters={EventStatusFilters}>
-    <Datagrid rowClick="show">
+export const EventStatusShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="color" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

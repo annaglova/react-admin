@@ -3,6 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const resources = require("./src/resourcesList.json");
 
+const SKIP_MARK = "// @MANUAL";
+
 const MAIN_RESOURCES = resources.MAIN_RESOURCES;
 const DICT_RESOURCES = resources.DICT_RESOURCES;
 const ALL_RESOURCES = [...MAIN_RESOURCES, ...DICT_RESOURCES];
@@ -117,8 +119,19 @@ ${formFields}
   </Edit>
 );
 `;
-    const fileName = `${Name}Edit.tsx`;
-    fs.writeFileSync(path.join(dir, fileName), code);
+    const fileName = `${Name}List.tsx`;
+    const filePath = path.join(dir, fileName);
+
+    // --- SKIP якщо ручна мітка ---
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, "utf-8");
+      if (content.includes(SKIP_MARK)) {
+        console.log(`⏭️ Пропущено ${fileName} (ручна мітка @MANUAL)`);
+        continue;
+      }
+    }
+
+    fs.writeFileSync(filePath, code);
     console.log(`✅ Створено: ${fileName} у ${dir}`);
   }
   console.log(

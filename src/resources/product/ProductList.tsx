@@ -1,13 +1,8 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
 
-const ProductFilters = [
-  <TextInput label="Пошук по імені" source="name" alwaysOn />,
-  <TextInput label="Пошук по id" source="id" />,
-];
-
-export const ProductList = () => (
-  <List filters={ProductFilters}>
-    <Datagrid rowClick="show">
+export const ProductShow = () => (
+  <Show>
+    <SimpleShowLayout>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="code" />
@@ -39,6 +34,6 @@ export const ProductList = () => (
       <TextField source="general_conditions" />
       <TextField source="stripe_product_id" />
       <TextField source="pet_breed_id" />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );

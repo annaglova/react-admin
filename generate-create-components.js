@@ -120,7 +120,7 @@ ${formFields}
   </Create>
 );
 `;
-    const fileName = `${Name}List.tsx`;
+    const fileName = `${Name}Create.tsx`;
     const filePath = path.join(dir, fileName);
 
     // --- SKIP якщо ручна мітка ---

@@ -1,8 +1,13 @@
-import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const DependencyTypeShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const DependencyTypeFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const DependencyTypeList = () => (
+  <List filters={DependencyTypeFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -13,6 +18,6 @@ export const DependencyTypeShow = () => (
       <ReferenceField source="dependency_category_id" reference="dependency_category">
         <TextField source="name" />
       </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

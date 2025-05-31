@@ -1,11 +1,16 @@
-import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
 
-export const PetServiceStatusShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const PetServiceStatusFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const PetServiceStatusList = () => (
+  <List filters={PetServiceStatusFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

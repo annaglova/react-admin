@@ -1,8 +1,13 @@
-import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const TagAccessGranteeShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const TagAccessGranteeFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const TagAccessGranteeList = () => (
+  <List filters={TagAccessGranteeFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="tag_access_id" reference="tag_access">
         <TextField source="name" />
@@ -12,6 +17,6 @@ export const TagAccessGranteeShow = () => (
       <BooleanField source="can_delete" />
       <BooleanField source="can_edit" />
       <BooleanField source="can_read" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

@@ -1,8 +1,13 @@
-import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const CompetitionShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const CompetitionFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const CompetitionList = () => (
+  <List filters={CompetitionFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
@@ -31,6 +36,6 @@ export const CompetitionShow = () => (
       <ReferenceField source="breed_id" reference="breed">
         <TextField source="name" />
       </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

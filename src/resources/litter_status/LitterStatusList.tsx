@@ -1,12 +1,17 @@
-import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
 
-export const LitterStatusShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const LitterStatusFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const LitterStatusList = () => (
+  <List filters={LitterStatusFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <NumberField source="order" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

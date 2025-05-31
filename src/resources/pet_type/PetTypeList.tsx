@@ -1,8 +1,13 @@
-import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const PetTypeShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const PetTypeFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const PetTypeList = () => (
+  <List filters={PetTypeFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -17,6 +22,6 @@ export const PetTypeShow = () => (
       <ReferenceField source="public_data_id" reference="public_data">
         <TextField source="name" />
       </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

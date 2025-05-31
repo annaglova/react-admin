@@ -1,8 +1,13 @@
-import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const AwardInCompetitionShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const AwardInCompetitionFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const AwardInCompetitionList = () => (
+  <List filters={AwardInCompetitionFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="award_id" reference="award">
         <TextField source="name" />
@@ -10,6 +15,6 @@ export const AwardInCompetitionShow = () => (
       <ReferenceField source="competition_id" reference="competition">
         <TextField source="name" />
       </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

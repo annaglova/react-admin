@@ -1,8 +1,13 @@
-import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const NoteShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const NoteFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const NoteList = () => (
+  <List filters={NoteFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
@@ -32,6 +37,6 @@ export const NoteShow = () => (
         <TextField source="name" />
       </ReferenceField>
       <TextField source="pet_breed_id" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

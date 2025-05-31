@@ -1,8 +1,13 @@
-import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const BreedGroupShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const BreedGroupFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const BreedGroupList = () => (
+  <List filters={BreedGroupFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -10,6 +15,6 @@ export const BreedGroupShow = () => (
       <ReferenceField source="provider_id" reference="account">
         <TextField source="name" />
       </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

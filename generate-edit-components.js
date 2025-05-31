@@ -119,7 +119,7 @@ ${formFields}
   </Edit>
 );
 `;
-    const fileName = `${Name}List.tsx`;
+    const fileName = `${Name}Edit.tsx`;
     const filePath = path.join(dir, fileName);
 
     // --- SKIP якщо ручна мітка ---

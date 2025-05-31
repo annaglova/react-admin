@@ -1,8 +1,13 @@
-import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const PostFeedShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const PostFeedFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const PostFeedList = () => (
+  <List filters={PostFeedFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="pet_id" />
@@ -16,6 +21,6 @@ export const PostFeedShow = () => (
         <TextField source="name" />
       </ReferenceField>
       <TextField source="pet_breed_id" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

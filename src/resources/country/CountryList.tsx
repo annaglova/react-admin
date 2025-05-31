@@ -1,8 +1,13 @@
-import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const CountryShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const CountryFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const CountryList = () => (
+  <List filters={CountryFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -26,6 +31,6 @@ export const CountryShow = () => (
         <TextField source="name" />
       </ReferenceField>
       <TextField source="url" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

@@ -1,8 +1,13 @@
-import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const PostShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const PostFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const PostList = () => (
+  <List filters={PostFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <DateField source="publication_date" />
       <ReferenceField source="type_id" reference="post_type">
@@ -30,6 +35,6 @@ export const PostShow = () => (
       <ReferenceField source="cover_id" reference="cover">
         <TextField source="name" />
       </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

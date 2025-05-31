@@ -1,8 +1,13 @@
-import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const ProjectShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const ProjectFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const ProjectList = () => (
+  <List filters={ProjectFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="notes" />
       <TextField source="name" />
@@ -73,6 +78,6 @@ export const ProjectShow = () => (
       <ReferenceField source="cover_id" reference="cover">
         <TextField source="name" />
       </ReferenceField>
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

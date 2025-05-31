@@ -1,8 +1,13 @@
-import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const QuestShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const QuestFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const QuestList = () => (
+  <List filters={QuestFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="url" />
@@ -18,6 +23,6 @@ export const QuestShow = () => (
       <TextField source="description" />
       <NumberField source="total_steps" />
       <DateField source="deadline_date" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

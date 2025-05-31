@@ -134,7 +134,7 @@ ${showFields}
   </Show>
 );
 `;
-    const fileName = `${Name}List.tsx`;
+    const fileName = `${Name}Show.tsx`;
     const filePath = path.join(dir, fileName);
 
     // --- SKIP якщо ручна мітка ---

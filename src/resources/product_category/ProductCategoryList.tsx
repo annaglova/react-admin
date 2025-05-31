@@ -1,12 +1,17 @@
-import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
 
-export const ProductCategoryShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const ProductCategoryFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const ProductCategoryList = () => (
+  <List filters={ProductCategoryFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="color" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

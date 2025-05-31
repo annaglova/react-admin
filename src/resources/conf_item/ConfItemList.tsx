@@ -1,8 +1,13 @@
-import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const ConfItemShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const ConfItemFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const ConfItemList = () => (
+  <List filters={ConfItemFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <ReferenceField source="type_id" reference="config_item_type">
@@ -58,6 +63,6 @@ export const ConfItemShow = () => (
       <TextField source="page_model" />
       <NumberField source="quest_cycle_interval" />
       <TextField source="quest_type_id" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

@@ -1,8 +1,13 @@
-import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
 
-export const CurrencyShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const CurrencyFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const CurrencyList = () => (
+  <List filters={CurrencyFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
@@ -13,6 +18,6 @@ export const CurrencyShow = () => (
       <NumberField source="division" />
       <NumberField source="currecy_symbol_position" />
       <NumberField source="rate" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

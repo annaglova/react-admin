@@ -1,8 +1,13 @@
-import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const CoverShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const CoverFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const CoverList = () => (
+  <List filters={CoverFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
@@ -17,6 +22,6 @@ export const CoverShow = () => (
         <TextField source="name" />
       </ReferenceField>
       <BooleanField source="is_default" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

@@ -1,13 +1,18 @@
-import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
 
-export const QuestStatusShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const QuestStatusFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const QuestStatusList = () => (
+  <List filters={QuestStatusFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="code" />
       <NumberField source="order" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

@@ -1,11 +1,16 @@
-import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
 
-export const PlaceShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const PlaceFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const PlaceList = () => (
+  <List filters={PlaceFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

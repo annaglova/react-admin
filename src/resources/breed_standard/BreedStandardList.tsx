@@ -1,8 +1,13 @@
-import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
 
-export const BreedStandardShow = () => (
-  <Show>
-    <SimpleShowLayout>
+const BreedStandardFilters = [
+  <TextInput label="Пошук по імені" source="name" alwaysOn />,
+  <TextInput label="Пошук по id" source="id" />,
+];
+
+export const BreedStandardList = () => (
+  <List filters={BreedStandardFilters}>
+    <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="subsection_id" reference="breed_subsection">
         <TextField source="name" />
@@ -29,6 +34,6 @@ export const BreedStandardShow = () => (
       </ReferenceField>
       <BooleanField source="has_variable_divisions" />
       <TextField source="name" />
-    </SimpleShowLayout>
-  </Show>
+    </Datagrid>
+  </List>
 );

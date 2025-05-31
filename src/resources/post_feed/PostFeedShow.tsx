@@ -3,6 +3,7 @@ import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "re
 export const PostFeedShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="pet_id" />
       <ReferenceField source="account_id" reference="account">

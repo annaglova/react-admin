@@ -3,6 +3,7 @@ import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextFi
 export const CoverShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
       <TextField source="redirect_url" />

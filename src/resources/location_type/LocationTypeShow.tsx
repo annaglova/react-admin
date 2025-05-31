@@ -3,6 +3,7 @@ import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "re
 export const LocationTypeShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <ReferenceField source="event_type_id" reference="event_type">

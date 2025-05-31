@@ -3,6 +3,7 @@ import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextFi
 export const PublicDataShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="hash_md5" />
       <ReferenceField source="account_id" reference="account">

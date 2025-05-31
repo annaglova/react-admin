@@ -3,6 +3,7 @@ import { BooleanField, DateField, NumberField, Show, SimpleShowLayout, TextField
 export const PetShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
       <DateField source="date_of_birth" />

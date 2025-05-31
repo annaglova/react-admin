@@ -3,6 +3,7 @@ import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "re
 export const QualificationInCompetitionShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <ReferenceField source="pet_qualification_id" reference="pet_qualification">
         <TextField source="name" />
       </ReferenceField>

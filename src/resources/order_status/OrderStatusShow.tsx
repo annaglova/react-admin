@@ -3,6 +3,7 @@ import { BooleanField, DateField, NumberField, Show, SimpleShowLayout, TextField
 export const OrderStatusShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <NumberField source="position" />

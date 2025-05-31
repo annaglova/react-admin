@@ -3,6 +3,7 @@ import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextFie
 export const CountryShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="image" />

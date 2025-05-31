@@ -3,6 +3,7 @@ import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowL
 export const ProjectShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="notes" />
       <TextField source="name" />
       <ReferenceField source="account_id" reference="account">

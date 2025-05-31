@@ -3,6 +3,7 @@ import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextFie
 export const EventShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <ReferenceField source="type_id" reference="event_type">
         <TextField source="name" />

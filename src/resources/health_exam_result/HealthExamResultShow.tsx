@@ -3,6 +3,7 @@ import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "re
 export const HealthExamResultShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <ReferenceField source="object_id" reference="health_exam_object">

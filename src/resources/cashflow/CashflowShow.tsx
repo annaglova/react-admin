@@ -3,6 +3,7 @@ import { DateField, NumberField, ReferenceField, Show, SimpleShowLayout, TextFie
 export const CashflowShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <ReferenceField source="project_id" reference="project">
         <TextField source="name" />
       </ReferenceField>

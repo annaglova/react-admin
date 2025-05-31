@@ -3,6 +3,7 @@ import { DateField, ReferenceField, Show, SimpleShowLayout, TextField } from "re
 export const AccountOwnershipShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <ReferenceField source="country_id" reference="country">

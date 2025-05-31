@@ -3,6 +3,7 @@ import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextFi
 export const TagAccessGranteeShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <ReferenceField source="tag_access_id" reference="tag_access">
         <TextField source="name" />
       </ReferenceField>

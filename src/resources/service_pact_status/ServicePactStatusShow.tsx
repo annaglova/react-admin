@@ -3,6 +3,7 @@ import { BooleanField, DateField, Show, SimpleShowLayout, TextField } from "reac
 export const ServicePactStatusShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <BooleanField source="is_active" />

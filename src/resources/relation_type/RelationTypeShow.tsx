@@ -3,6 +3,7 @@ import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextFi
 export const RelationTypeShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <BooleanField source="for_contact_contact" />

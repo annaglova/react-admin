@@ -3,6 +3,7 @@ import { BooleanField, DateField, Show, SimpleShowLayout, TextField } from "reac
 export const SysLanguageShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="code" />

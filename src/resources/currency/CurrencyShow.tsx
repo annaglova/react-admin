@@ -3,6 +3,7 @@ import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react
 export const CurrencyShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="code" />

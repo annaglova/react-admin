@@ -3,6 +3,7 @@ import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextFi
 export const BreedStandardShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <ReferenceField source="subsection_id" reference="breed_subsection">
         <TextField source="name" />
       </ReferenceField>

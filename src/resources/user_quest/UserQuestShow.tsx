@@ -3,6 +3,7 @@ import { BooleanField, DateField, NumberField, Show, SimpleShowLayout, TextField
 export const UserQuestShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <DateField source="finish_date" />
       <TextField source="contact_id" />

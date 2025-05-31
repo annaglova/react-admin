@@ -3,6 +3,7 @@ import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowL
 export const AccountShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <TextField source="owner_id" />

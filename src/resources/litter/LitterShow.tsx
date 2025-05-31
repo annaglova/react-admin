@@ -3,6 +3,7 @@ import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowL
 export const LitterShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="notes" />
       <TextField source="father_id" />

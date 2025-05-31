@@ -3,6 +3,7 @@ import { BooleanField, DateField, NumberField, ReferenceField, Show, SimpleShowL
 export const PostShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <DateField source="publication_date" />
       <ReferenceField source="type_id" reference="post_type">
         <TextField source="name" />

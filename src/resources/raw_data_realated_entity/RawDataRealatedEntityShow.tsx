@@ -3,6 +3,7 @@ import { DateField, NumberField, Show, SimpleShowLayout, TextField } from "react
 export const RawDataRealatedEntityShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
       <NumberField source="priority" />

@@ -3,6 +3,7 @@ import { BooleanField, DateField, ReferenceField, Show, SimpleShowLayout, TextFi
 export const CollectionShow = () => (
   <Show>
     <SimpleShowLayout>
+      <TextField source="id" />
       <BooleanField source="private" />
       <TextField source="entity_name" />
       <BooleanField source="auto" />

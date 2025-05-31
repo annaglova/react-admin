@@ -124,9 +124,9 @@ export const CustomMenu = () => (
       leftIcon={<PeopleIcon />}
     />
 
-    {/* Dictionaries */}
+    {/* Loocups */}
     <div className="font-bold px-4 pt-4 pb-1 text-gray-500 uppercase tracking-wide text-xs select-none">
-      Dictionaries
+      Loocups
     </div>
 
     {/* Breed */}

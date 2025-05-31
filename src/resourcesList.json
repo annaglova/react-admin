@@ -26,7 +26,7 @@
     "quest",
     "user_quest"
   ],
-  "DICT_RESOURCES": [
+  "LOOKUP_RESOURCES": [
     "account_category",
     "account_industry",
     "account_ownership",

@@ -6,7 +6,7 @@ const UnitFilters = [
 ];
 
 export const UnitList = () => (
-  <List filters={UnitFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={UnitFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

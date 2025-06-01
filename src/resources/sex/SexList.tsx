@@ -6,7 +6,7 @@ const SexFilters = [
 ];
 
 export const SexList = () => (
-  <List filters={SexFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={SexFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

@@ -6,7 +6,7 @@ const AffixTypeFilters = [
 ];
 
 export const AffixTypeList = () => (
-  <List filters={AffixTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={AffixTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

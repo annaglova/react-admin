@@ -6,7 +6,7 @@ const DependencyTypeFilters = [
 ];
 
 export const DependencyTypeList = () => (
-  <List filters={DependencyTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={DependencyTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

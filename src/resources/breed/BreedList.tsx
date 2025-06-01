@@ -6,7 +6,7 @@ const BreedFilters = [
 ];
 
 export const BreedList = () => (
-  <List filters={BreedFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={BreedFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

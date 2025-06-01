@@ -6,7 +6,7 @@ const ServiceCategoryFilters = [
 ];
 
 export const ServiceCategoryList = () => (
-  <List filters={ServiceCategoryFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={ServiceCategoryFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

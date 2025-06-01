@@ -6,7 +6,7 @@ const StudbookTypeFilters = [
 ];
 
 export const StudbookTypeList = () => (
-  <List filters={StudbookTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={StudbookTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

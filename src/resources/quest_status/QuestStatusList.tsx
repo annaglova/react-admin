@@ -6,7 +6,7 @@ const QuestStatusFilters = [
 ];
 
 export const QuestStatusList = () => (
-  <List filters={QuestStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={QuestStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

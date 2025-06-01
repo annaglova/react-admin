@@ -6,7 +6,7 @@ const AwardFilters = [
 ];
 
 export const AwardList = () => (
-  <List filters={AwardFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={AwardFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

@@ -6,7 +6,7 @@ const EmployeeJobFilters = [
 ];
 
 export const EmployeeJobList = () => (
-  <List filters={EmployeeJobFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={EmployeeJobFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

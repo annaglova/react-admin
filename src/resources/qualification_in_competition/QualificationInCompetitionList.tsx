@@ -6,7 +6,7 @@ const QualificationInCompetitionFilters = [
 ];
 
 export const QualificationInCompetitionList = () => (
-  <List filters={QualificationInCompetitionFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={QualificationInCompetitionFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="pet_qualification_id" reference="pet_qualification">

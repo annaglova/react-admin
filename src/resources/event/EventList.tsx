@@ -6,7 +6,7 @@ const EventFilters = [
 ];
 
 export const EventList = () => (
-  <List filters={EventFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={EventFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

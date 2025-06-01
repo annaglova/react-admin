@@ -6,7 +6,7 @@ const PetLifecycleEventFilters = [
 ];
 
 export const PetLifecycleEventList = () => (
-  <List filters={PetLifecycleEventFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={PetLifecycleEventFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

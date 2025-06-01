@@ -6,7 +6,7 @@ const LitterFilters = [
 ];
 
 export const LitterList = () => (
-  <List filters={LitterFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={LitterFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

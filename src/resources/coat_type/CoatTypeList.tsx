@@ -6,7 +6,7 @@ const CoatTypeFilters = [
 ];
 
 export const CoatTypeList = () => (
-  <List filters={CoatTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={CoatTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

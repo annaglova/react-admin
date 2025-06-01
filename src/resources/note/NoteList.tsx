@@ -6,7 +6,7 @@ const NoteFilters = [
 ];
 
 export const NoteList = () => (
-  <List filters={NoteFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={NoteFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

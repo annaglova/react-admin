@@ -6,7 +6,7 @@ const TagAccessGranteeFilters = [
 ];
 
 export const TagAccessGranteeList = () => (
-  <List filters={TagAccessGranteeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={TagAccessGranteeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="tag_access_id" reference="tag_access">

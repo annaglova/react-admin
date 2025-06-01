@@ -6,7 +6,7 @@ const CompetitionTypeFilters = [
 ];
 
 export const CompetitionTypeList = () => (
-  <List filters={CompetitionTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={CompetitionTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

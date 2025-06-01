@@ -6,7 +6,7 @@ const MeasurementTypeFilters = [
 ];
 
 export const MeasurementTypeList = () => (
-  <List filters={MeasurementTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={MeasurementTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

@@ -6,7 +6,7 @@ const CoverFilters = [
 ];
 
 export const CoverList = () => (
-  <List filters={CoverFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={CoverFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

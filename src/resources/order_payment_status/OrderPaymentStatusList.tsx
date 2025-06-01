@@ -6,7 +6,7 @@ const OrderPaymentStatusFilters = [
 ];
 
 export const OrderPaymentStatusList = () => (
-  <List filters={OrderPaymentStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={OrderPaymentStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

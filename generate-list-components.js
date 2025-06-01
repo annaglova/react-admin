@@ -162,7 +162,7 @@ const ${Name}Filters = [
 ];
 
 export const ${Name}List = () => (
-  <List filters={${Name}Filters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={${Name}Filters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
 ${datagridFields}
     </Datagrid>

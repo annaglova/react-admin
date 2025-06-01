@@ -6,7 +6,7 @@ const CashflowFilters = [
 ];
 
 export const CashflowList = () => (
-  <List filters={CashflowFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={CashflowFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="project_id" reference="project">

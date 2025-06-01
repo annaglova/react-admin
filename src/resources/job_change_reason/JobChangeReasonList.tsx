@@ -6,7 +6,7 @@ const JobChangeReasonFilters = [
 ];
 
 export const JobChangeReasonList = () => (
-  <List filters={JobChangeReasonFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={JobChangeReasonFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

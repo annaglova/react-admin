@@ -6,7 +6,7 @@ const CurrencyFilters = [
 ];
 
 export const CurrencyList = () => (
-  <List filters={CurrencyFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={CurrencyFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

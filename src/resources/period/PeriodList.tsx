@@ -6,7 +6,7 @@ const PeriodFilters = [
 ];
 
 export const PeriodList = () => (
-  <List filters={PeriodFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={PeriodFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

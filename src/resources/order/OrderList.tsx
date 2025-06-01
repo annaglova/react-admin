@@ -6,7 +6,7 @@ const OrderFilters = [
 ];
 
 export const OrderList = () => (
-  <List filters={OrderFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={OrderFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="number" />

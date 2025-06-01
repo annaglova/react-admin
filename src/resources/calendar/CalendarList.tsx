@@ -6,7 +6,7 @@ const CalendarFilters = [
 ];
 
 export const CalendarList = () => (
-  <List filters={CalendarFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={CalendarFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

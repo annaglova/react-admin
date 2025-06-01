@@ -6,7 +6,7 @@ const PetStatusFilters = [
 ];
 
 export const PetStatusList = () => (
-  <List filters={PetStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={PetStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

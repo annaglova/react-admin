@@ -6,7 +6,7 @@ const ProductFilters = [
 ];
 
 export const ProductList = () => (
-  <List filters={ProductFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={ProductFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

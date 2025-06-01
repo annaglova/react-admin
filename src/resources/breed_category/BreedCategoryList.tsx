@@ -6,7 +6,7 @@ const BreedCategoryFilters = [
 ];
 
 export const BreedCategoryList = () => (
-  <List filters={BreedCategoryFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={BreedCategoryFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

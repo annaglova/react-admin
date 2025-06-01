@@ -6,7 +6,7 @@ const AddressTypeFilters = [
 ];
 
 export const AddressTypeList = () => (
-  <List filters={AddressTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={AddressTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

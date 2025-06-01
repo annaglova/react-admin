@@ -6,7 +6,7 @@ const ContactDecisionRoleFilters = [
 ];
 
 export const ContactDecisionRoleList = () => (
-  <List filters={ContactDecisionRoleFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={ContactDecisionRoleFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

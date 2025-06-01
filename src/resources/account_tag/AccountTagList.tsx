@@ -6,7 +6,7 @@ const AccountTagFilters = [
 ];
 
 export const AccountTagList = () => (
-  <List filters={AccountTagFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={AccountTagFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

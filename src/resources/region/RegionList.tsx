@@ -6,7 +6,7 @@ const RegionFilters = [
 ];
 
 export const RegionList = () => (
-  <List filters={RegionFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={RegionFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

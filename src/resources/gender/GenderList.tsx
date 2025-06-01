@@ -6,7 +6,7 @@ const GenderFilters = [
 ];
 
 export const GenderList = () => (
-  <List filters={GenderFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={GenderFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

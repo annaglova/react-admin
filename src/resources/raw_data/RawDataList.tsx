@@ -6,7 +6,7 @@ const RawDataFilters = [
 ];
 
 export const RawDataList = () => (
-  <List filters={RawDataFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={RawDataFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

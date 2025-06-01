@@ -6,7 +6,7 @@ const DependencyCategoryFilters = [
 ];
 
 export const DependencyCategoryList = () => (
-  <List filters={DependencyCategoryFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={DependencyCategoryFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

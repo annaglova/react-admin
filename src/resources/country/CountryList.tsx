@@ -6,7 +6,7 @@ const CountryFilters = [
 ];
 
 export const CountryList = () => (
-  <List filters={CountryFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={CountryFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

@@ -6,7 +6,7 @@ const ContactTagFilters = [
 ];
 
 export const ContactTagList = () => (
-  <List filters={ContactTagFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={ContactTagFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

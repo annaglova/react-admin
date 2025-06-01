@@ -6,7 +6,7 @@ const PublicDataFilters = [
 ];
 
 export const PublicDataList = () => (
-  <List filters={PublicDataFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={PublicDataFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

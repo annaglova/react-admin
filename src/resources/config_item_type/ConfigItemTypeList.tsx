@@ -6,7 +6,7 @@ const ConfigItemTypeFilters = [
 ];
 
 export const ConfigItemTypeList = () => (
-  <List filters={ConfigItemTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={ConfigItemTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

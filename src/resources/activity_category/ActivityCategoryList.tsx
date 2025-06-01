@@ -6,7 +6,7 @@ const ActivityCategoryFilters = [
 ];
 
 export const ActivityCategoryList = () => (
-  <List filters={ActivityCategoryFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={ActivityCategoryFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

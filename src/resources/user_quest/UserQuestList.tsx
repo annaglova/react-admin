@@ -6,7 +6,7 @@ const UserQuestFilters = [
 ];
 
 export const UserQuestList = () => (
-  <List filters={UserQuestFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={UserQuestFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

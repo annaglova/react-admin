@@ -6,7 +6,7 @@ const HealthExamObjectFilters = [
 ];
 
 export const HealthExamObjectList = () => (
-  <List filters={HealthExamObjectFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={HealthExamObjectFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

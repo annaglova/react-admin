@@ -6,7 +6,7 @@ const LetterFilters = [
 ];
 
 export const LetterList = () => (
-  <List filters={LetterFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={LetterFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

@@ -6,7 +6,7 @@ const PostFeedFilters = [
 ];
 
 export const PostFeedList = () => (
-  <List filters={PostFeedFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={PostFeedFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

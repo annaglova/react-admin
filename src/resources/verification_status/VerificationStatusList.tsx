@@ -6,7 +6,7 @@ const VerificationStatusFilters = [
 ];
 
 export const VerificationStatusList = () => (
-  <List filters={VerificationStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={VerificationStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

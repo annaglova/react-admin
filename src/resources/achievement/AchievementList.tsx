@@ -6,7 +6,7 @@ const AchievementFilters = [
 ];
 
 export const AchievementList = () => (
-  <List filters={AchievementFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={AchievementFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

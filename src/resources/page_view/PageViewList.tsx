@@ -6,7 +6,7 @@ const PageViewFilters = [
 ];
 
 export const PageViewList = () => (
-  <List filters={PageViewFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={PageViewFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

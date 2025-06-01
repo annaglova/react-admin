@@ -6,7 +6,7 @@ const RelationTypeFilters = [
 ];
 
 export const RelationTypeList = () => (
-  <List filters={RelationTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={RelationTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

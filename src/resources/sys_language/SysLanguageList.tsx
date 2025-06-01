@@ -6,7 +6,7 @@ const SysLanguageFilters = [
 ];
 
 export const SysLanguageList = () => (
-  <List filters={SysLanguageFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={SysLanguageFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

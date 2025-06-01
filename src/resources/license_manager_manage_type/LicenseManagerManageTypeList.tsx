@@ -6,7 +6,7 @@ const LicenseManagerManageTypeFilters = [
 ];
 
 export const LicenseManagerManageTypeList = () => (
-  <List filters={LicenseManagerManageTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={LicenseManagerManageTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

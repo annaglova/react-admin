@@ -6,7 +6,7 @@ const ActivityPriorityFilters = [
 ];
 
 export const ActivityPriorityList = () => (
-  <List filters={ActivityPriorityFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
+  <List filters={ActivityPriorityFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

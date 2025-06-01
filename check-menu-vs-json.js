@@ -4,7 +4,7 @@ const fs = require("fs");
 const resourcesJson = require("./src/resourcesList.json");
 const ALL_RESOURCES = [
   ...resourcesJson.MAIN_RESOURCES,
-  ...resourcesJson.DICT_RESOURCES,
+  ...resourcesJson.LOOKUP_RESOURCES,
 ];
 
 // 2. Парсимо Menu з CustomMenu (беремо всі to="/..." з Menu.Item)

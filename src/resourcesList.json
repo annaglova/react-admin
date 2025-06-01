@@ -159,5 +159,6 @@
     "unit_by_measurement_type",
     "verification_status",
     "verified_stage"
-  ]
+  ],
+  "CHILD_RESOURCES": ["coat_type_in_breed", "coat_color_in_breed"]
 }

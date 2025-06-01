@@ -8,8 +8,12 @@ const SKIP_MARK = "// @MANUAL";
 const resources = require("./src/resourcesList.json");
 const MAIN_RESOURCES = resources.MAIN_RESOURCES;
 const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES || [];
-const ALL_RESOURCES = [...MAIN_RESOURCES, ...LOOKUP_RESOURCES];
-
+const CHILD_RESOURCES = resources.CHILD_RESOURCES || [];
+const ALL_RESOURCES = [
+  ...MAIN_RESOURCES,
+  ...LOOKUP_RESOURCES,
+  ...CHILD_RESOURCES,
+];
 const EXCLUDE_FIELDS = [
   "created_on",
   "created_by_id",

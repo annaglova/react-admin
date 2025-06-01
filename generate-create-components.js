@@ -6,7 +6,12 @@ const { createClient } = require("@supabase/supabase-js");
 const resources = require("./src/resourcesList.json");
 const MAIN_RESOURCES = resources.MAIN_RESOURCES;
 const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES;
-const ALL_RESOURCES = [...MAIN_RESOURCES, ...LOOKUP_RESOURCES];
+const CHILD_RESOURCES = resources.CHILD_RESOURCES;
+const ALL_RESOURCES = [
+  ...MAIN_RESOURCES,
+  ...LOOKUP_RESOURCES,
+  ...CHILD_RESOURCES,
+];
 
 const SKIP_MARK = "// @MANUAL";
 const EXCLUDE_FIELDS = [

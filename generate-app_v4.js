@@ -4,8 +4,8 @@ const path = require("path");
 const resources = require("./src/resourcesList.json");
 
 const MAIN_RESOURCES = resources.MAIN_RESOURCES;
-const DICT_RESOURCES = resources.DICT_RESOURCES;
-const ALL_RESOURCES = [...MAIN_RESOURCES, ...DICT_RESOURCES];
+const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES;
+const ALL_RESOURCES = [...MAIN_RESOURCES, ...LOOKUP_RESOURCES];
 
 function capitalize(name) {
   return name
@@ -54,7 +54,7 @@ import {
   EditGuesser,
   Resource,
 } from "react-admin";
-import { CustomLayout } from "./CustomLayout";
+import { CustomLayout } from "./layouts/CustomLayout";
 ${importLines}
 
 const instanceUrl = import.meta.env.VITE_SUPABASE_URL as string;

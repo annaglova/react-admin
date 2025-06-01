@@ -6,8 +6,13 @@ const resources = require("./src/resourcesList.json");
 const SKIP_MARK = "// @MANUAL";
 
 const MAIN_RESOURCES = resources.MAIN_RESOURCES;
-const DICT_RESOURCES = resources.DICT_RESOURCES;
-const ALL_RESOURCES = [...MAIN_RESOURCES, ...DICT_RESOURCES];
+const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES;
+const CHILD_RESOURCES = resources.CHILD_RESOURCES;
+const ALL_RESOURCES = [
+  ...MAIN_RESOURCES,
+  ...LOOKUP_RESOURCES,
+  ...CHILD_RESOURCES,
+];
 
 const EXCLUDE_FIELDS = [
   "id",

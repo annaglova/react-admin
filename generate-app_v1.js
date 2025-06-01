@@ -3,7 +3,7 @@ const resources = require("./src/resourcesList.json");
 const code = `
 import { supabaseDataProvider } from "ra-supabase";
 import { Admin, ListGuesser, EditGuesser, ShowGuesser, Resource } from "react-admin";
-import { CustomLayout } from "./CustomLayout";
+import { CustomLayout } from "./layouts/CustomLayout";
 import { ALL_RESOURCES } from "./resourcesList";
 
 const instanceUrl = import.meta.env.VITE_SUPABASE_URL as string;

@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, BooleanField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const CollectionShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -28,6 +29,38 @@ export const CollectionShow = ({ record }: any) => (
         <Labeled label="Cover Id" value={<ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Owner Id" value={<TextField source="owner_id" />} />
       </>
+    }
+    detailsConfigs={
+      [
+      {
+        label: "Collection In Tag",
+        content: (
+          <ReferenceManyField reference={"collection_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Collection Entity",
+        content: (
+          <ReferenceManyField reference={"collection_entity"} target={"collection_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <TextField source="record_id" />
+              <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
+              <TextField source="pet_id" />
+              <TextField source="pet_breed_id" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ]
     }
   />
 );

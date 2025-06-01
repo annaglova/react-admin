@@ -9,6 +9,7 @@ export const CollectionList = () => (
   <List filters={CollectionFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
+      <TextField source="name" />
       <BooleanField source="private" />
       <TextField source="entity_name" />
       <BooleanField source="auto" />
@@ -17,7 +18,6 @@ export const CollectionList = () => (
       </ReferenceField>
       <TextField source="avatar_url" />
       <TextField source="url" />
-      <TextField source="name" />
       <TextField source="notes" />
       <DateField source="update_date" />
       <ReferenceField source="cover_id" reference="cover">

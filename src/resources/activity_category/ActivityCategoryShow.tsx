@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, DateField } from "react-admin";
+import { BooleanField, DateField, NumberField, ReferenceField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
+
 
 export const ActivityCategoryShow = ({ record }: any) => (
   <LookupResourceShowLayout

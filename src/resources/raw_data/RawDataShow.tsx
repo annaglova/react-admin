@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const RawDataShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -34,6 +35,9 @@ export const RawDataShow = ({ record }: any) => (
         <Labeled label="Project Id" value={<ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Pet Id" value={<TextField source="pet_id" />} />
       </>
+    }
+    detailsConfigs={
+      []
     }
   />
 );

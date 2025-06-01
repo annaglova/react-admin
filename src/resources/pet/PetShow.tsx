@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { TextField, NumberField, BooleanField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const PetShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -63,6 +64,9 @@ export const PetShow = ({ record }: any) => (
         <Labeled label="Mother Breed Id" value={<TextField source="mother_breed_id" />} />
         <Labeled label="Father Breed Id" value={<TextField source="father_breed_id" />} />
       </>
+    }
+    detailsConfigs={
+      []
     }
   />
 );

@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const NoteShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -31,6 +32,22 @@ export const NoteShow = ({ record }: any) => (
         <Labeled label="Litter Id" value={<ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Pet Breed Id" value={<TextField source="pet_breed_id" />} />
       </>
+    }
+    detailsConfigs={
+      [
+      {
+        label: "Note Test Record",
+        content: (
+          <ReferenceManyField reference={"note_test_record"} target={"note_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <TextField source="pet_id" />
+              <TextField source="pet_breed_id" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ]
     }
   />
 );

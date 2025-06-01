@@ -9,6 +9,7 @@ export const PostList = () => (
   <List filters={PostFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
+      <TextField source="name" />
       <DateField source="publication_date" />
       <ReferenceField source="type_id" reference="post_type">
         <TextField source="name" />
@@ -23,7 +24,6 @@ export const PostList = () => (
       </ReferenceField>
       <BooleanField source="is_moment" />
       <TextField source="author_id" />
-      <TextField source="name" />
       <DateField source="date" />
       <ReferenceField source="event_id" reference="event">
         <TextField source="name" />

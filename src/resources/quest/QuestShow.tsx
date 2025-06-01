@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, NumberField, BooleanField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const QuestShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -27,6 +28,56 @@ export const QuestShow = ({ record }: any) => (
         <Labeled label="Total Steps" value={<NumberField source="total_steps" />} />
         <Labeled label="Deadline Date" value={<DateField source="deadline_date" />} />
       </>
+    }
+    detailsConfigs={
+      [
+      {
+        label: "Quest Step",
+        content: (
+          <ReferenceManyField reference={"quest_step"} target={"quest_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <TextField source="name" />
+              <TextField source="description" />
+              <TextField source="intitial_provider_code" />
+              <TextField source="provider_code" />
+              <NumberField source="position" />
+              <TextField source="dependencies" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Quest In Tag",
+        content: (
+          <ReferenceManyField reference={"quest_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Quest Stage",
+        content: (
+          <ReferenceManyField reference={"quest_stage"} target={"quest_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <TextField source="title" />
+              <TextField source="business_process_id" />
+              <ReferenceField source="conf_item_id" reference="conf_item"><TextField source="name" /></ReferenceField>
+              <NumberField source="order" />
+              <TextField source="description" />
+              <TextField source="code" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ]
     }
   />
 );

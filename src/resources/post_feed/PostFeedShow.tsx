@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const PostFeedShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -23,6 +24,35 @@ export const PostFeedShow = ({ record }: any) => (
         <Labeled label="Litter Id" value={<ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Pet Breed Id" value={<TextField source="pet_breed_id" />} />
       </>
+    }
+    detailsConfigs={
+      [
+      {
+        label: "Post In Feed",
+        content: (
+          <ReferenceManyField reference={"post_in_feed"} target={"feed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <ReferenceField source="post_id" reference="post"><TextField source="name" /></ReferenceField>
+              <BooleanField source="hide" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Post Feed Subscription",
+        content: (
+          <ReferenceManyField reference={"post_feed_subscription"} target={"feed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <TextField source="contact_id" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ]
     }
   />
 );

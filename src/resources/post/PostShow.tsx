@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, NumberField, BooleanField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const PostShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -33,6 +34,91 @@ export const PostShow = ({ record }: any) => (
         <Labeled label="Participants" value={<TextField source="participants" />} />
         <Labeled label="Cover Id" value={<ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>} />
       </>
+    }
+    detailsConfigs={
+      [
+      {
+        label: "Post",
+        content: (
+          <ReferenceManyField reference={"post"} target={"master_post_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <TextField source="name" />
+              <DateField source="publication_date" />
+              <ReferenceField source="type_id" reference="post_type"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="state_id" reference="post_state"><TextField source="name" /></ReferenceField>
+              <TextField source="text" />
+              <TextField source="url" />
+              <BooleanField source="is_moment" />
+              <TextField source="author_id" />
+              <DateField source="date" />
+              <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
+              <NumberField source="latitude" />
+              <NumberField source="longitude" />
+              <TextField source="photos" />
+              <TextField source="participants" />
+              <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Post In Feed",
+        content: (
+          <ReferenceManyField reference={"post_in_feed"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <ReferenceField source="feed_id" reference="post_feed"><TextField source="name" /></ReferenceField>
+              <BooleanField source="hide" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Post Photo",
+        content: (
+          <ReferenceManyField reference={"post_photo"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <NumberField source="position" />
+              <TextField source="link" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Post Like",
+        content: (
+          <ReferenceManyField reference={"post_like"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Post Comment",
+        content: (
+          <ReferenceManyField reference={"post_comment"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
+              <TextField source="text" />
+              <DateField source="date" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ]
     }
   />
 );

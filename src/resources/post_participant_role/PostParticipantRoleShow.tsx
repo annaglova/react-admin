@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { TextField, DateField } from "react-admin";
+import { BooleanField, DateField, NumberField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
+
 
 export const PostParticipantRoleShow = ({ record }: any) => (
   <LookupResourceShowLayout

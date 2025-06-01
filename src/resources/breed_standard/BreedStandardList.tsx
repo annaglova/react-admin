@@ -9,6 +9,7 @@ export const BreedStandardList = () => (
   <List filters={BreedStandardFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
+      <TextField source="name" />
       <ReferenceField source="subsection_id" reference="breed_subsection">
         <TextField source="name" />
       </ReferenceField>
@@ -33,7 +34,6 @@ export const BreedStandardList = () => (
         <TextField source="name" />
       </ReferenceField>
       <BooleanField source="has_variable_divisions" />
-      <TextField source="name" />
     </Datagrid>
   </List>
 );

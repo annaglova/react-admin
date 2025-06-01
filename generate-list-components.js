@@ -9,7 +9,7 @@ const SKIP_MARK = "// @MANUAL";
 const resources = require("./src/resourcesList.json");
 const ALL_RESOURCES = [
   ...resources.MAIN_RESOURCES,
-  ...resources.DICT_RESOURCES,
+  ...resources.LOOKUP_RESOURCES,
 ];
 
 // 2. Поля для виключення
@@ -45,6 +45,27 @@ function toPascalCase(str) {
     .split("_")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join("");
+}
+
+function groupColumns(cols, extraExclude = []) {
+  const fullExclude = [...EXCLUDE_FIELDS, ...extraExclude];
+  const filteredCols = cols.filter((c) => !fullExclude.includes(c.column_name));
+
+  const idCol = filteredCols.find((c) => c.column_name === "id");
+  const nameCol =
+    filteredCols.find((c) => c.column_name === "name") ||
+    filteredCols.find((c) => c.column_name === "title") ||
+    filteredCols.find((c) => c.column_name === "label") ||
+    filteredCols.find((c) => c.column_name === "value");
+
+  // Всі, крім id і name-type
+  const restCols = filteredCols.filter(
+    (c) =>
+      c.column_name !== "id" &&
+      c.column_name !== (nameCol && nameCol.column_name)
+  );
+
+  return [idCol, nameCol, ...restCols].filter(Boolean);
 }
 
 // 4. Підключення до Supabase
@@ -106,9 +127,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     ].join("\n  ");
 
     // 5. Генерація полів
-    const fields = columns.filter(
-      (col) => !EXCLUDE_FIELDS.includes(col.column_name)
-    );
+    const fields = groupColumns(columns);
     const datagridFields = fields
       .map((col) => {
         if (fkMap[col.column_name]) {

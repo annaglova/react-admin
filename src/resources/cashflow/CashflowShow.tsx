@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, NumberField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const CashflowShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -34,6 +35,9 @@ export const CashflowShow = ({ record }: any) => (
         <Labeled label="Income Fin Account Id" value={<ReferenceField source="income_fin_account_id" reference="fin_account"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Outcome Fin Account Id" value={<ReferenceField source="outcome_fin_account_id" reference="fin_account"><TextField source="name" /></ReferenceField>} />
       </>
+    }
+    detailsConfigs={
+      []
     }
   />
 );

@@ -9,8 +9,8 @@ export const ProjectList = () => (
   <List filters={ProjectFilters}>
     <Datagrid rowClick="show">
       <TextField source="id" />
-      <TextField source="notes" />
       <TextField source="name" />
+      <TextField source="notes" />
       <ReferenceField source="account_id" reference="account">
         <TextField source="name" />
       </ReferenceField>

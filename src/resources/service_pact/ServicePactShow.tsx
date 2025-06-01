@@ -1,7 +1,8 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { ReferenceField, TextField, DateField } from "react-admin";
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+
 
 export const ServicePactShow = ({ record }: any) => (
   <MainResourceShowLayout
@@ -29,6 +30,41 @@ export const ServicePactShow = ({ record }: any) => (
         <Labeled label="Provider Id" value={<ReferenceField source="provider_id" reference="account"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Product Id" value={<ReferenceField source="product_id" reference="product"><TextField source="name" /></ReferenceField>} />
       </>
+    }
+    detailsConfigs={
+      [
+      {
+        label: "Service In Service Pact",
+        content: (
+          <ReferenceManyField reference={"service_in_service_pact"} target={"service_pact_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+              <ReferenceField source="service_item_id" reference="service_item"><TextField source="name" /></ReferenceField>
+              <NumberField source="reaction_time_value" />
+              <ReferenceField source="reaction_time_unit_id" reference="time_unit"><TextField source="name" /></ReferenceField>
+              <NumberField source="solution_time_value" />
+              <ReferenceField source="solution_time_unit_id" reference="time_unit"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="calendar_id" reference="calendar"><TextField source="name" /></ReferenceField>
+              <TextField source="reaction_time" />
+              <TextField source="solution_time" />
+              <TextField source="concat_name" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ,
+        
+      {
+        label: "Service Pact In Tag",
+        content: (
+          <ReferenceManyField reference={"service_pact_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
+            <Datagrid>
+              <TextField source="id" />
+            </Datagrid>
+          </ReferenceManyField>
+        ),
+      }
+          ]
     }
   />
 );

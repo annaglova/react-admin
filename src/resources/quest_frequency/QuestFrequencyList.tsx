@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const QuestFrequencyFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const QuestFrequencyFilters = [
 ];
 
 export const QuestFrequencyList = () => (
-  <List filters={QuestFrequencyFilters}>
+  <List filters={QuestFrequencyFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

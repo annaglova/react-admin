@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CoatTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const CoatTypeFilters = [
 ];
 
 export const CoatTypeList = () => (
-  <List filters={CoatTypeFilters}>
+  <List filters={CoatTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

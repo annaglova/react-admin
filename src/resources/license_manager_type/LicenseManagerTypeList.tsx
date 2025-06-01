@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const LicenseManagerTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const LicenseManagerTypeFilters = [
 ];
 
 export const LicenseManagerTypeList = () => (
-  <List filters={LicenseManagerTypeFilters}>
+  <List filters={LicenseManagerTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

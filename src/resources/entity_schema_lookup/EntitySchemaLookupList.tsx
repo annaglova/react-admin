@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const EntitySchemaLookupFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const EntitySchemaLookupFilters = [
 ];
 
 export const EntitySchemaLookupList = () => (
-  <List filters={EntitySchemaLookupFilters}>
+  <List filters={EntitySchemaLookupFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

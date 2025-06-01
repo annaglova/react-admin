@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const BreedGroupFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const BreedGroupFilters = [
 ];
 
 export const BreedGroupList = () => (
-  <List filters={BreedGroupFilters}>
+  <List filters={BreedGroupFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

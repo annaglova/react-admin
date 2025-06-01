@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CashflowFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const CashflowFilters = [
 ];
 
 export const CashflowList = () => (
-  <List filters={CashflowFilters}>
+  <List filters={CashflowFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="project_id" reference="project">

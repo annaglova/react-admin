@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const ConfigItemStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const ConfigItemStatusFilters = [
 ];
 
 export const ConfigItemStatusList = () => (
-  <List filters={ConfigItemStatusFilters}>
+  <List filters={ConfigItemStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

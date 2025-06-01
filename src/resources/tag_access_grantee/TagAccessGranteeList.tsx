@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const TagAccessGranteeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const TagAccessGranteeFilters = [
 ];
 
 export const TagAccessGranteeList = () => (
-  <List filters={TagAccessGranteeFilters}>
+  <List filters={TagAccessGranteeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="tag_access_id" reference="tag_access">

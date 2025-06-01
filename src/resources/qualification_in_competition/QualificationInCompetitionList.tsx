@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const QualificationInCompetitionFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const QualificationInCompetitionFilters = [
 ];
 
 export const QualificationInCompetitionList = () => (
-  <List filters={QualificationInCompetitionFilters}>
+  <List filters={QualificationInCompetitionFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <ReferenceField source="pet_qualification_id" reference="pet_qualification">

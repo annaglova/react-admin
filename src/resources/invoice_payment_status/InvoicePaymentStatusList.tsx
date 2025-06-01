@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const InvoicePaymentStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const InvoicePaymentStatusFilters = [
 ];
 
 export const InvoicePaymentStatusList = () => (
-  <List filters={InvoicePaymentStatusFilters}>
+  <List filters={InvoicePaymentStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

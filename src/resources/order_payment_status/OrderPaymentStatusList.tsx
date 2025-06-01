@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, Pagination, TextField, TextInput } from "react-admin";
 
 const OrderPaymentStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const OrderPaymentStatusFilters = [
 ];
 
 export const OrderPaymentStatusList = () => (
-  <List filters={OrderPaymentStatusFilters}>
+  <List filters={OrderPaymentStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

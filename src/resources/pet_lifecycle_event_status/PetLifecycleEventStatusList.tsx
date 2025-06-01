@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const PetLifecycleEventStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const PetLifecycleEventStatusFilters = [
 ];
 
 export const PetLifecycleEventStatusList = () => (
-  <List filters={PetLifecycleEventStatusFilters}>
+  <List filters={PetLifecycleEventStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

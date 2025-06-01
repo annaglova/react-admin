@@ -115,7 +115,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
               ? "ReferenceField"
               : typeMap[f.data_type] || "TextField"
           )
-          .concat(["Datagrid", "List", "TextInput"])
+          .concat(["Datagrid", "List", "TextInput", "Pagination"])
       )
     );
     const imports = [...uniqueFieldTypes].sort().join(", ");
@@ -162,7 +162,7 @@ const ${Name}Filters = [
 ];
 
 export const ${Name}List = () => (
-  <List filters={${Name}Filters}>
+  <List filters={${Name}Filters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
 ${datagridFields}
     </Datagrid>

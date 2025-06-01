@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const ContactSalutationTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const ContactSalutationTypeFilters = [
 ];
 
 export const ContactSalutationTypeList = () => (
-  <List filters={ContactSalutationTypeFilters}>
+  <List filters={ContactSalutationTypeFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

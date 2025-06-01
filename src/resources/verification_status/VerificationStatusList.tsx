@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
 
 const VerificationStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const VerificationStatusFilters = [
 ];
 
 export const VerificationStatusList = () => (
-  <List filters={VerificationStatusFilters}>
+  <List filters={VerificationStatusFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

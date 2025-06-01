@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const PetServiceTypeByEntityFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const PetServiceTypeByEntityFilters = [
 ];
 
 export const PetServiceTypeByEntityList = () => (
-  <List filters={PetServiceTypeByEntityFilters}>
+  <List filters={PetServiceTypeByEntityFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="entity_name" />

@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ActivityCategoryFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const ActivityCategoryFilters = [
 ];
 
 export const ActivityCategoryList = () => (
-  <List filters={ActivityCategoryFilters}>
+  <List filters={ActivityCategoryFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, TextField, TextInput } from "react-admin";
+import { Datagrid, DateField, List, NumberField, Pagination, TextField, TextInput } from "react-admin";
 
 const RawDataRealatedEntityFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -6,7 +6,7 @@ const RawDataRealatedEntityFilters = [
 ];
 
 export const RawDataRealatedEntityList = () => (
-  <List filters={RawDataRealatedEntityFilters}>
+  <List filters={RawDataRealatedEntityFilters} pagination={<Pagination rowsPerPageOptions={[12]} />}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

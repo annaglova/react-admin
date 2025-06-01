@@ -1,17 +1,26 @@
-import { Create, NumberInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const BreedSubsectionCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <ReferenceInput source="breed_section_id" reference="breed_section">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <ReferenceInput source="breed_group_id" reference="breed_group">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <NumberInput source="code" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <ReferenceInput source="breed_section_id" reference="breed_section">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="breed_group_id" reference="breed_group">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+          <NumberInput source="code" />
+      </>
+    }
+  />
 );

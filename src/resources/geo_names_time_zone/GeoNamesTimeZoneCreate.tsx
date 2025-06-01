@@ -1,12 +1,21 @@
-import { Create, NumberInput, SimpleForm, TextInput } from "react-admin";
+import { NumberInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const GeoNamesTimeZoneCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <NumberInput source="gmt_offset" />
-      <TextInput source="country_code" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <NumberInput source="gmt_offset" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <TextInput source="country_code" />
+      </>
+    }
+  />
 );

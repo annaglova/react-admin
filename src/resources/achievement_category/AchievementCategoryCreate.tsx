@@ -1,10 +1,20 @@
-import { Create, SimpleForm, TextInput } from "react-admin";
+import { TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const AchievementCategoryCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+      </>
+    }
+    fieldsRight={
+      <>
+        
+      </>
+    }
+  />
 );

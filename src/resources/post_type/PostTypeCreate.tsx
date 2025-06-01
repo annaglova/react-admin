@@ -1,11 +1,20 @@
-import { Create, SimpleForm, TextInput } from "react-admin";
+import { TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const PostTypeCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <TextInput source="template_text" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <TextInput source="template_text" />
+      </>
+    }
+  />
 );

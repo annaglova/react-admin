@@ -1,11 +1,20 @@
-import { Create, NumberInput, SimpleForm, TextInput } from "react-admin";
+import { NumberInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const VerifiedStageCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <NumberInput source="priority" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <NumberInput source="priority" />
+      </>
+    }
+  />
 );

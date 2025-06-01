@@ -1,14 +1,24 @@
-import { Create, ReferenceInput, SelectInput, SimpleForm } from "react-admin";
+import { ReferenceInput, SelectInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const AwardInCompetitionCreate = () => (
-  <Create>
-    <SimpleForm>
-      <ReferenceInput source="award_id" reference="award">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <ReferenceInput source="competition_id" reference="competition">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      null
+    }
+    fieldsLeft={
+      <>
+        <ReferenceInput source="award_id" reference="award">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="competition_id" reference="competition">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

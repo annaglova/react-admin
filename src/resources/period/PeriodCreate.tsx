@@ -1,21 +1,30 @@
-import { Create, DateInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const PeriodCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <DateInput source="start_date" />
-      <DateInput source="due_date" />
-      <ReferenceInput source="year_id" reference="period">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <ReferenceInput source="quarter_id" reference="period">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <ReferenceInput source="parent_id" reference="period">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <DateInput source="start_date" />
+          <DateInput source="due_date" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="year_id" reference="period">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+          <ReferenceInput source="quarter_id" reference="period">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+          <ReferenceInput source="parent_id" reference="period">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

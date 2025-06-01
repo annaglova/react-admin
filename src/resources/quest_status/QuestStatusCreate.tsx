@@ -1,12 +1,21 @@
-import { Create, NumberInput, SimpleForm, TextInput } from "react-admin";
+import { NumberInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const QuestStatusCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <TextInput source="code" />
-      <NumberInput source="order" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <TextInput source="code" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <NumberInput source="order" />
+      </>
+    }
+  />
 );

@@ -1,16 +1,26 @@
-import { BooleanInput, Create, ReferenceInput, SelectInput, SimpleForm } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const TagAccessGranteeCreate = () => (
-  <Create>
-    <SimpleForm>
-      <ReferenceInput source="tag_access_id" reference="tag_access">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <BooleanInput source="can_tag" />
-      <BooleanInput source="can_create" />
-      <BooleanInput source="can_delete" />
-      <BooleanInput source="can_edit" />
-      <BooleanInput source="can_read" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      null
+    }
+    fieldsLeft={
+      <>
+        <ReferenceInput source="tag_access_id" reference="tag_access">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+          <BooleanInput source="can_tag" />
+          <BooleanInput source="can_create" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <BooleanInput source="can_delete" />
+          <BooleanInput source="can_edit" />
+          <BooleanInput source="can_read" />
+      </>
+    }
+  />
 );

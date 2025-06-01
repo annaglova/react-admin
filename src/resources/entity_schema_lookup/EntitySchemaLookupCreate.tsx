@@ -1,12 +1,21 @@
-import { BooleanInput, Create, SimpleForm, TextInput } from "react-admin";
+import { BooleanInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const EntitySchemaLookupCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <BooleanInput source="is_public" />
-      <TextInput source="public_name" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <BooleanInput source="is_public" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <TextInput source="public_name" />
+      </>
+    }
+  />
 );

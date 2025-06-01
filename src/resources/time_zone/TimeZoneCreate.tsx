@@ -1,13 +1,22 @@
-import { Create, SimpleForm, TextInput } from "react-admin";
+import { TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const TimeZoneCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <TextInput source="code" />
-      <TextInput source="offset" />
-      <TextInput source="code_american" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <TextInput source="code" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <TextInput source="offset" />
+          <TextInput source="code_american" />
+      </>
+    }
+  />
 );

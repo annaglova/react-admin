@@ -1,13 +1,22 @@
-import { Create, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const ConfigItemTypeCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <ReferenceInput source="conf_item_category_id" reference="config_item_category">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="conf_item_category_id" reference="config_item_category">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

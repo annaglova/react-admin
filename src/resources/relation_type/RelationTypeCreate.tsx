@@ -1,18 +1,27 @@
-import { BooleanInput, Create, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const RelationTypeCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <BooleanInput source="for_contact_contact" />
-      <BooleanInput source="for_account_contact" />
-      <BooleanInput source="for_contact_account" />
-      <BooleanInput source="for_account_account" />
-      <ReferenceInput source="reverse_relation_type_id" reference="relation_type">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <BooleanInput source="include_into_container" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <BooleanInput source="for_contact_contact" />
+          <BooleanInput source="for_account_contact" />
+          <BooleanInput source="for_contact_account" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <BooleanInput source="for_account_account" />
+          <ReferenceInput source="reverse_relation_type_id" reference="relation_type">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+          <BooleanInput source="include_into_container" />
+      </>
+    }
+  />
 );

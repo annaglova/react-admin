@@ -1,12 +1,21 @@
-import { BooleanInput, Create, SimpleForm, TextInput } from "react-admin";
+import { BooleanInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const ConfigItemStatusCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <BooleanInput source="is_final" />
-      <BooleanInput source="active" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <BooleanInput source="is_final" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <BooleanInput source="active" />
+      </>
+    }
+  />
 );

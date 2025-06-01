@@ -1,10 +1,20 @@
-import { Create, SimpleForm, TextInput } from "react-admin";
+import { TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const ReferralLinkCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="contact_id" />
-      <TextInput source="code" />
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      null
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="contact_id" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <TextInput source="code" />
+      </>
+    }
+  />
 );

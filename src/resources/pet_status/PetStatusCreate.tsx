@@ -1,14 +1,23 @@
-import { Create, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const PetStatusCreate = () => (
-  <Create>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <TextInput source="code" />
-      <ReferenceInput source="pet_type_id" reference="pet_type">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Create>
+  <ResourceCreateLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <TextInput source="code" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="pet_type_id" reference="pet_type">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

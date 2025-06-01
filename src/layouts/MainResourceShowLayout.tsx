@@ -20,7 +20,7 @@ export const MainResourceShowLayout = ({
   <Show>
     <div className="p-3 bg-gray-100">
       <SimpleShowLayout className="bg-white rounded-md mb-2">
-        <div className="flex justify-between items-end mb-4 px-6 pt-4">
+        <div className="flex justify-between items-end pt-2 pb-1 px-6 ">
           <span className="">{name}</span>
           <span className="">{id}</span>
         </div>

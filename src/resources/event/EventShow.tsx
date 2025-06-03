@@ -1,5 +1,5 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
+import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 
@@ -50,9 +50,13 @@ export const EventShow = ({ record }: any) => (
       {
         label: "Activity",
         content: (
-          <ReferenceManyField reference={"activity"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"activity"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="title" />
               <DateField source="start_date" />
               <DateField source="due_date" />
@@ -117,18 +121,23 @@ export const EventShow = ({ record }: any) => (
               <ReferenceField source="issue_type_id" reference="issue_type"><TextField source="name" /></ReferenceField>
               <ReferenceField source="user_quest_id" reference="user_quest"><TextField source="name" /></ReferenceField>
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Raw Data",
         content: (
-          <ReferenceManyField reference={"raw_data"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"raw_data"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <TextField source="json" />
@@ -145,18 +154,23 @@ export const EventShow = ({ record }: any) => (
               <ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>
               <ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>
               <TextField source="pet_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Project",
         content: (
-          <ReferenceManyField reference={"project"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"project"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
@@ -201,18 +215,23 @@ export const EventShow = ({ record }: any) => (
               <TextField source="url" />
               <ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>
               <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Post",
         content: (
-          <ReferenceManyField reference={"post"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"post"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <DateField source="publication_date" />
               <ReferenceField source="type_id" reference="post_type"><TextField source="name" /></ReferenceField>
@@ -228,18 +247,23 @@ export const EventShow = ({ record }: any) => (
               <TextField source="photos" />
               <TextField source="participants" />
               <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Note",
         content: (
-          <ReferenceManyField reference={"note"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"note"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <TextField source="pet_id" />
@@ -253,18 +277,23 @@ export const EventShow = ({ record }: any) => (
               <ReferenceField source="entity_schema_id" reference="entity_schema_lookup"><TextField source="name" /></ReferenceField>
               <ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Public Data",
         content: (
-          <ReferenceManyField reference={"public_data"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"public_data"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="hash_md5" />
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
@@ -282,43 +311,54 @@ export const EventShow = ({ record }: any) => (
               <ReferenceField source="pet_titles_id" reference="title_in_pet"><TextField source="name" /></ReferenceField>
               <BooleanField source="has_owner" />
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Location In Event",
         content: (
-          <ReferenceManyField reference={"location_in_event"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"location_in_event"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <ReferenceField source="location_type_id" reference="location_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Collection Entity",
         content: (
-          <ReferenceManyField reference={"collection_entity"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"collection_entity"} target={"event_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="record_id" />
               <ReferenceField source="collection_id" reference="collection"><TextField source="name" /></ReferenceField>
               <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
               <TextField source="pet_id" />
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ]
+  ]
     }
   />
 );

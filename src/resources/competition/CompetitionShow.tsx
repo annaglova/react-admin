@@ -1,5 +1,5 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
+import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 
@@ -37,9 +37,13 @@ export const CompetitionShow = ({ record }: any) => (
       {
         label: "Activity",
         content: (
-          <ReferenceManyField reference={"activity"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"activity"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="title" />
               <DateField source="start_date" />
               <DateField source="due_date" />
@@ -104,18 +108,23 @@ export const CompetitionShow = ({ record }: any) => (
               <ReferenceField source="issue_type_id" reference="issue_type"><TextField source="name" /></ReferenceField>
               <ReferenceField source="user_quest_id" reference="user_quest"><TextField source="name" /></ReferenceField>
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Competition",
         content: (
-          <ReferenceManyField reference={"competition"} target={"parent_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"competition"} target={"parent_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <ReferenceField source="provider_id" reference="account"><TextField source="name" /></ReferenceField>
@@ -127,52 +136,68 @@ export const CompetitionShow = ({ record }: any) => (
               <NumberField source="order" />
               <ReferenceField source="category_id" reference="competition_category"><TextField source="name" /></ReferenceField>
               <ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Qualification In Competition",
         content: (
-          <ReferenceManyField reference={"qualification_in_competition"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"qualification_in_competition"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="pet_qualification_id" reference="pet_qualification"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Award In Competition",
         content: (
-          <ReferenceManyField reference={"award_in_competition"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"award_in_competition"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="award_id" reference="award"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Contact In Competition",
         content: (
-          <ReferenceManyField reference={"contact_in_competition"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"contact_in_competition"} target={"competition_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="contact_id" />
               <BooleanField source="international_judgment" />
               <BooleanField source="national_judgment" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ]
+  ]
     }
   />
 );

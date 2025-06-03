@@ -1,11 +1,11 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
 import { BooleanField, DateField, NumberField, ReferenceField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
-import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
+import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";
 
 
 export const CoatTypeInBreedShow = ({ record }: any) => (
-  <LookupResourceShowLayout
+  <ChildResourceShowLayout
     name={
       <Labeled label="Name" value={<TextField source="name" />} />
     }

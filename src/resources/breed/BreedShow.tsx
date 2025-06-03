@@ -1,5 +1,5 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
+import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 
@@ -47,9 +47,13 @@ export const BreedShow = ({ record }: any) => (
       {
         label: "Contact",
         content: (
-          <ReferenceManyField reference={"contact"} target={"promote_breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"contact"} target={"promote_breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="description" />
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
@@ -111,18 +115,23 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
               <NumberField source="rating" />
               <NumberField source="lead_conversion_score" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Raw Data",
         content: (
-          <ReferenceManyField reference={"raw_data"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"raw_data"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <TextField source="json" />
@@ -139,30 +148,40 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
               <ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>
               <TextField source="pet_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
-        label: "Order",
+        label: "\"Order\"",
         content: (
-          <ReferenceManyField reference={"\"order\""} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              
-            </Datagrid>
-          </ReferenceManyField>
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"\"order\""} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Project",
         content: (
-          <ReferenceManyField reference={"project"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"project"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
@@ -207,18 +226,23 @@ export const BreedShow = ({ record }: any) => (
               <TextField source="url" />
               <ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>
               <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Competition",
         content: (
-          <ReferenceManyField reference={"competition"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"competition"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <ReferenceField source="provider_id" reference="account"><TextField source="name" /></ReferenceField>
@@ -231,18 +255,23 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>
               <NumberField source="order" />
               <ReferenceField source="category_id" reference="competition_category"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Cover",
         content: (
-          <ReferenceManyField reference={"cover"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"cover"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <TextField source="redirect_url" />
@@ -251,18 +280,23 @@ export const BreedShow = ({ record }: any) => (
               <TextField source="owner_id" />
               <TextField source="url" />
               <BooleanField source="is_default" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Note",
         content: (
-          <ReferenceManyField reference={"note"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"note"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <TextField source="pet_id" />
@@ -276,33 +310,43 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="entity_schema_id" reference="entity_schema_lookup"><TextField source="name" /></ReferenceField>
               <ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Top Pet In Breed",
         content: (
-          <ReferenceManyField reference={"top_pet_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"top_pet_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="pet_id" />
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Public Data",
         content: (
-          <ReferenceManyField reference={"public_data"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"public_data"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="hash_md5" />
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
@@ -320,18 +364,23 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="pet_titles_id" reference="title_in_pet"><TextField source="name" /></ReferenceField>
               <BooleanField source="has_owner" />
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Invoice",
         content: (
-          <ReferenceManyField reference={"invoice"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"invoice"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="number" />
               <DateField source="start_date" />
               <NumberField source="primary_amount" />
@@ -358,18 +407,23 @@ export const BreedShow = ({ record }: any) => (
               <NumberField source="payment_amount_without_tax" />
               <NumberField source="primary_payment_amount_without_tax" />
               <BooleanField source="created_from_order" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Breed Division",
         content: (
-          <ReferenceManyField reference={"breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="description" />
               <BooleanField source="division_by_color" />
@@ -378,18 +432,23 @@ export const BreedShow = ({ record }: any) => (
               <BooleanField source="division_by_size" />
               <BooleanField source="division_by_coat_type" />
               <ReferenceField source="breed_standard_id" reference="breed_standard"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Contact Career",
         content: (
-          <ReferenceManyField reference={"contact_career"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"contact_career"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="contact_id" />
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
               <ReferenceField source="department_id" reference="department"><TextField source="name" /></ReferenceField>
@@ -403,238 +462,323 @@ export const BreedShow = ({ record }: any) => (
               <TextField source="description" />
               <ReferenceField source="decision_role_id" reference="contact_decision_role"><TextField source="name" /></ReferenceField>
               <NumberField source="rating" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Related Breed",
         content: (
-          <ReferenceManyField reference={"related_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
-            </Datagrid>
-          </ReferenceManyField>
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"related_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Breed Synonym",
         content: (
-          <ReferenceManyField reference={"breed_synonym"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"breed_synonym"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <ReferenceField source="language_id" reference="sys_language"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Body Feature In Breed",
         content: (
-          <ReferenceManyField reference={"body_feature_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"body_feature_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="body_feature_id" reference="body_feature"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Coat Type In Breed Division",
         content: (
-          <ReferenceManyField reference={"coat_type_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"coat_type_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="coat_type_id" reference="coat_type"><TextField source="name" /></ReferenceField>
               <ReferenceField source="breed_division_id" reference="breed_division"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Achievement In Breed",
         content: (
-          <ReferenceManyField reference={"achievement_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"achievement_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="achievement_id" reference="achievement"><TextField source="name" /></ReferenceField>
               <DateField source="date" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Pet Size In Breed",
         content: (
-          <ReferenceManyField reference={"pet_size_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"pet_size_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="pet_size_id" reference="pet_size"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Body Feature In Breed Division",
         content: (
-          <ReferenceManyField reference={"body_feature_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"body_feature_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="body_feature_id" reference="body_feature"><TextField source="name" /></ReferenceField>
               <ReferenceField source="breed_division_id" reference="breed_division"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Health Exam Object In Breed",
         content: (
-          <ReferenceManyField reference={"health_exam_object_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"health_exam_object_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="health_exam_object_id" reference="health_exam_object"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Coat Color In Breed",
         content: (
-          <ReferenceManyField reference={"coat_color_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"coat_color_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="coat_color_id" reference="coat_color"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Coat Color In Breed Division",
         content: (
-          <ReferenceManyField reference={"coat_color_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"coat_color_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="breed_division_id" reference="breed_division"><TextField source="name" /></ReferenceField>
               <ReferenceField source="coat_color_id" reference="coat_color"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Coat Type In Breed",
         content: (
-          <ReferenceManyField reference={"coat_type_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"coat_type_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="coat_type_id" reference="coat_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Breed Forecast",
         content: (
-          <ReferenceManyField reference={"breed_forecast"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"breed_forecast"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <NumberField source="value" />
               <ReferenceField source="period_id" reference="period"><TextField source="name" /></ReferenceField>
               <NumberField source="amount" />
               <NumberField source="primary_amount" />
               <ReferenceField source="currency_id" reference="currency"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Pet Size In Breed Division",
         content: (
-          <ReferenceManyField reference={"pet_size_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"pet_size_in_breed_division"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="pet_size_id" reference="pet_size"><TextField source="name" /></ReferenceField>
               <ReferenceField source="breed_division_id" reference="breed_division"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Measurement Type In Breed",
         content: (
-          <ReferenceManyField reference={"measurement_type_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"measurement_type_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="measurement_type_id" reference="measurement_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Breed In Kennel",
         content: (
-          <ReferenceManyField reference={"breed_in_kennel"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"breed_in_kennel"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
               <ReferenceField source="breed_standard_id" reference="breed_standard"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Breed In Account",
         content: (
-          <ReferenceManyField reference={"breed_in_account"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"breed_in_account"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="breed_standard_id" reference="breed_standard"><TextField source="name" /></ReferenceField>
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
               <NumberField source="pet_count" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Breed Standard",
         content: (
-          <ReferenceManyField reference={"breed_standard"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"breed_standard"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <ReferenceField source="subsection_id" reference="breed_subsection"><TextField source="name" /></ReferenceField>
               <ReferenceField source="section_id" reference="breed_section"><TextField source="name" /></ReferenceField>
@@ -647,107 +791,138 @@ export const BreedShow = ({ record }: any) => (
               <BooleanField source="working_trial" />
               <ReferenceField source="status_id" reference="breed_standard_status"><TextField source="name" /></ReferenceField>
               <BooleanField source="has_variable_divisions" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item Measurement",
         content: (
-          <ReferenceManyField reference={"conf_item_measurement"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_measurement"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <NumberField source="value" />
               <ReferenceField source="conf_item_id" reference="conf_item"><TextField source="name" /></ReferenceField>
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
               <TextField source="contact_id" />
               <ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Payment In Breed",
         content: (
-          <ReferenceManyField reference={"payment_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"payment_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <NumberField source="amount" />
               <TextField source="contact_id" />
               <ReferenceField source="invoice_id" reference="invoice"><TextField source="name" /></ReferenceField>
               <DateField source="date" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "User Settings",
         content: (
-          <ReferenceManyField reference={"user_settings"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"user_settings"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="contact_id" />
               <ReferenceField source="page_view_id" reference="page_view"><TextField source="name" /></ReferenceField>
               <ReferenceField source="size_unit_id" reference="unit"><TextField source="name" /></ReferenceField>
               <ReferenceField source="weight_unit_id" reference="unit"><TextField source="name" /></ReferenceField>
               <BooleanField source="anonymous_gift_sender" />
               <BooleanField source="welcome_stage_complete" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Contact In Breed",
         content: (
-          <ReferenceManyField reference={"contact_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"contact_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="contact_id" />
               <NumberField source="rating" />
               <NumberField source="place" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Top Patron In Breed",
         content: (
-          <ReferenceManyField reference={"top_patron_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"top_patron_in_breed"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="contact_id" />
               <NumberField source="rating" />
               <NumberField source="place" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Breed In Contact",
         content: (
-          <ReferenceManyField reference={"breed_in_contact"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"breed_in_contact"} target={"breed_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="breed_standard_id" reference="breed_standard"><TextField source="name" /></ReferenceField>
               <TextField source="contact_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ]
+  ]
     }
   />
 );

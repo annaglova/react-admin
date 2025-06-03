@@ -1,5 +1,5 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
+import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 
@@ -36,9 +36,13 @@ export const ServicePactShow = ({ record }: any) => (
       {
         label: "Service In Service Pact",
         content: (
-          <ReferenceManyField reference={"service_in_service_pact"} target={"service_pact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"service_in_service_pact"} target={"service_pact_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="service_item_id" reference="service_item"><TextField source="name" /></ReferenceField>
               <NumberField source="reaction_time_value" />
               <ReferenceField source="reaction_time_unit_id" reference="time_unit"><TextField source="name" /></ReferenceField>
@@ -48,23 +52,29 @@ export const ServicePactShow = ({ record }: any) => (
               <TextField source="reaction_time" />
               <TextField source="solution_time" />
               <TextField source="concat_name" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Service Pact In Tag",
         content: (
-          <ReferenceManyField reference={"service_pact_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
-            </Datagrid>
-          </ReferenceManyField>
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"service_pact_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ]
+  ]
     }
   />
 );

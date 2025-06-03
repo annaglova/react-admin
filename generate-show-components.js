@@ -1,3 +1,4 @@
+// generate-show-components.js
 require("dotenv").config();
 const { createClient } = require("@supabase/supabase-js");
 const fs = require("fs");
@@ -6,7 +7,7 @@ const path = require("path");
 const SKIP_MARK = "// @MANUAL";
 
 const resources = require("./src/resourcesList.json");
-const MAIN_RESOURCES = resources.MAIN_RESOURCES;
+const MAIN_RESOURCES = resources.MAIN_RESOURCES || [];
 const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES || [];
 const CHILD_RESOURCES = resources.CHILD_RESOURCES || [];
 const ALL_RESOURCES = [
@@ -181,24 +182,25 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
           configs.push(`
       {
-        label: ${JSON.stringify(
-          labelFor(dt.tableName)
-            .replace(/^"(.+)"$/, "$1")
-            .replace(/['"]/g, "")
-        )},
+        label: ${JSON.stringify(labelFor(dt.tableName))},
         content: (
-          <ReferenceManyField reference={${JSON.stringify(
-            dt.tableName
-          )}} target={${JSON.stringify(
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={${JSON.stringify(
+              dt.tableName
+            )}} target={${JSON.stringify(
             dt.fkColumns[0]
           )}} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              ${datagridFields}
-            </Datagrid>
-          </ReferenceManyField>
+              <Datagrid>
+                ${datagridFields}
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          `);
+  `);
         }
 
         detailsConfigsJsx = `[${configs.join(",\n        ")}]`;
@@ -212,15 +214,14 @@ const supabase = createClient(supabaseUrl, supabaseKey);
       "BooleanField",
       "DateField",
     ]);
-    // ReferenceField якщо є FK
     if (columns.some((f) => fkMap[f.column_name]))
       importsSet.add("ReferenceField");
-    // Для MAIN — додаємо компоненти табів
     if (MAIN_RESOURCES.includes(table)) {
       importsSet.add("Tab");
       importsSet.add("ReferenceManyField");
       importsSet.add("Datagrid");
       importsSet.add("Pagination");
+      importsSet.add("CreateButton");
     }
 
     // 5. Name/id поля як Labeled
@@ -252,14 +253,20 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     const fieldsLeft = leftFields.map(genField).join("\n        ");
     const fieldsRight = rightFields.map(genField).join("\n        ");
 
-    // 7. Layout imports
-    const layoutImport = MAIN_RESOURCES.includes(table)
-      ? `import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";`
-      : `import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";`;
-
-    const layoutName = MAIN_RESOURCES.includes(table)
-      ? "MainResourceShowLayout"
-      : "LookupResourceShowLayout";
+    // 7. Layout imports + назва layout'а
+    let layoutImport, layoutName;
+    if (MAIN_RESOURCES.includes(table)) {
+      layoutImport = `import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";`;
+      layoutName = "MainResourceShowLayout";
+    } else if (LOOKUP_RESOURCES.includes(table)) {
+      layoutImport = `import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";`;
+      layoutName = "LookupResourceShowLayout";
+    } else if (CHILD_RESOURCES.includes(table)) {
+      layoutImport = `import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";`;
+      layoutName = "ChildResourceShowLayout";
+    } else {
+      throw new Error(`Таблиця ${table} не знайдена в MAIN/LOOKUP/CHILD`);
+    }
 
     // 8. Формуємо фінальний код компонента
     const Name = toPascalCase(table);
@@ -273,6 +280,7 @@ ${layoutImport}
 
 `;
 
+    // MAIN має detailsConfigs, інші — ні
     if (MAIN_RESOURCES.includes(table)) {
       code += `
 export const ${Name}Show = ({ record }: any) => (
@@ -300,7 +308,7 @@ export const ${Name}Show = ({ record }: any) => (
 );
 `;
     } else {
-      // LOOKUP — old style
+      // LOOKUP/CHILD
       code += `
 export const ${Name}Show = ({ record }: any) => (
   <${layoutName}

@@ -1,5 +1,5 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
+import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 
@@ -56,9 +56,13 @@ export const ConfItemShow = ({ record }: any) => (
       {
         label: "Activity",
         content: (
-          <ReferenceManyField reference={"activity"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"activity"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="title" />
               <DateField source="start_date" />
               <DateField source="due_date" />
@@ -123,53 +127,68 @@ export const ConfItemShow = ({ record }: any) => (
               <ReferenceField source="issue_type_id" reference="issue_type"><TextField source="name" /></ReferenceField>
               <ReferenceField source="user_quest_id" reference="user_quest"><TextField source="name" /></ReferenceField>
               <TextField source="pet_breed_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Quest Stage",
         content: (
-          <ReferenceManyField reference={"quest_stage"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"quest_stage"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="title" />
               <TextField source="business_process_id" />
               <ReferenceField source="quest_id" reference="quest"><TextField source="name" /></ReferenceField>
               <NumberField source="order" />
               <TextField source="description" />
               <TextField source="code" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Quest User Data",
         content: (
-          <ReferenceManyField reference={"quest_user_data"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"quest_user_data"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="quest_status_id" reference="quest_status"><TextField source="name" /></ReferenceField>
               <ReferenceField source="current_stage_id" reference="quest_stage"><TextField source="name" /></ReferenceField>
               <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
               <TextField source="data" />
               <DateField source="due_date" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Raw Data",
         content: (
-          <ReferenceManyField reference={"raw_data"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"raw_data"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <TextField source="json" />
@@ -186,18 +205,23 @@ export const ConfItemShow = ({ record }: any) => (
               <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
               <ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>
               <TextField source="pet_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item",
         content: (
-          <ReferenceManyField reference={"conf_item"} target={"parent_conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item"} target={"parent_conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <ReferenceField source="type_id" reference="config_item_type"><TextField source="name" /></ReferenceField>
               <TextField source="serial_number" />
@@ -229,18 +253,23 @@ export const ConfItemShow = ({ record }: any) => (
               <TextField source="page_model" />
               <NumberField source="quest_cycle_interval" />
               <TextField source="quest_type_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Cashflow",
         content: (
-          <ReferenceManyField reference={"cashflow"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"cashflow"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>
               <TextField source="number" />
               <ReferenceField source="type_id" reference="cashflow_type"><TextField source="name" /></ReferenceField>
@@ -256,33 +285,43 @@ export const ConfItemShow = ({ record }: any) => (
               <ReferenceField source="invoice_id" reference="invoice"><TextField source="name" /></ReferenceField>
               <ReferenceField source="income_fin_account_id" reference="fin_account"><TextField source="name" /></ReferenceField>
               <ReferenceField source="outcome_fin_account_id" reference="fin_account"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Service In Conf Item",
         content: (
-          <ReferenceManyField reference={"service_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"service_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="service_item_id" reference="service_item"><TextField source="name" /></ReferenceField>
               <ReferenceField source="dependency_category_id" reference="dependency_category"><TextField source="name" /></ReferenceField>
               <ReferenceField source="dependency_type_id" reference="dependency_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item Address",
         content: (
-          <ReferenceManyField reference={"conf_item_address"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_address"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="country_id" reference="country"><TextField source="name" /></ReferenceField>
               <ReferenceField source="region_id" reference="region"><TextField source="name" /></ReferenceField>
               <ReferenceField source="city_id" reference="city"><TextField source="name" /></ReferenceField>
@@ -291,74 +330,99 @@ export const ConfItemShow = ({ record }: any) => (
               <DateField source="start_date" />
               <DateField source="end_date" />
               <BooleanField source="current" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item In Case",
         content: (
-          <ReferenceManyField reference={"conf_item_in_case"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_in_case"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <BooleanField source="major" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Process Selector In Conf Item",
         content: (
-          <ReferenceManyField reference={"process_selector_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"process_selector_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <BooleanField source="is_collection" />
               <TextField source="selector" />
               <TextField source="parameter_name" />
               <TextField source="result_element_name" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Raw Data Session Cookies",
         content: (
-          <ReferenceManyField reference={"raw_data_session_cookies"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"raw_data_session_cookies"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="cookies" />
               <TextField source="headers" />
               <TextField source="domen" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item In Tag",
         content: (
-          <ReferenceManyField reference={"conf_item_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
-            </Datagrid>
-          </ReferenceManyField>
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item Process Launch",
         content: (
-          <ReferenceManyField reference={"conf_item_process_launch"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_process_launch"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <NumberField source="launch_number" />
@@ -369,86 +433,112 @@ export const ConfItemShow = ({ record }: any) => (
               <DateField source="update_date" />
               <BooleanField source="reanimate" />
               <TextField source="parameters_value" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Process Parameter In Conf Item",
         content: (
-          <ReferenceManyField reference={"process_parameter_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"process_parameter_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="parameter_value" />
               <TextField source="parameter_name" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item Relationship",
         content: (
-          <ReferenceManyField reference={"conf_item_relationship"} target={"conf_item_b_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_relationship"} target={"conf_item_b_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="dependency_category_id" reference="dependency_category"><TextField source="name" /></ReferenceField>
               <ReferenceField source="dependency_type_id" reference="dependency_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Parsing Business Process In Conf Item",
         content: (
-          <ReferenceManyField reference={"parsing_business_process_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"parsing_business_process_in_conf_item"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <NumberField source="priority" />
               <TextField source="business_process_id" />
               <BooleanField source="is_active" />
               <TextField source="provider_class_name" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item Measurement",
         content: (
-          <ReferenceManyField reference={"conf_item_measurement"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_measurement"} target={"conf_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <NumberField source="value" />
               <ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>
               <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
               <TextField source="contact_id" />
               <ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Conf Item Comparison Result",
         content: (
-          <ReferenceManyField reference={"conf_item_comparison_result"} target={"conf_item_minus_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"conf_item_comparison_result"} target={"conf_item_minus_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <NumberField source="delta" />
               <TextField source="contact_id" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ]
+  ]
     }
   />
 );

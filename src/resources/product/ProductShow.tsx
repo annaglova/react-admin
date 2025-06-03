@@ -1,5 +1,5 @@
 // АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
+import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 
@@ -44,9 +44,13 @@ export const ProductShow = ({ record }: any) => (
       {
         label: "Service Pact",
         content: (
-          <ReferenceManyField reference={"service_pact"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"service_pact"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <ReferenceField source="status_id" reference="service_pact_status"><TextField source="name" /></ReferenceField>
               <DateField source="start_date" />
@@ -58,18 +62,23 @@ export const ProductShow = ({ record }: any) => (
               <TextField source="notes" />
               <ReferenceField source="calendar_id" reference="calendar"><TextField source="name" /></ReferenceField>
               <ReferenceField source="provider_id" reference="account"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Invoice Product",
         content: (
-          <ReferenceManyField reference={"invoice_product"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"invoice_product"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="notes" />
               <TextField source="custom_product" />
@@ -90,47 +99,62 @@ export const ProductShow = ({ record }: any) => (
               <NumberField source="discount_tax" />
               <ReferenceField source="invoice_id" reference="invoice"><TextField source="name" /></ReferenceField>
               <NumberField source="base_quantity" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Product Unit",
         content: (
-          <ReferenceManyField reference={"product_unit"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"product_unit"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="unit_id" reference="unit"><TextField source="name" /></ReferenceField>
               <BooleanField source="is_base" />
               <NumberField source="number_of_base_units" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "Product Price",
         content: (
-          <ReferenceManyField reference={"product_price"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"product_price"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <ReferenceField source="currency_id" reference="currency"><TextField source="name" /></ReferenceField>
               <NumberField source="price" />
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ,
+  ,
         
       {
         label: "License Manager",
         content: (
-          <ReferenceManyField reference={"license_manager"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-            <Datagrid>
-              <TextField source="id" />
+          <>
+            <div className="flex justify-end px-4 pt-2 pb-1">
+              <CreateButton/>
+            </div>
+            <ReferenceManyField reference={"license_manager"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
+              <Datagrid>
+                <TextField source="id" />
               <TextField source="name" />
               <TextField source="contact_id" />
               <ReferenceField source="status_id" reference="license_manager_status"><TextField source="name" /></ReferenceField>
@@ -140,11 +164,12 @@ export const ProductShow = ({ record }: any) => (
               <ReferenceField source="invoice_id" reference="invoice"><TextField source="name" /></ReferenceField>
               <ReferenceField source="type_id" reference="license_manager_type"><TextField source="name" /></ReferenceField>
               <ReferenceField source="manage_type_id" reference="license_manager_manage_type"><TextField source="name" /></ReferenceField>
-            </Datagrid>
-          </ReferenceManyField>
+              </Datagrid>
+            </ReferenceManyField>
+          </>
         ),
       }
-          ]
+  ]
     }
   />
 );

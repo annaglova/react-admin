@@ -1,14 +1,24 @@
-import { Edit, ReferenceInput, SelectInput, SimpleForm } from "react-admin";
+import { ReferenceInput, SelectInput } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CoatColorInBreedEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <ReferenceInput source="breed_id" reference="breed">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <ReferenceInput source="coat_color_id" reference="coat_color">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      null
+    }
+    fieldsLeft={
+      <>
+        <ReferenceInput source="breed_id" reference="breed">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="coat_color_id" reference="coat_color">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

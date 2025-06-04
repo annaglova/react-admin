@@ -1,16 +1,25 @@
-import { BooleanInput, DateInput, Edit, NumberInput, SimpleForm, TextInput } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, TextInput } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const UserQuestEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <TextInput source="name" />
-      <DateInput source="finish_date" />
-      <TextInput source="contact_id" />
-      <DateInput source="deadline_date" />
-      <BooleanInput source="deactivated" />
-      <NumberInput source="reward" />
-      <TextInput source="description" />
-      <NumberInput source="frequency_interval" />
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <DateInput source="finish_date" />
+          <TextInput source="contact_id" />
+          <DateInput source="deadline_date" />
+          <BooleanInput source="deactivated" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <NumberInput source="reward" />
+          <TextInput source="description" />
+          <NumberInput source="frequency_interval" />
+      </>
+    }
+  />
 );

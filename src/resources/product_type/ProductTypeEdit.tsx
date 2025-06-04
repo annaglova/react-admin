@@ -1,14 +1,23 @@
-import { BooleanInput, Edit, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ProductTypeEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <BooleanInput source="is_service" />
-      <ReferenceInput source="category_id" reference="product_category">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <BooleanInput source="is_service" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="category_id" reference="product_category">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

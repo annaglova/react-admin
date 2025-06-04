@@ -1,12 +1,21 @@
-import { Edit, NumberInput, SimpleForm, TextInput } from "react-admin";
+import { NumberInput, TextInput } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const GeoNamesTimeZoneEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <NumberInput source="gmt_offset" />
-      <TextInput source="country_code" />
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <NumberInput source="gmt_offset" />
+      </>
+    }
+    fieldsRight={
+      <>
+        <TextInput source="country_code" />
+      </>
+    }
+  />
 );

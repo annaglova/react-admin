@@ -1,14 +1,24 @@
-import { Edit, ReferenceInput, SelectInput, SimpleForm } from "react-admin";
+import { ReferenceInput, SelectInput } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const AwardInCompetitionEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <ReferenceInput source="award_id" reference="award">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <ReferenceInput source="competition_id" reference="competition">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      null
+    }
+    fieldsLeft={
+      <>
+        <ReferenceInput source="award_id" reference="award">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="competition_id" reference="competition">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

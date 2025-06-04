@@ -1,16 +1,25 @@
-import { Edit, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const UnitByMeasurementTypeEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <ReferenceInput source="measurement_type_id" reference="measurement_type">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <ReferenceInput source="unit_id" reference="unit">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <ReferenceInput source="measurement_type_id" reference="measurement_type">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="unit_id" reference="unit">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

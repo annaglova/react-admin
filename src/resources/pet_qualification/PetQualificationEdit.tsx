@@ -1,17 +1,26 @@
-import { Edit, NumberInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PetQualificationEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <TextInput source="name" />
-      <TextInput source="description" />
-      <ReferenceInput source="pet_type_id" reference="pet_type">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <NumberInput source="code" />
-      <ReferenceInput source="provider_id" reference="account">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      <>{<TextInput source="name" />}</>
+    }
+    fieldsLeft={
+      <>
+        <TextInput source="description" />
+          <ReferenceInput source="pet_type_id" reference="pet_type">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+    fieldsRight={
+      <>
+        <NumberInput source="code" />
+          <ReferenceInput source="provider_id" reference="account">
+  <SelectInput optionText="name" />
+</ReferenceInput>
+      </>
+    }
+  />
 );

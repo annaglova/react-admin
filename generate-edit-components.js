@@ -1,25 +1,27 @@
-// generate-edit-components.js
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config();
+const { createClient } = require("@supabase/supabase-js");
+
 const resources = require("./src/resourcesList.json");
-
-const SKIP_MARK = "// @MANUAL";
-
-const MAIN_RESOURCES = resources.MAIN_RESOURCES;
-const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES;
-const CHILD_RESOURCES = resources.CHILD_RESOURCES;
+const MAIN_RESOURCES = resources.MAIN_RESOURCES || [];
+const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES || [];
+const CHILD_RESOURCES = resources.CHILD_RESOURCES || [];
 const ALL_RESOURCES = [
   ...MAIN_RESOURCES,
   ...LOOKUP_RESOURCES,
   ...CHILD_RESOURCES,
 ];
 
+const SKIP_MARK = "// @MANUAL";
 const EXCLUDE_FIELDS = [
   "id",
   "created_on",
   "created_by_id",
   "modified_on",
   "modified_by_id",
+  "updated_at",
+  "created_at",
 ];
 
 const typeMap = {
@@ -48,16 +50,28 @@ function toPascalCase(str) {
     .join("");
 }
 
+// Групування: name окремо, інші по колонках
+function groupColumns(cols, exclude = []) {
+  const filtered = cols.filter((c) => !exclude.includes(c.column_name));
+  const nameCol =
+    filtered.find((c) => c.column_name === "name") ||
+    filtered.find((c) => c.column_name === "title") ||
+    filtered.find((c) => c.column_name === "label") ||
+    filtered.find((c) => c.column_name === "value");
+  const rest = filtered.filter(
+    (c) => !["name", "title", "label", "value"].includes(c.column_name)
+  );
+  return { nameCol, rest };
+}
+
 // ------ Supabase setup -----
-require("dotenv").config();
-const { createClient } = require("@supabase/supabase-js");
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 (async () => {
   for (const table of ALL_RESOURCES) {
-    // 1. Columns
+    // 1. Колонки таблиці
     const { data: columns, error: colErr } = await supabase.rpc(
       "get_table_columns",
       { tablename: table }
@@ -84,46 +98,67 @@ const supabase = createClient(supabaseUrl, supabaseKey);
       }
     }
 
-    // 3. Form fields
-    const fields = columns.filter(
-      (col) => !EXCLUDE_FIELDS.includes(col.column_name)
-    );
-    const importsSet = new Set(["SimpleForm", "Edit"]);
-    const formFields = fields
-      .map((col) => {
-        if (fkMap[col.column_name]) {
-          importsSet.add("ReferenceInput");
-          importsSet.add("SelectInput");
-          return `      <ReferenceInput source="${
-            col.column_name
-          }" reference="${fkMap[col.column_name]}">
-        <SelectInput optionText="name" />
-      </ReferenceInput>`;
-        } else {
-          const type = typeMap[col.data_type] || "TextInput";
-          importsSet.add(type);
-          return `      <${type} source="${col.column_name}" />`;
-        }
-      })
-      .join("\n");
+    // 3. Групування
+    const { nameCol, rest } = groupColumns(columns, EXCLUDE_FIELDS);
+    const mid = Math.ceil(rest.length / 2);
+    const leftFields = rest.slice(0, mid);
+    const rightFields = rest.slice(mid);
 
-    // 4. Code
+    // 4. Генерація полів
+    const importsSet = new Set(["ResourceEditLayout"]);
+    function renderField(col) {
+      if (fkMap[col.column_name]) {
+        importsSet.add("ReferenceInput");
+        importsSet.add("SelectInput");
+        return `<ReferenceInput source="${col.column_name}" reference="${
+          fkMap[col.column_name]
+        }">
+  <SelectInput optionText="name" />
+</ReferenceInput>`;
+      } else {
+        const type = typeMap[col.data_type] || "TextInput";
+        importsSet.add(type);
+        return `<${type} source="${col.column_name}" />`;
+      }
+    }
+
+    // name field окремо
+    const nameField = nameCol ? renderField(nameCol) : "";
+
+    // Інші — по колонках
+    const fieldsLeft = leftFields.map(renderField).join("\n          ");
+    const fieldsRight = rightFields.map(renderField).join("\n          ");
+
+    // 5. Генеруємо фінальний код
     const Name = toPascalCase(table);
     const dir = path.join("src", "resources", table);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
     const code = `import { ${Array.from(importsSet)
+      .filter((x) => x !== "ResourceEditLayout") // не імпортуємо Layout з react-admin
       .sort()
       .join(", ")} } from "react-admin";
+import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ${Name}Edit = () => (
-  <Edit>
-    <SimpleForm>
-${formFields}
-    </SimpleForm>
-  </Edit>
+  <ResourceEditLayout
+    name={
+      ${nameField ? `<>{${nameField}}</>` : "null"}
+    }
+    fieldsLeft={
+      <>
+        ${fieldsLeft}
+      </>
+    }
+    fieldsRight={
+      <>
+        ${fieldsRight}
+      </>
+    }
+  />
 );
 `;
+
     const fileName = `${Name}Edit.tsx`;
     const filePath = path.join(dir, fileName);
 

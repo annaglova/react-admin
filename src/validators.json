@@ -426,6 +426,15 @@
       "isRequired": false
     }
   },
+  "coat_color_in_breed": {
+    "id": {
+      "isRequired": true
+    },
+
+    "breed_id": {
+      "isRequired": true
+    }
+  },
   "breed": {
     "id": {
       "isRequired": true

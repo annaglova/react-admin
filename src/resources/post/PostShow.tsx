@@ -37,113 +37,113 @@ export const PostShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Post",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post"} target={"master_post_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <DateField source="publication_date" />
-              <ReferenceField source="type_id" reference="post_type"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="state_id" reference="post_state"><TextField source="name" /></ReferenceField>
-              <TextField source="text" />
-              <TextField source="url" />
-              <BooleanField source="is_moment" />
-              <TextField source="author_id" />
-              <DateField source="date" />
-              <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
-              <NumberField source="latitude" />
-              <NumberField source="longitude" />
-              <TextField source="photos" />
-              <TextField source="participants" />
-              <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post" />
+        </div>
+        <ReferenceManyField reference="post" target="master_post_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id *" />
+              <TextField source="name" label="Name" />
+              <DateField source="publication_date" label="Publication Date" />
+              <ReferenceField source="type_id" reference="post_type" label="Type Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="state_id" reference="post_state" label="State Id"><TextField source="name" /></ReferenceField>
+              <TextField source="text" label="Text" />
+              <TextField source="url" label="Url" />
+              <BooleanField source="is_moment" label="Is Moment" />
+              <TextField source="author_id" label="Author Id" />
+              <DateField source="date" label="Date" />
+              <ReferenceField source="event_id" reference="event" label="Event Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="latitude" label="Latitude" />
+              <NumberField source="longitude" label="Longitude" />
+              <TextField source="photos" label="Photos" />
+              <TextField source="participants" label="Participants" />
+              <ReferenceField source="cover_id" reference="cover" label="Cover Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post In Feed",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_in_feed"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="feed_id" reference="post_feed"><TextField source="name" /></ReferenceField>
-              <BooleanField source="hide" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post In Feed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_in_feed" />
+        </div>
+        <ReferenceManyField reference="post_in_feed" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="feed_id" reference="post_feed" label="Feed Id"><TextField source="name" /></ReferenceField>
+              <BooleanField source="hide" label="Hide" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post Photo",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_photo"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <NumberField source="position" />
-              <TextField source="link" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post Photo",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_photo" />
+        </div>
+        <ReferenceManyField reference="post_photo" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <NumberField source="position" label="Position" />
+              <TextField source="link" label="Link" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post Like",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_like"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post Like",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_like" />
+        </div>
+        <ReferenceManyField reference="post_like" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="contact_id" reference="contact" label="Contact Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post Comment",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_comment"} target={"post_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
-              <TextField source="text" />
-              <DateField source="date" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "Post Comment",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_comment" />
+        </div>
+        <ReferenceManyField reference="post_comment" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="contact_id" reference="contact" label="Contact Id"><TextField source="name" /></ReferenceField>
+              <TextField source="text" label="Text" />
+              <DateField source="date" label="Date" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

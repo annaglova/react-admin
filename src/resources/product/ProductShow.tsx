@@ -41,135 +41,135 @@ export const ProductShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Service Pact",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"service_pact"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <ReferenceField source="status_id" reference="service_pact_status"><TextField source="name" /></ReferenceField>
-              <DateField source="start_date" />
-              <DateField source="end_date" />
-              <TextField source="owner_id" />
-              <TextField source="number" />
-              <ReferenceField source="service_provider_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="service_provider_contact_id" reference="contact"><TextField source="name" /></ReferenceField>
-              <TextField source="notes" />
-              <ReferenceField source="calendar_id" reference="calendar"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="provider_id" reference="account"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Service Pact",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="service_pact" />
+        </div>
+        <ReferenceManyField reference="service_pact" target="product_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="name" label="Name" />
+              <ReferenceField source="status_id" reference="service_pact_status" label="Status Id"><TextField source="name" /></ReferenceField>
+              <DateField source="start_date" label="Start Date" />
+              <DateField source="end_date" label="End Date" />
+              <TextField source="owner_id" label="Owner Id" />
+              <TextField source="number" label="Number" />
+              <ReferenceField source="service_provider_id" reference="account" label="Service Provider Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="service_provider_contact_id" reference="contact" label="Service Provider Contact Id"><TextField source="name" /></ReferenceField>
+              <TextField source="notes" label="Notes" />
+              <ReferenceField source="calendar_id" reference="calendar" label="Calendar Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="provider_id" reference="account" label="Provider Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Invoice Product",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"invoice_product"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="notes" />
-              <TextField source="custom_product" />
-              <DateField source="delivery_date" />
-              <NumberField source="quantity" />
-              <ReferenceField source="unit_id" reference="unit"><TextField source="name" /></ReferenceField>
-              <NumberField source="primary_price" />
-              <NumberField source="price" />
-              <NumberField source="primary_amount" />
-              <NumberField source="amount" />
-              <NumberField source="primary_discount_amount" />
-              <NumberField source="discount_amount" />
-              <NumberField source="discount_percent" />
-              <NumberField source="primary_tax_amount" />
-              <NumberField source="tax_amount" />
-              <NumberField source="primary_total_amount" />
-              <NumberField source="total_amount" />
-              <NumberField source="discount_tax" />
-              <ReferenceField source="invoice_id" reference="invoice"><TextField source="name" /></ReferenceField>
-              <NumberField source="base_quantity" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Invoice Product",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="invoice_product" />
+        </div>
+        <ReferenceManyField reference="invoice_product" target="product_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="name" label="Name" />
+              <TextField source="notes" label="Notes" />
+              <TextField source="custom_product" label="Custom Product" />
+              <DateField source="delivery_date" label="Delivery Date" />
+              <NumberField source="quantity" label="Quantity" />
+              <ReferenceField source="unit_id" reference="unit" label="Unit Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="primary_price" label="Primary Price" />
+              <NumberField source="price" label="Price" />
+              <NumberField source="primary_amount" label="Primary Amount" />
+              <NumberField source="amount" label="Amount" />
+              <NumberField source="primary_discount_amount" label="Primary Discount Amount" />
+              <NumberField source="discount_amount" label="Discount Amount" />
+              <NumberField source="discount_percent" label="Discount Percent" />
+              <NumberField source="primary_tax_amount" label="Primary Tax Amount" />
+              <NumberField source="tax_amount" label="Tax Amount" />
+              <NumberField source="primary_total_amount" label="Primary Total Amount" />
+              <NumberField source="total_amount" label="Total Amount" />
+              <NumberField source="discount_tax" label="Discount Tax" />
+              <ReferenceField source="invoice_id" reference="invoice" label="Invoice Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="base_quantity" label="Base Quantity" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Product Unit",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"product_unit"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="unit_id" reference="unit"><TextField source="name" /></ReferenceField>
-              <BooleanField source="is_base" />
-              <NumberField source="number_of_base_units" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Product Unit",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="product_unit" />
+        </div>
+        <ReferenceManyField reference="product_unit" target="product_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="unit_id" reference="unit" label="Unit Id"><TextField source="name" /></ReferenceField>
+              <BooleanField source="is_base" label="Is Base" />
+              <NumberField source="number_of_base_units" label="Number Of Base Units" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Product Price",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"product_price"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="currency_id" reference="currency"><TextField source="name" /></ReferenceField>
-              <NumberField source="price" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Product Price",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="product_price" />
+        </div>
+        <ReferenceManyField reference="product_price" target="product_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="currency_id" reference="currency" label="Currency Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="price" label="Price" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "License Manager",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"license_manager"} target={"product_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="contact_id" />
-              <ReferenceField source="status_id" reference="license_manager_status"><TextField source="name" /></ReferenceField>
-              <DateField source="delivery_date" />
-              <DateField source="estimated_date" />
-              <TextField source="owner_id" />
-              <ReferenceField source="invoice_id" reference="invoice"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="type_id" reference="license_manager_type"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="manage_type_id" reference="license_manager_manage_type"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "License Manager",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="license_manager" />
+        </div>
+        <ReferenceManyField reference="license_manager" target="product_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="name" label="Name" />
+              <TextField source="contact_id" label="Contact Id" />
+              <ReferenceField source="status_id" reference="license_manager_status" label="Status Id"><TextField source="name" /></ReferenceField>
+              <DateField source="delivery_date" label="Delivery Date" />
+              <DateField source="estimated_date" label="Estimated Date" />
+              <TextField source="owner_id" label="Owner Id" />
+              <ReferenceField source="invoice_id" reference="invoice" label="Invoice Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="type_id" reference="license_manager_type" label="Type Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="manage_type_id" reference="license_manager_manage_type" label="Manage Type Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

@@ -31,68 +31,68 @@ export const QuestShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Quest Step",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"quest_step"} target={"quest_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="description" />
-              <TextField source="intitial_provider_code" />
-              <TextField source="provider_code" />
-              <NumberField source="position" />
-              <TextField source="dependencies" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Quest Step",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="quest_step" />
+        </div>
+        <ReferenceManyField reference="quest_step" target="quest_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="name" label="Name" />
+              <TextField source="description" label="Description" />
+              <TextField source="intitial_provider_code" label="Intitial Provider Code" />
+              <TextField source="provider_code" label="Provider Code" />
+              <NumberField source="position" label="Position" />
+              <TextField source="dependencies" label="Dependencies" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Quest In Tag",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"quest_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Quest In Tag",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="quest_in_tag" />
+        </div>
+        <ReferenceManyField reference="quest_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Quest Stage",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"quest_stage"} target={"quest_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="title" />
-              <TextField source="business_process_id" />
-              <ReferenceField source="conf_item_id" reference="conf_item"><TextField source="name" /></ReferenceField>
-              <NumberField source="order" />
-              <TextField source="description" />
-              <TextField source="code" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "Quest Stage",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="quest_stage" />
+        </div>
+        <ReferenceManyField reference="quest_stage" target="quest_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="title" label="Title" />
+              <TextField source="business_process_id" label="Business Process Id" />
+              <ReferenceField source="conf_item_id" reference="conf_item" label="Conf Item Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="order" label="Order" />
+              <TextField source="description" label="Description" />
+              <TextField source="code" label="Code" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

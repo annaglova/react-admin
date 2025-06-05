@@ -32,45 +32,45 @@ export const CollectionShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Collection In Tag",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"collection_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Collection In Tag",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="collection_in_tag" />
+        </div>
+        <ReferenceManyField reference="collection_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Collection Entity",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"collection_entity"} target={"collection_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="record_id" />
-              <ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_id" />
-              <TextField source="pet_breed_id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "Collection Entity",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="collection_entity" />
+        </div>
+        <ReferenceManyField reference="collection_entity" target="collection_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="record_id" label="Record Id" />
+              <ReferenceField source="contact_id" reference="contact" label="Contact Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="event_id" reference="event" label="Event Id"><TextField source="name" /></ReferenceField>
+              <TextField source="pet_id" label="Pet Id" />
+              <TextField source="pet_breed_id" label="Pet Breed Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

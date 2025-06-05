@@ -27,42 +27,42 @@ export const PostFeedShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Post In Feed",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_in_feed"} target={"feed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="post_id" reference="post"><TextField source="name" /></ReferenceField>
-              <BooleanField source="hide" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post In Feed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_in_feed" />
+        </div>
+        <ReferenceManyField reference="post_in_feed" target="feed_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="post_id" reference="post" label="Post Id"><TextField source="name" /></ReferenceField>
+              <BooleanField source="hide" label="Hide" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post Feed Subscription",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_feed_subscription"} target={"feed_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="contact_id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "Post Feed Subscription",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_feed_subscription" />
+        </div>
+        <ReferenceManyField reference="post_feed_subscription" target="feed_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="contact_id" label="Contact Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

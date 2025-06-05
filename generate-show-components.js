@@ -54,6 +54,13 @@ function toPascalCase(str) {
     .join("");
 }
 
+function stripQuotes(str) {
+  // Забирає зовнішні подвійні лапки якщо є
+  return typeof str === "string" && str.startsWith('"') && str.endsWith('"')
+    ? str.slice(1, -1)
+    : str;
+}
+
 function labelFor(str) {
   // Наприклад: account_in_tag -> Account In Tag
   return str.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
@@ -75,6 +82,13 @@ function genLabeledField({
   }
   // Просто поле:
   return `<Labeled label="${label}" required={${isRequired}} value={<${type} source="${source}" />} />`;
+}
+
+function getColumnLabel(field, tableName) {
+  const fieldValidators = validators[tableName] || {};
+  const isRequired = !!fieldValidators[field]?.isRequired;
+  const label = labelFor(field);
+  return isRequired ? `${label} *` : label;
 }
 
 // Головна функція для вибору кращих колонок
@@ -170,6 +184,12 @@ const supabase = createClient(supabaseUrl, supabaseKey);
           });
           const detailColumns = detailColumnsResp.data || [];
 
+          const safeResource = stripQuotes(dt.tableName);
+          const safeReference = stripQuotes(dt.tableName);
+          const safeTarget = stripQuotes(dt.fkColumns[0]);
+
+          const createButton = `<CreateButton resource="${safeResource}" />`;
+
           // fk для дочірньої таблиці
           const fkMapDetail = {};
           const { data: fkDetailData } = await supabase.rpc(
@@ -181,48 +201,38 @@ const supabase = createClient(supabaseUrl, supabaseKey);
               fkMapDetail[fk.column_name] = fk.ref_table;
             }
           }
-
-          // Виключаємо target колонки
           const bestCols = groupColumns(detailColumns, dt.fkColumns);
-
           const datagridFields = bestCols
             .map((col) => {
+              const columnLabel = getColumnLabel(col.column_name, dt.tableName);
               if (
                 col.column_name.endsWith("_id") &&
                 fkMapDetail[col.column_name]
               ) {
-                return `<ReferenceField source="${
-                  col.column_name
-                }" reference="${
-                  fkMapDetail[col.column_name]
-                }"><TextField source="name" /></ReferenceField>`;
+                const refTable = fkMapDetail[col.column_name];
+                return `<ReferenceField source="${col.column_name}" reference="${refTable}" label="${columnLabel}"><TextField source="name" /></ReferenceField>`;
               }
               const type = typeMap[col.data_type] || "TextField";
-              return `<${type} source="${col.column_name}" />`;
+              return `<${type} source="${col.column_name}" label="${columnLabel}" />`;
             })
             .join("\n              ");
-
           configs.push(`
-      {
-        label: ${JSON.stringify(labelFor(dt.tableName))},
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={${JSON.stringify(
-              dt.tableName
-            )}} target={${JSON.stringify(
-            dt.fkColumns[0]
-          )}} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                ${datagridFields}
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  `);
+  {
+    label: ${JSON.stringify(labelFor(safeResource))},
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          ${createButton}
+        </div>
+        <ReferenceManyField reference="${safeReference}" target="${safeTarget}" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            ${datagridFields}
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+`);
         }
 
         detailsConfigsJsx = `[${configs.join(",\n        ")}]`;

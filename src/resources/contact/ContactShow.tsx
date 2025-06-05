@@ -83,425 +83,425 @@ export const ContactShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Contact",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"contact"} target={"owner_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="description" />
-              <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
-              <TextField source="dear" />
-              <ReferenceField source="salutation_type_id" reference="contact_salutation_type"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="gender_id" reference="gender"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="decision_role_id" reference="contact_decision_role"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="type_id" reference="contact_type"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="job_id" reference="job"><TextField source="name" /></ReferenceField>
-              <TextField source="job_title" />
-              <ReferenceField source="department_id" reference="department"><TextField source="name" /></ReferenceField>
-              <DateField source="birth_date" />
-              <TextField source="phone" />
-              <TextField source="mobile_phone" />
-              <TextField source="home_phone" />
-              <TextField source="skype" />
-              <TextField source="email" />
-              <ReferenceField source="address_type_id" reference="address_type"><TextField source="name" /></ReferenceField>
-              <TextField source="address" />
-              <ReferenceField source="city_id" reference="city"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="region_id" reference="region"><TextField source="name" /></ReferenceField>
-              <TextField source="zip" />
-              <ReferenceField source="country_id" reference="country"><TextField source="name" /></ReferenceField>
-              <BooleanField source="do_not_use_email" />
-              <BooleanField source="do_not_use_call" />
-              <BooleanField source="do_not_use_fax" />
-              <BooleanField source="do_not_use_sms" />
-              <BooleanField source="do_not_use_mail" />
-              <TextField source="notes" />
-              <TextField source="facebook" />
-              <TextField source="linked_in" />
-              <TextField source="twitter" />
-              <TextField source="facebook_id" />
-              <TextField source="linked_in_id" />
-              <TextField source="twitter_id" />
-              <TextField source="contact_photo" />
-              <TextField source="gpsn" />
-              <TextField source="gpse" />
-              <TextField source="surname" />
-              <TextField source="given_name" />
-              <TextField source="middle_name" />
-              <BooleanField source="confirmed" />
-              <ReferenceField source="language_id" reference="sys_language"><TextField source="name" /></ReferenceField>
-              <NumberField source="completeness" />
-              <BooleanField source="is_non_actual_email" />
-              <NumberField source="r_id" />
-              <NumberField source="age" />
-              <BooleanField source="ti_is_invoice_by_sms" />
-              <BooleanField source="ti_is_invoice_by_email" />
-              <TextField source="alternate_names" />
-              <TextField source="duplicate_group_id" />
-              <BooleanField source="is_email_confirmed" />
-              <TextField source="url" />
-              <ReferenceField source="verified_stage_id" reference="verified_stage"><TextField source="name" /></ReferenceField>
-              <TextField source="duplicate_id" />
-              <TextField source="avatar_url" />
-              <ReferenceField source="promote_breed_id" reference="breed"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="verification_status_id" reference="verification_status"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
-              <NumberField source="rating" />
-              <NumberField source="lead_conversion_score" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Contact",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="contact" />
+        </div>
+        <ReferenceManyField reference="contact" target="owner_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id *" />
+              <TextField source="name" label="Name *" />
+              <TextField source="description" label="Description" />
+              <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
+              <TextField source="dear" label="Dear" />
+              <ReferenceField source="salutation_type_id" reference="contact_salutation_type" label="Salutation Type Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="gender_id" reference="gender" label="Gender Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="decision_role_id" reference="contact_decision_role" label="Decision Role Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="type_id" reference="contact_type" label="Type Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="job_id" reference="job" label="Job Id"><TextField source="name" /></ReferenceField>
+              <TextField source="job_title" label="Job Title" />
+              <ReferenceField source="department_id" reference="department" label="Department Id"><TextField source="name" /></ReferenceField>
+              <DateField source="birth_date" label="Birth Date" />
+              <TextField source="phone" label="Phone" />
+              <TextField source="mobile_phone" label="Mobile Phone" />
+              <TextField source="home_phone" label="Home Phone" />
+              <TextField source="skype" label="Skype" />
+              <TextField source="email" label="Email" />
+              <ReferenceField source="address_type_id" reference="address_type" label="Address Type Id"><TextField source="name" /></ReferenceField>
+              <TextField source="address" label="Address" />
+              <ReferenceField source="city_id" reference="city" label="City Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="region_id" reference="region" label="Region Id"><TextField source="name" /></ReferenceField>
+              <TextField source="zip" label="Zip" />
+              <ReferenceField source="country_id" reference="country" label="Country Id"><TextField source="name" /></ReferenceField>
+              <BooleanField source="do_not_use_email" label="Do Not Use Email" />
+              <BooleanField source="do_not_use_call" label="Do Not Use Call" />
+              <BooleanField source="do_not_use_fax" label="Do Not Use Fax" />
+              <BooleanField source="do_not_use_sms" label="Do Not Use Sms" />
+              <BooleanField source="do_not_use_mail" label="Do Not Use Mail" />
+              <TextField source="notes" label="Notes" />
+              <TextField source="facebook" label="Facebook" />
+              <TextField source="linked_in" label="Linked In" />
+              <TextField source="twitter" label="Twitter" />
+              <TextField source="facebook_id" label="Facebook Id" />
+              <TextField source="linked_in_id" label="Linked In Id" />
+              <TextField source="twitter_id" label="Twitter Id" />
+              <TextField source="contact_photo" label="Contact Photo" />
+              <TextField source="gpsn" label="Gpsn" />
+              <TextField source="gpse" label="Gpse" />
+              <TextField source="surname" label="Surname" />
+              <TextField source="given_name" label="Given Name" />
+              <TextField source="middle_name" label="Middle Name" />
+              <BooleanField source="confirmed" label="Confirmed" />
+              <ReferenceField source="language_id" reference="sys_language" label="Language Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="completeness" label="Completeness" />
+              <BooleanField source="is_non_actual_email" label="Is Non Actual Email" />
+              <NumberField source="r_id" label="R Id" />
+              <NumberField source="age" label="Age" />
+              <BooleanField source="ti_is_invoice_by_sms" label="Ti Is Invoice By Sms" />
+              <BooleanField source="ti_is_invoice_by_email" label="Ti Is Invoice By Email" />
+              <TextField source="alternate_names" label="Alternate Names" />
+              <TextField source="duplicate_group_id" label="Duplicate Group Id" />
+              <BooleanField source="is_email_confirmed" label="Is Email Confirmed" />
+              <TextField source="url" label="Url" />
+              <ReferenceField source="verified_stage_id" reference="verified_stage" label="Verified Stage Id"><TextField source="name" /></ReferenceField>
+              <TextField source="duplicate_id" label="Duplicate Id" />
+              <TextField source="avatar_url" label="Avatar Url" />
+              <ReferenceField source="promote_breed_id" reference="breed" label="Promote Breed Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="verification_status_id" reference="verification_status" label="Verification Status Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="cover_id" reference="cover" label="Cover Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="rating" label="Rating" />
+              <NumberField source="lead_conversion_score" label="Lead Conversion Score" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Quest User Data",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"quest_user_data"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="quest_status_id" reference="quest_status"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="current_stage_id" reference="quest_stage"><TextField source="name" /></ReferenceField>
-              <TextField source="data" />
-              <ReferenceField source="conf_item_id" reference="conf_item"><TextField source="name" /></ReferenceField>
-              <DateField source="due_date" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Quest User Data",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="quest_user_data" />
+        </div>
+        <ReferenceManyField reference="quest_user_data" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="quest_status_id" reference="quest_status" label="Quest Status Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="current_stage_id" reference="quest_stage" label="Current Stage Id"><TextField source="name" /></ReferenceField>
+              <TextField source="data" label="Data" />
+              <ReferenceField source="conf_item_id" reference="conf_item" label="Conf Item Id"><TextField source="name" /></ReferenceField>
+              <DateField source="due_date" label="Due Date" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Project",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"project"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="notes" />
-              <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="project_entry_type_id" reference="project_entry_type"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="type_id" reference="project_type"><TextField source="name" /></ReferenceField>
-              <TextField source="owner_id" />
-              <ReferenceField source="status_id" reference="project_status"><TextField source="name" /></ReferenceField>
-              <DateField source="start_date" />
-              <DateField source="end_date" />
-              <NumberField source="duration" />
-              <DateField source="deadline" />
-              <ReferenceField source="supplier_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="parent_project_id" reference="project"><TextField source="name" /></ReferenceField>
-              <NumberField source="actual_completion" />
-              <BooleanField source="is_auto_calc_completion" />
-              <NumberField source="plan_income" />
-              <NumberField source="fact_income" />
-              <NumberField source="income_dev" />
-              <NumberField source="income_dev_perc" />
-              <NumberField source="plan_external_cost" />
-              <NumberField source="fact_external_cost" />
-              <NumberField source="external_cost_dev" />
-              <NumberField source="plan_external_dev_perc" />
-              <NumberField source="plan_expense" />
-              <NumberField source="fact_expense" />
-              <NumberField source="expense_dev" />
-              <NumberField source="expense_dev_perc" />
-              <NumberField source="plan_internal_cost" />
-              <NumberField source="fact_internal_cost" />
-              <NumberField source="internal_cost_dev" />
-              <NumberField source="plan_internal_dev_perc" />
-              <NumberField source="plan_margin" />
-              <NumberField source="plan_margin_perc" />
-              <NumberField source="fact_margin" />
-              <NumberField source="fact_margin_perc" />
-              <NumberField source="margin_dev" />
-              <NumberField source="margin_dev_perc" />
-              <NumberField source="position" />
-              <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="category_id" reference="project_category"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>
-              <TextField source="url" />
-              <ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Project",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="project" />
+        </div>
+        <ReferenceManyField reference="project" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id *" />
+              <TextField source="name" label="Name *" />
+              <TextField source="notes" label="Notes" />
+              <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="project_entry_type_id" reference="project_entry_type" label="Project Entry Type Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="type_id" reference="project_type" label="Type Id"><TextField source="name" /></ReferenceField>
+              <TextField source="owner_id" label="Owner Id" />
+              <ReferenceField source="status_id" reference="project_status" label="Status Id"><TextField source="name" /></ReferenceField>
+              <DateField source="start_date" label="Start Date" />
+              <DateField source="end_date" label="End Date" />
+              <NumberField source="duration" label="Duration" />
+              <DateField source="deadline" label="Deadline" />
+              <ReferenceField source="supplier_id" reference="account" label="Supplier Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="parent_project_id" reference="project" label="Parent Project Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="actual_completion" label="Actual Completion" />
+              <BooleanField source="is_auto_calc_completion" label="Is Auto Calc Completion" />
+              <NumberField source="plan_income" label="Plan Income" />
+              <NumberField source="fact_income" label="Fact Income" />
+              <NumberField source="income_dev" label="Income Dev" />
+              <NumberField source="income_dev_perc" label="Income Dev Perc" />
+              <NumberField source="plan_external_cost" label="Plan External Cost" />
+              <NumberField source="fact_external_cost" label="Fact External Cost" />
+              <NumberField source="external_cost_dev" label="External Cost Dev" />
+              <NumberField source="plan_external_dev_perc" label="Plan External Dev Perc" />
+              <NumberField source="plan_expense" label="Plan Expense" />
+              <NumberField source="fact_expense" label="Fact Expense" />
+              <NumberField source="expense_dev" label="Expense Dev" />
+              <NumberField source="expense_dev_perc" label="Expense Dev Perc" />
+              <NumberField source="plan_internal_cost" label="Plan Internal Cost" />
+              <NumberField source="fact_internal_cost" label="Fact Internal Cost" />
+              <NumberField source="internal_cost_dev" label="Internal Cost Dev" />
+              <NumberField source="plan_internal_dev_perc" label="Plan Internal Dev Perc" />
+              <NumberField source="plan_margin" label="Plan Margin" />
+              <NumberField source="plan_margin_perc" label="Plan Margin Perc" />
+              <NumberField source="fact_margin" label="Fact Margin" />
+              <NumberField source="fact_margin_perc" label="Fact Margin Perc" />
+              <NumberField source="margin_dev" label="Margin Dev" />
+              <NumberField source="margin_dev_perc" label="Margin Dev Perc" />
+              <NumberField source="position" label="Position" />
+              <ReferenceField source="event_id" reference="event" label="Event Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="category_id" reference="project_category" label="Category Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="breed_id" reference="breed" label="Breed Id"><TextField source="name" /></ReferenceField>
+              <TextField source="url" label="Url" />
+              <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="cover_id" reference="cover" label="Cover Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Service Pact",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"service_pact"} target={"service_provider_contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <ReferenceField source="status_id" reference="service_pact_status"><TextField source="name" /></ReferenceField>
-              <DateField source="start_date" />
-              <DateField source="end_date" />
-              <TextField source="owner_id" />
-              <TextField source="number" />
-              <ReferenceField source="service_provider_id" reference="account"><TextField source="name" /></ReferenceField>
-              <TextField source="notes" />
-              <ReferenceField source="calendar_id" reference="calendar"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="provider_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="product_id" reference="product"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Service Pact",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="service_pact" />
+        </div>
+        <ReferenceManyField reference="service_pact" target="service_provider_contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="name" label="Name" />
+              <ReferenceField source="status_id" reference="service_pact_status" label="Status Id"><TextField source="name" /></ReferenceField>
+              <DateField source="start_date" label="Start Date" />
+              <DateField source="end_date" label="End Date" />
+              <TextField source="owner_id" label="Owner Id" />
+              <TextField source="number" label="Number" />
+              <ReferenceField source="service_provider_id" reference="account" label="Service Provider Id"><TextField source="name" /></ReferenceField>
+              <TextField source="notes" label="Notes" />
+              <ReferenceField source="calendar_id" reference="calendar" label="Calendar Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="provider_id" reference="account" label="Provider Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="product_id" reference="product" label="Product Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post Feed",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_feed"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="pet_id" />
-              <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_breed_id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post Feed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_feed" />
+        </div>
+        <ReferenceManyField reference="post_feed" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="name" label="Name" />
+              <TextField source="pet_id" label="Pet Id" />
+              <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="litter_id" reference="litter" label="Litter Id"><TextField source="name" /></ReferenceField>
+              <TextField source="pet_breed_id" label="Pet Breed Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Relationship",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"relationship"} target={"contact_b_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="relation_type_id" reference="relation_type"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="reverse_relation_type_id" reference="relation_type"><TextField source="name" /></ReferenceField>
-              <BooleanField source="active" />
-              <TextField source="description" />
-              <ReferenceField source="account_a_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="account_b_id" reference="account"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Relationship",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="relationship" />
+        </div>
+        <ReferenceManyField reference="relationship" target="contact_b_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="relation_type_id" reference="relation_type" label="Relation Type Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="reverse_relation_type_id" reference="relation_type" label="Reverse Relation Type Id"><TextField source="name" /></ReferenceField>
+              <BooleanField source="active" label="Active" />
+              <TextField source="description" label="Description" />
+              <ReferenceField source="account_a_id" reference="account" label="Account A Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="account_b_id" reference="account" label="Account B Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Collection Entity",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"collection_entity"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="record_id" />
-              <ReferenceField source="collection_id" reference="collection"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_id" />
-              <TextField source="pet_breed_id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Collection Entity",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="collection_entity" />
+        </div>
+        <ReferenceManyField reference="collection_entity" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="record_id" label="Record Id" />
+              <ReferenceField source="collection_id" reference="collection" label="Collection Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="event_id" reference="event" label="Event Id"><TextField source="name" /></ReferenceField>
+              <TextField source="pet_id" label="Pet Id" />
+              <TextField source="pet_breed_id" label="Pet Breed Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Account Billing Info",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"account_billing_info"} target={"account_manager_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="description" />
-              <ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="country_id" reference="country"><TextField source="name" /></ReferenceField>
-              <TextField source="billing_info" />
-              <TextField source="legal_unit" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Account Billing Info",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="account_billing_info" />
+        </div>
+        <ReferenceManyField reference="account_billing_info" target="account_manager_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="name" label="Name" />
+              <TextField source="description" label="Description" />
+              <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="country_id" reference="country" label="Country Id"><TextField source="name" /></ReferenceField>
+              <TextField source="billing_info" label="Billing Info" />
+              <TextField source="legal_unit" label="Legal Unit" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post Like",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_like"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="post_id" reference="post"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post Like",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_like" />
+        </div>
+        <ReferenceManyField reference="post_like" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="post_id" reference="post" label="Post Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Comment",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"comment"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="comment_knowledge_base" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Comment",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="comment" />
+        </div>
+        <ReferenceManyField reference="comment" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="comment_knowledge_base" label="Comment Knowledge Base" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Favorites",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"favorites"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Favorites",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="favorites" />
+        </div>
+        <ReferenceManyField reference="favorites" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Pet Rating",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"pet_rating"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <NumberField source="rating" />
-              <TextField source="pet_id" />
-              <TextField source="pet_breed_id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Pet Rating",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="pet_rating" />
+        </div>
+        <ReferenceManyField reference="pet_rating" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <NumberField source="rating" label="Rating" />
+              <TextField source="pet_id" label="Pet Id" />
+              <TextField source="pet_breed_id" label="Pet Breed Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Post Comment",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"post_comment"} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="post_id" reference="post"><TextField source="name" /></ReferenceField>
-              <TextField source="text" />
-              <DateField source="date" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Post Comment",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="post_comment" />
+        </div>
+        <ReferenceManyField reference="post_comment" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="post_id" reference="post" label="Post Id"><TextField source="name" /></ReferenceField>
+              <TextField source="text" label="Text" />
+              <DateField source="date" label="Date" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Pet In Project",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"pet_in_project"} target={"handler_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_id" />
-              <NumberField source="number" />
-              <ReferenceField source="class_id" reference="pet_class"><TextField source="name" /></ReferenceField>
-              <TextField source="web_link" />
-              <TextField source="result" />
-              <TextField source="code" />
-              <TextField source="judge_id" />
-              <ReferenceField source="place_id" reference="place"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="qualification_id" reference="pet_qualification"><TextField source="name" /></ReferenceField>
-              <DateField source="date" />
-              <TextField source="temp_project_name" />
-              <TextField source="pet_breed_id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Pet In Project",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="pet_in_project" />
+        </div>
+        <ReferenceManyField reference="pet_in_project" target="handler_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="project_id" reference="project" label="Project Id"><TextField source="name" /></ReferenceField>
+              <TextField source="pet_id" label="Pet Id" />
+              <NumberField source="number" label="Number" />
+              <ReferenceField source="class_id" reference="pet_class" label="Class Id"><TextField source="name" /></ReferenceField>
+              <TextField source="web_link" label="Web Link" />
+              <TextField source="result" label="Result" />
+              <TextField source="code" label="Code" />
+              <TextField source="judge_id" label="Judge Id" />
+              <ReferenceField source="place_id" reference="place" label="Place Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="qualification_id" reference="pet_qualification" label="Qualification Id"><TextField source="name" /></ReferenceField>
+              <DateField source="date" label="Date" />
+              <TextField source="temp_project_name" label="Temp Project Name" />
+              <TextField source="pet_breed_id" label="Pet Breed Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "\"Like\"",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"\"like\""} target={"contact_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "Like",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="like" />
+        </div>
+        <ReferenceManyField reference="like" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

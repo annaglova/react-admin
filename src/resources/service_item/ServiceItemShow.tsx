@@ -35,104 +35,104 @@ export const ServiceItemShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Service In Service Pact",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"service_in_service_pact"} target={"service_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="service_pact_id" reference="service_pact"><TextField source="name" /></ReferenceField>
-              <NumberField source="reaction_time_value" />
-              <ReferenceField source="reaction_time_unit_id" reference="time_unit"><TextField source="name" /></ReferenceField>
-              <NumberField source="solution_time_value" />
-              <ReferenceField source="solution_time_unit_id" reference="time_unit"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="calendar_id" reference="calendar"><TextField source="name" /></ReferenceField>
-              <TextField source="reaction_time" />
-              <TextField source="solution_time" />
-              <TextField source="concat_name" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Service In Service Pact",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="service_in_service_pact" />
+        </div>
+        <ReferenceManyField reference="service_in_service_pact" target="service_item_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="service_pact_id" reference="service_pact" label="Service Pact Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="reaction_time_value" label="Reaction Time Value" />
+              <ReferenceField source="reaction_time_unit_id" reference="time_unit" label="Reaction Time Unit Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="solution_time_value" label="Solution Time Value" />
+              <ReferenceField source="solution_time_unit_id" reference="time_unit" label="Solution Time Unit Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="calendar_id" reference="calendar" label="Calendar Id"><TextField source="name" /></ReferenceField>
+              <TextField source="reaction_time" label="Reaction Time" />
+              <TextField source="solution_time" label="Solution Time" />
+              <TextField source="concat_name" label="Concat Name" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Service Relationship",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"service_relationship"} target={"service_item_b_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="dependency_category_id" reference="dependency_category"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="dependency_type_id" reference="dependency_type"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Service Relationship",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="service_relationship" />
+        </div>
+        <ReferenceManyField reference="service_relationship" target="service_item_b_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="dependency_category_id" reference="dependency_category" label="Dependency Category Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="dependency_type_id" reference="dependency_type" label="Dependency Type Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Service Item In Tag",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"service_item_in_tag"} target={"entity_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Service Item In Tag",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="service_item_in_tag" />
+        </div>
+        <ReferenceManyField reference="service_item_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Service In Conf Item",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"service_in_conf_item"} target={"service_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <ReferenceField source="conf_item_id" reference="conf_item"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="dependency_category_id" reference="dependency_category"><TextField source="name" /></ReferenceField>
-              <ReferenceField source="dependency_type_id" reference="dependency_type"><TextField source="name" /></ReferenceField>
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ,
+  {
+    label: "Service In Conf Item",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="service_in_conf_item" />
+        </div>
+        <ReferenceManyField reference="service_in_conf_item" target="service_item_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="conf_item_id" reference="conf_item" label="Conf Item Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="dependency_category_id" reference="dependency_category" label="Dependency Category Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="dependency_type_id" reference="dependency_type" label="Dependency Type Id"><TextField source="name" /></ReferenceField>
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
         
-      {
-        label: "Service Engineer",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"service_engineer"} target={"service_item_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "Service Engineer",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="service_engineer" />
+        </div>
+        <ReferenceManyField reference="service_engineer" target="service_item_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

@@ -35,24 +35,24 @@ export const NoteShow = ({ record }: any) => (
     }
     detailsConfigs={
       [
-      {
-        label: "Note Test Record",
-        content: (
-          <>
-            <div className="flex justify-end px-4 pt-2 pb-1">
-              <CreateButton/>
-            </div>
-            <ReferenceManyField reference={"note_test_record"} target={"note_id"} record={record} perPage={15}  pagination={<Pagination />}>
-              <Datagrid>
-                <TextField source="id" />
-              <TextField source="pet_id" />
-              <TextField source="pet_breed_id" />
-              </Datagrid>
-            </ReferenceManyField>
-          </>
-        ),
-      }
-  ]
+  {
+    label: "Note Test Record",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <CreateButton resource="note_test_record" />
+        </div>
+        <ReferenceManyField reference="note_test_record" target="note_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <TextField source="pet_id" label="Pet Id" />
+              <TextField source="pet_breed_id" label="Pet Breed Id" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+]
     }
   />
 );

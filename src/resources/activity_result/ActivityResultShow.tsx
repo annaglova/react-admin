@@ -7,19 +7,19 @@ import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 export const ActivityResultShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Description" value={<TextField source="description" />} />
+        <Labeled label="Description" required={false} value={<TextField source="description" />} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Business Process Only" value={<BooleanField source="business_process_only" />} />
+        <Labeled label="Business Process Only" required={false} value={<BooleanField source="business_process_only" />} />
       </>
     }
   />

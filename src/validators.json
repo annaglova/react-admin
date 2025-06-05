@@ -1,0 +1,2249 @@
+{
+  "contact": {
+    "id": {
+      "isRequired": true
+    },
+    "age": {
+      "isRequired": false
+    },
+    "job": {
+      "isRequired": false
+    },
+    "url": {
+      "isRequired": false
+    },
+    "zip": {
+      "isRequired": false
+    },
+    "city": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "email": {
+      "isRequired": false
+    },
+    "notes": {
+      "isRequired": false
+    },
+    "phone": {
+      "isRequired": false
+    },
+    "skype": {
+      "isRequired": false
+    },
+    "gender": {
+      "isRequired": false
+    },
+    "rating": {
+      "isRequired": false
+    },
+    "region": {
+      "isRequired": false
+    },
+    "account": {
+      "isRequired": false
+    },
+    "address": {
+      "isRequired": false
+    },
+    "country": {
+      "isRequired": false
+    },
+    "surname": {
+      "isRequired": false
+    },
+    "twitter": {
+      "isRequired": false
+    },
+    "facebook": {
+      "isRequired": false
+    },
+    "job_title": {
+      "isRequired": false
+    },
+    "language": {
+      "isRequired": false
+    },
+    "linked_in": {
+      "isRequired": false
+    },
+    "avatar_url": {
+      "isRequired": false
+    },
+    "birth_date": {
+      "isRequired": false
+    },
+    "confirmed": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "given_name": {
+      "isRequired": false
+    },
+    "home_phone": {
+      "isRequired": false
+    },
+    "twitter_id": {
+      "isRequired": false
+    },
+    "facebook_id": {
+      "isRequired": false
+    },
+    "linked_in_id": {
+      "isRequired": false
+    },
+    "middle_name": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "address_type": {
+      "isRequired": false
+    },
+    "mobile_phone": {
+      "isRequired": false
+    },
+    "decision_role": {
+      "isRequired": false
+    },
+    "alternate_names": {
+      "isRequired": false
+    },
+    "salutation_type": {
+      "isRequired": false
+    },
+    "is_email_confirmed": {
+      "isRequired": false
+    },
+    "is_non_actual_email": {
+      "isRequired": false
+    },
+    "verification_status": {
+      "isRequired": false
+    }
+  },
+  "pet": {
+    "id": {
+      "isRequired": true
+    },
+    "c_o_i": {
+      "isRequired": false
+    },
+    "sex": {
+      "isRequired": false
+    },
+    "url": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": false
+    },
+    "size": {
+      "isRequired": false
+    },
+    "breed": {
+      "isRequired": false
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "notes": {
+      "isRequired": false
+    },
+    "owner": {
+      "isRequired": false
+    },
+    "father": {
+      "isRequired": false
+    },
+    "kennel": {
+      "isRequired": false
+    },
+    "litter": {
+      "isRequired": false
+    },
+    "mother": {
+      "isRequired": false
+    },
+    "rating": {
+      "isRequired": false
+    },
+    "titles": {
+      "isRequired": false
+    },
+    "weight": {
+      "isRequired": false
+    },
+    "breeder": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "call_name": {
+      "isRequired": false
+    },
+    "coat_type": {
+      "isRequired": false
+    },
+    "is_public": {
+      "isRequired": false
+    },
+    "avatar_url": {
+      "isRequired": false
+    },
+    "coat_color": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "pet_status": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "public_data": {
+      "isRequired": false
+    },
+    "trim_titles": {
+      "isRequired": false
+    },
+    "body_feature": {
+      "isRequired": false
+    },
+    "date_of_birth": {
+      "isRequired": false
+    },
+    "date_of_death": {
+      "isRequired": false
+    },
+    "owner_kennel": {
+      "isRequired": false
+    },
+    "breed_division": {
+      "isRequired": false
+    },
+    "country_of_stay": {
+      "isRequired": false
+    },
+    "country_of_birth": {
+      "isRequired": false
+    },
+    "inbreeding_percent": {
+      "isRequired": false
+    },
+    "verification_status": {
+      "isRequired": false
+    },
+    "rating_placement_in_breed": {
+      "isRequired": false
+    }
+  },
+  "title_in_pet": {
+    "id": {
+      "isRequired": true
+    },
+    "pet": {
+      "isRequired": true
+    },
+    "date": {
+      "isRequired": false
+    },
+    "title": {
+      "isRequired": false
+    },
+    "amount": {
+      "isRequired": false
+    },
+    "country": {
+      "isRequired": false
+    },
+    "raw_title": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "is_confirmed": {
+      "isRequired": false
+    }
+  },
+  "post": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "date": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": false
+    },
+    "text": {
+      "isRequired": false
+    },
+    "type": {
+      "isRequired": false
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "event": {
+      "isRequired": false
+    },
+    "state": {
+      "isRequired": false
+    },
+    "author": {
+      "isRequired": false
+    },
+    "photos": {
+      "isRequired": false
+    },
+    "is_moment": {
+      "isRequired": false
+    },
+    "latitude": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "longitude": {
+      "isRequired": false
+    },
+    "master_post": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "participants": {
+      "isRequired": false
+    },
+    "publication_date": {
+      "isRequired": false
+    }
+  },
+  "litter": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "notes": {
+      "isRequired": false
+    },
+    "father": {
+      "isRequired": false
+    },
+    "kennel": {
+      "isRequired": false
+    },
+    "letter": {
+      "isRequired": false
+    },
+    "mother": {
+      "isRequired": false
+    },
+    "status": {
+      "isRequired": false
+    },
+    "breeder": {
+      "isRequired": false
+    },
+    "end_date": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "is_public": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "start_date": {
+      "isRequired": false
+    },
+    "male_amount": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "date_of_birth": {
+      "isRequired": false
+    },
+    "female_amount": {
+      "isRequired": false
+    },
+    "mating_period": {
+      "isRequired": false
+    }
+  },
+  "breed": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "rating": {
+      "isRequired": false
+    },
+    "account": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": true
+    },
+    "category": {
+      "isRequired": false
+    },
+    "language": {
+      "isRequired": false
+    },
+    "admin_name": {
+      "isRequired": false
+    },
+    "avatar_url": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "public_data": {
+      "isRequired": false
+    },
+    "kennel_count": {
+      "isRequired": false
+    },
+    "patron_count": {
+      "isRequired": false
+    },
+    "differ_by_size": {
+      "isRequired": false
+    },
+    "authentic_name": {
+      "isRequired": false
+    },
+    "payment_rating": {
+      "isRequired": false
+    },
+    "has_related_breed": {
+      "isRequired": false
+    },
+    "pet_profile_count": {
+      "isRequired": false
+    },
+    "differ_by_coat_type": {
+      "isRequired": false
+    },
+    "differ_by_coat_color": {
+      "isRequired": false
+    },
+    "achievement_progress": {
+      "isRequired": false
+    },
+    "differ_by_body_feature": {
+      "isRequired": false
+    }
+  },
+  "project": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "type": {
+      "isRequired": false
+    },
+    "breed": {
+      "isRequired": false
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "event": {
+      "isRequired": false
+    },
+    "notes": {
+      "isRequired": false
+    },
+    "owner": {
+      "isRequired": true
+    },
+    "status": {
+      "isRequired": true
+    },
+    "account": {
+      "isRequired": false
+    },
+    "end_date": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "category": {
+      "isRequired": false
+    },
+    "deadline": {
+      "isRequired": false
+    },
+    "duration": {
+      "isRequired": false
+    },
+    "position": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "start_date": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "parent_project": {
+      "isRequired": false
+    },
+    "actual_completion": {
+      "isRequired": false
+    }
+  },
+  "breedpride_collection": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "auto": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": false
+    },
+    "type": {
+      "isRequired": false
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "notes": {
+      "isRequired": false
+    },
+    "owner": {
+      "isRequired": false
+    },
+    "private": {
+      "isRequired": false
+    },
+    "avatar_url": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "entity_name": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "update_date": {
+      "isRequired": false
+    }
+  },
+  "event": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "city": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": false
+    },
+    "type": {
+      "isRequired": true
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "owner": {
+      "isRequired": true
+    },
+    "region": {
+      "isRequired": false
+    },
+    "status": {
+      "isRequired": true
+    },
+    "account": {
+      "isRequired": false
+    },
+    "address": {
+      "isRequired": false
+    },
+    "country": {
+      "isRequired": false
+    },
+    "end_date": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "industry": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "organizer": {
+      "isRequired": false
+    },
+    "start_date": {
+      "isRequired": false
+    },
+    "territory": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "recipient_count": {
+      "isRequired": false
+    },
+    "last_actualize_date": {
+      "isRequired": false
+    }
+  },
+  "cover": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "type": {
+      "isRequired": true
+    },
+    "breed": {
+      "isRequired": false
+    },
+    "owner": {
+      "isRequired": false
+    },
+    "avatar_url": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "is_default": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "redirect_url": {
+      "isRequired": false
+    }
+  },
+  "contact_salutation_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "gender": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "order": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "account": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "web": {
+      "isRequired": false
+    },
+    "zip": {
+      "isRequired": false
+    },
+    "city": {
+      "isRequired": false
+    },
+    "code": {
+      "isRequired": false
+    },
+    "g_p_s_e": {
+      "isRequired": false
+    },
+    "g_p_s_n": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "type": {
+      "isRequired": false
+    },
+    "cover": {
+      "isRequired": false
+    },
+    "notes": {
+      "isRequired": false
+    },
+    "owner": {
+      "isRequired": false
+    },
+    "phone": {
+      "isRequired": false
+    },
+    "since": {
+      "isRequired": false
+    },
+    "parent": {
+      "isRequired": false
+    },
+    "rating": {
+      "isRequired": false
+    },
+    "region": {
+      "isRequired": false
+    },
+    "status": {
+      "isRequired": false
+    },
+    "about_us": {
+      "isRequired": false
+    },
+    "address": {
+      "isRequired": false
+    },
+    "country": {
+      "isRequired": false
+    },
+    "industry": {
+      "isRequired": false
+    },
+    "verified": {
+      "isRequired": false
+    },
+    "affix_type": {
+      "isRequired": false
+    },
+    "avatar_url": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "ownership": {
+      "isRequired": false
+    },
+    "federation": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "address_type": {
+      "isRequired": false
+    },
+    "has_kennel_name": {
+      "isRequired": false
+    },
+    "primary_contact": {
+      "isRequired": false
+    },
+    "account_category": {
+      "isRequired": false
+    },
+    "additional_phone": {
+      "isRequired": false
+    },
+    "alternative_name": {
+      "isRequired": false
+    },
+    "verification_status": {
+      "isRequired": false
+    },
+    "company_foundation_date": {
+      "isRequired": false
+    },
+    "rating_placement_in_breed": {
+      "isRequired": false
+    }
+  },
+  "contact_decision_role": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "job": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "address_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "color": {
+      "isRequired": false
+    },
+    "for_account": {
+      "isRequired": false
+    },
+    "for_contact": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "city": {
+    "id": {
+      "isRequired": true
+    },
+    "dem": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "region": {
+      "isRequired": false
+    },
+    "country": {
+      "isRequired": false
+    },
+    "latitude": {
+      "isRequired": false
+    },
+    "time_zone": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "longitude": {
+      "isRequired": false
+    },
+    "geo_names_id": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "population": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "alternate_names": {
+      "isRequired": false
+    },
+    "geo_names_time_zone": {
+      "isRequired": false
+    }
+  },
+  "region": {
+    "id": {
+      "isRequired": true
+    },
+    "dem": {
+      "isRequired": false
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "country": {
+      "isRequired": false
+    },
+    "latitude": {
+      "isRequired": false
+    },
+    "time_zone": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "longitude": {
+      "isRequired": false
+    },
+    "geo_names_id": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "alternate_names": {
+      "isRequired": false
+    },
+    "geo_names_time_zone": {
+      "isRequired": false
+    },
+    "region_admin1_code": {
+      "isRequired": false
+    }
+  },
+  "country": {
+    "id": {
+      "isRequired": true
+    },
+    "dem": {
+      "isRequired": false
+    },
+    "url": {
+      "isRequired": false
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "latitude": {
+      "isRequired": false
+    },
+    "time_zone": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "longitude": {
+      "isRequired": false
+    },
+    "alpha2_code": {
+      "isRequired": false
+    },
+    "geo_names_id": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "public_data": {
+      "isRequired": false
+    },
+    "billing_info": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "alternate_names": {
+      "isRequired": false
+    },
+    "geo_names_time_zone": {
+      "isRequired": false
+    },
+    "geo_names_country_code": {
+      "isRequired": false
+    }
+  },
+  "sys_language": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "is_used": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "sys_culture_def_id": {
+      "isRequired": false
+    }
+  },
+  "verification_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "communication_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    },
+    "display_format": {
+      "isRequired": false
+    },
+    "usefor_accounts": {
+      "isRequired": false
+    },
+    "usefor_contacts": {
+      "isRequired": false
+    }
+  },
+  "firebase_auth_provider": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "referral": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "contact": {
+      "isRequired": false
+    }
+  },
+  "pet_type": {
+    "id": {
+      "isRequired": true
+    },
+    "url": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "avatar_url": {
+      "isRequired": false
+    },
+    "event_count": {
+      "isRequired": false
+    },
+    "public_data": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "kennel_count": {
+      "isRequired": false
+    },
+    "patron_count": {
+      "isRequired": false
+    },
+    "profile_count": {
+      "isRequired": false
+    },
+    "pet_profile_count": {
+      "isRequired": false
+    },
+    "organization_count": {
+      "isRequired": false
+    }
+  },
+  "sex": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "gender": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "pet_status": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "coat_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "coat_color": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "pet_size": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "body_feature": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "breed_division": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "breed": {
+      "isRequired": false
+    },
+    "is_main": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "breed_standard": {
+      "isRequired": false
+    },
+    "division_by_size": {
+      "isRequired": false
+    },
+    "division_by_color": {
+      "isRequired": false
+    },
+    "division_by_coat_type": {
+      "isRequired": false
+    },
+    "division_by_body_feature": {
+      "isRequired": false
+    }
+  },
+  "public_data": {
+    "id": {
+      "isRequired": true
+    },
+    "pet": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "breed": {
+      "isRequired": false
+    },
+    "event": {
+      "isRequired": false
+    },
+    "model": {
+      "isRequired": false
+    },
+    "account": {
+      "isRequired": false
+    },
+    "contact": {
+      "isRequired": false
+    },
+    "country": {
+      "isRequired": false
+    },
+    "hash_m_d5": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "primary": {
+      "isRequired": false
+    },
+    "project": {
+      "isRequired": false
+    },
+    "has_owner": {
+      "isRequired": false
+    },
+    "record_id": {
+      "isRequired": false
+    },
+    "redirect": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "pet_titles": {
+      "isRequired": false
+    },
+    "entity_name": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    }
+  },
+  "title": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "rating": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "provider": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "pet_service_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "health_exam_object": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "health_exam_result": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "object": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "pet_service_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "currency": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "rate": {
+      "isRequired": false
+    },
+    "symbol": {
+      "isRequired": true
+    },
+    "division": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "short_name": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "recalc_direction": {
+      "isRequired": false
+    },
+    "currecy_symbol_position": {
+      "isRequired": false
+    }
+  },
+  "pet_class": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "age_to": {
+      "isRequired": false
+    },
+    "age_from": {
+      "isRequired": false
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "provider": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "place": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "pet_qualification": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "provider": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "pet_identifier_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "is_public": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "studbook": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "type": {
+      "isRequired": false
+    },
+    "status": {
+      "isRequired": false
+    },
+    "account": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "alternate_names": {
+      "isRequired": false
+    }
+  },
+  "data_source": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "domain": {
+      "isRequired": false
+    },
+    "priority": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "measurement_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "unit": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "short_name": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "period": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "year": {
+      "isRequired": false
+    },
+    "parent": {
+      "isRequired": false
+    },
+    "due_date": {
+      "isRequired": false
+    },
+    "quarter": {
+      "isRequired": false
+    },
+    "start_date": {
+      "isRequired": false
+    },
+    "period_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "period_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "litter_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "order": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "letter": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "breed_category": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "project_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "project_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "is_final": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "project_category": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "event_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "post_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "template_text": {
+      "isRequired": false
+    }
+  },
+  "post_state": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "breedpride_collection_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "event_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "event_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "color": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "territory": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "account_industry": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "pet_type": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "cover_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "system": {
+      "isRequired": false
+    },
+    "priority": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "entity_schema_lookup": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "is_public": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "public_name": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "account_ownership": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "country": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "account_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    },
+    "raw_data_model": {
+      "isRequired": false
+    }
+  },
+  "account_category": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "account_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "affix_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "time_zone": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "offset": {
+      "isRequired": false
+    },
+    "created_by": {
+      "isRequired": false
+    },
+    "created_on": {
+      "isRequired": false
+    },
+    "modified_by": {
+      "isRequired": false
+    },
+    "modified_on": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "code_american": {
+      "isRequired": false
+    }
+  },
+  "geo_names_time_zone": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "g_m_t_offset": {
+      "isRequired": false
+    },
+    "country_code": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "breed_standard": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "link": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": false
+    },
+    "breed": {
+      "isRequired": false
+    },
+    "group": {
+      "isRequired": false
+    },
+    "status": {
+      "isRequired": false
+    },
+    "section": {
+      "isRequired": false
+    },
+    "approved": {
+      "isRequired": false
+    },
+    "provider": {
+      "isRequired": false
+    },
+    "effective": {
+      "isRequired": false
+    },
+    "subsection": {
+      "isRequired": false
+    },
+    "working_trial": {
+      "isRequired": false
+    },
+    "has_variable_divisions": {
+      "isRequired": false
+    }
+  },
+  "studbook_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "studbook_type": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "breed_subsection": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "breed_group": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    },
+    "breed_section": {
+      "isRequired": false
+    }
+  },
+  "breed_section": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "breed_group": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "breed_group": {
+    "id": {
+      "isRequired": true
+    },
+    "code": {
+      "isRequired": false
+    },
+    "name": {
+      "isRequired": true
+    },
+    "provider": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  },
+  "breed_standard_status": {
+    "id": {
+      "isRequired": true
+    },
+    "name": {
+      "isRequired": true
+    },
+    "provider": {
+      "isRequired": false
+    },
+    "description": {
+      "isRequired": false
+    }
+  }
+}

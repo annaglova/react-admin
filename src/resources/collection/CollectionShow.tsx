@@ -7,27 +7,27 @@ import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 export const CollectionShow = ({ record }: any) => (
   <MainResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Private" value={<BooleanField source="private" />} />
-        <Labeled label="Entity Name" value={<TextField source="entity_name" />} />
-        <Labeled label="Auto" value={<BooleanField source="auto" />} />
-        <Labeled label="Type Id" value={<ReferenceField source="type_id" reference="collection_type"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Avatar Url" value={<TextField source="avatar_url" />} />
+        <Labeled label="Private" required={false} value={<BooleanField source="private" />} />
+        <Labeled label="Entity Name" required={false} value={<TextField source="entity_name" />} />
+        <Labeled label="Auto" required={false} value={<BooleanField source="auto" />} />
+        <Labeled label="Type Id" required={false} value={<ReferenceField source="type_id" reference="collection_type"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Avatar Url" required={false} value={<TextField source="avatar_url" />} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Url" value={<TextField source="url" />} />
-        <Labeled label="Notes" value={<TextField source="notes" />} />
-        <Labeled label="Update Date" value={<DateField source="update_date" />} />
-        <Labeled label="Cover Id" value={<ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Owner Id" value={<TextField source="owner_id" />} />
+        <Labeled label="Url" required={false} value={<TextField source="url" />} />
+        <Labeled label="Notes" required={false} value={<TextField source="notes" />} />
+        <Labeled label="Update Date" required={false} value={<DateField source="update_date" />} />
+        <Labeled label="Cover Id" required={false} value={<ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Owner Id" required={false} value={<TextField source="owner_id" />} />
       </>
     }
     detailsConfigs={

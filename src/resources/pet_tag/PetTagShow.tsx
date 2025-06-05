@@ -7,14 +7,14 @@ import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 export const PetTagShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Color" value={<TextField source="color" />} />
+        <Labeled label="Color" required={false} value={<TextField source="color" />} />
       </>
     }
     fieldsRight={

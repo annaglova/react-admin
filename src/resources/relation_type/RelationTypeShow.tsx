@@ -7,24 +7,24 @@ import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 export const RelationTypeShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Description" value={<TextField source="description" />} />
-        <Labeled label="For Contact Contact" value={<BooleanField source="for_contact_contact" />} />
-        <Labeled label="For Account Contact" value={<BooleanField source="for_account_contact" />} />
-        <Labeled label="For Contact Account" value={<BooleanField source="for_contact_account" />} />
+        <Labeled label="Description" required={false} value={<TextField source="description" />} />
+        <Labeled label="For Contact Contact" required={false} value={<BooleanField source="for_contact_contact" />} />
+        <Labeled label="For Account Contact" required={false} value={<BooleanField source="for_account_contact" />} />
+        <Labeled label="For Contact Account" required={false} value={<BooleanField source="for_contact_account" />} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="For Account Account" value={<BooleanField source="for_account_account" />} />
-        <Labeled label="Reverse Relation Type Id" value={<ReferenceField source="reverse_relation_type_id" reference="relation_type"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Include Into Container" value={<BooleanField source="include_into_container" />} />
+        <Labeled label="For Account Account" required={false} value={<BooleanField source="for_account_account" />} />
+        <Labeled label="Reverse Relation Type Id" required={false} value={<ReferenceField source="reverse_relation_type_id" reference="relation_type"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Include Into Container" required={false} value={<BooleanField source="include_into_container" />} />
       </>
     }
   />

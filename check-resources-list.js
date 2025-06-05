@@ -11,6 +11,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const EXCLUDE_TABLES = [
   "config",
   "config_type",
+  "form_field_code",
   // додай інші якщо потрібно
 ];
 

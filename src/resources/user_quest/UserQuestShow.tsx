@@ -7,24 +7,24 @@ import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 export const UserQuestShow = ({ record }: any) => (
   <MainResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Finish Date" value={<DateField source="finish_date" />} />
-        <Labeled label="Contact Id" value={<TextField source="contact_id" />} />
-        <Labeled label="Deadline Date" value={<DateField source="deadline_date" />} />
-        <Labeled label="Deactivated" value={<BooleanField source="deactivated" />} />
+        <Labeled label="Finish Date" required={false} value={<DateField source="finish_date" />} />
+        <Labeled label="Contact Id" required={false} value={<TextField source="contact_id" />} />
+        <Labeled label="Deadline Date" required={false} value={<DateField source="deadline_date" />} />
+        <Labeled label="Deactivated" required={false} value={<BooleanField source="deactivated" />} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Reward" value={<NumberField source="reward" />} />
-        <Labeled label="Description" value={<TextField source="description" />} />
-        <Labeled label="Frequency Interval" value={<NumberField source="frequency_interval" />} />
+        <Labeled label="Reward" required={false} value={<NumberField source="reward" />} />
+        <Labeled label="Description" required={false} value={<TextField source="description" />} />
+        <Labeled label="Frequency Interval" required={false} value={<NumberField source="frequency_interval" />} />
       </>
     }
     detailsConfigs={

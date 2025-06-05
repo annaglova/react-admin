@@ -7,26 +7,26 @@ import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 export const QuestShow = ({ record }: any) => (
   <MainResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Url" value={<TextField source="url" />} />
-        <Labeled label="Type Id" value={<ReferenceField source="type_id" reference="quest_type"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Reward" value={<NumberField source="reward" />} />
-        <Labeled label="Frequency Interval" value={<NumberField source="frequency_interval" />} />
-        <Labeled label="Frequency Id" value={<ReferenceField source="frequency_id" reference="quest_frequency"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Url" required={false} value={<TextField source="url" />} />
+        <Labeled label="Type Id" required={false} value={<ReferenceField source="type_id" reference="quest_type"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Reward" required={false} value={<NumberField source="reward" />} />
+        <Labeled label="Frequency Interval" required={false} value={<NumberField source="frequency_interval" />} />
+        <Labeled label="Frequency Id" required={false} value={<ReferenceField source="frequency_id" reference="quest_frequency"><TextField source="name" /></ReferenceField>} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Deactivated" value={<BooleanField source="deactivated" />} />
-        <Labeled label="Description" value={<TextField source="description" />} />
-        <Labeled label="Total Steps" value={<NumberField source="total_steps" />} />
-        <Labeled label="Deadline Date" value={<DateField source="deadline_date" />} />
+        <Labeled label="Deactivated" required={false} value={<BooleanField source="deactivated" />} />
+        <Labeled label="Description" required={false} value={<TextField source="description" />} />
+        <Labeled label="Total Steps" required={false} value={<NumberField source="total_steps" />} />
+        <Labeled label="Deadline Date" required={false} value={<DateField source="deadline_date" />} />
       </>
     }
     detailsConfigs={

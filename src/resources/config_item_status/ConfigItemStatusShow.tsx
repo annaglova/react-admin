@@ -7,20 +7,20 @@ import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 export const ConfigItemStatusShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Description" value={<TextField source="description" />} />
-        <Labeled label="Is Final" value={<BooleanField source="is_final" />} />
+        <Labeled label="Description" required={false} value={<TextField source="description" />} />
+        <Labeled label="Is Final" required={false} value={<BooleanField source="is_final" />} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Active" value={<BooleanField source="active" />} />
+        <Labeled label="Active" required={false} value={<BooleanField source="active" />} />
       </>
     }
   />

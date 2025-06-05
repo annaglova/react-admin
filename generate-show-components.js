@@ -24,6 +24,10 @@ const EXCLUDE_FIELDS = [
   "created_at",
 ];
 
+const validators = JSON.parse(
+  fs.readFileSync(path.join("src", "validators.json"), "utf-8")
+);
+
 const typeMap = {
   integer: "NumberField",
   bigint: "NumberField",
@@ -53,6 +57,24 @@ function toPascalCase(str) {
 function labelFor(str) {
   // Наприклад: account_in_tag -> Account In Tag
   return str.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function genLabeledField({
+  label,
+  source,
+  tableName,
+  type = "TextField",
+  fkMap,
+}) {
+  const fieldValidators = validators[tableName] || {};
+  const isRequired = !!fieldValidators[source]?.isRequired;
+  // Якщо це foreign key:
+  if (fkMap && fkMap[source]) {
+    const refTable = fkMap[source];
+    return `<Labeled label="${label}" required={${isRequired}} value={<ReferenceField source="${source}" reference="${refTable}"><TextField source="name" /></ReferenceField>} />`;
+  }
+  // Просто поле:
+  return `<Labeled label="${label}" required={${isRequired}} value={<${type} source="${source}" />} />`;
 }
 
 // Головна функція для вибору кращих колонок
@@ -225,8 +247,18 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     }
 
     // 5. Name/id поля як Labeled
-    const nameField = `<Labeled label="Name" value={<TextField source="name" />} />`;
-    const idField = `<Labeled label="ID" value={<TextField source="id" />} />`;
+    const nameField = genLabeledField({
+      label: "Name",
+      source: "name",
+      tableName: table,
+      type: "TextField",
+    });
+    const idField = genLabeledField({
+      label: "ID",
+      source: "id",
+      tableName: table,
+      type: "TextField",
+    });
 
     // 6. Основні поля, дві колонки
     const fields = columns.filter(
@@ -239,19 +271,24 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     const leftFields = fields.slice(0, mid);
     const rightFields = fields.slice(mid);
 
-    function genField(col) {
+    function genField(col, tableName) {
       const label = labelFor(col.column_name);
-      if (fkMap[col.column_name]) {
-        const refTable = fkMap[col.column_name];
-        return `<Labeled label="${label}" value={<ReferenceField source="${col.column_name}" reference="${refTable}"><TextField source="name" /></ReferenceField>} />`;
-      } else {
-        const type = typeMap[col.data_type] || "TextField";
-        return `<Labeled label="${label}" value={<${type} source="${col.column_name}" />} />`;
-      }
+      const type = typeMap[col.data_type] || "TextField";
+      return genLabeledField({
+        label,
+        source: col.column_name,
+        tableName,
+        type,
+        fkMap,
+      });
     }
 
-    const fieldsLeft = leftFields.map(genField).join("\n        ");
-    const fieldsRight = rightFields.map(genField).join("\n        ");
+    const fieldsLeft = leftFields
+      .map((col) => genField(col, table))
+      .join("\n        ");
+    const fieldsRight = rightFields
+      .map((col) => genField(col, table))
+      .join("\n        ");
 
     // 7. Layout imports + назва layout'а
     let layoutImport, layoutName;

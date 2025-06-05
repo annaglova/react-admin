@@ -7,19 +7,19 @@ import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";
 export const CoatTypeInBreedShow = ({ record }: any) => (
   <ChildResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Breed Id" value={<ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Breed Id" required={false} value={<ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Coat Type Id" value={<ReferenceField source="coat_type_id" reference="coat_type"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Coat Type Id" required={false} value={<ReferenceField source="coat_type_id" reference="coat_type"><TextField source="name" /></ReferenceField>} />
       </>
     }
   />

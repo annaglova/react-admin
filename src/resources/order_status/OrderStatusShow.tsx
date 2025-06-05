@@ -7,20 +7,20 @@ import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 export const OrderStatusShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Description" value={<TextField source="description" />} />
-        <Labeled label="Position" value={<NumberField source="position" />} />
+        <Labeled label="Description" required={false} value={<TextField source="description" />} />
+        <Labeled label="Position" required={false} value={<NumberField source="position" />} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Final Status" value={<BooleanField source="final_status" />} />
+        <Labeled label="Final Status" required={false} value={<BooleanField source="final_status" />} />
       </>
     }
   />

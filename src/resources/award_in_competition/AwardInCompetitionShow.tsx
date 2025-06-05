@@ -7,19 +7,19 @@ import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 export const AwardInCompetitionShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={false} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Award Id" value={<ReferenceField source="award_id" reference="award"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Award Id" required={false} value={<ReferenceField source="award_id" reference="award"><TextField source="name" /></ReferenceField>} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Competition Id" value={<ReferenceField source="competition_id" reference="competition"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Competition Id" required={false} value={<ReferenceField source="competition_id" reference="competition"><TextField source="name" /></ReferenceField>} />
       </>
     }
   />

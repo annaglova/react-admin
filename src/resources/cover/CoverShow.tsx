@@ -7,25 +7,25 @@ import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 export const CoverShow = ({ record }: any) => (
   <MainResourceShowLayout
     name={
-      <Labeled label="Name" value={<TextField source="name" />} />
+      <Labeled label="Name" required={true} value={<TextField source="name" />} />
     }
     id={
-      <Labeled label="ID" value={<TextField source="id" />} />
+      <Labeled label="ID" required={true} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Notes" value={<TextField source="notes" />} />
-        <Labeled label="Redirect Url" value={<TextField source="redirect_url" />} />
-        <Labeled label="Avatar Url" value={<TextField source="avatar_url" />} />
-        <Labeled label="Type Id" value={<ReferenceField source="type_id" reference="cover_type"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Notes" required={false} value={<TextField source="notes" />} />
+        <Labeled label="Redirect Url" required={false} value={<TextField source="redirect_url" />} />
+        <Labeled label="Avatar Url" required={false} value={<TextField source="avatar_url" />} />
+        <Labeled label="Type Id" required={false} value={<ReferenceField source="type_id" reference="cover_type"><TextField source="name" /></ReferenceField>} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Owner Id" value={<TextField source="owner_id" />} />
-        <Labeled label="Url" value={<TextField source="url" />} />
-        <Labeled label="Breed Id" value={<ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Is Default" value={<BooleanField source="is_default" />} />
+        <Labeled label="Owner Id" required={false} value={<TextField source="owner_id" />} />
+        <Labeled label="Url" required={false} value={<TextField source="url" />} />
+        <Labeled label="Breed Id" required={false} value={<ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Is Default" required={false} value={<BooleanField source="is_default" />} />
       </>
     }
     detailsConfigs={

@@ -14,9 +14,10 @@ const SYSTEM_FIELDS = [
 ];
 
 const emptyCustom = {
+  listFields: [],
   showFields: [],
-  editFields: [],
   createFields: [],
+  editFields: [],
   showDetailsTabs: [],
 };
 
@@ -58,9 +59,10 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 function fillCustom(custom = {}) {
   return {
+    listFields: Array.isArray(custom.listFields) ? custom.listFields : [],
     showFields: Array.isArray(custom.showFields) ? custom.showFields : [],
-    editFields: Array.isArray(custom.editFields) ? custom.editFields : [],
     createFields: Array.isArray(custom.createFields) ? custom.createFields : [],
+    editFields: Array.isArray(custom.editFields) ? custom.editFields : [],
     showDetailsTabs: Array.isArray(custom.showDetailsTabs)
       ? custom.showDetailsTabs
       : [],

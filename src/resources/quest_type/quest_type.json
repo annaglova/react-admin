@@ -51,10 +51,11 @@
   ],
   "detailsTabs": [],
   "custom": {
+    "listFields": [],
     "showFields": [],
-    "editFields": [],
     "createFields": [],
+    "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-07T17:01:08.957Z"
+  "metaUpdatedAt": "2025-06-07T17:06:50.061Z"
 }

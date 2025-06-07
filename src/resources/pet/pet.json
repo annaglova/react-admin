@@ -309,10 +309,11 @@
   ],
   "detailsTabs": [],
   "custom": {
+    "listFields": [],
     "showFields": [],
-    "editFields": [],
     "createFields": [],
+    "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-07T17:00:53.209Z"
+  "metaUpdatedAt": "2025-06-07T17:06:32.348Z"
 }

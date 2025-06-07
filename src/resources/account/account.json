@@ -808,7 +808,10 @@
     },
     {
       "resource": "account",
-      "fk": ["parent_id", "federation_id"],
+      "fk": [
+        "parent_id",
+        "federation_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -1759,7 +1762,10 @@
     },
     {
       "resource": "event",
-      "fk": ["account_id", "organizer_id"],
+      "fk": [
+        "account_id",
+        "organizer_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -1973,7 +1979,10 @@
     },
     {
       "resource": "project",
-      "fk": ["account_id", "supplier_id"],
+      "fk": [
+        "account_id",
+        "supplier_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -2303,7 +2312,10 @@
     },
     {
       "resource": "service_pact",
-      "fk": ["provider_id", "service_provider_id"],
+      "fk": [
+        "provider_id",
+        "service_provider_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -3575,7 +3587,10 @@
     },
     {
       "resource": "invoice",
-      "fk": ["account_id", "supplier_id"],
+      "fk": [
+        "account_id",
+        "supplier_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -4321,7 +4336,10 @@
     },
     {
       "resource": "relationship",
-      "fk": ["account_b_id", "account_a_id"],
+      "fk": [
+        "account_b_id",
+        "account_a_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -5541,10 +5559,11 @@
     }
   ],
   "custom": {
+    "listFields": [],
     "showFields": [],
-    "editFields": [],
     "createFields": [],
+    "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-07T17:00:56.703Z"
+  "metaUpdatedAt": "2025-06-07T17:06:37.919Z"
 }

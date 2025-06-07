@@ -680,10 +680,11 @@
     }
   ],
   "custom": {
+    "listFields": [],
     "showFields": [],
-    "editFields": [],
     "createFields": [],
+    "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-07T17:01:00.094Z"
+  "metaUpdatedAt": "2025-06-07T17:06:41.230Z"
 }

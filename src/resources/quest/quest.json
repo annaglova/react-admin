@@ -304,10 +304,11 @@
     }
   ],
   "custom": {
+    "listFields": [],
     "showFields": [],
-    "editFields": [],
     "createFields": [],
+    "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-07T17:01:03.063Z"
+  "metaUpdatedAt": "2025-06-07T17:06:44.171Z"
 }

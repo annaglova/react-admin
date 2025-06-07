@@ -512,10 +512,11 @@
     }
   ],
   "custom": {
+    "listFields": [],
     "showFields": [],
-    "editFields": [],
     "createFields": [],
+    "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-07T17:01:02.647Z"
+  "metaUpdatedAt": "2025-06-07T17:06:43.759Z"
 }

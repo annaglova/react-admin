@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const OrderShow = ({ record }: any) => (
@@ -51,7 +53,7 @@ export const OrderShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="order_id" />
         </div>
         <ReferenceManyField reference="activity" target="order_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -132,7 +134,7 @@ export const OrderShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="invoice" />
+          <ChildCreateButton resource="invoice" fkField="order_id" />
         </div>
         <ReferenceManyField reference="invoice" target="order_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

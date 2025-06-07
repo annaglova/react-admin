@@ -4,6 +4,7 @@ import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
 
+
 export const PetTagShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={

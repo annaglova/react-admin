@@ -4,6 +4,7 @@ import { Labeled } from "@/components/Labeled";
 import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";
 
 
+
 export const PetLifecycleShow = ({ record }: any) => (
   <ChildResourceShowLayout
     name={

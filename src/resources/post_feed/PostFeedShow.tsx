@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const PostFeedShow = ({ record }: any) => (
@@ -32,7 +34,7 @@ export const PostFeedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_in_feed" />
+          <ChildCreateButton resource="post_in_feed" fkField="feed_id" />
         </div>
         <ReferenceManyField reference="post_in_feed" target="feed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -51,7 +53,7 @@ export const PostFeedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_feed_subscription" />
+          <ChildCreateButton resource="post_feed_subscription" fkField="feed_id" />
         </div>
         <ReferenceManyField reference="post_feed_subscription" target="feed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

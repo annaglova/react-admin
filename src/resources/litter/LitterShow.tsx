@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const LitterShow = ({ record }: any) => (
@@ -44,7 +46,7 @@ export const LitterShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="litter_id" />
         </div>
         <ReferenceManyField reference="activity" target="litter_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -125,7 +127,7 @@ export const LitterShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_feed" />
+          <ChildCreateButton resource="post_feed" fkField="litter_id" />
         </div>
         <ReferenceManyField reference="post_feed" target="litter_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -147,7 +149,7 @@ export const LitterShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="note" />
+          <ChildCreateButton resource="note" fkField="litter_id" />
         </div>
         <ReferenceManyField reference="note" target="litter_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -177,7 +179,7 @@ export const LitterShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_service_in_litter" />
+          <ChildCreateButton resource="pet_service_in_litter" fkField="litter_id" />
         </div>
         <ReferenceManyField reference="pet_service_in_litter" target="litter_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -199,7 +201,7 @@ export const LitterShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="cover_in_litter" />
+          <ChildCreateButton resource="cover_in_litter" fkField="litter_id" />
         </div>
         <ReferenceManyField reference="cover_in_litter" target="litter_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

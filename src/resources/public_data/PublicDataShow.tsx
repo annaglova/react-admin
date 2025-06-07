@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const PublicDataShow = ({ record }: any) => (
@@ -44,7 +46,7 @@ export const PublicDataShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed" />
+          <ChildCreateButton resource="breed" fkField="public_data_id" />
         </div>
         <ReferenceManyField reference="breed" target="public_data_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -83,7 +85,7 @@ export const PublicDataShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="public_data" />
+          <ChildCreateButton resource="public_data" fkField="redirect_id" />
         </div>
         <ReferenceManyField reference="public_data" target="redirect_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -117,7 +119,7 @@ export const PublicDataShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="country" />
+          <ChildCreateButton resource="country" fkField="public_data_id" />
         </div>
         <ReferenceManyField reference="country" target="public_data_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -149,7 +151,7 @@ export const PublicDataShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_type" />
+          <ChildCreateButton resource="pet_type" fkField="public_data_id" />
         </div>
         <ReferenceManyField reference="pet_type" target="public_data_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

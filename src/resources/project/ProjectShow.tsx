@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const ProjectShow = ({ record }: any) => (
@@ -71,7 +73,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="project_id" />
         </div>
         <ReferenceManyField reference="activity" target="project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -152,7 +154,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="raw_data" />
+          <ChildCreateButton resource="raw_data" fkField="project_id" />
         </div>
         <ReferenceManyField reference="raw_data" target="project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -185,7 +187,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="project" />
+          <ChildCreateButton resource="project" fkField="parent_project_id" />
         </div>
         <ReferenceManyField reference="project" target="parent_project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -246,7 +248,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="cashflow" />
+          <ChildCreateButton resource="cashflow" fkField="project_id" />
         </div>
         <ReferenceManyField reference="cashflow" target="project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -278,7 +280,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="note" />
+          <ChildCreateButton resource="note" fkField="project_id" />
         </div>
         <ReferenceManyField reference="note" target="project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -308,7 +310,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="public_data" />
+          <ChildCreateButton resource="public_data" fkField="project_id" />
         </div>
         <ReferenceManyField reference="public_data" target="project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -342,7 +344,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="invoice" />
+          <ChildCreateButton resource="invoice" fkField="project_id" />
         </div>
         <ReferenceManyField reference="invoice" target="project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -385,7 +387,7 @@ export const ProjectShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_in_project" />
+          <ChildCreateButton resource="pet_in_project" fkField="project_id" />
         </div>
         <ReferenceManyField reference="pet_in_project" target="project_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

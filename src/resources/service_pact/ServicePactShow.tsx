@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const ServicePactShow = ({ record }: any) => (
@@ -38,7 +40,7 @@ export const ServicePactShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_in_service_pact" />
+          <ChildCreateButton resource="service_in_service_pact" fkField="service_pact_id" />
         </div>
         <ReferenceManyField reference="service_in_service_pact" target="service_pact_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -64,7 +66,7 @@ export const ServicePactShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_pact_in_tag" />
+          <ChildCreateButton resource="service_pact_in_tag" fkField="entity_id" />
         </div>
         <ReferenceManyField reference="service_pact_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

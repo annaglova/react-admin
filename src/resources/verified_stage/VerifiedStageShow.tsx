@@ -4,6 +4,7 @@ import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
 
+
 export const VerifiedStageShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={

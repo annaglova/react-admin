@@ -188,7 +188,8 @@ const supabase = createClient(supabaseUrl, supabaseKey);
           const safeReference = stripQuotes(dt.tableName);
           const safeTarget = stripQuotes(dt.fkColumns[0]);
 
-          const createButton = `<CreateButton resource="${safeResource}" />`;
+          const fkField = dt.fkColumns[0];
+          const createButton = `<ChildCreateButton resource="${safeResource}" fkField="${fkField}" />`;
 
           // fk для дочірньої таблиці
           const fkMapDetail = {};
@@ -302,9 +303,11 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
     // 7. Layout imports + назва layout'а
     let layoutImport, layoutName;
+    let customImports = "";
     if (MAIN_RESOURCES.includes(table)) {
       layoutImport = `import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";`;
       layoutName = "MainResourceShowLayout";
+      customImports += `import { ChildCreateButton } from "@/components/ChildCreateButton";\n`;
     } else if (LOOKUP_RESOURCES.includes(table)) {
       layoutImport = `import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";`;
       layoutName = "LookupResourceShowLayout";
@@ -324,6 +327,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 import { ${Array.from(importsSet).sort().join(", ")} } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 ${layoutImport}
+${customImports}
 
 `;
 

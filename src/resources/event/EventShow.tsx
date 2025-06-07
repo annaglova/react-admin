@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const EventShow = ({ record }: any) => (
@@ -52,7 +54,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="event_id" />
         </div>
         <ReferenceManyField reference="activity" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -133,7 +135,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="raw_data" />
+          <ChildCreateButton resource="raw_data" fkField="event_id" />
         </div>
         <ReferenceManyField reference="raw_data" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -166,7 +168,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="project" />
+          <ChildCreateButton resource="project" fkField="event_id" />
         </div>
         <ReferenceManyField reference="project" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -227,7 +229,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post" />
+          <ChildCreateButton resource="post" fkField="event_id" />
         </div>
         <ReferenceManyField reference="post" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -259,7 +261,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="note" />
+          <ChildCreateButton resource="note" fkField="event_id" />
         </div>
         <ReferenceManyField reference="note" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -289,7 +291,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="public_data" />
+          <ChildCreateButton resource="public_data" fkField="event_id" />
         </div>
         <ReferenceManyField reference="public_data" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -323,7 +325,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="location_in_event" />
+          <ChildCreateButton resource="location_in_event" fkField="event_id" />
         </div>
         <ReferenceManyField reference="location_in_event" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -342,7 +344,7 @@ export const EventShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="collection_entity" />
+          <ChildCreateButton resource="collection_entity" fkField="event_id" />
         </div>
         <ReferenceManyField reference="collection_entity" target="event_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

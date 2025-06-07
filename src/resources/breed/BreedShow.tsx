@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const BreedShow = ({ record }: any) => (
@@ -49,7 +51,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="contact" />
+          <ChildCreateButton resource="contact" fkField="promote_breed_id" />
         </div>
         <ReferenceManyField reference="contact" target="promote_breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -127,7 +129,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="raw_data" />
+          <ChildCreateButton resource="raw_data" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="raw_data" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -160,7 +162,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="order" />
+          <ChildCreateButton resource="order" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="order" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -177,7 +179,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="project" />
+          <ChildCreateButton resource="project" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="project" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -238,7 +240,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="competition" />
+          <ChildCreateButton resource="competition" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="competition" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -267,7 +269,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="cover" />
+          <ChildCreateButton resource="cover" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="cover" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -292,7 +294,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="note" />
+          <ChildCreateButton resource="note" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="note" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -322,7 +324,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="top_pet_in_breed" />
+          <ChildCreateButton resource="top_pet_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="top_pet_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -342,7 +344,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="public_data" />
+          <ChildCreateButton resource="public_data" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="public_data" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -376,7 +378,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="invoice" />
+          <ChildCreateButton resource="invoice" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="invoice" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -419,7 +421,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_division" />
+          <ChildCreateButton resource="breed_division" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="breed_division" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -444,7 +446,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="contact_career" />
+          <ChildCreateButton resource="contact_career" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="contact_career" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -474,7 +476,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="related_breed" />
+          <ChildCreateButton resource="related_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="related_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -491,7 +493,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_synonym" />
+          <ChildCreateButton resource="breed_synonym" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="breed_synonym" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -510,7 +512,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="body_feature_in_breed" />
+          <ChildCreateButton resource="body_feature_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="body_feature_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -528,7 +530,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="coat_type_in_breed_division" />
+          <ChildCreateButton resource="coat_type_in_breed_division" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="coat_type_in_breed_division" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -547,7 +549,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="achievement_in_breed" />
+          <ChildCreateButton resource="achievement_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="achievement_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -566,7 +568,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_size_in_breed" />
+          <ChildCreateButton resource="pet_size_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="pet_size_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -584,7 +586,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="body_feature_in_breed_division" />
+          <ChildCreateButton resource="body_feature_in_breed_division" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="body_feature_in_breed_division" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -603,7 +605,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="health_exam_object_in_breed" />
+          <ChildCreateButton resource="health_exam_object_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="health_exam_object_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -621,7 +623,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="coat_color_in_breed" />
+          <ChildCreateButton resource="coat_color_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="coat_color_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -639,7 +641,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="coat_color_in_breed_division" />
+          <ChildCreateButton resource="coat_color_in_breed_division" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="coat_color_in_breed_division" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -658,7 +660,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="coat_type_in_breed" />
+          <ChildCreateButton resource="coat_type_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="coat_type_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -676,7 +678,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_forecast" />
+          <ChildCreateButton resource="breed_forecast" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="breed_forecast" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -698,7 +700,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_size_in_breed_division" />
+          <ChildCreateButton resource="pet_size_in_breed_division" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="pet_size_in_breed_division" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -717,7 +719,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="measurement_type_in_breed" />
+          <ChildCreateButton resource="measurement_type_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="measurement_type_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -735,7 +737,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_in_kennel" />
+          <ChildCreateButton resource="breed_in_kennel" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="breed_in_kennel" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -754,7 +756,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_in_account" />
+          <ChildCreateButton resource="breed_in_account" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="breed_in_account" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -774,7 +776,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_standard" />
+          <ChildCreateButton resource="breed_standard" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="breed_standard" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -803,7 +805,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_measurement" />
+          <ChildCreateButton resource="conf_item_measurement" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="conf_item_measurement" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -825,7 +827,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="payment_in_breed" />
+          <ChildCreateButton resource="payment_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="payment_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -846,7 +848,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="user_settings" />
+          <ChildCreateButton resource="user_settings" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="user_settings" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -869,7 +871,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="contact_in_breed" />
+          <ChildCreateButton resource="contact_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="contact_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -889,7 +891,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="top_patron_in_breed" />
+          <ChildCreateButton resource="top_patron_in_breed" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="top_patron_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -910,7 +912,7 @@ export const BreedShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_in_contact" />
+          <ChildCreateButton resource="breed_in_contact" fkField="breed_id" />
         </div>
         <ReferenceManyField reference="breed_in_contact" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

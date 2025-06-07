@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const QuestShow = ({ record }: any) => (
@@ -36,7 +38,7 @@ export const QuestShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="quest_step" />
+          <ChildCreateButton resource="quest_step" fkField="quest_id" />
         </div>
         <ReferenceManyField reference="quest_step" target="quest_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -59,7 +61,7 @@ export const QuestShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="quest_in_tag" />
+          <ChildCreateButton resource="quest_in_tag" fkField="entity_id" />
         </div>
         <ReferenceManyField reference="quest_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -76,7 +78,7 @@ export const QuestShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="quest_stage" />
+          <ChildCreateButton resource="quest_stage" fkField="quest_id" />
         </div>
         <ReferenceManyField reference="quest_stage" target="quest_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

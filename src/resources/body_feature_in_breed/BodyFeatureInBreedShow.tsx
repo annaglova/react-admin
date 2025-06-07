@@ -4,6 +4,7 @@ import { Labeled } from "@/components/Labeled";
 import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";
 
 
+
 export const BodyFeatureInBreedShow = ({ record }: any) => (
   <ChildResourceShowLayout
     name={

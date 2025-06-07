@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const CompetitionShow = ({ record }: any) => (
@@ -39,7 +41,7 @@ export const CompetitionShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="competition_id" />
         </div>
         <ReferenceManyField reference="activity" target="competition_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -120,7 +122,7 @@ export const CompetitionShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="competition" />
+          <ChildCreateButton resource="competition" fkField="parent_id" />
         </div>
         <ReferenceManyField reference="competition" target="parent_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -148,7 +150,7 @@ export const CompetitionShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="qualification_in_competition" />
+          <ChildCreateButton resource="qualification_in_competition" fkField="competition_id" />
         </div>
         <ReferenceManyField reference="qualification_in_competition" target="competition_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -166,7 +168,7 @@ export const CompetitionShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="award_in_competition" />
+          <ChildCreateButton resource="award_in_competition" fkField="competition_id" />
         </div>
         <ReferenceManyField reference="award_in_competition" target="competition_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -184,7 +186,7 @@ export const CompetitionShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="contact_in_competition" />
+          <ChildCreateButton resource="contact_in_competition" fkField="competition_id" />
         </div>
         <ReferenceManyField reference="contact_in_competition" target="competition_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

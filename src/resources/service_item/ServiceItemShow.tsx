@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const ServiceItemShow = ({ record }: any) => (
@@ -40,7 +42,7 @@ export const ServiceItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_in_service_pact" />
+          <ChildCreateButton resource="service_in_service_pact" fkField="service_item_id" />
         </div>
         <ReferenceManyField reference="service_in_service_pact" target="service_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -66,7 +68,7 @@ export const ServiceItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_relationship" />
+          <ChildCreateButton resource="service_relationship" fkField="service_item_b_id" />
         </div>
         <ReferenceManyField reference="service_relationship" target="service_item_b_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -85,7 +87,7 @@ export const ServiceItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_item_in_tag" />
+          <ChildCreateButton resource="service_item_in_tag" fkField="entity_id" />
         </div>
         <ReferenceManyField reference="service_item_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -102,7 +104,7 @@ export const ServiceItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_in_conf_item" />
+          <ChildCreateButton resource="service_in_conf_item" fkField="service_item_id" />
         </div>
         <ReferenceManyField reference="service_in_conf_item" target="service_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -122,7 +124,7 @@ export const ServiceItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_engineer" />
+          <ChildCreateButton resource="service_engineer" fkField="service_item_id" />
         </div>
         <ReferenceManyField reference="service_engineer" target="service_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const AccountShow = ({ record }: any) => (
@@ -73,7 +75,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="account_id" />
         </div>
         <ReferenceManyField reference="activity" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -154,7 +156,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="account" />
+          <ChildCreateButton resource="account" fkField="parent_id" />
         </div>
         <ReferenceManyField reference="account" target="parent_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -216,7 +218,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="contact" />
+          <ChildCreateButton resource="contact" fkField="account_id" />
         </div>
         <ReferenceManyField reference="contact" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -294,7 +296,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="litter" />
+          <ChildCreateButton resource="litter" fkField="kennel_id" />
         </div>
         <ReferenceManyField reference="litter" target="kennel_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -328,7 +330,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="order" />
+          <ChildCreateButton resource="order" fkField="account_id" />
         </div>
         <ReferenceManyField reference="order" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -345,7 +347,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="event" />
+          <ChildCreateButton resource="event" fkField="account_id" />
         </div>
         <ReferenceManyField reference="event" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -386,7 +388,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="project" />
+          <ChildCreateButton resource="project" fkField="account_id" />
         </div>
         <ReferenceManyField reference="project" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -446,7 +448,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_pact" />
+          <ChildCreateButton resource="service_pact" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="service_pact" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -473,7 +475,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_item" />
+          <ChildCreateButton resource="service_item" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="service_item" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -503,7 +505,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item" />
+          <ChildCreateButton resource="conf_item" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="conf_item" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -551,7 +553,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_feed" />
+          <ChildCreateButton resource="post_feed" fkField="account_id" />
         </div>
         <ReferenceManyField reference="post_feed" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -573,7 +575,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed" />
+          <ChildCreateButton resource="breed" fkField="account_id" />
         </div>
         <ReferenceManyField reference="breed" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -612,7 +614,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="competition" />
+          <ChildCreateButton resource="competition" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="competition" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -641,7 +643,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="note" />
+          <ChildCreateButton resource="note" fkField="account_id" />
         </div>
         <ReferenceManyField reference="note" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -671,7 +673,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="public_data" />
+          <ChildCreateButton resource="public_data" fkField="account_id" />
         </div>
         <ReferenceManyField reference="public_data" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -705,7 +707,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="competition_backup" />
+          <ChildCreateButton resource="competition_backup" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="competition_backup" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -729,7 +731,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="invoice" />
+          <ChildCreateButton resource="invoice" fkField="account_id" />
         </div>
         <ReferenceManyField reference="invoice" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -771,7 +773,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="fin_account" />
+          <ChildCreateButton resource="fin_account" fkField="account_id" />
         </div>
         <ReferenceManyField reference="fin_account" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -792,7 +794,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_standard_status" />
+          <ChildCreateButton resource="breed_standard_status" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="breed_standard_status" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -811,7 +813,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="contact_career" />
+          <ChildCreateButton resource="contact_career" fkField="account_id" />
         </div>
         <ReferenceManyField reference="contact_career" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -841,7 +843,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="cover_in_account" />
+          <ChildCreateButton resource="cover_in_account" fkField="account_id" />
         </div>
         <ReferenceManyField reference="cover_in_account" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -860,7 +862,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="account_communication" />
+          <ChildCreateButton resource="account_communication" fkField="account_id" />
         </div>
         <ReferenceManyField reference="account_communication" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -885,7 +887,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_qualification" />
+          <ChildCreateButton resource="pet_qualification" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="pet_qualification" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -906,7 +908,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="account_in_tag" />
+          <ChildCreateButton resource="account_in_tag" fkField="entity_id" />
         </div>
         <ReferenceManyField reference="account_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -924,7 +926,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="relationship" />
+          <ChildCreateButton resource="relationship" fkField="account_b_id" />
         </div>
         <ReferenceManyField reference="relationship" target="account_b_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -947,7 +949,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_service_in_account" />
+          <ChildCreateButton resource="pet_service_in_account" fkField="account_id" />
         </div>
         <ReferenceManyField reference="pet_service_in_account" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -967,7 +969,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_in_kennel" />
+          <ChildCreateButton resource="breed_in_kennel" fkField="account_id" />
         </div>
         <ReferenceManyField reference="breed_in_kennel" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -986,7 +988,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="collection_entity" />
+          <ChildCreateButton resource="collection_entity" fkField="account_id" />
         </div>
         <ReferenceManyField reference="collection_entity" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1009,7 +1011,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_group" />
+          <ChildCreateButton resource="breed_group" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="breed_group" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1029,7 +1031,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="studbook" />
+          <ChildCreateButton resource="studbook" fkField="account_id" />
         </div>
         <ReferenceManyField reference="studbook" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1051,7 +1053,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="title" />
+          <ChildCreateButton resource="title" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="title" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1073,7 +1075,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="award" />
+          <ChildCreateButton resource="award" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="award" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1093,7 +1095,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_in_account" />
+          <ChildCreateButton resource="breed_in_account" fkField="account_id" />
         </div>
         <ReferenceManyField reference="breed_in_account" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1113,7 +1115,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="breed_standard" />
+          <ChildCreateButton resource="breed_standard" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="breed_standard" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1142,7 +1144,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="account_address" />
+          <ChildCreateButton resource="account_address" fkField="account_id" />
         </div>
         <ReferenceManyField reference="account_address" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1169,7 +1171,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="account_billing_info" />
+          <ChildCreateButton resource="account_billing_info" fkField="account_id" />
         </div>
         <ReferenceManyField reference="account_billing_info" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1193,7 +1195,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="pet_class" />
+          <ChildCreateButton resource="pet_class" fkField="provider_id" />
         </div>
         <ReferenceManyField reference="pet_class" target="provider_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1216,7 +1218,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_measurement" />
+          <ChildCreateButton resource="conf_item_measurement" fkField="account_id" />
         </div>
         <ReferenceManyField reference="conf_item_measurement" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -1238,7 +1240,7 @@ export const AccountShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="account_review" />
+          <ChildCreateButton resource="account_review" fkField="account_id" />
         </div>
         <ReferenceManyField reference="account_review" target="account_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

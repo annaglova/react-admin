@@ -4,6 +4,7 @@ import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
 
+
 export const CashflowCategoryShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={

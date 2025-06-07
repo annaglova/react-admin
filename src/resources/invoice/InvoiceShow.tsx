@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const InvoiceShow = ({ record }: any) => (
@@ -54,7 +56,7 @@ export const InvoiceShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="invoice_id" />
         </div>
         <ReferenceManyField reference="activity" target="invoice_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -135,7 +137,7 @@ export const InvoiceShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="cashflow" />
+          <ChildCreateButton resource="cashflow" fkField="invoice_id" />
         </div>
         <ReferenceManyField reference="cashflow" target="invoice_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -167,7 +169,7 @@ export const InvoiceShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="invoice_product" />
+          <ChildCreateButton resource="invoice_product" fkField="invoice_id" />
         </div>
         <ReferenceManyField reference="invoice_product" target="invoice_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -204,7 +206,7 @@ export const InvoiceShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="license_manager" />
+          <ChildCreateButton resource="license_manager" fkField="invoice_id" />
         </div>
         <ReferenceManyField reference="license_manager" target="invoice_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -230,7 +232,7 @@ export const InvoiceShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="payment_in_breed" />
+          <ChildCreateButton resource="payment_in_breed" fkField="invoice_id" />
         </div>
         <ReferenceManyField reference="payment_in_breed" target="invoice_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

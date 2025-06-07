@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const PostShow = ({ record }: any) => (
@@ -42,7 +44,7 @@ export const PostShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post" />
+          <ChildCreateButton resource="post" fkField="master_post_id" />
         </div>
         <ReferenceManyField reference="post" target="master_post_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -74,7 +76,7 @@ export const PostShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_in_feed" />
+          <ChildCreateButton resource="post_in_feed" fkField="post_id" />
         </div>
         <ReferenceManyField reference="post_in_feed" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -93,7 +95,7 @@ export const PostShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_photo" />
+          <ChildCreateButton resource="post_photo" fkField="post_id" />
         </div>
         <ReferenceManyField reference="post_photo" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -112,7 +114,7 @@ export const PostShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_like" />
+          <ChildCreateButton resource="post_like" fkField="post_id" />
         </div>
         <ReferenceManyField reference="post_like" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -130,7 +132,7 @@ export const PostShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="post_comment" />
+          <ChildCreateButton resource="post_comment" fkField="post_id" />
         </div>
         <ReferenceManyField reference="post_comment" target="post_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

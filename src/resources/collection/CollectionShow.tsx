@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const CollectionShow = ({ record }: any) => (
@@ -37,7 +39,7 @@ export const CollectionShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="collection_in_tag" />
+          <ChildCreateButton resource="collection_in_tag" fkField="entity_id" />
         </div>
         <ReferenceManyField reference="collection_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -54,7 +56,7 @@ export const CollectionShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="collection_entity" />
+          <ChildCreateButton resource="collection_entity" fkField="collection_id" />
         </div>
         <ReferenceManyField reference="collection_entity" target="collection_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

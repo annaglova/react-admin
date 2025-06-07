@@ -2,6 +2,8 @@
 import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
+import { ChildCreateButton } from "@/components/ChildCreateButton";
+
 
 
 export const ConfItemShow = ({ record }: any) => (
@@ -58,7 +60,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="activity" />
+          <ChildCreateButton resource="activity" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="activity" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -139,7 +141,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="quest_stage" />
+          <ChildCreateButton resource="quest_stage" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="quest_stage" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -162,7 +164,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="quest_user_data" />
+          <ChildCreateButton resource="quest_user_data" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="quest_user_data" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -184,7 +186,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="raw_data" />
+          <ChildCreateButton resource="raw_data" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="raw_data" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -217,7 +219,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item" />
+          <ChildCreateButton resource="conf_item" fkField="parent_conf_item_id" />
         </div>
         <ReferenceManyField reference="conf_item" target="parent_conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -265,7 +267,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="cashflow" />
+          <ChildCreateButton resource="cashflow" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="cashflow" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -297,7 +299,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="service_in_conf_item" />
+          <ChildCreateButton resource="service_in_conf_item" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="service_in_conf_item" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -317,7 +319,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_address" />
+          <ChildCreateButton resource="conf_item_address" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="conf_item_address" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -342,7 +344,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_in_case" />
+          <ChildCreateButton resource="conf_item_in_case" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="conf_item_in_case" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -360,7 +362,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="process_selector_in_conf_item" />
+          <ChildCreateButton resource="process_selector_in_conf_item" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="process_selector_in_conf_item" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -381,7 +383,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="raw_data_session_cookies" />
+          <ChildCreateButton resource="raw_data_session_cookies" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="raw_data_session_cookies" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -401,7 +403,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_in_tag" />
+          <ChildCreateButton resource="conf_item_in_tag" fkField="entity_id" />
         </div>
         <ReferenceManyField reference="conf_item_in_tag" target="entity_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -418,7 +420,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_process_launch" />
+          <ChildCreateButton resource="conf_item_process_launch" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="conf_item_process_launch" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -445,7 +447,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="process_parameter_in_conf_item" />
+          <ChildCreateButton resource="process_parameter_in_conf_item" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="process_parameter_in_conf_item" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -464,7 +466,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_relationship" />
+          <ChildCreateButton resource="conf_item_relationship" fkField="conf_item_b_id" />
         </div>
         <ReferenceManyField reference="conf_item_relationship" target="conf_item_b_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -483,7 +485,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="parsing_business_process_in_conf_item" />
+          <ChildCreateButton resource="parsing_business_process_in_conf_item" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="parsing_business_process_in_conf_item" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -504,7 +506,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_measurement" />
+          <ChildCreateButton resource="conf_item_measurement" fkField="conf_item_id" />
         </div>
         <ReferenceManyField reference="conf_item_measurement" target="conf_item_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
@@ -526,7 +528,7 @@ export const ConfItemShow = ({ record }: any) => (
     content: (
       <>
         <div className="flex justify-end px-4 pt-2 pb-1">
-          <CreateButton resource="conf_item_comparison_result" />
+          <ChildCreateButton resource="conf_item_comparison_result" fkField="conf_item_minus_id" />
         </div>
         <ReferenceManyField reference="conf_item_comparison_result" target="conf_item_minus_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>

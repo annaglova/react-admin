@@ -1,46 +1,47 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const LitterCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="notes" />
-          <TextInput source="father_id" />
-          <TextInput source="mother_id" />
+        <TextInput source="notes" validate={[]} />
+          <TextInput source="father_id" validate={[]} />
+          <TextInput source="mother_id" validate={[]} />
           <ReferenceInput source="pet_type_id" reference="pet_type">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
           <ReferenceInput source="mating_period_id" reference="period">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <DateInput source="date_of_birth" />
+          <DateInput source="date_of_birth" validate={[]} />
           <ReferenceInput source="status_id" reference="litter_status">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
           <ReferenceInput source="kennel_id" reference="account">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <TextInput source="breeder_id" />
+          <TextInput source="breeder_id" validate={[]} />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="url" />
+        <TextInput source="url" validate={[]} />
           <ReferenceInput source="letter_id" reference="letter">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <NumberInput source="male_amount" />
-          <NumberInput source="female_amount" />
-          <BooleanInput source="is_public" />
+          <NumberInput source="male_amount" validate={[]} />
+          <NumberInput source="female_amount" validate={[]} />
+          <BooleanInput source="is_public" validate={[]} />
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <DateInput source="start_date" />
-          <DateInput source="end_date" />
+          <DateInput source="start_date" validate={[]} />
+          <DateInput source="end_date" validate={[]} />
       </>
     }
   />

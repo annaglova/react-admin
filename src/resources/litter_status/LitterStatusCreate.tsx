@@ -1,19 +1,20 @@
-import { NumberInput, TextInput } from "react-admin";
+import { NumberInput, TextInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const LitterStatusCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
+        <TextInput source="description" validate={[]} />
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="order" />
+        <NumberInput source="order" validate={[]} />
       </>
     }
   />

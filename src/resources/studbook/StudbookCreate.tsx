@@ -1,28 +1,29 @@
-import { ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const StudbookCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
+        <TextInput source="description" validate={[]} />
           <ReferenceInput source="account_id" reference="account">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
           <ReferenceInput source="status_id" reference="studbook_status">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="type_id" reference="studbook_type">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <TextInput source="alternate_names" />
+          <TextInput source="alternate_names" validate={[]} />
       </>
     }
   />

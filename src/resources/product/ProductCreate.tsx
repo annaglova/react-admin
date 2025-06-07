@@ -1,46 +1,47 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const ProductCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="code" />
+        <TextInput source="code" validate={[]} />
           <ReferenceInput source="unit_id" reference="unit">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
           <ReferenceInput source="currency_id" reference="currency">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <NumberInput source="price" />
-          <TextInput source="url" />
+          <NumberInput source="price" validate={[]} />
+          <TextInput source="url" validate={[]} />
           <ReferenceInput source="type_id" reference="product_type">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <BooleanInput source="active" />
-          <TextInput source="owner_id" />
-          <TextInput source="description" />
+          <BooleanInput source="active" validate={[]} />
+          <TextInput source="owner_id" validate={[]} />
+          <TextInput source="description" validate={[]} />
           <ReferenceInput source="product_source_id" reference="product_source">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="notes" />
-          <BooleanInput source="is_archive" />
+        <TextInput source="notes" validate={[]} />
+          <BooleanInput source="is_archive" validate={[]} />
           <ReferenceInput source="category_id" reference="product_category">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <TextInput source="short_description" />
-          <TextInput source="pet_id" />
-          <TextInput source="benefits" />
-          <TextInput source="general_conditions" />
-          <TextInput source="stripe_product_id" />
-          <TextInput source="pet_breed_id" />
+          <TextInput source="short_description" validate={[]} />
+          <TextInput source="pet_id" validate={[]} />
+          <TextInput source="benefits" validate={[]} />
+          <TextInput source="general_conditions" validate={[]} />
+          <TextInput source="stripe_product_id" validate={[]} />
+          <TextInput source="pet_breed_id" validate={[]} />
       </>
     }
   />

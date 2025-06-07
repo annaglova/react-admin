@@ -41,6 +41,25 @@ const typeMap = {
   numeric: "NumberInput",
 };
 
+const validators = JSON.parse(
+  fs.readFileSync(path.join("src", "validators.json"), "utf-8")
+);
+
+function getValidatorsForField(table, field) {
+  const tableValidators = validators[table] || {};
+  const config = tableValidators[field] || {};
+  const v = [];
+
+  // Додаємо основні валідатори
+  if (config.isRequired) v.push("required()");
+  // if (config.minLength) v.push(`minLength(${config.minLength})`);
+  // if (config.maxLength) v.push(`maxLength(${config.maxLength})`);
+  // if (config.pattern) v.push(`regex(${config.pattern})`);
+  // if (v.length === 0) return "";
+  // if (v.length === 1) return `validate={${v[0]}}`;
+  return `validate={[${v.join(", ")}]}`;
+}
+
 function toPascalCase(str) {
   return str
     .split("_")
@@ -104,19 +123,22 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
     // 4. Генерація полів
     const importsSet = new Set(["ResourceCreateLayout"]);
+    importsSet.add("required");
     function renderField(col) {
+      const validate = getValidatorsForField(table, col.column_name);
       if (fkMap[col.column_name]) {
         importsSet.add("ReferenceInput");
         importsSet.add("SelectInput");
+        // ReferenceInput сам не приймає validate — validate треба прокидати в SelectInput!
         return `<ReferenceInput source="${col.column_name}" reference="${
           fkMap[col.column_name]
         }">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" ${validate} />
 </ReferenceInput>`;
       } else {
         const type = typeMap[col.data_type] || "TextInput";
         importsSet.add(type);
-        return `<${type} source="${col.column_name}" />`;
+        return `<${type} source="${col.column_name}" ${validate} />`;
       }
     }
 
@@ -131,12 +153,14 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     const Name = toPascalCase(table);
     const dir = path.join("src", "resources", table);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    const validatorImports = [];
 
     const code = `import { ${Array.from(importsSet)
       .filter((x) => x !== "ResourceCreateLayout") // <-- тут фільтруємо!
       .sort()
-      .join(", ")} } from "react-admin";
+      .join(", ")} , ${validatorImports.join(", ")}} from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const ${Name}Create = () => (
   <ResourceCreateLayout

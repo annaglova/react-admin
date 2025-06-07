@@ -1,5 +1,6 @@
-import { BooleanInput, ReferenceInput, SelectInput } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const TagAccessGranteeCreate = () => (
   <ResourceCreateLayout
@@ -9,17 +10,17 @@ export const TagAccessGranteeCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="tag_access_id" reference="tag_access">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
-          <BooleanInput source="can_tag" />
-          <BooleanInput source="can_create" />
+          <BooleanInput source="can_tag" validate={[]} />
+          <BooleanInput source="can_create" validate={[]} />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="can_delete" />
-          <BooleanInput source="can_edit" />
-          <BooleanInput source="can_read" />
+        <BooleanInput source="can_delete" validate={[]} />
+          <BooleanInput source="can_edit" validate={[]} />
+          <BooleanInput source="can_read" validate={[]} />
       </>
     }
   />

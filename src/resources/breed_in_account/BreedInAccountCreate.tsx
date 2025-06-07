@@ -1,0 +1,29 @@
+import { NumberInput, ReferenceInput, SelectInput, required , } from "react-admin";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
+
+export const BreedInAccountCreate = () => (
+  <ResourceCreateLayout
+    name={
+      null
+    }
+    fieldsLeft={
+      <>
+        <ReferenceInput source="breed_standard_id" reference="breed_standard">
+  <SelectInput optionText="name" validate={[]} />
+</ReferenceInput>
+          <ReferenceInput source="breed_id" reference="breed">
+  <SelectInput optionText="name" validate={[]} />
+</ReferenceInput>
+      </>
+    }
+    fieldsRight={
+      <>
+        <ReferenceInput source="account_id" reference="account">
+  <SelectInput optionText="name" validate={[]} />
+</ReferenceInput>
+          <NumberInput source="pet_count" validate={[]} />
+      </>
+    }
+  />
+);

@@ -1,23 +1,24 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const AchievementCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
+        <TextInput source="description" validate={[]} />
           <ReferenceInput source="category_id" reference="achievement_category">
-  <SelectInput optionText="name" />
+  <SelectInput optionText="name" validate={[]} />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="int_value" />
-          <NumberInput source="position" />
+        <NumberInput source="int_value" validate={[]} />
+          <NumberInput source="position" validate={[]} />
       </>
     }
   />

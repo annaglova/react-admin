@@ -1,19 +1,20 @@
-import { TextInput } from "react-admin";
+import { TextInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const ContactTypeCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
+        <TextInput source="description" validate={[]} />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="color" />
+        <TextInput source="color" validate={[]} />
       </>
     }
   />

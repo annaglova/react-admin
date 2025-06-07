@@ -1,20 +1,21 @@
-import { BooleanInput, NumberInput, TextInput } from "react-admin";
+import { BooleanInput, NumberInput, TextInput, required , } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
+
 
 export const OrderStatusCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
-          <NumberInput source="position" />
+        <TextInput source="description" validate={[]} />
+          <NumberInput source="position" validate={[]} />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="final_status" />
+        <BooleanInput source="final_status" validate={[]} />
       </>
     }
   />

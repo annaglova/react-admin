@@ -8,14 +8,14 @@ const AchievementFilters = [
 export const AchievementList = () => (
   <List filters={AchievementFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="category_id" reference="achievement_category">
-        <TextField source="name" />
-      </ReferenceField>
-      <NumberField source="int_value" />
-      <NumberField source="position" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="category_id" reference="achievement_category" label="Category Id">
+  <TextField source="name" />
+</ReferenceField>
+      <NumberField source="int_value" label="Int Value" />
+      <NumberField source="position" label="Position" />
     </Datagrid>
   </List>
 );

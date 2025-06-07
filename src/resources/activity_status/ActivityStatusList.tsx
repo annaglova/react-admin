@@ -8,12 +8,12 @@ const ActivityStatusFilters = [
 export const ActivityStatusList = () => (
   <List filters={ActivityStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <TextField source="code" />
-      <BooleanField source="finish" />
-      <TextField source="color" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <TextField source="code" label="Code" />
+      <BooleanField source="finish" label="Finish" />
+      <TextField source="color" label="Color" />
     </Datagrid>
   </List>
 );

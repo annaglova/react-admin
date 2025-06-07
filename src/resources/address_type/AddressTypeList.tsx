@@ -8,12 +8,12 @@ const AddressTypeFilters = [
 export const AddressTypeList = () => (
   <List filters={AddressTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="for_contact" />
-      <BooleanField source="for_account" />
-      <TextField source="color" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="for_contact" label="For Contact" />
+      <BooleanField source="for_account" label="For Account" />
+      <TextField source="color" label="Color" />
     </Datagrid>
   </List>
 );

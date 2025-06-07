@@ -8,9 +8,9 @@ const ReferralLinkFilters = [
 export const ReferralLinkList = () => (
   <List filters={ReferralLinkFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="contact_id" />
-      <TextField source="code" />
+      <TextField source="id" label="Id" />
+      <TextField source="contact_id" label="Contact Id" />
+      <TextField source="code" label="Code" />
     </Datagrid>
   </List>
 );

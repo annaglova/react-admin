@@ -8,16 +8,16 @@ const CurrencyFilters = [
 export const CurrencyList = () => (
   <List filters={CurrencyFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <TextField source="code" />
-      <TextField source="short_name" />
-      <TextField source="symbol" />
-      <NumberField source="recalc_direction" />
-      <NumberField source="division" />
-      <NumberField source="currecy_symbol_position" />
-      <NumberField source="rate" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <TextField source="code" label="Code *" />
+      <TextField source="short_name" label="Short Name" />
+      <TextField source="symbol" label="Symbol *" />
+      <NumberField source="recalc_direction" label="Recalc Direction" />
+      <NumberField source="division" label="Division" />
+      <NumberField source="currecy_symbol_position" label="Currecy Symbol Position" />
+      <NumberField source="rate" label="Rate" />
     </Datagrid>
   </List>
 );

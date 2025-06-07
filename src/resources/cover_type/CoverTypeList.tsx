@@ -8,11 +8,11 @@ const CoverTypeFilters = [
 export const CoverTypeList = () => (
   <List filters={CoverTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <NumberField source="priority" />
-      <BooleanField source="system" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <NumberField source="priority" label="Priority" />
+      <BooleanField source="system" label="System" />
     </Datagrid>
   </List>
 );

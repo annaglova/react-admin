@@ -8,11 +8,11 @@ const ActivityTypeFilters = [
 export const ActivityTypeList = () => (
   <List filters={ActivityTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <TextField source="code" />
-      <TextField source="type_image" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <TextField source="code" label="Code" />
+      <TextField source="type_image" label="Type Image" />
     </Datagrid>
   </List>
 );

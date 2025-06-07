@@ -8,12 +8,12 @@ const AccountOwnershipFilters = [
 export const AccountOwnershipList = () => (
   <List filters={AccountOwnershipFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="country_id" reference="country">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="country_id" reference="country" label="Country Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

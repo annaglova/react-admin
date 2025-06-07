@@ -8,25 +8,25 @@ const RegionFilters = [
 export const RegionList = () => (
   <List filters={RegionFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="country_id" reference="country">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="time_zone_id" reference="time_zone">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="geo_names_time_zone_id" reference="geo_names_time_zone">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="alternate_names" />
-      <TextField source="geo_names_id" />
-      <NumberField source="dem" />
-      <NumberField source="latitude" />
-      <NumberField source="longitude" />
-      <TextField source="code" />
-      <TextField source="region_admin1_code" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="country_id" reference="country" label="Country Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="time_zone_id" reference="time_zone" label="Time Zone Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="geo_names_time_zone_id" reference="geo_names_time_zone" label="Geo Names Time Zone Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="alternate_names" label="Alternate Names" />
+      <TextField source="geo_names_id" label="Geo Names Id" />
+      <NumberField source="dem" label="Dem" />
+      <NumberField source="latitude" label="Latitude" />
+      <NumberField source="longitude" label="Longitude" />
+      <TextField source="code" label="Code" />
+      <TextField source="region_admin1_code" label="Region Admin1 Code" />
     </Datagrid>
   </List>
 );

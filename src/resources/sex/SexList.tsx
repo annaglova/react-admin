@@ -8,14 +8,14 @@ const SexFilters = [
 export const SexList = () => (
   <List filters={SexFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="pet_type_id" reference="pet_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="code" />
-      <NumberField source="order" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="code" label="Code" />
+      <NumberField source="order" label="Order" />
     </Datagrid>
   </List>
 );

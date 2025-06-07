@@ -8,37 +8,37 @@ const ProductFilters = [
 export const ProductList = () => (
   <List filters={ProductFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="code" />
-      <ReferenceField source="unit_id" reference="unit">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="currency_id" reference="currency">
-        <TextField source="name" />
-      </ReferenceField>
-      <NumberField source="price" />
-      <TextField source="url" />
-      <ReferenceField source="type_id" reference="product_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <BooleanField source="active" />
-      <TextField source="owner_id" />
-      <TextField source="description" />
-      <ReferenceField source="product_source_id" reference="product_source">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="notes" />
-      <BooleanField source="is_archive" />
-      <ReferenceField source="category_id" reference="product_category">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="short_description" />
-      <TextField source="pet_id" />
-      <TextField source="benefits" />
-      <TextField source="general_conditions" />
-      <TextField source="stripe_product_id" />
-      <TextField source="pet_breed_id" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="code" label="Code" />
+      <ReferenceField source="unit_id" reference="unit" label="Unit Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="currency_id" reference="currency" label="Currency Id">
+  <TextField source="name" />
+</ReferenceField>
+      <NumberField source="price" label="Price" />
+      <TextField source="url" label="Url" />
+      <ReferenceField source="type_id" reference="product_type" label="Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <BooleanField source="active" label="Active" />
+      <TextField source="owner_id" label="Owner Id" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="product_source_id" reference="product_source" label="Product Source Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="notes" label="Notes" />
+      <BooleanField source="is_archive" label="Is Archive" />
+      <ReferenceField source="category_id" reference="product_category" label="Category Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="short_description" label="Short Description" />
+      <TextField source="pet_id" label="Pet Id" />
+      <TextField source="benefits" label="Benefits" />
+      <TextField source="general_conditions" label="General Conditions" />
+      <TextField source="stripe_product_id" label="Stripe Product Id" />
+      <TextField source="pet_breed_id" label="Pet Breed Id" />
     </Datagrid>
   </List>
 );

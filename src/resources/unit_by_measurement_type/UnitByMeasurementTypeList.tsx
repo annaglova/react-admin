@@ -8,15 +8,15 @@ const UnitByMeasurementTypeFilters = [
 export const UnitByMeasurementTypeList = () => (
   <List filters={UnitByMeasurementTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="measurement_type_id" reference="measurement_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="unit_id" reference="unit">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="measurement_type_id" reference="measurement_type" label="Measurement Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="unit_id" reference="unit" label="Unit Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

@@ -8,11 +8,11 @@ const QuestStatusFilters = [
 export const QuestStatusList = () => (
   <List filters={QuestStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <TextField source="code" />
-      <NumberField source="order" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <TextField source="code" label="Code" />
+      <NumberField source="order" label="Order" />
     </Datagrid>
   </List>
 );

@@ -8,11 +8,11 @@ const InvoicePaymentStatusFilters = [
 export const InvoicePaymentStatusList = () => (
   <List filters={InvoicePaymentStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="final_status" />
-      <TextField source="color" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="final_status" label="Final Status" />
+      <TextField source="color" label="Color" />
     </Datagrid>
   </List>
 );

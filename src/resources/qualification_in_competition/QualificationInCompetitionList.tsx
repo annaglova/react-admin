@@ -8,13 +8,13 @@ const QualificationInCompetitionFilters = [
 export const QualificationInCompetitionList = () => (
   <List filters={QualificationInCompetitionFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <ReferenceField source="pet_qualification_id" reference="pet_qualification">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="competition_id" reference="competition">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <ReferenceField source="pet_qualification_id" reference="pet_qualification" label="Pet Qualification Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="competition_id" reference="competition" label="Competition Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

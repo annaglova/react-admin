@@ -8,103 +8,103 @@ const ContactFilters = [
 export const ContactList = () => (
   <List filters={ContactFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="account_id" reference="account">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="owner_id" reference="contact">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="dear" />
-      <ReferenceField source="salutation_type_id" reference="contact_salutation_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="gender_id" reference="gender">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="decision_role_id" reference="contact_decision_role">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="type_id" reference="contact_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="job_id" reference="job">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="job_title" />
-      <ReferenceField source="department_id" reference="department">
-        <TextField source="name" />
-      </ReferenceField>
-      <DateField source="birth_date" />
-      <TextField source="phone" />
-      <TextField source="mobile_phone" />
-      <TextField source="home_phone" />
-      <TextField source="skype" />
-      <TextField source="email" />
-      <ReferenceField source="address_type_id" reference="address_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="address" />
-      <ReferenceField source="city_id" reference="city">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="region_id" reference="region">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="zip" />
-      <ReferenceField source="country_id" reference="country">
-        <TextField source="name" />
-      </ReferenceField>
-      <BooleanField source="do_not_use_email" />
-      <BooleanField source="do_not_use_call" />
-      <BooleanField source="do_not_use_fax" />
-      <BooleanField source="do_not_use_sms" />
-      <BooleanField source="do_not_use_mail" />
-      <TextField source="notes" />
-      <TextField source="facebook" />
-      <TextField source="linked_in" />
-      <TextField source="twitter" />
-      <TextField source="facebook_id" />
-      <TextField source="linked_in_id" />
-      <TextField source="twitter_id" />
-      <TextField source="contact_photo" />
-      <TextField source="gpsn" />
-      <TextField source="gpse" />
-      <TextField source="surname" />
-      <TextField source="given_name" />
-      <TextField source="middle_name" />
-      <BooleanField source="confirmed" />
-      <ReferenceField source="language_id" reference="sys_language">
-        <TextField source="name" />
-      </ReferenceField>
-      <NumberField source="completeness" />
-      <BooleanField source="is_non_actual_email" />
-      <NumberField source="r_id" />
-      <NumberField source="age" />
-      <BooleanField source="ti_is_invoice_by_sms" />
-      <BooleanField source="ti_is_invoice_by_email" />
-      <TextField source="alternate_names" />
-      <TextField source="duplicate_group_id" />
-      <BooleanField source="is_email_confirmed" />
-      <TextField source="url" />
-      <ReferenceField source="verified_stage_id" reference="verified_stage">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="duplicate_id" />
-      <TextField source="avatar_url" />
-      <ReferenceField source="promote_breed_id" reference="breed">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="verification_status_id" reference="verification_status">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="cover_id" reference="cover">
-        <TextField source="name" />
-      </ReferenceField>
-      <NumberField source="rating" />
-      <NumberField source="lead_conversion_score" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="account_id" reference="account" label="Account Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="owner_id" reference="contact" label="Owner Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="dear" label="Dear" />
+      <ReferenceField source="salutation_type_id" reference="contact_salutation_type" label="Salutation Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="gender_id" reference="gender" label="Gender Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="decision_role_id" reference="contact_decision_role" label="Decision Role Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="type_id" reference="contact_type" label="Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="job_id" reference="job" label="Job Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="job_title" label="Job Title" />
+      <ReferenceField source="department_id" reference="department" label="Department Id">
+  <TextField source="name" />
+</ReferenceField>
+      <DateField source="birth_date" label="Birth Date" />
+      <TextField source="phone" label="Phone" />
+      <TextField source="mobile_phone" label="Mobile Phone" />
+      <TextField source="home_phone" label="Home Phone" />
+      <TextField source="skype" label="Skype" />
+      <TextField source="email" label="Email" />
+      <ReferenceField source="address_type_id" reference="address_type" label="Address Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="address" label="Address" />
+      <ReferenceField source="city_id" reference="city" label="City Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="region_id" reference="region" label="Region Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="zip" label="Zip" />
+      <ReferenceField source="country_id" reference="country" label="Country Id">
+  <TextField source="name" />
+</ReferenceField>
+      <BooleanField source="do_not_use_email" label="Do Not Use Email" />
+      <BooleanField source="do_not_use_call" label="Do Not Use Call" />
+      <BooleanField source="do_not_use_fax" label="Do Not Use Fax" />
+      <BooleanField source="do_not_use_sms" label="Do Not Use Sms" />
+      <BooleanField source="do_not_use_mail" label="Do Not Use Mail" />
+      <TextField source="notes" label="Notes" />
+      <TextField source="facebook" label="Facebook" />
+      <TextField source="linked_in" label="Linked In" />
+      <TextField source="twitter" label="Twitter" />
+      <TextField source="facebook_id" label="Facebook Id" />
+      <TextField source="linked_in_id" label="Linked In Id" />
+      <TextField source="twitter_id" label="Twitter Id" />
+      <TextField source="contact_photo" label="Contact Photo" />
+      <TextField source="gpsn" label="Gpsn" />
+      <TextField source="gpse" label="Gpse" />
+      <TextField source="surname" label="Surname" />
+      <TextField source="given_name" label="Given Name" />
+      <TextField source="middle_name" label="Middle Name" />
+      <BooleanField source="confirmed" label="Confirmed" />
+      <ReferenceField source="language_id" reference="sys_language" label="Language Id">
+  <TextField source="name" />
+</ReferenceField>
+      <NumberField source="completeness" label="Completeness" />
+      <BooleanField source="is_non_actual_email" label="Is Non Actual Email" />
+      <NumberField source="r_id" label="R Id" />
+      <NumberField source="age" label="Age" />
+      <BooleanField source="ti_is_invoice_by_sms" label="Ti Is Invoice By Sms" />
+      <BooleanField source="ti_is_invoice_by_email" label="Ti Is Invoice By Email" />
+      <TextField source="alternate_names" label="Alternate Names" />
+      <TextField source="duplicate_group_id" label="Duplicate Group Id" />
+      <BooleanField source="is_email_confirmed" label="Is Email Confirmed" />
+      <TextField source="url" label="Url" />
+      <ReferenceField source="verified_stage_id" reference="verified_stage" label="Verified Stage Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="duplicate_id" label="Duplicate Id" />
+      <TextField source="avatar_url" label="Avatar Url" />
+      <ReferenceField source="promote_breed_id" reference="breed" label="Promote Breed Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="verification_status_id" reference="verification_status" label="Verification Status Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="cover_id" reference="cover" label="Cover Id">
+  <TextField source="name" />
+</ReferenceField>
+      <NumberField source="rating" label="Rating" />
+      <NumberField source="lead_conversion_score" label="Lead Conversion Score" />
     </Datagrid>
   </List>
 );

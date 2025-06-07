@@ -8,12 +8,12 @@ const SysLanguageFilters = [
 export const SysLanguageList = () => (
   <List filters={SysLanguageFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <TextField source="code" />
-      <BooleanField source="is_used" />
-      <TextField source="sys_culture_def_id" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <TextField source="code" label="Code *" />
+      <BooleanField source="is_used" label="Is Used" />
+      <TextField source="sys_culture_def_id" label="Sys Culture Def Id" />
     </Datagrid>
   </List>
 );

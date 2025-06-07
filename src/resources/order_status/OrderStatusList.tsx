@@ -8,11 +8,11 @@ const OrderStatusFilters = [
 export const OrderStatusList = () => (
   <List filters={OrderStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <NumberField source="position" />
-      <BooleanField source="final_status" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <NumberField source="position" label="Position" />
+      <BooleanField source="final_status" label="Final Status" />
     </Datagrid>
   </List>
 );

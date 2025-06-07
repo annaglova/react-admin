@@ -8,16 +8,16 @@ const DependencyTypeFilters = [
 export const DependencyTypeList = () => (
   <List filters={DependencyTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="for_service_service" />
-      <BooleanField source="for_conf_item_conf_item" />
-      <BooleanField source="for_service_conf_item" />
-      <TextField source="reverse_type_name" />
-      <ReferenceField source="dependency_category_id" reference="dependency_category">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="for_service_service" label="For Service Service" />
+      <BooleanField source="for_conf_item_conf_item" label="For Conf Item Conf Item" />
+      <BooleanField source="for_service_conf_item" label="For Service Conf Item" />
+      <TextField source="reverse_type_name" label="Reverse Type Name" />
+      <ReferenceField source="dependency_category_id" reference="dependency_category" label="Dependency Category Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

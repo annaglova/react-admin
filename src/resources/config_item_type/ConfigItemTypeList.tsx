@@ -8,12 +8,12 @@ const ConfigItemTypeFilters = [
 export const ConfigItemTypeList = () => (
   <List filters={ConfigItemTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="conf_item_category_id" reference="config_item_category">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="conf_item_category_id" reference="config_item_category" label="Conf Item Category Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

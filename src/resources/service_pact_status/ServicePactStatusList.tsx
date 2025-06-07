@@ -8,11 +8,11 @@ const ServicePactStatusFilters = [
 export const ServicePactStatusList = () => (
   <List filters={ServicePactStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="is_active" />
-      <TextField source="color" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="is_active" label="Is Active" />
+      <TextField source="color" label="Color" />
     </Datagrid>
   </List>
 );

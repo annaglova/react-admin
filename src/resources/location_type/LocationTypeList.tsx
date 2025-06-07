@@ -8,12 +8,12 @@ const LocationTypeFilters = [
 export const LocationTypeList = () => (
   <List filters={LocationTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="event_type_id" reference="event_type">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="event_type_id" reference="event_type" label="Event Type Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

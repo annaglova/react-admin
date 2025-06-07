@@ -8,18 +8,18 @@ const PetClassFilters = [
 export const PetClassList = () => (
   <List filters={PetClassFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <NumberField source="age_to" />
-      <NumberField source="age_from" />
-      <NumberField source="code" />
-      <ReferenceField source="pet_type_id" reference="pet_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="provider_id" reference="account">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <NumberField source="age_to" label="Age To" />
+      <NumberField source="age_from" label="Age From" />
+      <NumberField source="code" label="Code" />
+      <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="provider_id" reference="account" label="Provider Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

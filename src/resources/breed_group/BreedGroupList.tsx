@@ -8,13 +8,13 @@ const BreedGroupFilters = [
 export const BreedGroupList = () => (
   <List filters={BreedGroupFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <NumberField source="code" />
-      <ReferenceField source="provider_id" reference="account">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <NumberField source="code" label="Code" />
+      <ReferenceField source="provider_id" reference="account" label="Provider Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

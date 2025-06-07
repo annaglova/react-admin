@@ -8,12 +8,12 @@ const AccountIndustryFilters = [
 export const AccountIndustryList = () => (
   <List filters={AccountIndustryFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="pet_type_id" reference="pet_type">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

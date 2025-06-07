@@ -8,9 +8,9 @@ const PaymentMethodFilters = [
 export const PaymentMethodList = () => (
   <List filters={PaymentMethodFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
     </Datagrid>
   </List>
 );

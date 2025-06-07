@@ -12,6 +12,10 @@ const ALL_RESOURCES = [
   ...resources.LOOKUP_RESOURCES,
 ];
 
+const validators = JSON.parse(
+  fs.readFileSync(path.join("src", "validators.json"), "utf-8")
+);
+
 // 2. Поля для виключення
 const EXCLUDE_FIELDS = [
   "created_on",
@@ -66,6 +70,15 @@ function groupColumns(cols, extraExclude = []) {
   );
 
   return [idCol, nameCol, ...restCols].filter(Boolean);
+}
+
+function getColumnLabel(field, tableName) {
+  const fieldValidators = validators[tableName] || {};
+  const isRequired = !!fieldValidators[field]?.isRequired;
+  const label = field
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+  return isRequired ? `${label} *` : label;
 }
 
 // 4. Підключення до Supabase
@@ -130,22 +143,19 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     const fields = groupColumns(columns);
     const datagridFields = fields
       .map((col) => {
+        const columnLabel = getColumnLabel(col.column_name, table);
         if (fkMap[col.column_name]) {
           const refTable = fkMap[col.column_name];
           if (refTable && /^[a-zA-Z0-9_]+$/.test(refTable)) {
-            return `      <ReferenceField source="${col.column_name}" reference="${refTable}">
-        <TextField source="name" />
-      </ReferenceField>`;
+            return `      <ReferenceField source="${col.column_name}" reference="${refTable}" label="${columnLabel}">
+  <TextField source="name" />
+</ReferenceField>`;
           } else {
-            // Логування якщо refTable некоректне
-            console.warn(
-              `⚠️ Для поля ${col.column_name} у таблиці ${table} некоректний reference: "${refTable}"`
-            );
-            return `      <TextField source="${col.column_name}" />`;
+            return `      <TextField source="${col.column_name}" label="${columnLabel}" />`;
           }
         } else {
           const type = typeMap[col.data_type] || "TextField";
-          return `      <${type} source="${col.column_name}" />`;
+          return `      <${type} source="${col.column_name}" label="${columnLabel}" />`;
         }
       })
       .join("\n");

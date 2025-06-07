@@ -8,12 +8,12 @@ const HealthExamResultFilters = [
 export const HealthExamResultList = () => (
   <List filters={HealthExamResultFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="object_id" reference="health_exam_object">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="object_id" reference="health_exam_object" label="Object Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

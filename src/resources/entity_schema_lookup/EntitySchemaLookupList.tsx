@@ -8,11 +8,11 @@ const EntitySchemaLookupFilters = [
 export const EntitySchemaLookupList = () => (
   <List filters={EntitySchemaLookupFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="is_public" />
-      <TextField source="public_name" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="is_public" label="Is Public" />
+      <TextField source="public_name" label="Public Name" />
     </Datagrid>
   </List>
 );

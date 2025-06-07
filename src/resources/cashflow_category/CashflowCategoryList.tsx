@@ -8,12 +8,12 @@ const CashflowCategoryFilters = [
 export const CashflowCategoryList = () => (
   <List filters={CashflowCategoryFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="cashflow_type_id" reference="cashflow_type">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="cashflow_type_id" reference="cashflow_type" label="Cashflow Type Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

@@ -8,20 +8,20 @@ const PeriodFilters = [
 export const PeriodList = () => (
   <List filters={PeriodFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <DateField source="start_date" />
-      <DateField source="due_date" />
-      <ReferenceField source="year_id" reference="period">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="quarter_id" reference="period">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="parent_id" reference="period">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <DateField source="start_date" label="Start Date" />
+      <DateField source="due_date" label="Due Date" />
+      <ReferenceField source="year_id" reference="period" label="Year Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="quarter_id" reference="period" label="Quarter Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="parent_id" reference="period" label="Parent Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

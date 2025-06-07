@@ -8,10 +8,10 @@ const ActivityPriorityFilters = [
 export const ActivityPriorityList = () => (
   <List filters={ActivityPriorityFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <TextField source="img" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <TextField source="img" label="Img" />
     </Datagrid>
   </List>
 );

@@ -8,10 +8,10 @@ const ProjectStatusFilters = [
 export const ProjectStatusList = () => (
   <List filters={ProjectStatusFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="is_final" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="is_final" label="Is Final" />
     </Datagrid>
   </List>
 );

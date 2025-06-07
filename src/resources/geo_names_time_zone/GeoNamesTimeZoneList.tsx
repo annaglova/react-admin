@@ -8,11 +8,11 @@ const GeoNamesTimeZoneFilters = [
 export const GeoNamesTimeZoneList = () => (
   <List filters={GeoNamesTimeZoneFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <NumberField source="gmt_offset" />
-      <TextField source="country_code" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <NumberField source="gmt_offset" label="Gmt Offset" />
+      <TextField source="country_code" label="Country Code" />
     </Datagrid>
   </List>
 );

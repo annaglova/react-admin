@@ -8,15 +8,15 @@ const TagAccessGranteeFilters = [
 export const TagAccessGranteeList = () => (
   <List filters={TagAccessGranteeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <ReferenceField source="tag_access_id" reference="tag_access">
-        <TextField source="name" />
-      </ReferenceField>
-      <BooleanField source="can_tag" />
-      <BooleanField source="can_create" />
-      <BooleanField source="can_delete" />
-      <BooleanField source="can_edit" />
-      <BooleanField source="can_read" />
+      <TextField source="id" label="Id" />
+      <ReferenceField source="tag_access_id" reference="tag_access" label="Tag Access Id">
+  <TextField source="name" />
+</ReferenceField>
+      <BooleanField source="can_tag" label="Can Tag" />
+      <BooleanField source="can_create" label="Can Create" />
+      <BooleanField source="can_delete" label="Can Delete" />
+      <BooleanField source="can_edit" label="Can Edit" />
+      <BooleanField source="can_read" label="Can Read" />
     </Datagrid>
   </List>
 );

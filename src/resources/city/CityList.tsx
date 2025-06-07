@@ -8,27 +8,27 @@ const CityFilters = [
 export const CityList = () => (
   <List filters={CityFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="country_id" reference="country">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="region_id" reference="region">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="time_zone_id" reference="time_zone">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="geo_names_time_zone_id" reference="geo_names_time_zone">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="alternate_names" />
-      <TextField source="geo_names_id" />
-      <NumberField source="dem" />
-      <NumberField source="latitude" />
-      <NumberField source="longitude" />
-      <NumberField source="population" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="country_id" reference="country" label="Country Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="region_id" reference="region" label="Region Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="time_zone_id" reference="time_zone" label="Time Zone Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="geo_names_time_zone_id" reference="geo_names_time_zone" label="Geo Names Time Zone Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="alternate_names" label="Alternate Names" />
+      <TextField source="geo_names_id" label="Geo Names Id" />
+      <NumberField source="dem" label="Dem" />
+      <NumberField source="latitude" label="Latitude" />
+      <NumberField source="longitude" label="Longitude" />
+      <NumberField source="population" label="Population" />
     </Datagrid>
   </List>
 );

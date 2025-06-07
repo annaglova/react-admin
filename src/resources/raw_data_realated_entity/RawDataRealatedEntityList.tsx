@@ -8,10 +8,10 @@ const RawDataRealatedEntityFilters = [
 export const RawDataRealatedEntityList = () => (
   <List filters={RawDataRealatedEntityFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <NumberField source="priority" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <NumberField source="priority" label="Priority" />
     </Datagrid>
   </List>
 );

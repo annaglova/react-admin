@@ -8,19 +8,19 @@ const StudbookFilters = [
 export const StudbookList = () => (
   <List filters={StudbookFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="account_id" reference="account">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="status_id" reference="studbook_status">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="type_id" reference="studbook_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="alternate_names" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="account_id" reference="account" label="Account Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="status_id" reference="studbook_status" label="Status Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="type_id" reference="studbook_type" label="Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <TextField source="alternate_names" label="Alternate Names" />
     </Datagrid>
   </List>
 );

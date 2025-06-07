@@ -8,16 +8,16 @@ const BreedSubsectionFilters = [
 export const BreedSubsectionList = () => (
   <List filters={BreedSubsectionFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <ReferenceField source="breed_section_id" reference="breed_section">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="breed_group_id" reference="breed_group">
-        <TextField source="name" />
-      </ReferenceField>
-      <NumberField source="code" />
+      <TextField source="id" label="Id *" />
+      <TextField source="name" label="Name *" />
+      <TextField source="description" label="Description" />
+      <ReferenceField source="breed_section_id" reference="breed_section" label="Breed Section Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="breed_group_id" reference="breed_group" label="Breed Group Id">
+  <TextField source="name" />
+</ReferenceField>
+      <NumberField source="code" label="Code" />
     </Datagrid>
   </List>
 );

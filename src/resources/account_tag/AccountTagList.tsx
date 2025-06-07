@@ -8,9 +8,9 @@ const AccountTagFilters = [
 export const AccountTagList = () => (
   <List filters={AccountTagFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="color" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="color" label="Color" />
     </Datagrid>
   </List>
 );

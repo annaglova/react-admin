@@ -8,15 +8,15 @@ const UserQuestFilters = [
 export const UserQuestList = () => (
   <List filters={UserQuestFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <DateField source="finish_date" />
-      <TextField source="contact_id" />
-      <DateField source="deadline_date" />
-      <BooleanField source="deactivated" />
-      <NumberField source="reward" />
-      <TextField source="description" />
-      <NumberField source="frequency_interval" />
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <DateField source="finish_date" label="Finish Date" />
+      <TextField source="contact_id" label="Contact Id" />
+      <DateField source="deadline_date" label="Deadline Date" />
+      <BooleanField source="deactivated" label="Deactivated" />
+      <NumberField source="reward" label="Reward" />
+      <TextField source="description" label="Description" />
+      <NumberField source="frequency_interval" label="Frequency Interval" />
     </Datagrid>
   </List>
 );

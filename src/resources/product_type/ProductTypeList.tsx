@@ -8,13 +8,13 @@ const ProductTypeFilters = [
 export const ProductTypeList = () => (
   <List filters={ProductTypeFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="is_service" />
-      <ReferenceField source="category_id" reference="product_category">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="is_service" label="Is Service" />
+      <ReferenceField source="category_id" reference="product_category" label="Category Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

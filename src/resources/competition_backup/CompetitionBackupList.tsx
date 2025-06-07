@@ -8,21 +8,21 @@ const CompetitionBackupFilters = [
 export const CompetitionBackupList = () => (
   <List filters={CompetitionBackupFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="name" />
-      <TextField source="description" />
-      <BooleanField source="exists_award" />
-      <BooleanField source="exists_place" />
-      <BooleanField source="exists_qualification" />
-      <ReferenceField source="pet_type_id" reference="pet_type">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="provider_id" reference="account">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="type_id" reference="competition_type">
-        <TextField source="name" />
-      </ReferenceField>
+      <TextField source="id" label="Id" />
+      <TextField source="name" label="Name" />
+      <TextField source="description" label="Description" />
+      <BooleanField source="exists_award" label="Exists Award" />
+      <BooleanField source="exists_place" label="Exists Place" />
+      <BooleanField source="exists_qualification" label="Exists Qualification" />
+      <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="provider_id" reference="account" label="Provider Id">
+  <TextField source="name" />
+</ReferenceField>
+      <ReferenceField source="type_id" reference="competition_type" label="Type Id">
+  <TextField source="name" />
+</ReferenceField>
     </Datagrid>
   </List>
 );

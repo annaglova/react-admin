@@ -1,4 +1,4 @@
-import { TextInput } from "react-admin";
+import { TextInput ,   } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ReferralLinkEdit = () => (
@@ -8,12 +8,12 @@ export const ReferralLinkEdit = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="contact_id" />
+        <TextInput source="contact_id"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="code" />
+        <TextInput source="code"  />
       </>
     }
   />

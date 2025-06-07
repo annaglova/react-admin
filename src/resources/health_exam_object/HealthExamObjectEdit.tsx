@@ -1,19 +1,19 @@
-import { TextInput } from "react-admin";
+import { TextInput ,   } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const HealthExamObjectEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
+        <TextInput source="description"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="code" />
+        <TextInput source="code"  />
       </>
     }
   />

@@ -1,19 +1,19 @@
-import { TextInput } from "react-admin";
+import { TextInput ,   } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PostTypeEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
+        <TextInput source="description"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="template_text" />
+        <TextInput source="template_text"  />
       </>
     }
   />

@@ -1,20 +1,20 @@
-import { BooleanInput, NumberInput, TextInput } from "react-admin";
+import { BooleanInput, NumberInput, TextInput ,   } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CoverTypeEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
-          <NumberInput source="priority" />
+        <TextInput source="description"  />
+          <NumberInput source="priority"  />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="system" />
+        <BooleanInput source="system"  />
       </>
     }
   />

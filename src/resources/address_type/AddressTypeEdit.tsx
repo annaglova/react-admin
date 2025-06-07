@@ -1,21 +1,21 @@
-import { BooleanInput, TextInput } from "react-admin";
+import { BooleanInput, TextInput ,   } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const AddressTypeEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
-          <BooleanInput source="for_contact" />
+        <TextInput source="description"  />
+          <BooleanInput source="for_contact"  />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="for_account" />
-          <TextInput source="color" />
+        <BooleanInput source="for_account"  />
+          <TextInput source="color"  />
       </>
     }
   />

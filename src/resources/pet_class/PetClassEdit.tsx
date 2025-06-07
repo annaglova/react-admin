@@ -1,26 +1,26 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PetClassEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" />}</>
+      <>{<TextInput source="name" validate={[required()]} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" />
-          <NumberInput source="age_to" />
-          <NumberInput source="age_from" />
+        <TextInput source="description"  />
+          <NumberInput source="age_to"  />
+          <NumberInput source="age_from"  />
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="code" />
+        <NumberInput source="code"  />
           <ReferenceInput source="pet_type_id" reference="pet_type">
-  <SelectInput optionText="name" />
+   <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="provider_id" reference="account">
-  <SelectInput optionText="name" />
+   <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

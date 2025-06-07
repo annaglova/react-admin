@@ -1,0 +1,112 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "contact_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "product_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "product"
+    },
+    {
+      "name": "status_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "license_manager_status"
+    },
+    {
+      "name": "delivery_date",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "estimated_date",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "owner_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "invoice_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "invoice"
+    },
+    {
+      "name": "type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "license_manager_type"
+    },
+    {
+      "name": "manage_type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "license_manager_manage_type"
+    }
+  ],
+  "detailsTabs": [],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:12.976Z"
+}

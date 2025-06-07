@@ -1,0 +1,68 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "cookies",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "conf_item_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "conf_item"
+    },
+    {
+      "name": "headers",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "domen",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:15.069Z"
+}

@@ -1,0 +1,96 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": true,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": true,
+      "isSystemField": false
+    },
+    {
+      "name": "description",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "code",
+      "type": "character varying",
+      "isRequired": true,
+      "isSystemField": false
+    },
+    {
+      "name": "short_name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "symbol",
+      "type": "character varying",
+      "isRequired": true,
+      "isSystemField": false
+    },
+    {
+      "name": "recalc_direction",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "division",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "currecy_symbol_position",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "rate",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:05.956Z"
+}

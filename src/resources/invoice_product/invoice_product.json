@@ -1,0 +1,174 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "product_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "product"
+    },
+    {
+      "name": "custom_product",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "delivery_date",
+      "type": "date",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "quantity",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "unit_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "unit"
+    },
+    {
+      "name": "primary_price",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "price",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "primary_amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "primary_discount_amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "discount_amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "discount_percent",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "primary_tax_amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "tax_amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "primary_total_amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "total_amount",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "discount_tax",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "invoice_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "invoice"
+    },
+    {
+      "name": "base_quantity",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:12.880Z"
+}

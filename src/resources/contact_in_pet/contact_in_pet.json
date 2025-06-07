@@ -1,0 +1,62 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "contact_role_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "contact_role_for_pet"
+    },
+    {
+      "name": "pet_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "contact_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:12.004Z"
+}

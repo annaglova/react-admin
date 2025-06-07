@@ -1,0 +1,243 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "private",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "entity_name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "auto",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "collection_type"
+    },
+    {
+      "name": "avatar_url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "update_date",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "cover_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "cover"
+    },
+    {
+      "name": "owner_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [
+    {
+      "resource": "collection_in_tag",
+      "fk": "entity_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "entity_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "collection"
+        }
+      ]
+    },
+    {
+      "resource": "collection_entity",
+      "fk": "collection_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "record_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "collection_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "collection"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "event_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "event"
+        },
+        {
+          "name": "pet_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    }
+  ],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:00:57.758Z"
+}

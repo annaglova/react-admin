@@ -1,0 +1,193 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "account_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "account"
+    },
+    {
+      "name": "contact_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "contact"
+    },
+    {
+      "name": "litter_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "litter"
+    },
+    {
+      "name": "pet_breed_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [
+    {
+      "resource": "post_in_feed",
+      "fk": "feed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "feed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post_feed"
+        },
+        {
+          "name": "post_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post"
+        },
+        {
+          "name": "hide",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "post_feed_subscription",
+      "fk": "feed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "feed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post_feed"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    }
+  ],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:02.822Z"
+}

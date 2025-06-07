@@ -1,0 +1,110 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": true,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": true,
+      "isSystemField": false
+    },
+    {
+      "name": "description",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_profile_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "organization_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "profile_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "patron_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "kennel_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "avatar_url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "event_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "public_data_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "public_data"
+    }
+  ],
+  "detailsTabs": [],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:08.229Z"
+}

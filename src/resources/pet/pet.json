@@ -1,0 +1,318 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": true,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "date_of_birth",
+      "type": "date",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "owner_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "kennel_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "sex_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "father_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "mother_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "breed_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "breeder_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "photo_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "date_of_death",
+      "type": "date",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_status_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "coat_type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "coat_color_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "size_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "body_feature_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "litter_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "call_name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "country_of_birth_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "titles",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "inbreeding_percent",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "page_template_code",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "verified_stage_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "owner_kennel_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "full_breed_name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "avatar_url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "rating",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "breed_division_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "trim_titles",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "country_of_stay_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "child_rating",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "self_rating",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "calc_date_of_birth",
+      "type": "date",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "coi",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "verification_status_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "rating_placement_in_breed",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "is_public",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "cover_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "public_data_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "weight",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "test_int_index",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "mother_breed_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "father_breed_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:00:53.209Z"
+}

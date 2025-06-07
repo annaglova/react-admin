@@ -1,0 +1,277 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "status_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "service_pact_status"
+    },
+    {
+      "name": "start_date",
+      "type": "date",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "end_date",
+      "type": "date",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "owner_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "number",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "service_provider_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "account"
+    },
+    {
+      "name": "service_provider_contact_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "contact"
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "calendar_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "calendar"
+    },
+    {
+      "name": "provider_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "account"
+    },
+    {
+      "name": "product_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "product"
+    }
+  ],
+  "detailsTabs": [
+    {
+      "resource": "service_in_service_pact",
+      "fk": "service_pact_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "service_item_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "service_item"
+        },
+        {
+          "name": "service_pact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "service_pact"
+        },
+        {
+          "name": "reaction_time_value",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "reaction_time_unit_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "time_unit"
+        },
+        {
+          "name": "solution_time_value",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "solution_time_unit_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "time_unit"
+        },
+        {
+          "name": "calendar_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "calendar"
+        },
+        {
+          "name": "reaction_time",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "solution_time",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "concat_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "service_pact_in_tag",
+      "fk": "entity_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "entity_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "service_pact"
+        }
+      ]
+    }
+  ],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:00.848Z"
+}

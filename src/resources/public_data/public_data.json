@@ -1,0 +1,755 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": true,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": true,
+      "isSystemField": false
+    },
+    {
+      "name": "hash_md5",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "account_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "account"
+    },
+    {
+      "name": "contact_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "breed_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "breed"
+    },
+    {
+      "name": "event_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "event"
+    },
+    {
+      "name": "project_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "project"
+    },
+    {
+      "name": "record_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "model",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "entity_name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "primary",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "redirect_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "public_data"
+    },
+    {
+      "name": "pet_type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "pet_type"
+    },
+    {
+      "name": "country_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "country"
+    },
+    {
+      "name": "pet_titles_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "title_in_pet"
+    },
+    {
+      "name": "has_owner",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_breed_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [
+    {
+      "resource": "breed",
+      "fk": "public_data_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_type"
+        },
+        {
+          "name": "differ_by_coat_color",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "differ_by_coat_type",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "differ_by_size",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "language_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "sys_language"
+        },
+        {
+          "name": "authentic_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "differ_by_body_feature",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_profile_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "category_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_category"
+        },
+        {
+          "name": "kennel_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "has_related_breed",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "admin_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "patron_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "avatar_url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "rating",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "achievement_progress",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "cover_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "cover"
+        },
+        {
+          "name": "payment_rating",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "public_data_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "public_data"
+        }
+      ]
+    },
+    {
+      "resource": "public_data",
+      "fk": "redirect_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "hash_md5",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "event_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "event"
+        },
+        {
+          "name": "project_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project"
+        },
+        {
+          "name": "record_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "model",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "entity_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "redirect_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "public_data"
+        },
+        {
+          "name": "pet_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_type"
+        },
+        {
+          "name": "country_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "country"
+        },
+        {
+          "name": "pet_titles_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "title_in_pet"
+        },
+        {
+          "name": "has_owner",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "country",
+      "fk": "public_data_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "description",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "image",
+          "type": "bytea",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "billing_info",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "time_zone_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "time_zone"
+        },
+        {
+          "name": "code",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "alternate_names",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "geo_names_time_zone_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "geo_names_time_zone"
+        },
+        {
+          "name": "geo_names_country_code",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "geo_names_id",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "dem",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "latitude",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "longitude",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "alpha2_code",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "public_data_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "public_data"
+        },
+        {
+          "name": "url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "pet_type",
+      "fk": "public_data_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "description",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_profile_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "organization_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "profile_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "patron_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "kennel_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "avatar_url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "event_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "public_data_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "public_data"
+        }
+      ]
+    }
+  ],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:00:59.728Z"
+}

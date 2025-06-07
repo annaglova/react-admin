@@ -1,0 +1,521 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": true,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "publication_date",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "post_type"
+    },
+    {
+      "name": "state_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "post_state"
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "master_post_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "post"
+    },
+    {
+      "name": "is_moment",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "author_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "event_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "event"
+    },
+    {
+      "name": "latitude",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "longitude",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "photos",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "participants",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "cover_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "cover"
+    }
+  ],
+  "detailsTabs": [
+    {
+      "resource": "post",
+      "fk": "master_post_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "publication_date",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post_type"
+        },
+        {
+          "name": "state_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post_state"
+        },
+        {
+          "name": "text",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "master_post_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post"
+        },
+        {
+          "name": "is_moment",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "author_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "event_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "event"
+        },
+        {
+          "name": "latitude",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "longitude",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "photos",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "participants",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "cover_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "cover"
+        }
+      ]
+    },
+    {
+      "resource": "post_in_feed",
+      "fk": "post_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "feed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post_feed"
+        },
+        {
+          "name": "post_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post"
+        },
+        {
+          "name": "hide",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "post_photo",
+      "fk": "post_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "position",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "link",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "post_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post"
+        }
+      ]
+    },
+    {
+      "resource": "post_like",
+      "fk": "post_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "post_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact"
+        }
+      ]
+    },
+    {
+      "resource": "post_comment",
+      "fk": "post_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "post_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "post"
+        },
+        {
+          "name": "text",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "date",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    }
+  ],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:02.647Z"
+}

@@ -1,0 +1,689 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "code",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "unit_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "unit"
+    },
+    {
+      "name": "currency_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "currency"
+    },
+    {
+      "name": "price",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "product_type"
+    },
+    {
+      "name": "active",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "owner_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "product_source_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "product_source"
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "is_archive",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "category_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "product_category"
+    },
+    {
+      "name": "short_description",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "benefits",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "general_conditions",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "stripe_product_id",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_breed_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false
+    }
+  ],
+  "detailsTabs": [
+    {
+      "resource": "service_pact",
+      "fk": "product_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "status_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "service_pact_status"
+        },
+        {
+          "name": "start_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "end_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "number",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "service_provider_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "service_provider_contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "calendar_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "calendar"
+        },
+        {
+          "name": "provider_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "product_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "product"
+        }
+      ]
+    },
+    {
+      "resource": "invoice_product",
+      "fk": "product_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "product_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "product"
+        },
+        {
+          "name": "custom_product",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "delivery_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "quantity",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "unit_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "unit"
+        },
+        {
+          "name": "primary_price",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "price",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_discount_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "discount_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "discount_percent",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_tax_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "tax_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_total_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "total_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "discount_tax",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "invoice_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "invoice"
+        },
+        {
+          "name": "base_quantity",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "product_unit",
+      "fk": "product_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "product_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "product"
+        },
+        {
+          "name": "unit_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "unit"
+        },
+        {
+          "name": "is_base",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "number_of_base_units",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "product_price",
+      "fk": "product_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "product_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "product"
+        },
+        {
+          "name": "currency_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "currency"
+        },
+        {
+          "name": "price",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "license_manager",
+      "fk": "product_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "product_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "product"
+        },
+        {
+          "name": "status_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "license_manager_status"
+        },
+        {
+          "name": "delivery_date",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "estimated_date",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "invoice_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "invoice"
+        },
+        {
+          "name": "type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "license_manager_type"
+        },
+        {
+          "name": "manage_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "license_manager_manage_type"
+        }
+      ]
+    }
+  ],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:01:00.094Z"
+}

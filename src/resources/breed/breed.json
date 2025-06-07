@@ -1,0 +1,3615 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "isRequired": true,
+      "isSystemField": true
+    },
+    {
+      "name": "created_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "created_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_on",
+      "type": "timestamp without time zone",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "modified_by_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "isRequired": true,
+      "isSystemField": false
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_type_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "pet_type"
+    },
+    {
+      "name": "differ_by_coat_color",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "differ_by_coat_type",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "differ_by_size",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "language_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "sys_language"
+    },
+    {
+      "name": "authentic_name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "differ_by_body_feature",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "pet_profile_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "category_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "breed_category"
+    },
+    {
+      "name": "kennel_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "has_related_breed",
+      "type": "boolean",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "admin_name",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "account_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "account"
+    },
+    {
+      "name": "patron_count",
+      "type": "integer",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "avatar_url",
+      "type": "character varying",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "rating",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "achievement_progress",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "cover_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "cover"
+    },
+    {
+      "name": "payment_rating",
+      "type": "numeric",
+      "isRequired": false,
+      "isSystemField": false
+    },
+    {
+      "name": "public_data_id",
+      "type": "uuid",
+      "isRequired": false,
+      "isSystemField": false,
+      "isFk": true,
+      "ref": "public_data"
+    }
+  ],
+  "detailsTabs": [
+    {
+      "resource": "contact",
+      "fk": "promote_breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "description",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "dear",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "salutation_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact_salutation_type"
+        },
+        {
+          "name": "gender_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "gender"
+        },
+        {
+          "name": "decision_role_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact_decision_role"
+        },
+        {
+          "name": "type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact_type"
+        },
+        {
+          "name": "job_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "job"
+        },
+        {
+          "name": "job_title",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "department_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "department"
+        },
+        {
+          "name": "birth_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "phone",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "mobile_phone",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "home_phone",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "skype",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "email",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "address_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "address_type"
+        },
+        {
+          "name": "address",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "city_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "city"
+        },
+        {
+          "name": "region_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "region"
+        },
+        {
+          "name": "zip",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "country_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "country"
+        },
+        {
+          "name": "do_not_use_email",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "do_not_use_call",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "do_not_use_fax",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "do_not_use_sms",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "do_not_use_mail",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "facebook",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "linked_in",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "twitter",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "facebook_id",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "linked_in_id",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "twitter_id",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "contact_photo",
+          "type": "bytea",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "gpsn",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "gpse",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "surname",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "given_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "middle_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "confirmed",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "language_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "sys_language"
+        },
+        {
+          "name": "completeness",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "is_non_actual_email",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "r_id",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "age",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "ti_is_invoice_by_sms",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "ti_is_invoice_by_email",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "alternate_names",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "duplicate_group_id",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "is_email_confirmed",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "verified_stage_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "verified_stage"
+        },
+        {
+          "name": "duplicate_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "avatar_url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "promote_breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "verification_status_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "verification_status"
+        },
+        {
+          "name": "cover_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "cover"
+        },
+        {
+          "name": "rating",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "lead_conversion_score",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "raw_data",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "json",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "status_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "raw_data_status"
+        },
+        {
+          "name": "log",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "conf_item_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "conf_item"
+        },
+        {
+          "name": "redirect_url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "record_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "entity_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "model",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "hash_md5",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "event_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "event"
+        },
+        {
+          "name": "project_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project"
+        },
+        {
+          "name": "pet_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "\"order\"",
+      "fk": "breed_id",
+      "fields": []
+    },
+    {
+      "resource": "project",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "project_entry_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project_entry_type"
+        },
+        {
+          "name": "type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project_type"
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "status_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project_status"
+        },
+        {
+          "name": "start_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "end_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "duration",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "deadline",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "supplier_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "parent_project_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project"
+        },
+        {
+          "name": "actual_completion",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "is_auto_calc_completion",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_income",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "fact_income",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "income_dev",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "income_dev_perc",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_external_cost",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "fact_external_cost",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "external_cost_dev",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_external_dev_perc",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_expense",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "fact_expense",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "expense_dev",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "expense_dev_perc",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_internal_cost",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "fact_internal_cost",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "internal_cost_dev",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_internal_dev_perc",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_margin",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "plan_margin_perc",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "fact_margin",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "fact_margin_perc",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "margin_dev",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "margin_dev_perc",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "position",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "event_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "event"
+        },
+        {
+          "name": "category_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project_category"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_type"
+        },
+        {
+          "name": "cover_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "cover"
+        }
+      ]
+    },
+    {
+      "resource": "competition",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "provider_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "parent_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "competition"
+        },
+        {
+          "name": "type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "competition_type"
+        },
+        {
+          "name": "template_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "competition"
+        },
+        {
+          "name": "exists_qualification",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "exists_place",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "exists_award",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_type"
+        },
+        {
+          "name": "order",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "category_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "competition_category"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "cover",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "redirect_url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "avatar_url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "cover_type"
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "url",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "is_default",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "note",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "project_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project"
+        },
+        {
+          "name": "event_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "event"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "cover_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "cover"
+        },
+        {
+          "name": "record_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "entity_schema_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "entity_schema_lookup"
+        },
+        {
+          "name": "litter_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "litter"
+        },
+        {
+          "name": "pet_breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "top_pet_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "pet_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "public_data",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "hash_md5",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "event_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "event"
+        },
+        {
+          "name": "project_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project"
+        },
+        {
+          "name": "record_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "model",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "entity_name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "redirect_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "public_data"
+        },
+        {
+          "name": "pet_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_type"
+        },
+        {
+          "name": "country_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "country"
+        },
+        {
+          "name": "pet_titles_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "title_in_pet"
+        },
+        {
+          "name": "has_owner",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "invoice",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "number",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "start_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_payment_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "payment_status_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "invoice_payment_status"
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "supplier_billing_info_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account_billing_info"
+        },
+        {
+          "name": "remind_to_owner",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "remind_to_owner_date",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "customer_billing_info_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account_billing_info"
+        },
+        {
+          "name": "currency_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "currency"
+        },
+        {
+          "name": "currency_rate",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "due_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "payment_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "supplier_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "project_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "project"
+        },
+        {
+          "name": "order_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "order"
+        },
+        {
+          "name": "amount_without_tax",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_amount_without_tax",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "payment_amount_without_tax",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_payment_amount_without_tax",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "created_from_order",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "breed_division",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": true,
+          "isSystemField": false
+        },
+        {
+          "name": "description",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "division_by_color",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "is_main",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "division_by_body_feature",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "division_by_size",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "division_by_coat_type",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_standard_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_standard"
+        }
+      ]
+    },
+    {
+      "resource": "contact_career",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "department_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "department"
+        },
+        {
+          "name": "job_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "job"
+        },
+        {
+          "name": "job_title",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "current",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "start_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "due_date",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "job_change_reason_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "job_change_reason"
+        },
+        {
+          "name": "description",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "decision_role_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "contact_decision_role"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "rating",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "related_breed",
+      "fk": [
+        "breed_id",
+        "connected_breed_id"
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "connected_breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "breed_synonym",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "language_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "sys_language"
+        }
+      ]
+    },
+    {
+      "resource": "body_feature_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "body_feature_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "body_feature"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "coat_type_in_breed_division",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "coat_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "coat_type"
+        },
+        {
+          "name": "breed_division_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_division"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "achievement_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "achievement_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "achievement"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "date",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "pet_size_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "pet_size_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_size"
+        }
+      ]
+    },
+    {
+      "resource": "body_feature_in_breed_division",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "body_feature_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "body_feature"
+        },
+        {
+          "name": "breed_division_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_division"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "health_exam_object_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "health_exam_object_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "health_exam_object"
+        }
+      ]
+    },
+    {
+      "resource": "coat_color_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "coat_color_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "coat_color"
+        }
+      ]
+    },
+    {
+      "resource": "coat_color_in_breed_division",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_division_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_division"
+        },
+        {
+          "name": "coat_color_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "coat_color"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "coat_type_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "coat_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "coat_type"
+        }
+      ]
+    },
+    {
+      "resource": "breed_forecast",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "period_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "period"
+        },
+        {
+          "name": "amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "primary_amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "currency_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "currency"
+        },
+        {
+          "name": "value",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "pet_size_in_breed_division",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "pet_size_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_size"
+        },
+        {
+          "name": "breed_division_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_division"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "measurement_type_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "measurement_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "measurement_type"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        }
+      ]
+    },
+    {
+      "resource": "breed_in_kennel",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "breed_standard_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_standard"
+        }
+      ]
+    },
+    {
+      "resource": "breed_in_account",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_standard_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_standard"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "pet_count",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "breed_standard",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": true,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "subsection_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_subsection"
+        },
+        {
+          "name": "section_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_section"
+        },
+        {
+          "name": "group_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_group"
+        },
+        {
+          "name": "code",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "provider_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "effective",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "approved",
+          "type": "date",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "link",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "working_trial",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "status_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_standard_status"
+        },
+        {
+          "name": "has_variable_divisions",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "conf_item_measurement",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "value",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "conf_item_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "conf_item"
+        },
+        {
+          "name": "account_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "account"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "pet_type_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "pet_type"
+        }
+      ]
+    },
+    {
+      "resource": "payment_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "amount",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "invoice_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "invoice"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "date",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "user_settings",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "page_view_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "page_view"
+        },
+        {
+          "name": "size_unit_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "unit"
+        },
+        {
+          "name": "weight_unit_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "unit"
+        },
+        {
+          "name": "anonymous_gift_sender",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "welcome_stage_complete",
+          "type": "boolean",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "contact_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "rating",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "place",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "top_patron_in_breed",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "name",
+          "type": "character varying",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "rating",
+          "type": "numeric",
+          "isRequired": false,
+          "isSystemField": false
+        },
+        {
+          "name": "place",
+          "type": "integer",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    },
+    {
+      "resource": "breed_in_contact",
+      "fk": "breed_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": true
+        },
+        {
+          "name": "breed_standard_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed_standard"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false,
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isRequired": false,
+          "isSystemField": false
+        }
+      ]
+    }
+  ],
+  "custom": {
+    "showFields": [],
+    "editFields": [],
+    "createFields": [],
+    "showDetailsTabs": []
+  },
+  "metaUpdatedAt": "2025-06-07T17:00:53.125Z"
+}

@@ -3,6 +3,23 @@ const path = require("path");
 require("dotenv").config();
 const { createClient } = require("@supabase/supabase-js");
 
+const SYSTEM_FIELDS = [
+  "id",
+  "created_on",
+  "created_by_id",
+  "modified_on",
+  "modified_by_id",
+  "updated_at",
+  "created_at",
+];
+
+const emptyCustom = {
+  showFields: [],
+  editFields: [],
+  createFields: [],
+  showDetailsTabs: [],
+};
+
 const resources = require("./src/resourcesList.json");
 const MAIN_RESOURCES = resources.MAIN_RESOURCES || [];
 const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES || [];
@@ -11,14 +28,6 @@ const ALL_RESOURCES = [
   ...MAIN_RESOURCES,
   ...LOOKUP_RESOURCES,
   ...CHILD_RESOURCES,
-];
-const EXCLUDE_FIELDS = [
-  "created_on",
-  "created_by_id",
-  "modified_on",
-  "modified_by_id",
-  "updated_at",
-  "created_at",
 ];
 
 const validators = JSON.parse(
@@ -32,6 +41,7 @@ function getFieldMeta(table, col) {
     name: col.column_name,
     type: col.data_type,
     isRequired: !!v.isRequired,
+    isSystemField: SYSTEM_FIELDS.includes(col.column_name),
   };
 }
 
@@ -45,6 +55,17 @@ function toPascalCase(str) {
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
+
+function fillCustom(custom = {}) {
+  return {
+    showFields: Array.isArray(custom.showFields) ? custom.showFields : [],
+    editFields: Array.isArray(custom.editFields) ? custom.editFields : [],
+    createFields: Array.isArray(custom.createFields) ? custom.createFields : [],
+    showDetailsTabs: Array.isArray(custom.showDetailsTabs)
+      ? custom.showDetailsTabs
+      : [],
+  };
+}
 
 function loadIfExists(file) {
   try {
@@ -74,10 +95,7 @@ function loadIfExists(file) {
     }
 
     // 3. Основні поля
-    const filteredCols = columns.filter(
-      (c) => !EXCLUDE_FIELDS.includes(c.column_name)
-    );
-    const fields = filteredCols.map((col) => {
+    const fields = columns.map((col) => {
       const meta = getFieldMeta(table, col);
       if (fkMap[col.column_name]) {
         meta.isFk = true;
@@ -135,15 +153,39 @@ function loadIfExists(file) {
     const filePath = path.join(dir, `${table}.json`);
     const prev = loadIfExists(filePath);
 
-    // 6. Перезаписати fields, detailsTabs, залишити custom
+    // 6. Перезаписати fields, detailsTabs, залишити custom + metaUpdatedAt
     const result = {
       ...prev,
       fields,
       detailsTabs,
-      custom: prev.custom || {},
+      custom: fillCustom(prev.custom),
+      metaUpdatedAt: new Date().toISOString(),
     };
     fs.writeFileSync(filePath, JSON.stringify(result, null, 2));
     console.log(`✅ ${table}.json створено/оновлено`);
+  }
+
+  // 7. Перевірка валідності всіх json після генерації
+  let errors = [];
+  for (const table of ALL_RESOURCES) {
+    const filePath = path.join("src", "resources", table, `${table}.json`);
+    try {
+      const obj = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      if (!Array.isArray(obj.fields)) {
+        errors.push(`${table}: fields is not array`);
+      }
+      if (!Array.isArray(obj.detailsTabs)) {
+        errors.push(`${table}: detailsTabs is not array`);
+      }
+    } catch (e) {
+      errors.push(`${table}: JSON parse error: ${e.message}`);
+    }
+  }
+  if (errors.length) {
+    console.error("❌ Виявлено помилки у json:\n" + errors.join("\n"));
+    process.exit(1);
+  } else {
+    console.log("✅ Всі json-файли валідні!");
   }
 
   console.log("🎉 Всі json згенеровано/оновлено.");

@@ -14,14 +14,14 @@ export const PeriodList = () => (
       <DateField source="start_date" label="Start Date" />
       <DateField source="due_date" label="Due Date" />
       <ReferenceField source="year_id" reference="period" label="Year Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="quarter_id" reference="period" label="Quarter Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="parent_id" reference="period" label="Parent Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

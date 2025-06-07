@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, Pagination, TextField, TextInput } from "react-admin";
+import { Datagrid, List, NumberField, Pagination, TextField, TextInput } from "react-admin";
 
 const QuestStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,

@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
+import { Datagrid, List, Pagination, TextField, TextInput } from "react-admin";
 
 const AchievementCategoryFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,

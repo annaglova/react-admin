@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const AwardInCompetitionFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -10,11 +10,11 @@ export const AwardInCompetitionList = () => (
     <Datagrid rowClick="show">
       <TextField source="id" label="Id" />
       <ReferenceField source="award_id" reference="award" label="Award Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="competition_id" reference="competition" label="Competition Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

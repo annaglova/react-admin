@@ -12,31 +12,31 @@ export const ContactList = () => (
       <TextField source="name" label="Name *" />
       <TextField source="description" label="Description" />
       <ReferenceField source="account_id" reference="account" label="Account Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="owner_id" reference="contact" label="Owner Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="dear" label="Dear" />
       <ReferenceField source="salutation_type_id" reference="contact_salutation_type" label="Salutation Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="gender_id" reference="gender" label="Gender Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="decision_role_id" reference="contact_decision_role" label="Decision Role Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="type_id" reference="contact_type" label="Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="job_id" reference="job" label="Job Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="job_title" label="Job Title" />
       <ReferenceField source="department_id" reference="department" label="Department Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <DateField source="birth_date" label="Birth Date" />
       <TextField source="phone" label="Phone" />
       <TextField source="mobile_phone" label="Mobile Phone" />
@@ -44,19 +44,19 @@ export const ContactList = () => (
       <TextField source="skype" label="Skype" />
       <TextField source="email" label="Email" />
       <ReferenceField source="address_type_id" reference="address_type" label="Address Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="address" label="Address" />
       <ReferenceField source="city_id" reference="city" label="City Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="region_id" reference="region" label="Region Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="zip" label="Zip" />
       <ReferenceField source="country_id" reference="country" label="Country Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="do_not_use_email" label="Do Not Use Email" />
       <BooleanField source="do_not_use_call" label="Do Not Use Call" />
       <BooleanField source="do_not_use_fax" label="Do Not Use Fax" />
@@ -77,8 +77,8 @@ export const ContactList = () => (
       <TextField source="middle_name" label="Middle Name" />
       <BooleanField source="confirmed" label="Confirmed" />
       <ReferenceField source="language_id" reference="sys_language" label="Language Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="completeness" label="Completeness" />
       <BooleanField source="is_non_actual_email" label="Is Non Actual Email" />
       <NumberField source="r_id" label="R Id" />
@@ -90,19 +90,19 @@ export const ContactList = () => (
       <BooleanField source="is_email_confirmed" label="Is Email Confirmed" />
       <TextField source="url" label="Url" />
       <ReferenceField source="verified_stage_id" reference="verified_stage" label="Verified Stage Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="duplicate_id" label="Duplicate Id" />
       <TextField source="avatar_url" label="Avatar Url" />
       <ReferenceField source="promote_breed_id" reference="breed" label="Promote Breed Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="verification_status_id" reference="verification_status" label="Verification Status Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="cover_id" reference="cover" label="Cover Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="rating" label="Rating" />
       <NumberField source="lead_conversion_score" label="Lead Conversion Score" />
     </Datagrid>

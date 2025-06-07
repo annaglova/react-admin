@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const BreedSectionFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -13,8 +13,8 @@ export const BreedSectionList = () => (
       <TextField source="description" label="Description" />
       <NumberField source="code" label="Code" />
       <ReferenceField source="breed_group_id" reference="breed_group" label="Breed Group Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

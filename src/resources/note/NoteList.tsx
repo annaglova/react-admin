@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const NoteFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -13,29 +13,29 @@ export const NoteList = () => (
       <TextField source="notes" label="Notes" />
       <TextField source="pet_id" label="Pet Id" />
       <ReferenceField source="project_id" reference="project" label="Project Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="event_id" reference="event" label="Event Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="contact_id" label="Contact Id" />
       <ReferenceField source="account_id" reference="account" label="Account Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="breed_id" reference="breed" label="Breed Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="owner_id" label="Owner Id" />
       <ReferenceField source="cover_id" reference="cover" label="Cover Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="record_id" label="Record Id" />
       <ReferenceField source="entity_schema_id" reference="entity_schema_lookup" label="Entity Schema Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="litter_id" reference="litter" label="Litter Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="pet_breed_id" label="Pet Breed Id" />
     </Datagrid>
   </List>

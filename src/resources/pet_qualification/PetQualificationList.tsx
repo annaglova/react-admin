@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const PetQualificationFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,12 +12,12 @@ export const PetQualificationList = () => (
       <TextField source="name" label="Name *" />
       <TextField source="description" label="Description" />
       <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="code" label="Code" />
       <ReferenceField source="provider_id" reference="account" label="Provider Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

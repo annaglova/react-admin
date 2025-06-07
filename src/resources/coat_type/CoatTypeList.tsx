@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CoatTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,8 +12,8 @@ export const CoatTypeList = () => (
       <TextField source="name" label="Name *" />
       <TextField source="description" label="Description" />
       <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

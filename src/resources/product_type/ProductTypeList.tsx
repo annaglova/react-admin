@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const ProductTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -13,8 +13,8 @@ export const ProductTypeList = () => (
       <TextField source="description" label="Description" />
       <BooleanField source="is_service" label="Is Service" />
       <ReferenceField source="category_id" reference="product_category" label="Category Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

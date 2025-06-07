@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, Pagination, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, List, Pagination, TextField, TextInput } from "react-admin";
 
 const SysLanguageFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,

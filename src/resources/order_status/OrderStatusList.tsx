@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, NumberField, Pagination, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, List, NumberField, Pagination, TextField, TextInput } from "react-admin";
 
 const OrderStatusFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,

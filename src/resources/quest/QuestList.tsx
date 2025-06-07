@@ -12,13 +12,13 @@ export const QuestList = () => (
       <TextField source="name" label="Name" />
       <TextField source="url" label="Url" />
       <ReferenceField source="type_id" reference="quest_type" label="Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="reward" label="Reward" />
       <NumberField source="frequency_interval" label="Frequency Interval" />
       <ReferenceField source="frequency_id" reference="quest_frequency" label="Frequency Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <BooleanField source="deactivated" label="Deactivated" />
       <TextField source="description" label="Description" />
       <NumberField source="total_steps" label="Total Steps" />

@@ -9,34 +9,34 @@ export const ProjectList = () => (
   <List filters={ProjectFilters} perPage={15}  pagination={<Pagination />} >
     <Datagrid rowClick="show">
       <TextField source="id" label="Id *" />
-      <TextField source="name" label="Name *" />
       <TextField source="notes" label="Notes" />
+      <TextField source="name" label="Name *" />
       <ReferenceField source="account_id" reference="account" label="Account Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="contact_id" reference="contact" label="Contact Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="project_entry_type_id" reference="project_entry_type" label="Project Entry Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="type_id" reference="project_type" label="Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="owner_id" label="Owner Id" />
       <ReferenceField source="status_id" reference="project_status" label="Status Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <DateField source="start_date" label="Start Date" />
       <DateField source="end_date" label="End Date" />
       <NumberField source="duration" label="Duration" />
       <DateField source="deadline" label="Deadline" />
       <ReferenceField source="supplier_id" reference="account" label="Supplier Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="parent_project_id" reference="project" label="Parent Project Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <NumberField source="actual_completion" label="Actual Completion" />
       <BooleanField source="is_auto_calc_completion" label="Is Auto Calc Completion" />
       <NumberField source="plan_income" label="Plan Income" />
@@ -63,21 +63,21 @@ export const ProjectList = () => (
       <NumberField source="margin_dev_perc" label="Margin Dev Perc" />
       <NumberField source="position" label="Position" />
       <ReferenceField source="event_id" reference="event" label="Event Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="category_id" reference="project_category" label="Category Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="breed_id" reference="breed" label="Breed Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="url" label="Url" />
       <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="cover_id" reference="cover" label="Cover Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

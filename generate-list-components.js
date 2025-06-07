@@ -1,30 +1,24 @@
-require("dotenv").config();
-const { createClient } = require("@supabase/supabase-js");
 const fs = require("fs");
 const path = require("path");
-
 const SKIP_MARK = "// @MANUAL";
 
-// 1. Читаємо ресурси з JSON
+// --- Налаштування ---
 const resources = require("./src/resourcesList.json");
-const ALL_RESOURCES = [
-  ...resources.MAIN_RESOURCES,
-  ...resources.LOOKUP_RESOURCES,
-];
+const MAIN_RESOURCES = resources.MAIN_RESOURCES || [];
+const LOOKUP_RESOURCES = resources.LOOKUP_RESOURCES || [];
+const ALL_RESOURCES = [...MAIN_RESOURCES, ...LOOKUP_RESOURCES];
 
-const validators = JSON.parse(
-  fs.readFileSync(path.join("src", "validators.json"), "utf-8")
-);
-
-// 2. Поля для виключення
+// Тільки ці поля не показувати в таблиці
 const EXCLUDE_FIELDS = [
   "created_on",
   "created_by_id",
   "modified_on",
   "modified_by_id",
+  "updated_at",
+  "created_at",
 ];
 
-// 3. Мапа postgres → React Admin Field
+// Мапа postgres → React Admin Field
 const typeMap = {
   integer: "NumberField",
   bigint: "NumberField",
@@ -51,124 +45,81 @@ function toPascalCase(str) {
     .join("");
 }
 
-function groupColumns(cols, extraExclude = []) {
-  const fullExclude = [...EXCLUDE_FIELDS, ...extraExclude];
-  const filteredCols = cols.filter((c) => !fullExclude.includes(c.column_name));
-
-  const idCol = filteredCols.find((c) => c.column_name === "id");
-  const nameCol =
-    filteredCols.find((c) => c.column_name === "name") ||
-    filteredCols.find((c) => c.column_name === "title") ||
-    filteredCols.find((c) => c.column_name === "label") ||
-    filteredCols.find((c) => c.column_name === "value");
-
-  // Всі, крім id і name-type
-  const restCols = filteredCols.filter(
-    (c) =>
-      c.column_name !== "id" &&
-      c.column_name !== (nameCol && nameCol.column_name)
-  );
-
-  return [idCol, nameCol, ...restCols].filter(Boolean);
-}
-
-function getColumnLabel(field, tableName) {
-  const fieldValidators = validators[tableName] || {};
-  const isRequired = !!fieldValidators[field]?.isRequired;
-  const label = field
+function getColumnLabel(fieldMeta) {
+  const label = fieldMeta.name
     .replace(/_/g, " ")
     .replace(/\b\w/g, (c) => c.toUpperCase());
-  return isRequired ? `${label} *` : label;
+  return fieldMeta.isRequired ? `${label} *` : label;
 }
 
-// 4. Підключення до Supabase
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+function getMetaJson(table) {
+  const filePath = path.join("src", "resources", table, `${table}.json`);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Meta JSON for table "${table}" not found: ${filePath}`);
+  }
+  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+}
 
-(async () => {
-  for (const table of ALL_RESOURCES) {
-    // 1. Колонки таблиці
-    const { data: columns, error: colErr } = await supabase.rpc(
-      "get_table_columns",
-      { tablename: table }
-    );
-    if (colErr) {
-      console.error(`Помилка колонок ${table}:`, colErr);
-      continue;
-    }
-    if (!columns || !columns.length) {
-      console.warn(`Таблиця ${table} без колонок, пропуск...`);
-      continue;
-    }
+function buildFieldMap(fields) {
+  // name -> fieldMeta
+  return Object.fromEntries(fields.map((f) => [f.name, f]));
+}
 
-    // 2. Foreign keys для цієї таблиці (RPC get_foreign_keys_from)
-    const { data: foreignKeys, error: fkErr } = await supabase.rpc(
-      "get_foreign_keys_from",
-      { table_name: table }
-    );
-    if (fkErr) {
-      console.error(`Помилка foreign keys ${table}:`, fkErr);
-      continue;
-    }
-    // формуємо map: column_name -> ref_table
-    const fkMap = {};
-    if (Array.isArray(foreignKeys)) {
-      for (const fk of foreignKeys) {
-        fkMap[fk.column_name] = fk.ref_table;
+for (const table of ALL_RESOURCES) {
+  // 1. Читаємо структуру з json
+  const meta = getMetaJson(table);
+
+  // listFields — з custom.listFields, або всі крім EXCLUDE_FIELDS (якщо порожній)
+  let listFieldNames = (meta.custom?.listFields || []).filter(Boolean);
+
+  if (listFieldNames.length === 0) {
+    listFieldNames = meta.fields
+      .map((f) => f.name)
+      .filter((name) => !EXCLUDE_FIELDS.includes(name));
+  }
+
+  const fieldMetaMap = buildFieldMap(meta.fields);
+
+  // 2. Готуємо імпорти і поля
+  const usedTypes = new Set(["Datagrid", "List", "TextInput", "Pagination"]);
+  const datagridFields = listFieldNames
+    .map((fieldName) => {
+      const meta = fieldMetaMap[fieldName];
+      if (!meta) return null;
+      let fieldType = typeMap[meta.type] || "TextField";
+      usedTypes.add(fieldType);
+
+      const columnLabel = getColumnLabel(meta);
+
+      // Foreign Key
+      if (meta.isFk && meta.ref) {
+        usedTypes.add("ReferenceField");
+        return `      <ReferenceField source="${meta.name}" reference="${meta.ref}" label="${columnLabel}">
+        <TextField source="name" />
+      </ReferenceField>`;
       }
-    }
+      return `      <${fieldType} source="${meta.name}" label="${columnLabel}" />`;
+    })
+    .filter(Boolean)
+    .join("\n");
 
-    // 3. Генеруємо імпорт
-    const uniqueFieldTypes = Array.from(
-      new Set(
-        columns
-          .map((f) =>
-            fkMap[f.column_name]
-              ? "ReferenceField"
-              : typeMap[f.data_type] || "TextField"
-          )
-          .concat(["Datagrid", "List", "TextInput", "Pagination"])
-      )
-    );
-    const imports = [...uniqueFieldTypes].sort().join(", ");
+  // 3. Генеруємо фільтри (basic)
+  const filters = [
+    `<TextInput label="Пошук по імені" source="name" alwaysOn />,`,
+    `<TextInput label="Пошук по id" source="id" />,`,
+  ].join("\n  ");
 
-    // 4. Фільтри
-    const filterInputs = [
-      `<TextInput label="Пошук по імені" source="name" alwaysOn />,`,
-      `<TextInput label="Пошук по id" source="id" />,`,
-    ].join("\n  ");
+  // 4. Записуємо файл
+  const Name = toPascalCase(table);
+  const dir = path.join("src", "resources", table);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-    // 5. Генерація полів
-    const fields = groupColumns(columns);
-    const datagridFields = fields
-      .map((col) => {
-        const columnLabel = getColumnLabel(col.column_name, table);
-        if (fkMap[col.column_name]) {
-          const refTable = fkMap[col.column_name];
-          if (refTable && /^[a-zA-Z0-9_]+$/.test(refTable)) {
-            return `      <ReferenceField source="${col.column_name}" reference="${refTable}" label="${columnLabel}">
-  <TextField source="name" />
-</ReferenceField>`;
-          } else {
-            return `      <TextField source="${col.column_name}" label="${columnLabel}" />`;
-          }
-        } else {
-          const type = typeMap[col.data_type] || "TextField";
-          return `      <${type} source="${col.column_name}" label="${columnLabel}" />`;
-        }
-      })
-      .join("\n");
-
-    // 6. Генерація файлу
-    const Name = toPascalCase(table);
-    const dir = path.join("src", "resources", table);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-    const code = `import { ${imports} } from "react-admin";
+  const code = `import { ${Array.from(usedTypes)
+    .sort()
+    .join(", ")} } from "react-admin";
 
 const ${Name}Filters = [
-  ${filterInputs}
+  ${filters}
 ];
 
 export const ${Name}List = () => (
@@ -179,22 +130,22 @@ ${datagridFields}
   </List>
 );
 `;
-    const fileName = `${Name}List.tsx`;
-    const filePath = path.join(dir, fileName);
 
-    // --- SKIP якщо ручна мітка ---
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, "utf-8");
-      if (content.includes(SKIP_MARK)) {
-        console.log(`⏭️ Пропущено ${fileName} (ручна мітка @MANUAL)`);
-        continue;
-      }
+  const fileName = `${Name}List.tsx`;
+  const filePath = path.join(dir, fileName);
+
+  // --- SKIP якщо ручна мітка ---
+  if (fs.existsSync(filePath)) {
+    const content = fs.readFileSync(filePath, "utf-8");
+    if (content.includes(SKIP_MARK)) {
+      console.log(`⏭️ Пропущено ${fileName} (ручна мітка @MANUAL)`);
+      continue;
     }
-
-    fs.writeFileSync(filePath, code);
-    console.log(`✅ Створено: ${fileName} у ${dir}`);
   }
-  console.log(
-    "🎉 Всі List-файли згенеровано в src/resources/<resource>/<Name>List.tsx"
-  );
-})();
+
+  fs.writeFileSync(filePath, code);
+  console.log(`✅ Створено: ${fileName} у ${dir}`);
+}
+console.log(
+  "🎉 Всі List-файли згенеровано в src/resources/<resource>/<Name>List.tsx"
+);

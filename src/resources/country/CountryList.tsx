@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const CountryFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -14,13 +14,13 @@ export const CountryList = () => (
       <TextField source="image" label="Image" />
       <TextField source="billing_info" label="Billing Info" />
       <ReferenceField source="time_zone_id" reference="time_zone" label="Time Zone Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="code" label="Code" />
       <TextField source="alternate_names" label="Alternate Names" />
       <ReferenceField source="geo_names_time_zone_id" reference="geo_names_time_zone" label="Geo Names Time Zone Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="geo_names_country_code" label="Geo Names Country Code" />
       <TextField source="geo_names_id" label="Geo Names Id" />
       <NumberField source="dem" label="Dem" />
@@ -28,8 +28,8 @@ export const CountryList = () => (
       <NumberField source="longitude" label="Longitude" />
       <TextField source="alpha2_code" label="Alpha2 Code" />
       <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="url" label="Url" />
     </Datagrid>
   </List>

@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const RawDataFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -13,12 +13,12 @@ export const RawDataList = () => (
       <TextField source="notes" label="Notes" />
       <TextField source="json" label="Json" />
       <ReferenceField source="status_id" reference="raw_data_status" label="Status Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="log" label="Log" />
       <ReferenceField source="conf_item_id" reference="conf_item" label="Conf Item Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="redirect_url" label="Redirect Url" />
       <TextField source="record_id" label="Record Id" />
       <TextField source="entity_name" label="Entity Name" />
@@ -27,14 +27,14 @@ export const RawDataList = () => (
       <TextField source="contact_id" label="Contact Id" />
       <TextField source="account_id" label="Account Id" />
       <ReferenceField source="breed_id" reference="breed" label="Breed Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="event_id" reference="event" label="Event Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="project_id" reference="project" label="Project Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="pet_id" label="Pet Id" />
     </Datagrid>
   </List>

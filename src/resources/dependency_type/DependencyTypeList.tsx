@@ -1,4 +1,4 @@
-import { BooleanField, Datagrid, DateField, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { BooleanField, Datagrid, List, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const DependencyTypeFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -16,8 +16,8 @@ export const DependencyTypeList = () => (
       <BooleanField source="for_service_conf_item" label="For Service Conf Item" />
       <TextField source="reverse_type_name" label="Reverse Type Name" />
       <ReferenceField source="dependency_category_id" reference="dependency_category" label="Dependency Category Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

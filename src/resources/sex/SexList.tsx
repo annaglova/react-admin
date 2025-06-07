@@ -1,4 +1,4 @@
-import { Datagrid, DateField, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
+import { Datagrid, List, NumberField, Pagination, ReferenceField, TextField, TextInput } from "react-admin";
 
 const SexFilters = [
   <TextInput label="Пошук по імені" source="name" alwaysOn />,
@@ -12,8 +12,8 @@ export const SexList = () => (
       <TextField source="name" label="Name *" />
       <TextField source="description" label="Description" />
       <ReferenceField source="pet_type_id" reference="pet_type" label="Pet Type Id">
-  <TextField source="name" />
-</ReferenceField>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="code" label="Code" />
       <NumberField source="order" label="Order" />
     </Datagrid>

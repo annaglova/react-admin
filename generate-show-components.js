@@ -1,10 +1,16 @@
 // generate-show-components.js
-require("dotenv").config();
-const { createClient } = require("@supabase/supabase-js");
 const fs = require("fs");
 const path = require("path");
 
 const SKIP_MARK = "// @MANUAL";
+const EXCLUDE_FIELDS = [
+  "created_on",
+  "created_by_id",
+  "modified_on",
+  "modified_by_id",
+  "updated_at",
+  "created_at",
+];
 
 const resources = require("./src/resourcesList.json");
 const MAIN_RESOURCES = resources.MAIN_RESOURCES || [];
@@ -15,15 +21,8 @@ const ALL_RESOURCES = [
   ...LOOKUP_RESOURCES,
   ...CHILD_RESOURCES,
 ];
-const EXCLUDE_FIELDS = [
-  "created_on",
-  "created_by_id",
-  "modified_on",
-  "modified_by_id",
-  "updated_at",
-  "created_at",
-];
 
+// !!! Для генерації валідаторів (зірочок)
 const validators = JSON.parse(
   fs.readFileSync(path.join("src", "validators.json"), "utf-8")
 );
@@ -55,169 +54,106 @@ function toPascalCase(str) {
 }
 
 function stripQuotes(str) {
-  // Забирає зовнішні подвійні лапки якщо є
   return typeof str === "string" && str.startsWith('"') && str.endsWith('"')
     ? str.slice(1, -1)
     : str;
 }
 
 function labelFor(str) {
-  // Наприклад: account_in_tag -> Account In Tag
   return str.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+// Новий генератор “Labeled” поля
 function genLabeledField({
   label,
   source,
   tableName,
   type = "TextField",
-  fkMap,
+  isFk,
+  ref,
 }) {
   const fieldValidators = validators[tableName] || {};
   const isRequired = !!fieldValidators[source]?.isRequired;
-  // Якщо це foreign key:
-  if (fkMap && fkMap[source]) {
-    const refTable = fkMap[source];
-    return `<Labeled label="${label}" required={${isRequired}} value={<ReferenceField source="${source}" reference="${refTable}"><TextField source="name" /></ReferenceField>} />`;
+  if (isFk && ref) {
+    return `<Labeled label="${label}" required={${isRequired}} value={<ReferenceField source="${source}" reference="${ref}"><TextField source="name" /></ReferenceField>} />`;
   }
-  // Просто поле:
   return `<Labeled label="${label}" required={${isRequired}} value={<${type} source="${source}" />} />`;
 }
 
-function getColumnLabel(field, tableName) {
-  const fieldValidators = validators[tableName] || {};
-  const isRequired = !!fieldValidators[field]?.isRequired;
-  const label = labelFor(field);
-  return isRequired ? `${label} *` : label;
-}
-
-// Головна функція для вибору кращих колонок
-function groupColumns(cols, extraExclude = []) {
+// Формуємо кращі колонки (як раніше)
+function groupColumns(fields, extraExclude = []) {
   const fullExclude = [...EXCLUDE_FIELDS, ...extraExclude];
+  const filtered = fields.filter((c) => !fullExclude.includes(c.name));
 
-  // Всі без технічних та зайвих
-  const filteredCols = cols.filter((c) => !fullExclude.includes(c.column_name));
-
-  const idCol = filteredCols.find((c) => c.column_name === "id");
+  const idCol = filtered.find((c) => c.name === "id");
   const nameCol =
-    filteredCols.find((c) => c.column_name === "name") ||
-    filteredCols.find((c) => c.column_name === "title") ||
-    filteredCols.find((c) => c.column_name === "label") ||
-    filteredCols.find((c) => c.column_name === "value");
+    filtered.find((c) => c.name === "name") ||
+    filtered.find((c) => c.name === "title") ||
+    filtered.find((c) => c.name === "label") ||
+    filtered.find((c) => c.name === "value");
 
-  // Всі, крім id і name-type
-  const restCols = filteredCols.filter(
-    (c) =>
-      c.column_name !== "id" &&
-      c.column_name !== (nameCol && nameCol.column_name)
+  const rest = filtered.filter(
+    (c) => c.name !== "id" && (!nameCol || c.name !== nameCol.name)
   );
 
-  // Повертаємо масив: id, nameCol, решта
-  return [idCol, nameCol, ...restCols].filter(Boolean);
+  return [idCol, nameCol, ...rest].filter(Boolean);
 }
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+// Завантажуємо json для таблиці
+function loadTableJson(table) {
+  const filePath = path.join("src", "resources", table, `${table}.json`);
+  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+}
 
-(async () => {
-  for (const table of ALL_RESOURCES) {
-    // 1. Колонки таблиці
-    const { data: columns, error: colErr } = await supabase.rpc(
-      "get_table_columns",
-      { tablename: table }
-    );
-    if (colErr) {
-      console.error(`Помилка колонок ${table}:`, colErr);
-      continue;
-    }
-    if (!columns || !columns.length) {
-      console.warn(`Таблиця ${table} без колонок, пропуск...`);
-      continue;
-    }
+for (const table of ALL_RESOURCES) {
+  // 1. json головної таблиці
+  const tableJson = loadTableJson(table);
+  const fields = tableJson.fields || [];
+  const detailsTabs = tableJson.detailsTabs || [];
+  const tableValidators = validators[table] || {};
 
-    // 2. Foreign keys для цієї таблиці (RPC get_foreign_keys_from)
-    const { data: foreignKeys, error: fkErr } = await supabase.rpc(
-      "get_foreign_keys_from",
-      { table_name: table }
-    );
-    if (fkErr) {
-      console.error(`Помилка foreign keys ${table}:`, fkErr);
-      continue;
-    }
-    const fkMap = {};
-    if (Array.isArray(foreignKeys)) {
-      for (const fk of foreignKeys) {
-        fkMap[fk.column_name] = fk.ref_table;
-      }
-    }
+  // fkMap: поле → reference
+  const fkMap = {};
+  fields.forEach((f) => {
+    if (f.isFk && f.ref) fkMap[f.name] = f.ref;
+  });
 
-    // 3. Detail-таблиці (children — ті, що мають FK на цей MAIN)
-    let detailsConfigsJsx = "[]";
-    if (MAIN_RESOURCES.includes(table)) {
-      const { data: details, error: detErr } = await supabase.rpc(
-        "get_foreign_keys_to",
-        { table_name: table }
+  // 2. Генеруємо detailsConfigs (для MAIN)
+  let detailsConfigsJsx = "[]";
+  if (
+    MAIN_RESOURCES.includes(table) &&
+    Array.isArray(detailsTabs) &&
+    detailsTabs.length
+  ) {
+    const configs = [];
+    for (const tab of detailsTabs) {
+      // Для кожної вкладки беремо fields і визначаємо fkMap
+      const childFields = tab.fields || [];
+      const childFkMap = {};
+      childFields.forEach((f) => {
+        if (f.isFk && f.ref) childFkMap[f.name] = f.ref;
+      });
+      const bestCols = groupColumns(
+        childFields,
+        Array.isArray(tab.fk) ? tab.fk : [tab.fk]
       );
-      if (detErr) {
-        console.error(`Помилка detail-таблиць ${table}:`, detErr);
-      } else if (Array.isArray(details) && details.length) {
-        // Групуємо по table_name
-        const map = {};
-        for (const d of details) {
-          if (!map[d.table_name]) map[d.table_name] = [];
-          map[d.table_name].push(d.column_name);
-        }
-        const detailTables = Object.entries(map).map(
-          ([tableName, columns]) => ({
-            tableName,
-            fkColumns: columns,
-          })
-        );
-
-        // Генеруємо detailsConfigs
-        const configs = [];
-
-        for (const dt of detailTables) {
-          const detailColumnsResp = await supabase.rpc("get_table_columns", {
-            tablename: dt.tableName,
-          });
-          const detailColumns = detailColumnsResp.data || [];
-
-          const safeResource = stripQuotes(dt.tableName);
-          const safeReference = stripQuotes(dt.tableName);
-          const safeTarget = stripQuotes(dt.fkColumns[0]);
-
-          const fkField = dt.fkColumns[0];
-          const createButton = `<ChildCreateButton resource="${safeResource}" fkField="${fkField}" />`;
-
-          // fk для дочірньої таблиці
-          const fkMapDetail = {};
-          const { data: fkDetailData } = await supabase.rpc(
-            "get_foreign_keys_from",
-            { table_name: dt.tableName }
-          );
-          if (Array.isArray(fkDetailData)) {
-            for (const fk of fkDetailData) {
-              fkMapDetail[fk.column_name] = fk.ref_table;
-            }
+      const datagridFields = bestCols
+        .map((col) => {
+          const columnLabel = labelFor(col.name) + (col.isRequired ? " *" : "");
+          if (col.isFk && childFkMap[col.name]) {
+            const refTable = stripQuotes(childFkMap[col.name]);
+            return `<ReferenceField source="${col.name}" reference="${refTable}" label="${columnLabel}"><TextField source="name" /></ReferenceField>`;
           }
-          const bestCols = groupColumns(detailColumns, dt.fkColumns);
-          const datagridFields = bestCols
-            .map((col) => {
-              const columnLabel = getColumnLabel(col.column_name, dt.tableName);
-              if (
-                col.column_name.endsWith("_id") &&
-                fkMapDetail[col.column_name]
-              ) {
-                const refTable = fkMapDetail[col.column_name];
-                return `<ReferenceField source="${col.column_name}" reference="${refTable}" label="${columnLabel}"><TextField source="name" /></ReferenceField>`;
-              }
-              const type = typeMap[col.data_type] || "TextField";
-              return `<${type} source="${col.column_name}" label="${columnLabel}" />`;
-            })
-            .join("\n              ");
-          configs.push(`
+          const type = typeMap[col.type] || "TextField";
+          return `<${type} source="${col.name}" label="${columnLabel}" />`;
+        })
+        .join("\n              ");
+      const safeResource = stripQuotes(tab.resource);
+      const safeTarget = Array.isArray(tab.fk)
+        ? stripQuotes(tab.fk[0])
+        : stripQuotes(tab.fk);
+      const createButton = `<ChildCreateButton resource="${safeResource}" fkField="${safeTarget}" />`;
+      configs.push(`
   {
     label: ${JSON.stringify(labelFor(safeResource))},
     content: (
@@ -225,7 +161,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
         <div className="flex justify-end px-4 pt-2 pb-1">
           ${createButton}
         </div>
-        <ReferenceManyField reference="${safeReference}" target="${safeTarget}" record={record} perPage={15}  pagination={<Pagination />}>
+        <ReferenceManyField reference="${safeResource}" target="${safeTarget}" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
             ${datagridFields}
           </Datagrid>
@@ -234,113 +170,115 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     ),
   }
 `);
-        }
-
-        detailsConfigsJsx = `[${configs.join(",\n        ")}]`;
-      }
     }
+    detailsConfigsJsx = `[${configs.join(",\n        ")}]`;
+  }
 
-    // 4. Імпортовані компоненти
-    const importsSet = new Set([
-      "TextField",
-      "NumberField",
-      "BooleanField",
-      "DateField",
-    ]);
-    if (columns.some((f) => fkMap[f.column_name]))
-      importsSet.add("ReferenceField");
-    if (MAIN_RESOURCES.includes(table)) {
-      importsSet.add("Tab");
-      importsSet.add("ReferenceManyField");
-      importsSet.add("Datagrid");
-      importsSet.add("Pagination");
-      importsSet.add("CreateButton");
-    }
+  // --- Формуємо імпорти через Set
+  const importsSet = new Set([
+    "TextField",
+    "NumberField",
+    "BooleanField",
+    "DateField",
+  ]);
+  if (fields.some((f) => f.isFk)) importsSet.add("ReferenceField");
+  if (MAIN_RESOURCES.includes(table) && detailsTabs.length) {
+    importsSet.add("ReferenceManyField");
+    importsSet.add("Datagrid");
+    importsSet.add("Pagination");
+  }
 
-    // 5. Name/id поля як Labeled
-    const nameField = genLabeledField({
-      label: "Name",
-      source: "name",
-      tableName: table,
-      type: "TextField",
+  // layoutImport
+  let layoutImport, layoutName;
+  let customImports = "";
+  if (MAIN_RESOURCES.includes(table)) {
+    layoutImport = `import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";`;
+    layoutName = "MainResourceShowLayout";
+    customImports += `import { ChildCreateButton } from "@/components/ChildCreateButton";\n`;
+  } else if (LOOKUP_RESOURCES.includes(table)) {
+    layoutImport = `import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";`;
+    layoutName = "LookupResourceShowLayout";
+  } else if (CHILD_RESOURCES.includes(table)) {
+    layoutImport = `import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";`;
+    layoutName = "ChildResourceShowLayout";
+  } else {
+    throw new Error(`Таблиця ${table} не знайдена в MAIN/LOOKUP/CHILD`);
+  }
+
+  // 3. Name/id поля як Labeled (чи null)
+  const nameField = fields.find((f) => f.name === "name")
+    ? genLabeledField({
+        label: "Name",
+        source: "name",
+        tableName: table,
+        type: "TextField",
+        isFk: !!fkMap["name"],
+        ref: fkMap["name"],
+      })
+    : null;
+  const idField = fields.find((f) => f.name === "id")
+    ? genLabeledField({
+        label: "ID",
+        source: "id",
+        tableName: table,
+        type: "TextField",
+        isFk: !!fkMap["id"],
+        ref: fkMap["id"],
+      })
+    : null;
+
+  // 4. Основні поля, дві колонки
+  const baseFields = fields.filter(
+    (col) =>
+      !EXCLUDE_FIELDS.includes(col.name) &&
+      col.name !== "name" &&
+      col.name !== "id"
+  );
+  const mid = Math.ceil(baseFields.length / 2);
+  const leftFields = baseFields.slice(0, mid);
+  const rightFields = baseFields.slice(mid);
+
+  function genField(col, tableName) {
+    const label = labelFor(col.name); // Без додаткової зірочки!
+    const type = typeMap[col.type] || "TextField";
+    return genLabeledField({
+      label,
+      source: col.name,
+      tableName,
+      type,
+      isFk: !!fkMap[col.name],
+      ref: fkMap[col.name],
     });
-    const idField = genLabeledField({
-      label: "ID",
-      source: "id",
-      tableName: table,
-      type: "TextField",
-    });
+  }
 
-    // 6. Основні поля, дві колонки
-    const fields = columns.filter(
-      (col) =>
-        !EXCLUDE_FIELDS.includes(col.column_name) &&
-        col.column_name !== "name" &&
-        col.column_name !== "id"
-    );
-    const mid = Math.ceil(fields.length / 2);
-    const leftFields = fields.slice(0, mid);
-    const rightFields = fields.slice(mid);
+  const fieldsLeft = leftFields
+    .map((col) => genField(col, table))
+    .join("\n        ");
+  const fieldsRight = rightFields
+    .map((col) => genField(col, table))
+    .join("\n        ");
 
-    function genField(col, tableName) {
-      const label = labelFor(col.column_name);
-      const type = typeMap[col.data_type] || "TextField";
-      return genLabeledField({
-        label,
-        source: col.column_name,
-        tableName,
-        type,
-        fkMap,
-      });
-    }
+  // --- Генеруємо фінальний код
+  const Name = toPascalCase(table);
+  const dir = path.join("src", "resources", table);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-    const fieldsLeft = leftFields
-      .map((col) => genField(col, table))
-      .join("\n        ");
-    const fieldsRight = rightFields
-      .map((col) => genField(col, table))
-      .join("\n        ");
-
-    // 7. Layout imports + назва layout'а
-    let layoutImport, layoutName;
-    let customImports = "";
-    if (MAIN_RESOURCES.includes(table)) {
-      layoutImport = `import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";`;
-      layoutName = "MainResourceShowLayout";
-      customImports += `import { ChildCreateButton } from "@/components/ChildCreateButton";\n`;
-    } else if (LOOKUP_RESOURCES.includes(table)) {
-      layoutImport = `import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";`;
-      layoutName = "LookupResourceShowLayout";
-    } else if (CHILD_RESOURCES.includes(table)) {
-      layoutImport = `import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";`;
-      layoutName = "ChildResourceShowLayout";
-    } else {
-      throw new Error(`Таблиця ${table} не знайдена в MAIN/LOOKUP/CHILD`);
-    }
-
-    // 8. Формуємо фінальний код компонента
-    const Name = toPascalCase(table);
-    const dir = path.join("src", "resources", table);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-    let code = `// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+  let code = `// АВТОМАТИЧНО ЗГЕНЕРОВАНО!
 import { ${Array.from(importsSet).sort().join(", ")} } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 ${layoutImport}
 ${customImports}
-
 `;
 
-    // MAIN має detailsConfigs, інші — ні
-    if (MAIN_RESOURCES.includes(table)) {
-      code += `
+  if (MAIN_RESOURCES.includes(table)) {
+    code += `
 export const ${Name}Show = ({ record }: any) => (
   <${layoutName}
     name={
-      ${nameField}
+      ${nameField || "null"}
     }
     id={
-      ${idField}
+      ${idField || "null"}
     }
     fieldsLeft={
       <>
@@ -358,16 +296,16 @@ export const ${Name}Show = ({ record }: any) => (
   />
 );
 `;
-    } else {
-      // LOOKUP/CHILD
-      code += `
+  } else {
+    // LOOKUP/CHILD
+    code += `
 export const ${Name}Show = ({ record }: any) => (
   <${layoutName}
     name={
-      ${nameField}
+      ${nameField || "null"}
     }
     id={
-      ${idField}
+      ${idField || "null"}
     }
     fieldsLeft={
       <>
@@ -382,24 +320,23 @@ export const ${Name}Show = ({ record }: any) => (
   />
 );
 `;
-    }
-
-    const fileName = `${Name}Show.tsx`;
-    const filePath = path.join(dir, fileName);
-
-    // --- SKIP якщо ручна мітка ---
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, "utf-8");
-      if (content.includes(SKIP_MARK)) {
-        console.log(`⏭️ Пропущено ${fileName} (ручна мітка @MANUAL)`);
-        continue;
-      }
-    }
-
-    fs.writeFileSync(filePath, code);
-    console.log(`✅ Створено: ${fileName} у ${dir}`);
   }
-  console.log(
-    "🎉 Всі Show-файли згенеровано в src/resources/<resource>/<Name>Show.tsx"
-  );
-})();
+
+  const fileName = `${Name}Show.tsx`;
+  const filePath = path.join(dir, fileName);
+
+  // --- SKIP якщо ручна мітка ---
+  if (fs.existsSync(filePath)) {
+    const content = fs.readFileSync(filePath, "utf-8");
+    if (content.includes(SKIP_MARK)) {
+      console.log(`⏭️ Пропущено ${fileName} (ручна мітка @MANUAL)`);
+      continue;
+    }
+  }
+
+  fs.writeFileSync(filePath, code);
+  console.log(`✅ Створено: ${fileName} у ${dir}`);
+}
+console.log(
+  "🎉 Всі Show-файли згенеровано в src/resources/<resource>/<Name>Show.tsx"
+);

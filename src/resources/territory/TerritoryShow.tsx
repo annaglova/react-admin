@@ -1,8 +1,7 @@
-// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО!
 import { BooleanField, DateField, NumberField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
-
 
 
 export const TerritoryShow = ({ record }: any) => (

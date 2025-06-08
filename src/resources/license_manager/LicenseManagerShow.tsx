@@ -1,8 +1,7 @@
-// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО!
 import { BooleanField, DateField, NumberField, ReferenceField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { ChildResourceShowLayout } from "@/layouts/ChildResourceShowLayout";
-
 
 
 export const LicenseManagerShow = ({ record }: any) => (

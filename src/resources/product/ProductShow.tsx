@@ -1,9 +1,8 @@
-// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, Tab, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО!
+import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceField, ReferenceManyField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 import { ChildCreateButton } from "@/components/ChildCreateButton";
-
 
 
 export const ProductShow = ({ record }: any) => (

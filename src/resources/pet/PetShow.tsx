@@ -1,9 +1,8 @@
-// АВТОМАТИЧНО ЗГЕНЕРОВАНО! 
-import { BooleanField, CreateButton, Datagrid, DateField, NumberField, Pagination, ReferenceManyField, Tab, TextField } from "react-admin";
+// АВТОМАТИЧНО ЗГЕНЕРОВАНО!
+import { BooleanField, DateField, NumberField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 import { ChildCreateButton } from "@/components/ChildCreateButton";
-
 
 
 export const PetShow = ({ record }: any) => (

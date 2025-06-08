@@ -1,4 +1,6 @@
-// generate-app_v5.js
+// ⚠️ ЗГЕНЕРОВАНО. НЕ РЕДАГУВАТИ ВРУЧНУ!
+// Оновити: node generate-app_v5.js
+
 const fs = require("fs");
 const path = require("path");
 const resources = require("./src/resourcesList.json");
@@ -27,25 +29,27 @@ function getCreateName(resource) {
 function getEditName(resource) {
   return `${capitalize(resource)}Edit`;
 }
-function getImportLines(resource) {
+
+// Генеруємо масив імен для експорту з "@/resources"
+function getCrudNames(resource, hasList = true) {
   const c = capitalize(resource);
-  return `import { ${c}List } from "./resources/${resource}/${c}List";
-import { ${c}Show } from "./resources/${resource}/${c}Show";
-import { ${c}Create } from "./resources/${resource}/${c}Create";
-import { ${c}Edit } from "./resources/${resource}/${c}Edit";`;
-}
-function getChildImportLines(resource) {
-  const c = capitalize(resource);
-  return `import { ${c}Show } from "./resources/${resource}/${c}Show";
-import { ${c}Create } from "./resources/${resource}/${c}Create";
-import { ${c}Edit } from "./resources/${resource}/${c}Edit";`;
+  // MAIN/LOOKUP мають list, CHILD тільки show/edit/create
+  return hasList
+    ? [`${c}List`, `${c}Show`, `${c}Create`, `${c}Edit`]
+    : [`${c}Show`, `${c}Create`, `${c}Edit`];
 }
 
-const importLines = [
-  ...ALL_RESOURCES.map(getImportLines),
-  ...CHILD_RESOURCES.map(getChildImportLines),
-].join("\n");
+// ---- Масив усіх імен CRUD-компонентів ----
+const allCrudNames = [
+  ...ALL_RESOURCES.flatMap((r) => getCrudNames(r, true)),
+  ...CHILD_RESOURCES.flatMap((r) => getCrudNames(r, false)),
+];
+// Унікальні (на випадок дублів)
+const uniqCrudNames = [...new Set(allCrudNames)];
 
+const importLine = `import { ${uniqCrudNames.join(", ")} } from "@/resources";`;
+
+// ---- Генерація <Resource ... /> ----
 const resourceLines = [
   ...ALL_RESOURCES.map(
     (resource) => `
@@ -79,7 +83,7 @@ import {
   Resource,
 } from "react-admin";
 import { CustomLayout } from "./layouts/CustomLayout";
-${importLines}
+${importLine}
 
 const instanceUrl = import.meta.env.VITE_SUPABASE_URL as string;
 const apiKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
@@ -95,4 +99,4 @@ export default function App() {
 `;
 
 fs.writeFileSync(path.join("src", "App.tsx"), fileContent, "utf-8");
-console.log("✅ App.generated.tsx створено");
+console.log("✅ App.tsx створено");

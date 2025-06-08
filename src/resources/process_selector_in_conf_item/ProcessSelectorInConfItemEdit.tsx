@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ProcessSelectorInConfItemEdit = () => (
@@ -16,7 +16,7 @@ export const ProcessSelectorInConfItemEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="conf_item_id" reference="conf_item">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="result_element_name"  />
       </>

@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const DependencyTypeEdit = () => (
@@ -18,7 +18,7 @@ export const DependencyTypeEdit = () => (
         <BooleanInput source="for_service_conf_item"  />
           <TextInput source="reverse_type_name"  />
           <ReferenceInput source="dependency_category_id" reference="dependency_category">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

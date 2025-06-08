@@ -1,4 +1,4 @@
-import { NumberInput, ReferenceInput, SelectInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const LikeEdit = () => (
@@ -9,7 +9,7 @@ export const LikeEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="contact_id" reference="contact">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

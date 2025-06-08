@@ -1,4 +1,4 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CalendarEdit = () => (
@@ -10,10 +10,10 @@ export const CalendarEdit = () => (
       <>
         <TextInput source="description"  />
           <ReferenceInput source="parent_id" reference="calendar">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="time_zone_id" reference="time_zone">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

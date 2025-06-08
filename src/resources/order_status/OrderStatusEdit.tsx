@@ -1,4 +1,4 @@
-import { BooleanInput, NumberInput, TextInput ,   } from "react-admin";
+import { BooleanInput, NumberInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const OrderStatusEdit = () => (

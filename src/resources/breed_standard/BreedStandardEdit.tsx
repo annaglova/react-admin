@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const BreedStandardEdit = () => (
@@ -9,20 +9,20 @@ export const BreedStandardEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="subsection_id" reference="breed_subsection">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="section_id" reference="breed_section">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="group_id" reference="breed_group">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="code"  />
           <ReferenceInput source="provider_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="breed_id" reference="breed">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
@@ -33,7 +33,7 @@ export const BreedStandardEdit = () => (
           <TextInput source="link"  />
           <BooleanInput source="working_trial"  />
           <ReferenceInput source="status_id" reference="breed_standard_status">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="has_variable_divisions"  />
       </>

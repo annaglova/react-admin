@@ -1,4 +1,4 @@
-import { ReferenceInput, SelectInput, required ,   } from "react-admin";
+import { ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ConfItemInTagEdit = () => (
@@ -9,7 +9,7 @@ export const ConfItemInTagEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="entity_id" reference="conf_item">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

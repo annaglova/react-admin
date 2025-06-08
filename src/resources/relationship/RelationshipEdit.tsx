@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const RelationshipEdit = () => (
@@ -9,10 +9,10 @@ export const RelationshipEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="relation_type_id" reference="relation_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="reverse_relation_type_id" reference="relation_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="active"  />
           <TextInput source="description"  />
@@ -21,16 +21,16 @@ export const RelationshipEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="account_a_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="contact_a_id" reference="contact">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="account_b_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="contact_b_id" reference="contact">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

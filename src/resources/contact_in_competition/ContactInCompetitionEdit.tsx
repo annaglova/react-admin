@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ContactInCompetitionEdit = () => (
@@ -16,7 +16,7 @@ export const ContactInCompetitionEdit = () => (
       <>
         <BooleanInput source="national_judgment"  />
           <ReferenceInput source="competition_id" reference="competition">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

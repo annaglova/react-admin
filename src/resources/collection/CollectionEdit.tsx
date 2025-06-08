@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CollectionEdit = () => (
@@ -12,7 +12,7 @@ export const CollectionEdit = () => (
           <TextInput source="entity_name"  />
           <BooleanInput source="auto"  />
           <ReferenceInput source="type_id" reference="collection_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="avatar_url"  />
       </>
@@ -23,7 +23,7 @@ export const CollectionEdit = () => (
           <TextInput source="notes"  />
           <DateInput source="update_date"  />
           <ReferenceInput source="cover_id" reference="cover">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="owner_id"  />
       </>

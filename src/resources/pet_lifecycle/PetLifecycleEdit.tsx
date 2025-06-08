@@ -1,4 +1,4 @@
-import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PetLifecycleEdit = () => (
@@ -12,7 +12,7 @@ export const PetLifecycleEdit = () => (
           <TextInput source="description"  />
           <DateInput source="date"  />
           <ReferenceInput source="pet_lifecycle_event_id" reference="pet_lifecycle_event">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
@@ -20,7 +20,7 @@ export const PetLifecycleEdit = () => (
       <>
         <TextInput source="pet_id"  />
           <ReferenceInput source="status_id" reference="pet_lifecycle_event_status">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="pet_breed_id"  />
       </>

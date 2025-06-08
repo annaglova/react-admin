@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const TitleInPetEdit = () => (
@@ -9,13 +9,13 @@ export const TitleInPetEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="title_id" reference="title">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="pet_id"  />
           <BooleanInput source="is_confirmed"  />
           <DateInput source="date"  />
           <ReferenceInput source="country_id" reference="country">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

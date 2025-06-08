@@ -1,4 +1,4 @@
-import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const UserQuestStepEdit = () => (
@@ -9,7 +9,7 @@ export const UserQuestStepEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="user_quest_id" reference="user_quest">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="description"  />
           <TextInput source="intitial_provider_code"  />

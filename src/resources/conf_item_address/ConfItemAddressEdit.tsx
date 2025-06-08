@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ConfItemAddressEdit = () => (
@@ -9,13 +9,13 @@ export const ConfItemAddressEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="country_id" reference="country">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="region_id" reference="region">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="city_id" reference="city">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="street"  />
           <TextInput source="address"  />
@@ -27,7 +27,7 @@ export const ConfItemAddressEdit = () => (
           <DateInput source="end_date"  />
           <BooleanInput source="current"  />
           <ReferenceInput source="conf_item_id" reference="conf_item">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

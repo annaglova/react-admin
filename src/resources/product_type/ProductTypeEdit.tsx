@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ProductTypeEdit = () => (
@@ -15,7 +15,7 @@ export const ProductTypeEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="category_id" reference="product_category">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

@@ -1,4 +1,4 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PostPhotoEdit = () => (
@@ -15,7 +15,7 @@ export const PostPhotoEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="post_id" reference="post">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

@@ -1,4 +1,4 @@
-import { NumberInput, ReferenceInput, SelectInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ProductPriceEdit = () => (
@@ -9,10 +9,10 @@ export const ProductPriceEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="product_id" reference="product">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="currency_id" reference="currency">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

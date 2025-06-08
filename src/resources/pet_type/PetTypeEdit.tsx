@@ -1,10 +1,10 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PetTypeEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
@@ -22,7 +22,7 @@ export const PetTypeEdit = () => (
           <TextInput source="avatar_url"  />
           <NumberInput source="event_count"  />
           <ReferenceInput source="public_data_id" reference="public_data">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

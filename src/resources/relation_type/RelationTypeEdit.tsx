@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const RelationTypeEdit = () => (
@@ -18,7 +18,7 @@ export const RelationTypeEdit = () => (
       <>
         <BooleanInput source="for_account_account"  />
           <ReferenceInput source="reverse_relation_type_id" reference="relation_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="include_into_container"  />
       </>

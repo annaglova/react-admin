@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ConfItemProcessLaunchEdit = () => (
@@ -10,7 +10,7 @@ export const ConfItemProcessLaunchEdit = () => (
       <>
         <TextInput source="notes"  />
           <ReferenceInput source="conf_item_id" reference="conf_item">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <NumberInput source="launch_number"  />
           <NumberInput source="duration"  />

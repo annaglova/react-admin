@@ -1,10 +1,10 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CoverEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
@@ -12,7 +12,7 @@ export const CoverEdit = () => (
           <TextInput source="redirect_url"  />
           <TextInput source="avatar_url"  />
           <ReferenceInput source="type_id" reference="cover_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
@@ -21,7 +21,7 @@ export const CoverEdit = () => (
         <TextInput source="owner_id"  />
           <TextInput source="url"  />
           <ReferenceInput source="breed_id" reference="breed">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="is_default"  />
       </>

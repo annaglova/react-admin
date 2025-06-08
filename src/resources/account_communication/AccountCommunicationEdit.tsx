@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const AccountCommunicationEdit = () => (
@@ -10,7 +10,7 @@ export const AccountCommunicationEdit = () => (
       <>
         <TextInput source="number"  />
           <ReferenceInput source="account_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <NumberInput source="position"  />
           <TextInput source="social_media_id"  />

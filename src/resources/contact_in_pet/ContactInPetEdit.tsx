@@ -1,4 +1,4 @@
-import { ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ContactInPetEdit = () => (
@@ -9,7 +9,7 @@ export const ContactInPetEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="contact_role_id" reference="contact_role_for_pet">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="pet_id"  />
       </>

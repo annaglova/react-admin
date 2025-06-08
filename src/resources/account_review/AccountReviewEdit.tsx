@@ -1,4 +1,4 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const AccountReviewEdit = () => (
@@ -17,7 +17,7 @@ export const AccountReviewEdit = () => (
       <>
         <TextInput source="review"  />
           <ReferenceInput source="account_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="test"  />
       </>

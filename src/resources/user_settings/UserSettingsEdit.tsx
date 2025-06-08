@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const UserSettingsEdit = () => (
@@ -10,20 +10,20 @@ export const UserSettingsEdit = () => (
       <>
         <TextInput source="contact_id"  />
           <ReferenceInput source="breed_id" reference="breed">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="page_view_id" reference="page_view">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="size_unit_id" reference="unit">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="weight_unit_id" reference="unit">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="anonymous_gift_sender"  />
           <BooleanInput source="welcome_stage_complete"  />

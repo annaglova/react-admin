@@ -1,10 +1,10 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const BreedSectionEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
@@ -15,7 +15,7 @@ export const BreedSectionEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="breed_group_id" reference="breed_group">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

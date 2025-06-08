@@ -1,10 +1,10 @@
-import { DateInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PeriodEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
@@ -16,13 +16,13 @@ export const PeriodEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="year_id" reference="period">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="quarter_id" reference="period">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="parent_id" reference="period">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

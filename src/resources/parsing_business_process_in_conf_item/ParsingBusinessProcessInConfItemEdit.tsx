@@ -1,4 +1,4 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ParsingBusinessProcessInConfItemEdit = () => (
@@ -11,7 +11,7 @@ export const ParsingBusinessProcessInConfItemEdit = () => (
         <NumberInput source="priority"  />
           <TextInput source="business_process_id"  />
           <ReferenceInput source="conf_item_id" reference="conf_item">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

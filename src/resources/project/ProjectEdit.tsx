@@ -1,39 +1,39 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ProjectEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
         <TextInput source="notes"  />
           <ReferenceInput source="account_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="contact_id" reference="contact">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="project_entry_type_id" reference="project_entry_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="type_id" reference="project_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="owner_id"  />
           <ReferenceInput source="status_id" reference="project_status">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <DateInput source="start_date"  />
           <DateInput source="end_date"  />
           <NumberInput source="duration"  />
           <DateInput source="deadline"  />
           <ReferenceInput source="supplier_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="parent_project_id" reference="project">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <NumberInput source="actual_completion"  />
           <BooleanInput source="is_auto_calc_completion"  />
@@ -65,20 +65,20 @@ export const ProjectEdit = () => (
           <NumberInput source="margin_dev_perc"  />
           <NumberInput source="position"  />
           <ReferenceInput source="event_id" reference="event">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="category_id" reference="project_category">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="breed_id" reference="breed">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="url"  />
           <ReferenceInput source="pet_type_id" reference="pet_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="cover_id" reference="cover">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

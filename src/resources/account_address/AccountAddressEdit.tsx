@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const AccountAddressEdit = () => (
@@ -9,16 +9,16 @@ export const AccountAddressEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="address_type_id" reference="address_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="country_id" reference="country">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="region_id" reference="region">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="city_id" reference="city">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="address"  />
           <TextInput source="zip"  />
@@ -28,7 +28,7 @@ export const AccountAddressEdit = () => (
       <>
         <BooleanInput source="primary"  />
           <ReferenceInput source="account_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="gpsn"  />
           <TextInput source="gpse"  />

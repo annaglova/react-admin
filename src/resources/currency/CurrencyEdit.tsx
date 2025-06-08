@@ -1,17 +1,17 @@
-import { NumberInput, TextInput ,   } from "react-admin";
+import { NumberInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CurrencyEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
         <TextInput source="description"  />
-          <TextInput source="code" validate={[required()]} />
+          <TextInput source="code" validate={required()} />
           <TextInput source="short_name"  />
-          <TextInput source="symbol" validate={[required()]} />
+          <TextInput source="symbol" validate={required()} />
       </>
     }
     fieldsRight={

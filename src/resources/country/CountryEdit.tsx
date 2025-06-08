@@ -1,10 +1,10 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CountryEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
@@ -12,12 +12,12 @@ export const CountryEdit = () => (
           <TextInput source="image"  />
           <TextInput source="billing_info"  />
           <ReferenceInput source="time_zone_id" reference="time_zone">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="code"  />
           <TextInput source="alternate_names"  />
           <ReferenceInput source="geo_names_time_zone_id" reference="geo_names_time_zone">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="geo_names_country_code"  />
       </>
@@ -30,7 +30,7 @@ export const CountryEdit = () => (
           <NumberInput source="longitude"  />
           <TextInput source="alpha2_code"  />
           <ReferenceInput source="public_data_id" reference="public_data">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="url"  />
       </>

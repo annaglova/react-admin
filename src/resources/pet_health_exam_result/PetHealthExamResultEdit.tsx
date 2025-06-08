@@ -1,4 +1,4 @@
-import { DateInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PetHealthExamResultEdit = () => (
@@ -10,10 +10,10 @@ export const PetHealthExamResultEdit = () => (
       <>
         <TextInput source="pet_id"  />
           <ReferenceInput source="health_exam_object_id" reference="health_exam_object">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="health_exam_result_id" reference="health_exam_result">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

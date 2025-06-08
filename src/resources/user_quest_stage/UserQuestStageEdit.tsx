@@ -1,4 +1,4 @@
-import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const UserQuestStageEdit = () => (
@@ -11,11 +11,11 @@ export const UserQuestStageEdit = () => (
         <TextInput source="output"  />
           <TextInput source="input"  />
           <ReferenceInput source="user_quest_id" reference="user_quest">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <DateInput source="finish_date"  />
           <ReferenceInput source="stage_id" reference="quest_stage">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

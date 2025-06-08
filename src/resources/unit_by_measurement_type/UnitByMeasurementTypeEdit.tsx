@@ -1,4 +1,4 @@
-import { ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const UnitByMeasurementTypeEdit = () => (
@@ -10,14 +10,14 @@ export const UnitByMeasurementTypeEdit = () => (
       <>
         <TextInput source="description"  />
           <ReferenceInput source="measurement_type_id" reference="measurement_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="unit_id" reference="unit">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

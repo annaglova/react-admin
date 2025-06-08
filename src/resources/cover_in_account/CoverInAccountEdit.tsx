@@ -1,4 +1,4 @@
-import { DateInput, ReferenceInput, SelectInput, required ,   } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CoverInAccountEdit = () => (
@@ -9,10 +9,10 @@ export const CoverInAccountEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="account_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="cover_id" reference="cover">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

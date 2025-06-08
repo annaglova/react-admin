@@ -1,4 +1,4 @@
-import { DateInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const CoverInContactEdit = () => (
@@ -10,7 +10,7 @@ export const CoverInContactEdit = () => (
       <>
         <TextInput source="contact_id"  />
           <ReferenceInput source="cover_id" reference="cover">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

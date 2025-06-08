@@ -1,4 +1,4 @@
-import { ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const AccountBillingInfoEdit = () => (
@@ -10,10 +10,10 @@ export const AccountBillingInfoEdit = () => (
       <>
         <TextInput source="description"  />
           <ReferenceInput source="account_id" reference="account">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="country_id" reference="country">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="billing_info"  />
       </>
@@ -21,10 +21,10 @@ export const AccountBillingInfoEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="account_manager_id" reference="contact">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="chief_accountant_id" reference="contact">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="legal_unit"  />
       </>

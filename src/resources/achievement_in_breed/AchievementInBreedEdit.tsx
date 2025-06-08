@@ -1,4 +1,4 @@
-import { DateInput, ReferenceInput, SelectInput, required ,   } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const AchievementInBreedEdit = () => (
@@ -9,10 +9,10 @@ export const AchievementInBreedEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="achievement_id" reference="achievement">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="breed_id" reference="breed">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

@@ -1,4 +1,4 @@
-import { BooleanInput, ReferenceInput, SelectInput, required ,   } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PostInFeedEdit = () => (
@@ -9,10 +9,10 @@ export const PostInFeedEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="feed_id" reference="post_feed">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="post_id" reference="post">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

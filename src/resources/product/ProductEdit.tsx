@@ -1,4 +1,4 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ProductEdit = () => (
@@ -10,21 +10,21 @@ export const ProductEdit = () => (
       <>
         <TextInput source="code"  />
           <ReferenceInput source="unit_id" reference="unit">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="currency_id" reference="currency">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <NumberInput source="price"  />
           <TextInput source="url"  />
           <ReferenceInput source="type_id" reference="product_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="active"  />
           <TextInput source="owner_id"  />
           <TextInput source="description"  />
           <ReferenceInput source="product_source_id" reference="product_source">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
@@ -33,7 +33,7 @@ export const ProductEdit = () => (
         <TextInput source="notes"  />
           <BooleanInput source="is_archive"  />
           <ReferenceInput source="category_id" reference="product_category">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="short_description"  />
           <TextInput source="pet_id"  />

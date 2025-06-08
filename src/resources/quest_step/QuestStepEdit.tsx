@@ -1,4 +1,4 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const QuestStepEdit = () => (
@@ -9,7 +9,7 @@ export const QuestStepEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="quest_id" reference="quest">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="description"  />
           <TextInput source="intitial_provider_code"  />

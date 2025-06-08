@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required ,   } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const QuestEdit = () => (
@@ -10,12 +10,12 @@ export const QuestEdit = () => (
       <>
         <TextInput source="url"  />
           <ReferenceInput source="type_id" reference="quest_type">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <NumberInput source="reward"  />
           <NumberInput source="frequency_interval"  />
           <ReferenceInput source="frequency_id" reference="quest_frequency">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

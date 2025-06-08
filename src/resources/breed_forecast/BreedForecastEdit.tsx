@@ -1,4 +1,4 @@
-import { NumberInput, ReferenceInput, SelectInput, required ,   } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const BreedForecastEdit = () => (
@@ -9,7 +9,7 @@ export const BreedForecastEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="period_id" reference="period">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <NumberInput source="amount"  />
           <NumberInput source="primary_amount"  />
@@ -18,10 +18,10 @@ export const BreedForecastEdit = () => (
     fieldsRight={
       <>
         <ReferenceInput source="currency_id" reference="currency">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="breed_id" reference="breed">
-   <SelectInput optionText="name"  />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

@@ -1,44 +1,43 @@
-import { ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const RawDataCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="notes" validate={[]} />
-          <TextInput source="json" validate={[]} />
+        <TextInput source="notes"  />
+          <TextInput source="json"  />
           <ReferenceInput source="status_id" reference="raw_data_status">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="log" validate={[]} />
+          <TextInput source="log"  />
           <ReferenceInput source="conf_item_id" reference="conf_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="redirect_url" validate={[]} />
-          <TextInput source="record_id" validate={[]} />
-          <TextInput source="entity_name" validate={[]} />
+          <TextInput source="redirect_url"  />
+          <TextInput source="record_id"  />
+          <TextInput source="entity_name"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="model" validate={[]} />
-          <TextInput source="hash_md5" validate={[]} />
-          <TextInput source="contact_id" validate={[]} />
-          <TextInput source="account_id" validate={[]} />
+        <TextInput source="model"  />
+          <TextInput source="hash_md5"  />
+          <TextInput source="contact_id"  />
+          <TextInput source="account_id"  />
           <ReferenceInput source="breed_id" reference="breed">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="event_id" reference="event">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="project_id" reference="project">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_id" validate={[]} />
+          <TextInput source="pet_id"  />
       </>
     }
   />

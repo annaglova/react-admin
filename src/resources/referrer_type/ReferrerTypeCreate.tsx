@@ -1,20 +1,19 @@
-import { TextInput, required , } from "react-admin";
+import { TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ReferrerTypeCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
+        <TextInput source="description"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="matomo_code" validate={[]} />
+        <TextInput source="matomo_code"  />
       </>
     }
   />

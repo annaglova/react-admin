@@ -1,6 +1,5 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PostParticipantCreate = () => (
   <ResourceCreateLayout
@@ -9,19 +8,19 @@ export const PostParticipantCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="post_id" validate={[]} />
+        <TextInput source="post_id"  />
           <ReferenceInput source="role_id" reference="post_participant_role">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="record_id" validate={[]} />
-          <TextInput source="entity_name" validate={[]} />
+          <TextInput source="record_id"  />
+          <TextInput source="entity_name"  />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="hide_time_line" validate={[]} />
-          <TextInput source="record_url" validate={[]} />
-          <TextInput source="record_name" validate={[]} />
+        <BooleanInput source="hide_time_line"  />
+          <TextInput source="record_url"  />
+          <TextInput source="record_name"  />
       </>
     }
   />

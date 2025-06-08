@@ -1,63 +1,62 @@
-import { BooleanInput, DateInput, NumberInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PetOldCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="notes" validate={[]} />
-          <DateInput source="date_of_birth" validate={[]} />
-          <TextInput source="owner_id" validate={[]} />
-          <TextInput source="kennel_id" validate={[]} />
-          <TextInput source="pet_type_id" validate={[]} />
-          <TextInput source="sex_id" validate={[]} />
-          <TextInput source="father_id" validate={[]} />
-          <TextInput source="mother_id" validate={[]} />
-          <TextInput source="breed_id" validate={[]} />
-          <TextInput source="breeder_id" validate={[]} />
-          <TextInput source="photo_id" validate={[]} />
-          <DateInput source="date_of_death" validate={[]} />
-          <TextInput source="pet_status_id" validate={[]} />
-          <TextInput source="coat_type_id" validate={[]} />
-          <TextInput source="coat_color_id" validate={[]} />
-          <TextInput source="size_id" validate={[]} />
-          <TextInput source="body_feature_id" validate={[]} />
-          <TextInput source="litter_id" validate={[]} />
-          <TextInput source="call_name" validate={[]} />
-          <TextInput source="country_of_birth_id" validate={[]} />
-          <TextInput source="titles" validate={[]} />
-          <NumberInput source="inbreeding_percent" validate={[]} />
-          <TextInput source="url" validate={[]} />
+        <TextInput source="notes"  />
+          <DateInput source="date_of_birth"  />
+          <TextInput source="owner_id"  />
+          <TextInput source="kennel_id"  />
+          <TextInput source="pet_type_id"  />
+          <TextInput source="sex_id"  />
+          <TextInput source="father_id"  />
+          <TextInput source="mother_id"  />
+          <TextInput source="breed_id"  />
+          <TextInput source="breeder_id"  />
+          <TextInput source="photo_id"  />
+          <DateInput source="date_of_death"  />
+          <TextInput source="pet_status_id"  />
+          <TextInput source="coat_type_id"  />
+          <TextInput source="coat_color_id"  />
+          <TextInput source="size_id"  />
+          <TextInput source="body_feature_id"  />
+          <TextInput source="litter_id"  />
+          <TextInput source="call_name"  />
+          <TextInput source="country_of_birth_id"  />
+          <TextInput source="titles"  />
+          <NumberInput source="inbreeding_percent"  />
+          <TextInput source="url"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="page_template_code" validate={[]} />
-          <TextInput source="verified_stage_id" validate={[]} />
-          <TextInput source="owner_kennel_id" validate={[]} />
-          <TextInput source="full_breed_name" validate={[]} />
-          <TextInput source="avatar_url" validate={[]} />
-          <NumberInput source="rating" validate={[]} />
-          <TextInput source="breed_division_id" validate={[]} />
-          <TextInput source="trim_titles" validate={[]} />
-          <TextInput source="country_of_stay_id" validate={[]} />
-          <NumberInput source="child_rating" validate={[]} />
-          <NumberInput source="self_rating" validate={[]} />
-          <DateInput source="calc_date_of_birth" validate={[]} />
-          <NumberInput source="coi" validate={[]} />
-          <TextInput source="verification_status_id" validate={[]} />
-          <NumberInput source="rating_placement_in_breed" validate={[]} />
-          <BooleanInput source="is_public" validate={[]} />
-          <TextInput source="cover_id" validate={[]} />
-          <TextInput source="public_data_id" validate={[]} />
-          <NumberInput source="weight" validate={[]} />
-          <NumberInput source="test_int_index" validate={[]} />
-          <TextInput source="mother_breed_id" validate={[]} />
-          <TextInput source="father_breed_id" validate={[]} />
+        <TextInput source="page_template_code"  />
+          <TextInput source="verified_stage_id"  />
+          <TextInput source="owner_kennel_id"  />
+          <TextInput source="full_breed_name"  />
+          <TextInput source="avatar_url"  />
+          <NumberInput source="rating"  />
+          <TextInput source="breed_division_id"  />
+          <TextInput source="trim_titles"  />
+          <TextInput source="country_of_stay_id"  />
+          <NumberInput source="child_rating"  />
+          <NumberInput source="self_rating"  />
+          <DateInput source="calc_date_of_birth"  />
+          <NumberInput source="coi"  />
+          <TextInput source="verification_status_id"  />
+          <NumberInput source="rating_placement_in_breed"  />
+          <BooleanInput source="is_public"  />
+          <TextInput source="cover_id"  />
+          <TextInput source="public_data_id"  />
+          <NumberInput source="weight"  />
+          <NumberInput source="test_int_index"  />
+          <TextInput source="mother_breed_id"  />
+          <TextInput source="father_breed_id"  />
       </>
     }
   />

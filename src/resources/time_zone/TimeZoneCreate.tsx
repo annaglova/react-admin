@@ -1,22 +1,21 @@
-import { TextInput, required , } from "react-admin";
+import { TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const TimeZoneCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
-          <TextInput source="code" validate={[required()]} />
+        <TextInput source="description"  />
+          <TextInput source="code" validate={required()} />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="offset" validate={[]} />
-          <TextInput source="code_american" validate={[]} />
+        <TextInput source="offset"  />
+          <TextInput source="code_american"  />
       </>
     }
   />

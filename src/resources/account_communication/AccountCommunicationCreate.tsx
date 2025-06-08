@@ -1,6 +1,5 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const AccountCommunicationCreate = () => (
   <ResourceCreateLayout
@@ -9,21 +8,21 @@ export const AccountCommunicationCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="number" validate={[]} />
+        <TextInput source="number"  />
           <ReferenceInput source="account_id" reference="account">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="position" validate={[]} />
-          <TextInput source="social_media_id" validate={[]} />
-          <TextInput source="search_number" validate={[]} />
+          <NumberInput source="position"  />
+          <TextInput source="social_media_id"  />
+          <TextInput source="search_number"  />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="primary" validate={[]} />
-          <BooleanInput source="exists" validate={[]} />
-          <BooleanInput source="non_actual" validate={[]} />
-          <DateInput source="date_set_non_actual" validate={[]} />
+        <BooleanInput source="primary"  />
+          <BooleanInput source="exists"  />
+          <BooleanInput source="non_actual"  />
+          <DateInput source="date_set_non_actual"  />
       </>
     }
   />

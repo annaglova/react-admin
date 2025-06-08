@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const NoteTestRecordCreate = () => (
   <ResourceCreateLayout
@@ -9,15 +8,15 @@ export const NoteTestRecordCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id" validate={[]} />
+        <TextInput source="pet_id"  />
           <ReferenceInput source="note_id" reference="note">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="pet_breed_id" validate={[]} />
+        <TextInput source="pet_breed_id"  />
       </>
     }
   />

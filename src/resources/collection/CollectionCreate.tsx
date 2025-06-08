@@ -1,32 +1,31 @@
-import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const CollectionCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <BooleanInput source="private" validate={[]} />
-          <TextInput source="entity_name" validate={[]} />
-          <BooleanInput source="auto" validate={[]} />
+        <BooleanInput source="private"  />
+          <TextInput source="entity_name"  />
+          <BooleanInput source="auto"  />
           <ReferenceInput source="type_id" reference="collection_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="avatar_url" validate={[]} />
+          <TextInput source="avatar_url"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="url" validate={[]} />
-          <TextInput source="notes" validate={[]} />
-          <DateInput source="update_date" validate={[]} />
+        <TextInput source="url"  />
+          <TextInput source="notes"  />
+          <DateInput source="update_date"  />
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="owner_id" validate={[]} />
+          <TextInput source="owner_id"  />
       </>
     }
   />

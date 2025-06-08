@@ -1,35 +1,34 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const RegionCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
+        <TextInput source="description"  />
           <ReferenceInput source="country_id" reference="country">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="time_zone_id" reference="time_zone">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="geo_names_time_zone_id" reference="geo_names_time_zone">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="alternate_names" validate={[]} />
-          <TextInput source="geo_names_id" validate={[]} />
+          <TextInput source="alternate_names"  />
+          <TextInput source="geo_names_id"  />
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="dem" validate={[]} />
-          <NumberInput source="latitude" validate={[]} />
-          <NumberInput source="longitude" validate={[]} />
-          <TextInput source="code" validate={[]} />
-          <TextInput source="region_admin1_code" validate={[]} />
+        <NumberInput source="dem"  />
+          <NumberInput source="latitude"  />
+          <NumberInput source="longitude"  />
+          <TextInput source="code"  />
+          <TextInput source="region_admin1_code"  />
       </>
     }
   />

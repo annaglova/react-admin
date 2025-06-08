@@ -1,20 +1,19 @@
-import { TextInput, required , } from "react-admin";
+import { TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const DnaMarkerInPetCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="value" validate={[]} />}</>
+      <>{<TextInput source="value"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id" validate={[]} />
+        <TextInput source="pet_id"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="pet_breed_id" validate={[]} />
+        <TextInput source="pet_breed_id"  />
       </>
     }
   />

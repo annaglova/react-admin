@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const HealthExamObjectInBreedCreate = () => (
   <ResourceCreateLayout
@@ -10,14 +9,14 @@ export const HealthExamObjectInBreedCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="breed_id" reference="breed">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="health_exam_object_id" reference="health_exam_object">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

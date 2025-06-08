@@ -1,42 +1,41 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PostCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <DateInput source="publication_date" validate={[]} />
+        <DateInput source="publication_date"  />
           <ReferenceInput source="type_id" reference="post_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="state_id" reference="post_state">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="text" validate={[]} />
-          <TextInput source="url" validate={[]} />
+          <TextInput source="text"  />
+          <TextInput source="url"  />
           <ReferenceInput source="master_post_id" reference="post">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <BooleanInput source="is_moment" validate={[]} />
-          <TextInput source="author_id" validate={[]} />
+          <BooleanInput source="is_moment"  />
+          <TextInput source="author_id"  />
       </>
     }
     fieldsRight={
       <>
-        <DateInput source="date" validate={[]} />
+        <DateInput source="date"  />
           <ReferenceInput source="event_id" reference="event">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="latitude" validate={[]} />
-          <NumberInput source="longitude" validate={[]} />
-          <TextInput source="photos" validate={[]} />
-          <TextInput source="participants" validate={[]} />
+          <NumberInput source="latitude"  />
+          <NumberInput source="longitude"  />
+          <TextInput source="photos"  />
+          <TextInput source="participants"  />
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

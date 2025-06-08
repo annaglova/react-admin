@@ -1,6 +1,5 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PetServiceTypeByEntityCreate = () => (
   <ResourceCreateLayout
@@ -9,16 +8,16 @@ export const PetServiceTypeByEntityCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="entity_name" validate={[]} />
+        <TextInput source="entity_name"  />
           <ReferenceInput source="pet_service_type_id" reference="pet_service_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="transfer_to_litter" validate={[]} />
-          <BooleanInput source="transfer_to_account" validate={[]} />
+        <BooleanInput source="transfer_to_litter"  />
+          <BooleanInput source="transfer_to_account"  />
       </>
     }
   />

@@ -1,6 +1,5 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const AccountReviewCreate = () => (
   <ResourceCreateLayout
@@ -9,18 +8,18 @@ export const AccountReviewCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="contact_id" validate={[]} />
-          <NumberInput source="rating" validate={[]} />
-          <NumberInput source="order_number" validate={[]} />
+        <TextInput source="contact_id"  />
+          <NumberInput source="rating"  />
+          <NumberInput source="order_number"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="review" validate={[]} />
+        <TextInput source="review"  />
           <ReferenceInput source="account_id" reference="account">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="test" validate={[]} />
+          <TextInput source="test"  />
       </>
     }
   />

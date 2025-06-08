@@ -1,6 +1,5 @@
-import { TextInput, required , } from "react-admin";
+import { TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ReferralLinkCreate = () => (
   <ResourceCreateLayout
@@ -9,12 +8,12 @@ export const ReferralLinkCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="contact_id" validate={[]} />
+        <TextInput source="contact_id"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="code" validate={[]} />
+        <TextInput source="code"  />
       </>
     }
   />

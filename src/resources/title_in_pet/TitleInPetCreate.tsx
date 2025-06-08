@@ -1,6 +1,5 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const TitleInPetCreate = () => (
   <ResourceCreateLayout
@@ -10,22 +9,22 @@ export const TitleInPetCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="title_id" reference="title">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_id" validate={[]} />
-          <BooleanInput source="is_confirmed" validate={[]} />
-          <DateInput source="date" validate={[]} />
+          <TextInput source="pet_id"  />
+          <BooleanInput source="is_confirmed"  />
+          <DateInput source="date"  />
           <ReferenceInput source="country_id" reference="country">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="description" validate={[]} />
-          <NumberInput source="amount" validate={[]} />
-          <TextInput source="raw_title" validate={[]} />
-          <TextInput source="pet_breed_id" validate={[]} />
+        <TextInput source="description"  />
+          <NumberInput source="amount"  />
+          <TextInput source="raw_title"  />
+          <TextInput source="pet_breed_id"  />
       </>
     }
   />

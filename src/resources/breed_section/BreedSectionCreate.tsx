@@ -1,22 +1,21 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const BreedSectionCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
-          <NumberInput source="code" validate={[]} />
+        <TextInput source="description"  />
+          <NumberInput source="code"  />
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="breed_group_id" reference="breed_group">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

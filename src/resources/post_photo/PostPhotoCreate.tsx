@@ -1,6 +1,5 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PostPhotoCreate = () => (
   <ResourceCreateLayout
@@ -9,14 +8,14 @@ export const PostPhotoCreate = () => (
     }
     fieldsLeft={
       <>
-        <NumberInput source="position" validate={[]} />
-          <TextInput source="link" validate={[]} />
+        <NumberInput source="position"  />
+          <TextInput source="link"  />
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="post_id" reference="post">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

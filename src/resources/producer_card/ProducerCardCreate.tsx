@@ -1,26 +1,25 @@
-import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ProducerCardCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id" validate={[]} />
+        <TextInput source="pet_id"  />
           <ReferenceInput source="pet_lifecycle_event_id" reference="pet_lifecycle_event">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <DateInput source="datet" validate={[]} />
+          <DateInput source="datet"  />
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="day" validate={[]} />
-          <TextInput source="description" validate={[]} />
-          <TextInput source="pet_breed_id" validate={[]} />
+        <NumberInput source="day"  />
+          <TextInput source="description"  />
+          <TextInput source="pet_breed_id"  />
       </>
     }
   />

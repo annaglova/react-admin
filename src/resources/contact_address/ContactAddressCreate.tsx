@@ -1,6 +1,5 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ContactAddressCreate = () => (
   <ResourceCreateLayout
@@ -10,26 +9,26 @@ export const ContactAddressCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="address_type_id" reference="address_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="country_id" reference="country">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="region_id" reference="region">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="city_id" reference="city">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="address" validate={[]} />
+          <TextInput source="address"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="zip" validate={[]} />
-          <BooleanInput source="primary" validate={[]} />
-          <TextInput source="contact_id" validate={[]} />
-          <TextInput source="full_address" validate={[]} />
+        <TextInput source="zip"  />
+          <BooleanInput source="primary"  />
+          <TextInput source="contact_id"  />
+          <TextInput source="full_address"  />
       </>
     }
   />

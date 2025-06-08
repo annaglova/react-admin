@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PetInTagCreate = () => (
   <ResourceCreateLayout
@@ -10,13 +9,13 @@ export const PetInTagCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="tag_id" reference="pet_tag">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="entity_id" validate={[]} />
+        <TextInput source="entity_id"  />
       </>
     }
   />

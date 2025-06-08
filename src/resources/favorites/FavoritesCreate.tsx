@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const FavoritesCreate = () => (
   <ResourceCreateLayout
@@ -10,7 +9,7 @@ export const FavoritesCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="contact_id" reference="contact">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

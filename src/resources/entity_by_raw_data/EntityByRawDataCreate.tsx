@@ -1,6 +1,5 @@
-import { TextInput, required , } from "react-admin";
+import { TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const EntityByRawDataCreate = () => (
   <ResourceCreateLayout
@@ -9,14 +8,14 @@ export const EntityByRawDataCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="entity_name" validate={[]} />
-          <TextInput source="record_id" validate={[]} />
+        <TextInput source="entity_name"  />
+          <TextInput source="record_id"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="buckup_rawdata_id" validate={[]} />
-          <TextInput source="raw_data_id" validate={[]} />
+        <TextInput source="buckup_rawdata_id"  />
+          <TextInput source="raw_data_id"  />
       </>
     }
   />

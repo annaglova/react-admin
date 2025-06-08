@@ -1,6 +1,5 @@
-import { BooleanInput, ReferenceInput, SelectInput, required , } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ConfItemInCaseCreate = () => (
   <ResourceCreateLayout
@@ -10,13 +9,13 @@ export const ConfItemInCaseCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="conf_item_id" reference="conf_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="major" validate={[]} />
+        <BooleanInput source="major"  />
       </>
     }
   />

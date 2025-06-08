@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ServiceItemInTagCreate = () => (
   <ResourceCreateLayout
@@ -10,7 +9,7 @@ export const ServiceItemInTagCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="entity_id" reference="service_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

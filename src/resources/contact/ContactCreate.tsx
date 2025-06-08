@@ -1,113 +1,112 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ContactCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
+        <TextInput source="description"  />
           <ReferenceInput source="account_id" reference="account">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="owner_id" reference="contact">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="dear" validate={[]} />
+          <TextInput source="dear"  />
           <ReferenceInput source="salutation_type_id" reference="contact_salutation_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="gender_id" reference="gender">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="decision_role_id" reference="contact_decision_role">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="type_id" reference="contact_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="job_id" reference="job">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="job_title" validate={[]} />
+          <TextInput source="job_title"  />
           <ReferenceInput source="department_id" reference="department">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <DateInput source="birth_date" validate={[]} />
-          <TextInput source="phone" validate={[]} />
-          <TextInput source="mobile_phone" validate={[]} />
-          <TextInput source="home_phone" validate={[]} />
-          <TextInput source="skype" validate={[]} />
-          <TextInput source="email" validate={[]} />
+          <DateInput source="birth_date"  />
+          <TextInput source="phone"  />
+          <TextInput source="mobile_phone"  />
+          <TextInput source="home_phone"  />
+          <TextInput source="skype"  />
+          <TextInput source="email"  />
           <ReferenceInput source="address_type_id" reference="address_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="address" validate={[]} />
+          <TextInput source="address"  />
           <ReferenceInput source="city_id" reference="city">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="region_id" reference="region">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="zip" validate={[]} />
+          <TextInput source="zip"  />
           <ReferenceInput source="country_id" reference="country">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <BooleanInput source="do_not_use_email" validate={[]} />
-          <BooleanInput source="do_not_use_call" validate={[]} />
-          <BooleanInput source="do_not_use_fax" validate={[]} />
-          <BooleanInput source="do_not_use_sms" validate={[]} />
-          <BooleanInput source="do_not_use_mail" validate={[]} />
-          <TextInput source="notes" validate={[]} />
-          <TextInput source="facebook" validate={[]} />
-          <TextInput source="linked_in" validate={[]} />
+          <BooleanInput source="do_not_use_email"  />
+          <BooleanInput source="do_not_use_call"  />
+          <BooleanInput source="do_not_use_fax"  />
+          <BooleanInput source="do_not_use_sms"  />
+          <BooleanInput source="do_not_use_mail"  />
+          <TextInput source="notes"  />
+          <TextInput source="facebook"  />
+          <TextInput source="linked_in"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="twitter" validate={[]} />
-          <TextInput source="facebook_id" validate={[]} />
-          <TextInput source="linked_in_id" validate={[]} />
-          <TextInput source="twitter_id" validate={[]} />
-          <TextInput source="contact_photo" validate={[]} />
-          <TextInput source="gpsn" validate={[]} />
-          <TextInput source="gpse" validate={[]} />
-          <TextInput source="surname" validate={[]} />
-          <TextInput source="given_name" validate={[]} />
-          <TextInput source="middle_name" validate={[]} />
-          <BooleanInput source="confirmed" validate={[]} />
+        <TextInput source="twitter"  />
+          <TextInput source="facebook_id"  />
+          <TextInput source="linked_in_id"  />
+          <TextInput source="twitter_id"  />
+          <TextInput source="contact_photo"  />
+          <TextInput source="gpsn"  />
+          <TextInput source="gpse"  />
+          <TextInput source="surname"  />
+          <TextInput source="given_name"  />
+          <TextInput source="middle_name"  />
+          <BooleanInput source="confirmed"  />
           <ReferenceInput source="language_id" reference="sys_language">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="completeness" validate={[]} />
-          <BooleanInput source="is_non_actual_email" validate={[]} />
-          <NumberInput source="r_id" validate={[]} />
-          <NumberInput source="age" validate={[]} />
-          <BooleanInput source="ti_is_invoice_by_sms" validate={[]} />
-          <BooleanInput source="ti_is_invoice_by_email" validate={[]} />
-          <TextInput source="alternate_names" validate={[]} />
-          <TextInput source="duplicate_group_id" validate={[]} />
-          <BooleanInput source="is_email_confirmed" validate={[]} />
-          <TextInput source="url" validate={[]} />
+          <NumberInput source="completeness"  />
+          <BooleanInput source="is_non_actual_email"  />
+          <NumberInput source="r_id"  />
+          <NumberInput source="age"  />
+          <BooleanInput source="ti_is_invoice_by_sms"  />
+          <BooleanInput source="ti_is_invoice_by_email"  />
+          <TextInput source="alternate_names"  />
+          <TextInput source="duplicate_group_id"  />
+          <BooleanInput source="is_email_confirmed"  />
+          <TextInput source="url"  />
           <ReferenceInput source="verified_stage_id" reference="verified_stage">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="duplicate_id" validate={[]} />
-          <TextInput source="avatar_url" validate={[]} />
+          <TextInput source="duplicate_id"  />
+          <TextInput source="avatar_url"  />
           <ReferenceInput source="promote_breed_id" reference="breed">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="verification_status_id" reference="verification_status">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="rating" validate={[]} />
-          <NumberInput source="lead_conversion_score" validate={[]} />
+          <NumberInput source="rating"  />
+          <NumberInput source="lead_conversion_score"  />
       </>
     }
   />

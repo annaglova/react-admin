@@ -1,24 +1,23 @@
-import { ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PetAdditionalInfoCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="value" validate={[]} />}</>
+      <>{<TextInput source="value"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id" validate={[]} />
+        <TextInput source="pet_id"  />
           <ReferenceInput source="type_id" reference="pet_additional_info_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="description" validate={[]} />
-          <TextInput source="pet_breed_id" validate={[]} />
+        <TextInput source="description"  />
+          <TextInput source="pet_breed_id"  />
       </>
     }
   />

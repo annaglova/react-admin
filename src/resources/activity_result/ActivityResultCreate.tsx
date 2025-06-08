@@ -1,20 +1,19 @@
-import { BooleanInput, TextInput, required , } from "react-admin";
+import { BooleanInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ActivityResultCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
+        <TextInput source="description"  />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="business_process_only" validate={[]} />
+        <BooleanInput source="business_process_only"  />
       </>
     }
   />

@@ -1,6 +1,5 @@
-import { DateInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const QuestUserDataCreate = () => (
   <ResourceCreateLayout
@@ -10,23 +9,23 @@ export const QuestUserDataCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="quest_status_id" reference="quest_status">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="current_stage_id" reference="quest_stage">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="contact_id" reference="contact">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="data" validate={[]} />
+        <TextInput source="data"  />
           <ReferenceInput source="conf_item_id" reference="conf_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <DateInput source="due_date" validate={[]} />
+          <DateInput source="due_date"  />
       </>
     }
   />

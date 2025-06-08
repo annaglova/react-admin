@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const RawDataSessionCookiesCreate = () => (
   <ResourceCreateLayout
@@ -9,16 +8,16 @@ export const RawDataSessionCookiesCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="cookies" validate={[]} />
+        <TextInput source="cookies"  />
           <ReferenceInput source="conf_item_id" reference="conf_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="headers" validate={[]} />
-          <TextInput source="domen" validate={[]} />
+        <TextInput source="headers"  />
+          <TextInput source="domen"  />
       </>
     }
   />

@@ -1,6 +1,5 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ParsingBusinessProcessInConfItemCreate = () => (
   <ResourceCreateLayout
@@ -9,17 +8,17 @@ export const ParsingBusinessProcessInConfItemCreate = () => (
     }
     fieldsLeft={
       <>
-        <NumberInput source="priority" validate={[]} />
-          <TextInput source="business_process_id" validate={[]} />
+        <NumberInput source="priority"  />
+          <TextInput source="business_process_id"  />
           <ReferenceInput source="conf_item_id" reference="conf_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="is_active" validate={[]} />
-          <TextInput source="provider_class_name" validate={[]} />
+        <BooleanInput source="is_active"  />
+          <TextInput source="provider_class_name"  />
       </>
     }
   />

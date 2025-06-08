@@ -1,25 +1,24 @@
-import { BooleanInput, DateInput, NumberInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const UserQuestCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <DateInput source="finish_date" validate={[]} />
-          <TextInput source="contact_id" validate={[]} />
-          <DateInput source="deadline_date" validate={[]} />
-          <BooleanInput source="deactivated" validate={[]} />
+        <DateInput source="finish_date"  />
+          <TextInput source="contact_id"  />
+          <DateInput source="deadline_date"  />
+          <BooleanInput source="deactivated"  />
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="reward" validate={[]} />
-          <TextInput source="description" validate={[]} />
-          <NumberInput source="frequency_interval" validate={[]} />
+        <NumberInput source="reward"  />
+          <TextInput source="description"  />
+          <NumberInput source="frequency_interval"  />
       </>
     }
   />

@@ -1,22 +1,21 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ProductTypeCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
-          <BooleanInput source="is_service" validate={[]} />
+        <TextInput source="description"  />
+          <BooleanInput source="is_service"  />
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="category_id" reference="product_category">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

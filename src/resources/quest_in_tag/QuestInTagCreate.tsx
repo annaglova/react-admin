@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const QuestInTagCreate = () => (
   <ResourceCreateLayout
@@ -10,7 +9,7 @@ export const QuestInTagCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="entity_id" reference="quest">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

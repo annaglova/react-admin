@@ -1,6 +1,5 @@
-import { DateInput, ReferenceInput, SelectInput, required , } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const CoverInLitterCreate = () => (
   <ResourceCreateLayout
@@ -10,16 +9,16 @@ export const CoverInLitterCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="litter_id" reference="litter">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <DateInput source="setup_date" validate={[]} />
+        <DateInput source="setup_date"  />
       </>
     }
   />

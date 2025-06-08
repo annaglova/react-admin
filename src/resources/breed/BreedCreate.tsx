@@ -1,51 +1,50 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const BreedCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[required()]} />}</>
+      <>{<TextInput source="name" validate={required()} />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="notes" validate={[]} />
+        <TextInput source="notes"  />
           <ReferenceInput source="pet_type_id" reference="pet_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <BooleanInput source="differ_by_coat_color" validate={[]} />
-          <BooleanInput source="differ_by_coat_type" validate={[]} />
-          <BooleanInput source="differ_by_size" validate={[]} />
+          <BooleanInput source="differ_by_coat_color"  />
+          <BooleanInput source="differ_by_coat_type"  />
+          <BooleanInput source="differ_by_size"  />
           <ReferenceInput source="language_id" reference="sys_language">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="authentic_name" validate={[]} />
-          <BooleanInput source="differ_by_body_feature" validate={[]} />
-          <NumberInput source="pet_profile_count" validate={[]} />
+          <TextInput source="authentic_name"  />
+          <BooleanInput source="differ_by_body_feature"  />
+          <NumberInput source="pet_profile_count"  />
           <ReferenceInput source="category_id" reference="breed_category">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="kennel_count" validate={[]} />
+          <NumberInput source="kennel_count"  />
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="has_related_breed" validate={[]} />
-          <TextInput source="admin_name" validate={[]} />
-          <TextInput source="url" validate={[]} />
+        <BooleanInput source="has_related_breed"  />
+          <TextInput source="admin_name"  />
+          <TextInput source="url"  />
           <ReferenceInput source="account_id" reference="account">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="patron_count" validate={[]} />
-          <TextInput source="avatar_url" validate={[]} />
-          <NumberInput source="rating" validate={[]} />
-          <NumberInput source="achievement_progress" validate={[]} />
+          <NumberInput source="patron_count"  />
+          <TextInput source="avatar_url"  />
+          <NumberInput source="rating"  />
+          <NumberInput source="achievement_progress"  />
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="payment_rating" validate={[]} />
+          <NumberInput source="payment_rating"  />
           <ReferenceInput source="public_data_id" reference="public_data">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

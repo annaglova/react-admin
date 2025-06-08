@@ -1,6 +1,5 @@
-import { DateInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { DateInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const CoverInPetCreate = () => (
   <ResourceCreateLayout
@@ -9,16 +8,16 @@ export const CoverInPetCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id" validate={[]} />
+        <TextInput source="pet_id"  />
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <DateInput source="setup_date" validate={[]} />
-          <TextInput source="pet_breed_id" validate={[]} />
+        <DateInput source="setup_date"  />
+          <TextInput source="pet_breed_id"  />
       </>
     }
   />

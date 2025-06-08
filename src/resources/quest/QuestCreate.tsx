@@ -1,31 +1,30 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const QuestCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="url" validate={[]} />
+        <TextInput source="url"  />
           <ReferenceInput source="type_id" reference="quest_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="reward" validate={[]} />
-          <NumberInput source="frequency_interval" validate={[]} />
+          <NumberInput source="reward"  />
+          <NumberInput source="frequency_interval"  />
           <ReferenceInput source="frequency_id" reference="quest_frequency">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <BooleanInput source="deactivated" validate={[]} />
-          <TextInput source="description" validate={[]} />
-          <NumberInput source="total_steps" validate={[]} />
-          <DateInput source="deadline_date" validate={[]} />
+        <BooleanInput source="deactivated"  />
+          <TextInput source="description"  />
+          <NumberInput source="total_steps"  />
+          <DateInput source="deadline_date"  />
       </>
     }
   />

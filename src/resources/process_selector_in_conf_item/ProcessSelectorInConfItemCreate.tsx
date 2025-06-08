@@ -1,6 +1,5 @@
-import { BooleanInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ProcessSelectorInConfItemCreate = () => (
   <ResourceCreateLayout
@@ -9,17 +8,17 @@ export const ProcessSelectorInConfItemCreate = () => (
     }
     fieldsLeft={
       <>
-        <BooleanInput source="is_collection" validate={[]} />
-          <TextInput source="selector" validate={[]} />
-          <TextInput source="parameter_name" validate={[]} />
+        <BooleanInput source="is_collection"  />
+          <TextInput source="selector"  />
+          <TextInput source="parameter_name"  />
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="conf_item_id" reference="conf_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="result_element_name" validate={[]} />
+          <TextInput source="result_element_name"  />
       </>
     }
   />

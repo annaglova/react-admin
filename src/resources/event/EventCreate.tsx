@@ -1,64 +1,63 @@
-import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const EventCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
         <ReferenceInput source="type_id" reference="event_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="owner_id" validate={[]} />
+          <TextInput source="owner_id"  />
           <ReferenceInput source="status_id" reference="event_status">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <DateInput source="start_date" validate={[]} />
-          <DateInput source="end_date" validate={[]} />
-          <TextInput source="goal" validate={[]} />
+          <DateInput source="start_date"  />
+          <DateInput source="end_date"  />
+          <TextInput source="goal"  />
           <ReferenceInput source="territory_id" reference="territory">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="industry_id" reference="account_industry">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="actual_response" validate={[]} />
-          <NumberInput source="primary_budgeted_cost" validate={[]} />
-          <NumberInput source="primary_expected_revenue" validate={[]} />
-          <NumberInput source="primary_actual_cost" validate={[]} />
-          <NumberInput source="primary_actual_revenue" validate={[]} />
+          <TextInput source="actual_response"  />
+          <NumberInput source="primary_budgeted_cost"  />
+          <NumberInput source="primary_expected_revenue"  />
+          <NumberInput source="primary_actual_cost"  />
+          <NumberInput source="primary_actual_revenue"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="notes" validate={[]} />
-          <DateInput source="last_actualize_date" validate={[]} />
-          <NumberInput source="recipient_count" validate={[]} />
+        <TextInput source="notes"  />
+          <DateInput source="last_actualize_date"  />
+          <NumberInput source="recipient_count"  />
           <ReferenceInput source="organizer_id" reference="account">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="address" validate={[]} />
+          <TextInput source="address"  />
           <ReferenceInput source="city_id" reference="city">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="region_id" reference="region">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="country_id" reference="country">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="account_id" reference="account">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="url" validate={[]} />
+          <TextInput source="url"  />
           <ReferenceInput source="pet_type_id" reference="pet_type">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="cover_id" reference="cover">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

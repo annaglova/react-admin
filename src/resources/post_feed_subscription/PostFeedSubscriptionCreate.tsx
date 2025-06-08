@@ -1,6 +1,5 @@
-import { ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const PostFeedSubscriptionCreate = () => (
   <ResourceCreateLayout
@@ -10,13 +9,13 @@ export const PostFeedSubscriptionCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="feed_id" reference="post_feed">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="contact_id" validate={[]} />
+        <TextInput source="contact_id"  />
       </>
     }
   />

@@ -1,6 +1,5 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const ServiceInServicePactCreate = () => (
   <ResourceCreateLayout
@@ -10,29 +9,29 @@ export const ServiceInServicePactCreate = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="service_item_id" reference="service_item">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="service_pact_id" reference="service_pact">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="reaction_time_value" validate={[]} />
+          <NumberInput source="reaction_time_value"  />
           <ReferenceInput source="reaction_time_unit_id" reference="time_unit">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="solution_time_value" validate={[]} />
+          <NumberInput source="solution_time_value"  />
       </>
     }
     fieldsRight={
       <>
         <ReferenceInput source="solution_time_unit_id" reference="time_unit">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="calendar_id" reference="calendar">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="reaction_time" validate={[]} />
-          <TextInput source="solution_time" validate={[]} />
-          <TextInput source="concat_name" validate={[]} />
+          <TextInput source="reaction_time"  />
+          <TextInput source="solution_time"  />
+          <TextInput source="concat_name"  />
       </>
     }
   />

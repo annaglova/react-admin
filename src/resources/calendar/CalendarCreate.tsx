@@ -1,28 +1,27 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required , } from "react-admin";
+import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
-
 
 export const CalendarCreate = () => (
   <ResourceCreateLayout
     name={
-      <>{<TextInput source="name" validate={[]} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>
-        <TextInput source="description" validate={[]} />
+        <TextInput source="description"  />
           <ReferenceInput source="parent_id" reference="calendar">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="time_zone_id" reference="time_zone">
-  <SelectInput optionText="name" validate={[]} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="depth" validate={[]} />
-          <BooleanInput source="around_clock" validate={[]} />
-          <BooleanInput source="without_day_off" validate={[]} />
+        <NumberInput source="depth"  />
+          <BooleanInput source="around_clock"  />
+          <BooleanInput source="without_day_off"  />
       </>
     }
   />

@@ -626,7 +626,7 @@ export const BreedShow = ({ record }: any) => (
         </div>
         <ReferenceManyField reference="coat_color_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
-            <TextField source="id" label="Id *" />
+            <TextField source="id" label="Id" />
               <ReferenceField source="coat_color_id" reference="coat_color" label="Coat Color Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>

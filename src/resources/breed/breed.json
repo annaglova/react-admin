@@ -2581,7 +2581,7 @@
         {
           "name": "id",
           "type": "uuid",
-          "isRequired": true,
+          "isRequired": false,
           "isSystemField": true
         },
         {
@@ -2611,7 +2611,7 @@
         {
           "name": "breed_id",
           "type": "uuid",
-          "isRequired": true,
+          "isRequired": false,
           "isSystemField": false,
           "isFk": true,
           "ref": "breed"
@@ -3612,5 +3612,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-07T17:06:32.260Z"
+  "metaUpdatedAt": "2025-06-08T13:47:52.109Z"
 }

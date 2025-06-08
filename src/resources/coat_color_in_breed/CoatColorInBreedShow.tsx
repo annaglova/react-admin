@@ -10,11 +10,11 @@ export const CoatColorInBreedShow = ({ record }: any) => (
       null
     }
     id={
-      <Labeled label="ID" required={true} value={<TextField source="id" />} />
+      <Labeled label="ID" required={false} value={<TextField source="id" />} />
     }
     fieldsLeft={
       <>
-        <Labeled label="Breed Id" required={true} value={<ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Breed Id" required={false} value={<ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>} />
       </>
     }
     fieldsRight={

@@ -4,9 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "generate:validators": "node generate-validators.js",
+    "check:resources-list": "node check-resources-list.js",
+    "generate:json": "node generate-json.js",
+    "check:menu-vs-json": "node check-menu-vs-json.js",
+    "generate:resources-index": "node generate-resource-index.js",
+    "generate:lists": "node generate-list-components.js",
+    "generate:shows": "node generate-show-components.js",
+    "generate:creates": "node generate-create-components.js",
+    "generate:edits": "node generate-edit-components.js",
+    "generate:app": "node generate-app_v5.js",
+
+    "codegen": "npm run generate:validators && npm run check:resources-list && npm run generate:json && npm run check:menu-vs-json && npm run generate:resources-index && npm run generate:lists && npm run generate:shows && npm run generate:creates && npm run generate:edits && npm run generate:app",
+
+    "dev": "npm run codegen && vite",
+    "build": "npm run codegen && vite build"
   },
   "keywords": [],
   "author": "",

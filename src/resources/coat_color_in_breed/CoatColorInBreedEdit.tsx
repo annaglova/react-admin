@@ -9,7 +9,7 @@ export const CoatColorInBreedEdit = () => (
     fieldsLeft={
       <>
         <ReferenceInput source="breed_id" reference="breed">
-  <SelectInput optionText="name" validate={required()} />
+  <SelectInput optionText="name"  />
 </ReferenceInput>
       </>
     }

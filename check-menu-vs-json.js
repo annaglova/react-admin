@@ -8,7 +8,7 @@ const ALL_RESOURCES = [
 ];
 
 // 2. Парсимо Menu з CustomMenu (беремо всі to="/..." з Menu.Item)
-const customMenu = fs.readFileSync("./src/CustomMenu.tsx", "utf-8");
+const customMenu = fs.readFileSync("./src/components/CustomMenu.tsx", "utf-8");
 
 // Регулярка для to="/resource_name"
 const menuResourceRegex = /to="\/([a-zA-Z0-9_]+)"/g;

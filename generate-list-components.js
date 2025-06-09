@@ -18,6 +18,11 @@ const EXCLUDE_FIELDS = [
   "created_at",
 ];
 
+// --- Завантажуємо валідатори окремо ---
+const validators = JSON.parse(
+  fs.readFileSync(path.join("src", "validators.json"), "utf-8")
+);
+
 // Мапа postgres → React Admin Field
 const typeMap = {
   integer: "NumberField",
@@ -45,11 +50,14 @@ function toPascalCase(str) {
     .join("");
 }
 
-function getColumnLabel(fieldMeta) {
-  const label = fieldMeta.name
+function getColumnLabel(fieldName, table) {
+  // Підтягуємо isRequired із validators.json, якщо такий є
+  const tableValidators = validators[table] || {};
+  const isRequired = !!tableValidators[fieldName]?.isRequired;
+  const label = fieldName
     .replace(/_/g, " ")
     .replace(/\b\w/g, (c) => c.toUpperCase());
-  return fieldMeta.isRequired ? `${label} *` : label;
+  return isRequired ? `${label} *` : label;
 }
 
 function getMetaJson(table) {
@@ -89,7 +97,8 @@ for (const table of ALL_RESOURCES) {
       let fieldType = typeMap[meta.type] || "TextField";
       usedTypes.add(fieldType);
 
-      const columnLabel = getColumnLabel(meta);
+      // --- Валідатори підтягуємо з validators.json ---
+      const columnLabel = getColumnLabel(meta.name, table);
 
       // Foreign Key
       if (meta.isFk && meta.ref) {

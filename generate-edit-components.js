@@ -39,7 +39,7 @@ const validators = JSON.parse(
   fs.readFileSync(path.join("src", "validators.json"), "utf-8")
 );
 
-// 3. EXCLUDE поля для генерації (як і було)
+// 3. EXCLUDE поля для генерації
 const EXCLUDE_FIELDS = [
   "id",
   "created_on",
@@ -72,12 +72,13 @@ function groupColumns(cols, exclude = []) {
   return { nameCol, rest };
 }
 
-// Валідатори (required)
+// Валідатори (тільки з validators.json)
 function getValidatorsForField(table, field) {
   const tableValidators = validators[table] || {};
   const config = tableValidators[field] || {};
   const v = [];
   if (config.isRequired) v.push("required()");
+  // Додай ще minLength, pattern якщо треба!
   if (v.length === 0) return "";
   if (v.length === 1) return `validate={${v[0]}}`;
   return `validate={[${v.join(", ")}]}`;

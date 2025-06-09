@@ -137,9 +137,12 @@ for (const table of ALL_RESOURCES) {
         childFields,
         Array.isArray(tab.fk) ? tab.fk : [tab.fk]
       );
+      const childValidators = validators[tab.resource] || {};
       const datagridFields = bestCols
         .map((col) => {
-          const columnLabel = labelFor(col.name) + (col.isRequired ? " *" : "");
+          // Динамічно підтягуємо required із validators.json (як у genLabeledField)
+          const isRequired = !!childValidators[col.name]?.isRequired;
+          const columnLabel = labelFor(col.name) + (isRequired ? " *" : "");
           if (col.isFk && childFkMap[col.name]) {
             const refTable = stripQuotes(childFkMap[col.name]);
             return `<ReferenceField source="${col.name}" reference="${refTable}" label="${columnLabel}"><TextField source="name" /></ReferenceField>`;

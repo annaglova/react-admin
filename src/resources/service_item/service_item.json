@@ -2,123 +2,85 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "name",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "reaction_time_value",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     },
     {
       "name": "reaction_time_unit_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "solution_time_value",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     },
     {
       "name": "solution_time_unit_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "notes",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     },
     {
       "name": "reaction_time",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "solution_time",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "owner_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "calendar_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "calendar"
     },
     {
       "name": "category_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "service_category"
     },
     {
       "name": "provider_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "account"
     },
     {
       "name": "sort_order",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     },
     {
       "name": "description",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     }
   ],
   "detailsTabs": [
@@ -128,103 +90,73 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "service_item_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "service_item"
         },
         {
           "name": "service_pact_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "service_pact"
         },
         {
           "name": "reaction_time_value",
-          "type": "integer",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "integer"
         },
         {
           "name": "reaction_time_unit_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "time_unit"
         },
         {
           "name": "solution_time_value",
-          "type": "integer",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "integer"
         },
         {
           "name": "solution_time_unit_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "time_unit"
         },
         {
           "name": "calendar_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "calendar"
         },
         {
           "name": "reaction_time",
-          "type": "character varying",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "character varying"
         },
         {
           "name": "solution_time",
-          "type": "character varying",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "character varying"
         },
         {
           "name": "concat_name",
-          "type": "character varying",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "character varying"
         }
       ]
     },
@@ -237,63 +169,45 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "service_item_a_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "service_item"
         },
         {
           "name": "service_item_b_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "service_item"
         },
         {
           "name": "dependency_category_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "dependency_category"
         },
         {
           "name": "dependency_type_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "dependency_type"
         }
@@ -305,39 +219,27 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "entity_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "service_item"
         }
@@ -349,63 +251,45 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "service_item_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "service_item"
         },
         {
           "name": "conf_item_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "conf_item"
         },
         {
           "name": "dependency_category_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "dependency_category"
         },
         {
           "name": "dependency_type_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "dependency_type"
         }
@@ -417,39 +301,27 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "service_item_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "service_item"
         }
@@ -463,5 +335,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:00.195Z"
+  "metaUpdatedAt": "2025-06-09T10:26:45.163Z"
 }

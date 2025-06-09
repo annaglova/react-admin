@@ -2,77 +2,55 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "award_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "award"
     },
     {
       "name": "place_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "place"
     },
     {
       "name": "qualification_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "pet_qualification"
     },
     {
       "name": "pet_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "activity_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "activity"
     },
     {
       "name": "pet_breed_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     }
   ],
   "detailsTabs": [],
@@ -83,5 +61,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:12.788Z"
+  "metaUpdatedAt": "2025-06-09T10:26:58.892Z"
 }

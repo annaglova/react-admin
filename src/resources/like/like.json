@@ -2,23 +2,17 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "contact_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "contact"
     },
     {
       "name": "like_it",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     }
   ],
   "detailsTabs": [],
@@ -29,5 +23,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:12.328Z"
+  "metaUpdatedAt": "2025-06-09T10:26:58.401Z"
 }

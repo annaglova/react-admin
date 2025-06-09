@@ -2,91 +2,63 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "value",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "pet_identifier_type_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "pet_identifier_type"
     },
     {
       "name": "pet_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "date",
-      "type": "date",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "date"
     },
     {
       "name": "studbook_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "studbook"
     },
     {
       "name": "number",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "is_processed",
-      "type": "boolean",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "boolean"
     },
     {
       "name": "trim_value",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "is_public",
-      "type": "boolean",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "boolean"
     }
   ],
   "detailsTabs": [],
@@ -97,5 +69,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:12.738Z"
+  "metaUpdatedAt": "2025-06-09T10:26:58.839Z"
 }

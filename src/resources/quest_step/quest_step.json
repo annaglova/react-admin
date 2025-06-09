@@ -2,77 +2,53 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "name",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "quest_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "quest"
     },
     {
       "name": "description",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     },
     {
       "name": "intitial_provider_code",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "provider_code",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "position",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     },
     {
       "name": "dependencies",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     }
   ],
   "detailsTabs": [],
@@ -83,5 +59,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:14.599Z"
+  "metaUpdatedAt": "2025-06-09T10:27:00.792Z"
 }

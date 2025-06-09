@@ -2,57 +2,39 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "contact_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "international_judgment",
-      "type": "boolean",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "boolean"
     },
     {
       "name": "national_judgment",
-      "type": "boolean",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "boolean"
     },
     {
       "name": "competition_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "competition"
     }
@@ -65,5 +47,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:11.278Z"
+  "metaUpdatedAt": "2025-06-09T10:26:57.292Z"
 }

@@ -2,131 +2,93 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "name",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     },
     {
       "name": "notes",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     },
     {
       "name": "pet_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "project_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "project"
     },
     {
       "name": "event_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "event"
     },
     {
       "name": "contact_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "account_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "account"
     },
     {
       "name": "breed_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "breed"
     },
     {
       "name": "owner_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "cover_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "cover"
     },
     {
       "name": "record_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     },
     {
       "name": "entity_schema_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "entity_schema_lookup"
     },
     {
       "name": "litter_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "litter"
     },
     {
       "name": "pet_breed_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     }
   ],
   "detailsTabs": [
@@ -136,53 +98,37 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "pet_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "uuid"
         },
         {
           "name": "note_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "note"
         },
         {
           "name": "pet_breed_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "uuid"
         }
       ]
     }
@@ -194,5 +140,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:47:56.641Z"
+  "metaUpdatedAt": "2025-06-09T10:26:41.528Z"
 }

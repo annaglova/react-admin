@@ -31,18 +31,14 @@ const ALL_RESOURCES = [
   ...CHILD_RESOURCES,
 ];
 
-const validators = JSON.parse(
-  fs.readFileSync(path.join("src", "validators.json"), "utf-8")
-);
+// Вся логіка валідаторів видалена!
 
 function getFieldMeta(table, col) {
-  const tableValidators = validators[table] || {};
-  const v = tableValidators[col.column_name] || {};
   return {
     name: col.column_name,
     type: col.data_type,
-    isRequired: !!v.isRequired,
-    isSystemField: SYSTEM_FIELDS.includes(col.column_name),
+    // isSystemField: SYSTEM_FIELDS.includes(col.column_name),
+    // жодних isRequired або інфи про валідацію тут немає
   };
 }
 

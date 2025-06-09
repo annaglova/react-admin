@@ -2,103 +2,71 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "private",
-      "type": "boolean",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "boolean"
     },
     {
       "name": "entity_name",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "auto",
-      "type": "boolean",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "boolean"
     },
     {
       "name": "type_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "collection_type"
     },
     {
       "name": "avatar_url",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "url",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "name",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "notes",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     },
     {
       "name": "update_date",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "timestamp without time zone"
     },
     {
       "name": "cover_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "cover"
     },
     {
       "name": "owner_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "uuid"
     }
   ],
   "detailsTabs": [
@@ -108,39 +76,27 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "entity_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "collection"
         }
@@ -152,83 +108,59 @@
       "fields": [
         {
           "name": "id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "created_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "created_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "modified_on",
-          "type": "timestamp without time zone",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "timestamp without time zone"
         },
         {
           "name": "modified_by_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": true
+          "type": "uuid"
         },
         {
           "name": "record_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "uuid"
         },
         {
           "name": "collection_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "collection"
         },
         {
           "name": "contact_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "contact"
         },
         {
           "name": "account_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "account"
         },
         {
           "name": "event_id",
           "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false,
           "isFk": true,
           "ref": "event"
         },
         {
           "name": "pet_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "uuid"
         },
         {
           "name": "pet_breed_id",
-          "type": "uuid",
-          "isRequired": false,
-          "isSystemField": false
+          "type": "uuid"
         }
       ]
     }
@@ -240,5 +172,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:47:56.819Z"
+  "metaUpdatedAt": "2025-06-09T10:26:41.725Z"
 }

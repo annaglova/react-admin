@@ -2,101 +2,69 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "name",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "notes",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     },
     {
       "name": "conf_item_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "conf_item"
     },
     {
       "name": "launch_number",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     },
     {
       "name": "duration",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     },
     {
       "name": "start_date",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "timestamp without time zone"
     },
     {
       "name": "due_date",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "timestamp without time zone"
     },
     {
       "name": "changed_record_count",
-      "type": "integer",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "integer"
     },
     {
       "name": "update_date",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "timestamp without time zone"
     },
     {
       "name": "reanimate",
-      "type": "boolean",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "boolean"
     },
     {
       "name": "parameters_value",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     }
   ],
   "detailsTabs": [],
@@ -107,5 +75,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:10.810Z"
+  "metaUpdatedAt": "2025-06-09T10:26:56.981Z"
 }

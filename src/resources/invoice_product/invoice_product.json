@@ -2,165 +2,113 @@
   "fields": [
     {
       "name": "id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "created_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "created_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "modified_on",
-      "type": "timestamp without time zone",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "timestamp without time zone"
     },
     {
       "name": "modified_by_id",
-      "type": "uuid",
-      "isRequired": false,
-      "isSystemField": true
+      "type": "uuid"
     },
     {
       "name": "name",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "notes",
-      "type": "text",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "text"
     },
     {
       "name": "product_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "product"
     },
     {
       "name": "custom_product",
-      "type": "character varying",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "character varying"
     },
     {
       "name": "delivery_date",
-      "type": "date",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "date"
     },
     {
       "name": "quantity",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "unit_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "unit"
     },
     {
       "name": "primary_price",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "price",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "primary_amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "primary_discount_amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "discount_amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "discount_percent",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "primary_tax_amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "tax_amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "primary_total_amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "total_amount",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "discount_tax",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     },
     {
       "name": "invoice_id",
       "type": "uuid",
-      "isRequired": false,
-      "isSystemField": false,
       "isFk": true,
       "ref": "invoice"
     },
     {
       "name": "base_quantity",
-      "type": "numeric",
-      "isRequired": false,
-      "isSystemField": false
+      "type": "numeric"
     }
   ],
   "detailsTabs": [],
@@ -171,5 +119,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-08T13:48:12.175Z"
+  "metaUpdatedAt": "2025-06-09T10:26:58.247Z"
 }

@@ -1320,11 +1320,6 @@
       "isRequired": false
     }
   },
-  "coat_color_in_breed": {
-    "id": {
-      "isRequired": true
-    }
-  },
   "pet_size": {
     "id": {
       "isRequired": true

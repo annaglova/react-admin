@@ -1,4 +1,4 @@
-import { BooleanInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
+import { BooleanInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const BreedCreate = () => (
@@ -19,7 +19,6 @@ export const BreedCreate = () => (
 </ReferenceInput>
           <TextInput source="authentic_name"  />
           <BooleanInput source="differ_by_body_feature"  />
-          <NumberInput source="pet_profile_count"  />
           <ReferenceInput source="category_id" reference="breed_category">
   <SelectInput optionText="name"  />
 </ReferenceInput>

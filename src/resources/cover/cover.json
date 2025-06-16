@@ -1341,10 +1341,6 @@
           "type": "boolean"
         },
         {
-          "name": "pet_profile_count",
-          "type": "integer"
-        },
-        {
           "name": "category_id",
           "type": "uuid",
           "isFk": true,
@@ -1662,5 +1658,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-16T12:52:52.279Z"
+  "metaUpdatedAt": "2025-06-16T12:57:12.406Z"
 }

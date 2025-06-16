@@ -22,7 +22,6 @@ export const BreedShow = ({ record }: any) => (
         <Labeled label="Language Id" required={false} value={<ReferenceField source="language_id" reference="sys_language"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Authentic Name" required={false} value={<TextField source="authentic_name" />} />
         <Labeled label="Differ By Body Feature" required={false} value={<BooleanField source="differ_by_body_feature" />} />
-        <Labeled label="Pet Profile Count" required={false} value={<NumberField source="pet_profile_count" />} />
         <Labeled label="Category Id" required={false} value={<ReferenceField source="category_id" reference="breed_category"><TextField source="name" /></ReferenceField>} />
       </>
     }

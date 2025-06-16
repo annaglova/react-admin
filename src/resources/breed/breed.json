@@ -57,10 +57,6 @@
       "type": "boolean"
     },
     {
-      "name": "pet_profile_count",
-      "type": "integer"
-    },
-    {
       "name": "category_id",
       "type": "uuid",
       "isFk": true,
@@ -108,7 +104,10 @@
   "detailsTabs": [
     {
       "resource": "contact_in_breed",
-      "fk": ["breed_id", "breed_id"],
+      "fk": [
+        "breed_id",
+        "breed_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -154,7 +153,10 @@
     },
     {
       "resource": "payment_in_breed",
-      "fk": ["breed_id", "breed_id"],
+      "fk": [
+        "breed_id",
+        "breed_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -1577,7 +1579,10 @@
     },
     {
       "resource": "related_breed",
-      "fk": ["breed_id", "connected_breed_id"],
+      "fk": [
+        "breed_id",
+        "connected_breed_id"
+      ],
       "fields": [
         {
           "name": "id",
@@ -2564,5 +2569,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-16T12:52:51.231Z"
+  "metaUpdatedAt": "2025-06-16T12:57:11.449Z"
 }

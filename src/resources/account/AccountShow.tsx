@@ -587,7 +587,6 @@ export const AccountShow = ({ record }: any) => (
               <ReferenceField source="language_id" reference="sys_language" label="Language Id"><TextField source="name" /></ReferenceField>
               <TextField source="authentic_name" label="Authentic Name" />
               <BooleanField source="differ_by_body_feature" label="Differ By Body Feature" />
-              <NumberField source="pet_profile_count" label="Pet Profile Count" />
               <ReferenceField source="category_id" reference="breed_category" label="Category Id"><TextField source="name" /></ReferenceField>
               <BooleanField source="has_related_breed" label="Has Related Breed" />
               <TextField source="admin_name" label="Admin Name" />

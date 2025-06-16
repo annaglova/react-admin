@@ -305,6 +305,104 @@
   ],
   "detailsTabs": [
     {
+      "resource": "payment_in_breed",
+      "fk": "contact_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid"
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid"
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid"
+        },
+        {
+          "name": "amount",
+          "type": "numeric"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "invoice_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "invoice"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "date",
+          "type": "timestamp without time zone"
+        }
+      ]
+    },
+    {
+      "resource": "contact_in_breed",
+      "fk": "contact_id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid"
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid"
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "rating",
+          "type": "numeric"
+        },
+        {
+          "name": "place",
+          "type": "integer"
+        }
+      ]
+    },
+    {
       "resource": "contact",
       "fk": "owner_id",
       "fields": [
@@ -1531,5 +1629,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-09T10:26:38.375Z"
+  "metaUpdatedAt": "2025-06-16T12:52:51.595Z"
 }

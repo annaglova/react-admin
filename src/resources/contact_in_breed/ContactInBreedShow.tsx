@@ -15,7 +15,7 @@ export const ContactInBreedShow = ({ record }: any) => (
     fieldsLeft={
       <>
         <Labeled label="Breed Id" required={false} value={<ReferenceField source="breed_id" reference="breed"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Contact Id" required={false} value={<TextField source="contact_id" />} />
+        <Labeled label="Contact Id" required={false} value={<ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>} />
       </>
     }
     fieldsRight={

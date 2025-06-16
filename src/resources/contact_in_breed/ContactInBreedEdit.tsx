@@ -1,4 +1,4 @@
-import { NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
+import { NumberInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const ContactInBreedEdit = () => (
@@ -11,7 +11,9 @@ export const ContactInBreedEdit = () => (
         <ReferenceInput source="breed_id" reference="breed">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="contact_id"  />
+          <ReferenceInput source="contact_id" reference="contact">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
     fieldsRight={

@@ -15,7 +15,6 @@ export const BreedShow = ({ record }: any) => (
     }
     fieldsLeft={
       <>
-        <Labeled label="Notes" required={false} value={<TextField source="notes" />} />
         <Labeled label="Pet Type Id" required={false} value={<ReferenceField source="pet_type_id" reference="pet_type"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Differ By Coat Color" required={false} value={<BooleanField source="differ_by_coat_color" />} />
         <Labeled label="Differ By Coat Type" required={false} value={<BooleanField source="differ_by_coat_type" />} />
@@ -25,7 +24,6 @@ export const BreedShow = ({ record }: any) => (
         <Labeled label="Differ By Body Feature" required={false} value={<BooleanField source="differ_by_body_feature" />} />
         <Labeled label="Pet Profile Count" required={false} value={<NumberField source="pet_profile_count" />} />
         <Labeled label="Category Id" required={false} value={<ReferenceField source="category_id" reference="breed_category"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Kennel Count" required={false} value={<NumberField source="kennel_count" />} />
       </>
     }
     fieldsRight={
@@ -34,17 +32,55 @@ export const BreedShow = ({ record }: any) => (
         <Labeled label="Admin Name" required={false} value={<TextField source="admin_name" />} />
         <Labeled label="Url" required={false} value={<TextField source="url" />} />
         <Labeled label="Account Id" required={false} value={<ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Patron Count" required={false} value={<NumberField source="patron_count" />} />
         <Labeled label="Avatar Url" required={false} value={<TextField source="avatar_url" />} />
-        <Labeled label="Rating" required={false} value={<NumberField source="rating" />} />
-        <Labeled label="Achievement Progress" required={false} value={<NumberField source="achievement_progress" />} />
         <Labeled label="Cover Id" required={false} value={<ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Payment Rating" required={false} value={<NumberField source="payment_rating" />} />
         <Labeled label="Public Data Id" required={false} value={<ReferenceField source="public_data_id" reference="public_data"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Measurements" required={false} value={<TextField source="measurements" />} />
       </>
     }
     detailsConfigs={
       [
+  {
+    label: "Contact In Breed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <ChildCreateButton resource="contact_in_breed" fkField="breed_id" />
+        </div>
+        <ReferenceManyField reference="contact_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="contact_id" reference="contact" label="Contact Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="rating" label="Rating" />
+              <NumberField source="place" label="Place" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
+        
+  {
+    label: "Payment In Breed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <ChildCreateButton resource="payment_in_breed" fkField="breed_id" />
+        </div>
+        <ReferenceManyField reference="payment_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <NumberField source="amount" label="Amount" />
+              <ReferenceField source="contact_id" reference="contact" label="Contact Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="invoice_id" reference="invoice" label="Invoice Id"><TextField source="name" /></ReferenceField>
+              <DateField source="date" label="Date" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
+        
   {
     label: "Contact",
     content: (
@@ -626,7 +662,7 @@ export const BreedShow = ({ record }: any) => (
         </div>
         <ReferenceManyField reference="coat_color_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
-            <TextField source="id" label="Id *" />
+            <TextField source="id" label="Id" />
               <ReferenceField source="coat_color_id" reference="coat_color" label="Coat Color Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
@@ -822,27 +858,6 @@ export const BreedShow = ({ record }: any) => (
 ,
         
   {
-    label: "Payment In Breed",
-    content: (
-      <>
-        <div className="flex justify-end px-4 pt-2 pb-1">
-          <ChildCreateButton resource="payment_in_breed" fkField="breed_id" />
-        </div>
-        <ReferenceManyField reference="payment_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
-          <Datagrid>
-            <TextField source="id" label="Id" />
-              <NumberField source="amount" label="Amount" />
-              <TextField source="contact_id" label="Contact Id" />
-              <ReferenceField source="invoice_id" reference="invoice" label="Invoice Id"><TextField source="name" /></ReferenceField>
-              <DateField source="date" label="Date" />
-          </Datagrid>
-        </ReferenceManyField>
-      </>
-    ),
-  }
-,
-        
-  {
     label: "User Settings",
     content: (
       <>
@@ -858,26 +873,6 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="weight_unit_id" reference="unit" label="Weight Unit Id"><TextField source="name" /></ReferenceField>
               <BooleanField source="anonymous_gift_sender" label="Anonymous Gift Sender" />
               <BooleanField source="welcome_stage_complete" label="Welcome Stage Complete" />
-          </Datagrid>
-        </ReferenceManyField>
-      </>
-    ),
-  }
-,
-        
-  {
-    label: "Contact In Breed",
-    content: (
-      <>
-        <div className="flex justify-end px-4 pt-2 pb-1">
-          <ChildCreateButton resource="contact_in_breed" fkField="breed_id" />
-        </div>
-        <ReferenceManyField reference="contact_in_breed" target="breed_id" record={record} perPage={15}  pagination={<Pagination />}>
-          <Datagrid>
-            <TextField source="id" label="Id" />
-              <TextField source="contact_id" label="Contact Id" />
-              <NumberField source="rating" label="Rating" />
-              <NumberField source="place" label="Place" />
           </Datagrid>
         </ReferenceManyField>
       </>

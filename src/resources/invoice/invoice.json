@@ -471,6 +471,61 @@
       ]
     },
     {
+      "resource": "payment_in_breed",
+      "fk": [
+        "invoice_id",
+        "invoice_id"
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid"
+        },
+        {
+          "name": "created_on",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "created_by_id",
+          "type": "uuid"
+        },
+        {
+          "name": "modified_on",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "modified_by_id",
+          "type": "uuid"
+        },
+        {
+          "name": "amount",
+          "type": "numeric"
+        },
+        {
+          "name": "contact_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "contact"
+        },
+        {
+          "name": "invoice_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "invoice"
+        },
+        {
+          "name": "breed_id",
+          "type": "uuid",
+          "isFk": true,
+          "ref": "breed"
+        },
+        {
+          "name": "date",
+          "type": "timestamp without time zone"
+        }
+      ]
+    },
+    {
       "resource": "cashflow",
       "fk": "invoice_id",
       "fields": [
@@ -769,56 +824,6 @@
           "ref": "license_manager_manage_type"
         }
       ]
-    },
-    {
-      "resource": "payment_in_breed",
-      "fk": "invoice_id",
-      "fields": [
-        {
-          "name": "id",
-          "type": "uuid"
-        },
-        {
-          "name": "created_on",
-          "type": "timestamp without time zone"
-        },
-        {
-          "name": "created_by_id",
-          "type": "uuid"
-        },
-        {
-          "name": "modified_on",
-          "type": "timestamp without time zone"
-        },
-        {
-          "name": "modified_by_id",
-          "type": "uuid"
-        },
-        {
-          "name": "amount",
-          "type": "numeric"
-        },
-        {
-          "name": "contact_id",
-          "type": "uuid"
-        },
-        {
-          "name": "invoice_id",
-          "type": "uuid",
-          "isFk": true,
-          "ref": "invoice"
-        },
-        {
-          "name": "breed_id",
-          "type": "uuid",
-          "isFk": true,
-          "ref": "breed"
-        },
-        {
-          "name": "date",
-          "type": "timestamp without time zone"
-        }
-      ]
     }
   ],
   "custom": {
@@ -828,5 +833,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-09T10:26:44.580Z"
+  "metaUpdatedAt": "2025-06-16T12:52:53.029Z"
 }

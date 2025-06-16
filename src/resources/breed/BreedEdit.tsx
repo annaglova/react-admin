@@ -8,8 +8,7 @@ export const BreedEdit = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="notes"  />
-          <ReferenceInput source="pet_type_id" reference="pet_type">
+        <ReferenceInput source="pet_type_id" reference="pet_type">
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="differ_by_coat_color"  />
@@ -24,7 +23,6 @@ export const BreedEdit = () => (
           <ReferenceInput source="category_id" reference="breed_category">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="kennel_count"  />
       </>
     }
     fieldsRight={
@@ -35,17 +33,14 @@ export const BreedEdit = () => (
           <ReferenceInput source="account_id" reference="account">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="patron_count"  />
           <TextInput source="avatar_url"  />
-          <NumberInput source="rating"  />
-          <NumberInput source="achievement_progress"  />
           <ReferenceInput source="cover_id" reference="cover">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="payment_rating"  />
           <ReferenceInput source="public_data_id" reference="public_data">
   <SelectInput optionText="name"  />
 </ReferenceInput>
+          <TextInput source="measurements"  />
       </>
     }
   />

@@ -132,6 +132,27 @@ export const InvoiceShow = ({ record }: any) => (
 ,
         
   {
+    label: "Payment In Breed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <ChildCreateButton resource="payment_in_breed" fkField="invoice_id" />
+        </div>
+        <ReferenceManyField reference="payment_in_breed" target="invoice_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <NumberField source="amount" label="Amount" />
+              <ReferenceField source="contact_id" reference="contact" label="Contact Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="breed_id" reference="breed" label="Breed Id"><TextField source="name" /></ReferenceField>
+              <DateField source="date" label="Date" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
+        
+  {
     label: "Cashflow",
     content: (
       <>
@@ -219,27 +240,6 @@ export const InvoiceShow = ({ record }: any) => (
               <TextField source="owner_id" label="Owner Id" />
               <ReferenceField source="type_id" reference="license_manager_type" label="Type Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="manage_type_id" reference="license_manager_manage_type" label="Manage Type Id"><TextField source="name" /></ReferenceField>
-          </Datagrid>
-        </ReferenceManyField>
-      </>
-    ),
-  }
-,
-        
-  {
-    label: "Payment In Breed",
-    content: (
-      <>
-        <div className="flex justify-end px-4 pt-2 pb-1">
-          <ChildCreateButton resource="payment_in_breed" fkField="invoice_id" />
-        </div>
-        <ReferenceManyField reference="payment_in_breed" target="invoice_id" record={record} perPage={15}  pagination={<Pagination />}>
-          <Datagrid>
-            <TextField source="id" label="Id" />
-              <NumberField source="amount" label="Amount" />
-              <TextField source="contact_id" label="Contact Id" />
-              <ReferenceField source="breed_id" reference="breed" label="Breed Id"><TextField source="name" /></ReferenceField>
-              <DateField source="date" label="Date" />
           </Datagrid>
         </ReferenceManyField>
       </>

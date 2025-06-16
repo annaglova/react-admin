@@ -1309,10 +1309,6 @@
           "type": "character varying"
         },
         {
-          "name": "notes",
-          "type": "text"
-        },
-        {
           "name": "pet_type_id",
           "type": "uuid",
           "isFk": true,
@@ -1355,10 +1351,6 @@
           "ref": "breed_category"
         },
         {
-          "name": "kennel_count",
-          "type": "integer"
-        },
-        {
           "name": "has_related_breed",
           "type": "boolean"
         },
@@ -1377,20 +1369,8 @@
           "ref": "account"
         },
         {
-          "name": "patron_count",
-          "type": "integer"
-        },
-        {
           "name": "avatar_url",
           "type": "character varying"
-        },
-        {
-          "name": "rating",
-          "type": "numeric"
-        },
-        {
-          "name": "achievement_progress",
-          "type": "numeric"
         },
         {
           "name": "cover_id",
@@ -1399,14 +1379,14 @@
           "ref": "cover"
         },
         {
-          "name": "payment_rating",
-          "type": "numeric"
-        },
-        {
           "name": "public_data_id",
           "type": "uuid",
           "isFk": true,
           "ref": "public_data"
+        },
+        {
+          "name": "measurements",
+          "type": "jsonb"
         }
       ]
     },
@@ -1682,5 +1662,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-09T10:26:41.392Z"
+  "metaUpdatedAt": "2025-06-16T12:52:52.279Z"
 }

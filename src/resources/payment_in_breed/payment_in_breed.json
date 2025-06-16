@@ -26,7 +26,9 @@
     },
     {
       "name": "contact_id",
-      "type": "uuid"
+      "type": "uuid",
+      "isFk": true,
+      "ref": "contact"
     },
     {
       "name": "invoice_id",
@@ -53,5 +55,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-09T10:26:58.667Z"
+  "metaUpdatedAt": "2025-06-16T12:52:55.779Z"
 }

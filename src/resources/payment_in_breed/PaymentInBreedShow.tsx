@@ -15,7 +15,7 @@ export const PaymentInBreedShow = ({ record }: any) => (
     fieldsLeft={
       <>
         <Labeled label="Amount" required={false} value={<NumberField source="amount" />} />
-        <Labeled label="Contact Id" required={false} value={<TextField source="contact_id" />} />
+        <Labeled label="Contact Id" required={false} value={<ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Invoice Id" required={false} value={<ReferenceField source="invoice_id" reference="invoice"><TextField source="name" /></ReferenceField>} />
       </>
     }

@@ -1,4 +1,4 @@
-import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
+import { DateInput, NumberInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const PaymentInBreedCreate = () => (
@@ -9,7 +9,9 @@ export const PaymentInBreedCreate = () => (
     fieldsLeft={
       <>
         <NumberInput source="amount"  />
-          <TextInput source="contact_id"  />
+          <ReferenceInput source="contact_id" reference="contact">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <ReferenceInput source="invoice_id" reference="invoice">
   <SelectInput optionText="name"  />
 </ReferenceInput>

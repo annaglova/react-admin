@@ -85,6 +85,47 @@ export const ContactShow = ({ record }: any) => (
     detailsConfigs={
       [
   {
+    label: "Payment In Breed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <ChildCreateButton resource="payment_in_breed" fkField="contact_id" />
+        </div>
+        <ReferenceManyField reference="payment_in_breed" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <NumberField source="amount" label="Amount" />
+              <ReferenceField source="invoice_id" reference="invoice" label="Invoice Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="breed_id" reference="breed" label="Breed Id"><TextField source="name" /></ReferenceField>
+              <DateField source="date" label="Date" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
+        
+  {
+    label: "Contact In Breed",
+    content: (
+      <>
+        <div className="flex justify-end px-4 pt-2 pb-1">
+          <ChildCreateButton resource="contact_in_breed" fkField="contact_id" />
+        </div>
+        <ReferenceManyField reference="contact_in_breed" target="contact_id" record={record} perPage={15}  pagination={<Pagination />}>
+          <Datagrid>
+            <TextField source="id" label="Id" />
+              <ReferenceField source="breed_id" reference="breed" label="Breed Id"><TextField source="name" /></ReferenceField>
+              <NumberField source="rating" label="Rating" />
+              <NumberField source="place" label="Place" />
+          </Datagrid>
+        </ReferenceManyField>
+      </>
+    ),
+  }
+,
+        
+  {
     label: "Contact",
     content: (
       <>

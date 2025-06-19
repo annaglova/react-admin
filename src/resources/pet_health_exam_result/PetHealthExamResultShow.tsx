@@ -14,7 +14,7 @@ export const PetHealthExamResultShow = ({ record }: any) => (
     }
     fieldsLeft={
       <>
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Health Exam Object Id" required={false} value={<ReferenceField source="health_exam_object_id" reference="health_exam_object"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Health Exam Result Id" required={false} value={<ReferenceField source="health_exam_result_id" reference="health_exam_result"><TextField source="name" /></ReferenceField>} />
       </>
@@ -22,7 +22,7 @@ export const PetHealthExamResultShow = ({ record }: any) => (
     fieldsRight={
       <>
         <Labeled label="Date" required={false} value={<DateField source="date" />} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
   />

@@ -30,7 +30,9 @@
     },
     {
       "name": "pet_id",
-      "type": "uuid"
+      "type": "uuid",
+      "isFk": true,
+      "ref": "pet_manchester_terrier_toy"
     },
     {
       "name": "project_id",
@@ -88,7 +90,9 @@
     },
     {
       "name": "pet_breed_id",
-      "type": "uuid"
+      "type": "uuid",
+      "isFk": true,
+      "ref": "pet_manchester_terrier_toy"
     }
   ],
   "detailsTabs": [
@@ -118,7 +122,9 @@
         },
         {
           "name": "pet_id",
-          "type": "uuid"
+          "type": "uuid",
+          "isFk": true,
+          "ref": "pet_manchester_terrier_toy"
         },
         {
           "name": "note_id",
@@ -128,7 +134,9 @@
         },
         {
           "name": "pet_breed_id",
-          "type": "uuid"
+          "type": "uuid",
+          "isFk": true,
+          "ref": "pet_manchester_terrier_toy"
         }
       ]
     }
@@ -140,5 +148,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-16T12:57:12.432Z"
+  "metaUpdatedAt": "2025-06-19T09:28:29.522Z"
 }

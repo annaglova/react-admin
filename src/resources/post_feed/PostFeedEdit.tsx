@@ -8,7 +8,9 @@ export const PostFeedEdit = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id"  />
+        <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <ReferenceInput source="account_id" reference="account">
   <SelectInput optionText="name"  />
 </ReferenceInput>
@@ -22,7 +24,9 @@ export const PostFeedEdit = () => (
         <ReferenceInput source="litter_id" reference="litter">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

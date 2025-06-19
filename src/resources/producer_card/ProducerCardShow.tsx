@@ -14,7 +14,7 @@ export const ProducerCardShow = ({ record }: any) => (
     }
     fieldsLeft={
       <>
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Pet Lifecycle Event Id" required={false} value={<ReferenceField source="pet_lifecycle_event_id" reference="pet_lifecycle_event"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Datet" required={false} value={<DateField source="datet" />} />
       </>
@@ -23,7 +23,7 @@ export const ProducerCardShow = ({ record }: any) => (
       <>
         <Labeled label="Day" required={false} value={<NumberField source="day" />} />
         <Labeled label="Description" required={false} value={<TextField source="description" />} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
   />

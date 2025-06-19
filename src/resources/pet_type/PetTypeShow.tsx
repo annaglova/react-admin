@@ -15,19 +15,14 @@ export const PetTypeShow = ({ record }: any) => (
     fieldsLeft={
       <>
         <Labeled label="Description" required={false} value={<TextField source="description" />} />
-        <Labeled label="Pet Profile Count" required={false} value={<NumberField source="pet_profile_count" />} />
         <Labeled label="Url" required={false} value={<TextField source="url" />} />
-        <Labeled label="Organization Count" required={false} value={<NumberField source="organization_count" />} />
-        <Labeled label="Profile Count" required={false} value={<NumberField source="profile_count" />} />
+        <Labeled label="Avatar Url" required={false} value={<TextField source="avatar_url" />} />
       </>
     }
     fieldsRight={
       <>
-        <Labeled label="Patron Count" required={false} value={<NumberField source="patron_count" />} />
-        <Labeled label="Kennel Count" required={false} value={<NumberField source="kennel_count" />} />
-        <Labeled label="Avatar Url" required={false} value={<TextField source="avatar_url" />} />
-        <Labeled label="Event Count" required={false} value={<NumberField source="event_count" />} />
         <Labeled label="Public Data Id" required={false} value={<ReferenceField source="public_data_id" reference="public_data"><TextField source="name" /></ReferenceField>} />
+        <Labeled label="Measurements" required={false} value={<TextField source="measurements" />} />
       </>
     }
   />

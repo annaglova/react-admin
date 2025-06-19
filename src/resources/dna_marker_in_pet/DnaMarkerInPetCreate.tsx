@@ -1,4 +1,4 @@
-import { TextInput, required } from "react-admin";
+import { ReferenceInput, SelectInput, TextInput, required } from "react-admin";
 import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
 export const DnaMarkerInPetCreate = () => (
@@ -8,12 +8,16 @@ export const DnaMarkerInPetCreate = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id"  />
+        <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="pet_breed_id"  />
+        <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

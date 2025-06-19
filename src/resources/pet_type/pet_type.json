@@ -29,42 +29,22 @@
       "type": "character varying"
     },
     {
-      "name": "pet_profile_count",
-      "type": "integer"
-    },
-    {
       "name": "url",
       "type": "character varying"
-    },
-    {
-      "name": "organization_count",
-      "type": "integer"
-    },
-    {
-      "name": "profile_count",
-      "type": "integer"
-    },
-    {
-      "name": "patron_count",
-      "type": "integer"
-    },
-    {
-      "name": "kennel_count",
-      "type": "integer"
     },
     {
       "name": "avatar_url",
       "type": "character varying"
     },
     {
-      "name": "event_count",
-      "type": "integer"
-    },
-    {
       "name": "public_data_id",
       "type": "uuid",
       "isFk": true,
       "ref": "public_data"
+    },
+    {
+      "name": "measurements",
+      "type": "jsonb"
     }
   ],
   "detailsTabs": [],
@@ -75,5 +55,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-16T12:57:14.806Z"
+  "metaUpdatedAt": "2025-06-19T09:28:39.769Z"
 }

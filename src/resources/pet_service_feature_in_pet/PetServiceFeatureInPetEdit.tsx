@@ -8,7 +8,9 @@ export const PetServiceFeatureInPetEdit = () => (
     }
     fieldsLeft={
       <>
-        <TextInput source="pet_id"  />
+        <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <ReferenceInput source="pet_service_feature_id" reference="pet_service_feature">
   <SelectInput optionText="name"  />
 </ReferenceInput>
@@ -19,7 +21,9 @@ export const PetServiceFeatureInPetEdit = () => (
         <ReferenceInput source="pet_service_type_id" reference="pet_service_type">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

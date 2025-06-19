@@ -33,11 +33,11 @@ export const ProductShow = ({ record }: any) => (
         <Labeled label="Is Archive" required={false} value={<BooleanField source="is_archive" />} />
         <Labeled label="Category Id" required={false} value={<ReferenceField source="category_id" reference="product_category"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Short Description" required={false} value={<TextField source="short_description" />} />
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Benefits" required={false} value={<TextField source="benefits" />} />
         <Labeled label="General Conditions" required={false} value={<TextField source="general_conditions" />} />
         <Labeled label="Stripe Product Id" required={false} value={<TextField source="stripe_product_id" />} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
     detailsConfigs={

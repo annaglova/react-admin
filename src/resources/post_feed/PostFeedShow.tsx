@@ -15,7 +15,7 @@ export const PostFeedShow = ({ record }: any) => (
     }
     fieldsLeft={
       <>
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Account Id" required={false} value={<ReferenceField source="account_id" reference="account"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Contact Id" required={false} value={<ReferenceField source="contact_id" reference="contact"><TextField source="name" /></ReferenceField>} />
       </>
@@ -23,7 +23,7 @@ export const PostFeedShow = ({ record }: any) => (
     fieldsRight={
       <>
         <Labeled label="Litter Id" required={false} value={<ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
     detailsConfigs={

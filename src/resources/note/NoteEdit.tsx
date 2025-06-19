@@ -9,7 +9,9 @@ export const NoteEdit = () => (
     fieldsLeft={
       <>
         <TextInput source="notes"  />
-          <TextInput source="pet_id"  />
+          <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <ReferenceInput source="project_id" reference="project">
   <SelectInput optionText="name"  />
 </ReferenceInput>
@@ -38,7 +40,9 @@ export const NoteEdit = () => (
           <ReferenceInput source="litter_id" reference="litter">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

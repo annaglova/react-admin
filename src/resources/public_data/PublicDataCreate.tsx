@@ -13,7 +13,9 @@ export const PublicDataCreate = () => (
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="contact_id"  />
-          <TextInput source="pet_id"  />
+          <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <ReferenceInput source="breed_id" reference="breed">
   <SelectInput optionText="name"  />
 </ReferenceInput>
@@ -44,7 +46,9 @@ export const PublicDataCreate = () => (
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="has_owner"  />
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

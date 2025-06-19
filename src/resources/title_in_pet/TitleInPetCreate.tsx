@@ -11,7 +11,9 @@ export const TitleInPetCreate = () => (
         <ReferenceInput source="title_id" reference="title">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_id"  />
+          <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <BooleanInput source="is_confirmed"  />
           <DateInput source="date"  />
           <ReferenceInput source="country_id" reference="country">
@@ -24,7 +26,9 @@ export const TitleInPetCreate = () => (
         <TextInput source="description"  />
           <NumberInput source="amount"  />
           <TextInput source="raw_title"  />
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

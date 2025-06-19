@@ -450,7 +450,9 @@
         },
         {
           "name": "pet_id",
-          "type": "uuid"
+          "type": "uuid",
+          "isFk": true,
+          "ref": "pet_manchester_terrier_toy"
         },
         {
           "name": "is_template",
@@ -490,7 +492,9 @@
         },
         {
           "name": "pet_breed_id",
-          "type": "uuid"
+          "type": "uuid",
+          "isFk": true,
+          "ref": "pet_manchester_terrier_toy"
         }
       ]
     },
@@ -1606,5 +1610,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-16T12:57:13.502Z"
+  "metaUpdatedAt": "2025-06-19T09:28:38.393Z"
 }

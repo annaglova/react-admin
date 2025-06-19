@@ -15,7 +15,7 @@ export const PetInProjectShow = ({ record }: any) => (
     fieldsLeft={
       <>
         <Labeled label="Project Id" required={false} value={<ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Number" required={false} value={<NumberField source="number" />} />
         <Labeled label="Class Id" required={false} value={<ReferenceField source="class_id" reference="pet_class"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Web Link" required={false} value={<TextField source="web_link" />} />
@@ -31,7 +31,7 @@ export const PetInProjectShow = ({ record }: any) => (
         <Labeled label="Qualification Id" required={false} value={<ReferenceField source="qualification_id" reference="pet_qualification"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Date" required={false} value={<DateField source="date" />} />
         <Labeled label="Temp Project Name" required={false} value={<TextField source="temp_project_name" />} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
   />

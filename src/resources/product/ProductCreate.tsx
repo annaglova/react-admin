@@ -36,11 +36,15 @@ export const ProductCreate = () => (
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <TextInput source="short_description"  />
-          <TextInput source="pet_id"  />
+          <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <TextInput source="benefits"  />
           <TextInput source="general_conditions"  />
           <TextInput source="stripe_product_id"  />
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

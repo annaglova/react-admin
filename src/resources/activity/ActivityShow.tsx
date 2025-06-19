@@ -75,7 +75,7 @@ export const ActivityShow = ({ record }: any) => (
         <Labeled label="Project Id" required={false} value={<ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Full Project Name" required={false} value={<TextField source="full_project_name" />} />
         <Labeled label="Litter Id" required={false} value={<ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Is Template" required={false} value={<BooleanField source="is_template" />} />
         <Labeled label="Owner Role Id" required={false} value={<TextField source="owner_role_id" />} />
         <Labeled label="Remote Created On" required={false} value={<DateField source="remote_created_on" />} />
@@ -83,7 +83,7 @@ export const ActivityShow = ({ record }: any) => (
         <Labeled label="Competition Id" required={false} value={<ReferenceField source="competition_id" reference="competition"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Issue Type Id" required={false} value={<ReferenceField source="issue_type_id" reference="issue_type"><TextField source="name" /></ReferenceField>} />
         <Labeled label="User Quest Id" required={false} value={<ReferenceField source="user_quest_id" reference="user_quest"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
     detailsConfigs={
@@ -153,7 +153,7 @@ export const ActivityShow = ({ record }: any) => (
               <ReferenceField source="project_id" reference="project" label="Project Id"><TextField source="name" /></ReferenceField>
               <TextField source="full_project_name" label="Full Project Name" />
               <ReferenceField source="litter_id" reference="litter" label="Litter Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_id" label="Pet Id" />
+              <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id"><TextField source="name" /></ReferenceField>
               <BooleanField source="is_template" label="Is Template" />
               <TextField source="owner_role_id" label="Owner Role Id" />
               <DateField source="remote_created_on" label="Remote Created On" />
@@ -161,7 +161,7 @@ export const ActivityShow = ({ record }: any) => (
               <ReferenceField source="competition_id" reference="competition" label="Competition Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="issue_type_id" reference="issue_type" label="Issue Type Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="user_quest_id" reference="user_quest" label="User Quest Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_breed_id" label="Pet Breed Id" />
+              <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -182,8 +182,8 @@ export const ActivityShow = ({ record }: any) => (
               <ReferenceField source="award_id" reference="award" label="Award Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="place_id" reference="place" label="Place Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="qualification_id" reference="pet_qualification" label="Qualification Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_id" label="Pet Id" />
-              <TextField source="pet_breed_id" label="Pet Breed Id" />
+              <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
       </>

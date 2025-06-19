@@ -113,7 +113,7 @@ export const EventShow = ({ record }: any) => (
               <ReferenceField source="project_id" reference="project" label="Project Id"><TextField source="name" /></ReferenceField>
               <TextField source="full_project_name" label="Full Project Name" />
               <ReferenceField source="litter_id" reference="litter" label="Litter Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_id" label="Pet Id" />
+              <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id"><TextField source="name" /></ReferenceField>
               <BooleanField source="is_template" label="Is Template" />
               <TextField source="owner_role_id" label="Owner Role Id" />
               <DateField source="remote_created_on" label="Remote Created On" />
@@ -121,7 +121,7 @@ export const EventShow = ({ record }: any) => (
               <ReferenceField source="competition_id" reference="competition" label="Competition Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="issue_type_id" reference="issue_type" label="Issue Type Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="user_quest_id" reference="user_quest" label="User Quest Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_breed_id" label="Pet Breed Id" />
+              <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -267,7 +267,7 @@ export const EventShow = ({ record }: any) => (
             <TextField source="id" label="Id" />
               <TextField source="name" label="Name" />
               <TextField source="notes" label="Notes" />
-              <TextField source="pet_id" label="Pet Id" />
+              <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="project_id" reference="project" label="Project Id"><TextField source="name" /></ReferenceField>
               <TextField source="contact_id" label="Contact Id" />
               <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
@@ -277,7 +277,7 @@ export const EventShow = ({ record }: any) => (
               <TextField source="record_id" label="Record Id" />
               <ReferenceField source="entity_schema_id" reference="entity_schema_lookup" label="Entity Schema Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="litter_id" reference="litter" label="Litter Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_breed_id" label="Pet Breed Id" />
+              <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -299,7 +299,7 @@ export const EventShow = ({ record }: any) => (
               <TextField source="hash_md5" label="Hash Md5" />
               <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
               <TextField source="contact_id" label="Contact Id" />
-              <TextField source="pet_id" label="Pet Id" />
+              <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="breed_id" reference="breed" label="Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="project_id" reference="project" label="Project Id"><TextField source="name" /></ReferenceField>
               <TextField source="record_id" label="Record Id" />
@@ -311,7 +311,7 @@ export const EventShow = ({ record }: any) => (
               <ReferenceField source="country_id" reference="country" label="Country Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="pet_titles_id" reference="title_in_pet" label="Pet Titles Id"><TextField source="name" /></ReferenceField>
               <BooleanField source="has_owner" label="Has Owner" />
-              <TextField source="pet_breed_id" label="Pet Breed Id" />
+              <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
       </>

@@ -34,11 +34,15 @@ export const ProductList = () => (
         <TextField source="name" />
       </ReferenceField>
       <TextField source="short_description" label="Short Description" />
-      <TextField source="pet_id" label="Pet Id" />
+      <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id">
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="benefits" label="Benefits" />
       <TextField source="general_conditions" label="General Conditions" />
       <TextField source="stripe_product_id" label="Stripe Product Id" />
-      <TextField source="pet_breed_id" label="Pet Breed Id" />
+      <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

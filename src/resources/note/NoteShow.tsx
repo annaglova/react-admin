@@ -16,7 +16,7 @@ export const NoteShow = ({ record }: any) => (
     fieldsLeft={
       <>
         <Labeled label="Notes" required={false} value={<TextField source="notes" />} />
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Project Id" required={false} value={<ReferenceField source="project_id" reference="project"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Event Id" required={false} value={<ReferenceField source="event_id" reference="event"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Contact Id" required={false} value={<TextField source="contact_id" />} />
@@ -31,7 +31,7 @@ export const NoteShow = ({ record }: any) => (
         <Labeled label="Record Id" required={false} value={<TextField source="record_id" />} />
         <Labeled label="Entity Schema Id" required={false} value={<ReferenceField source="entity_schema_id" reference="entity_schema_lookup"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Litter Id" required={false} value={<ReferenceField source="litter_id" reference="litter"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
     detailsConfigs={
@@ -46,8 +46,8 @@ export const NoteShow = ({ record }: any) => (
         <ReferenceManyField reference="note_test_record" target="note_id" record={record} perPage={15}  pagination={<Pagination />}>
           <Datagrid>
             <TextField source="id" label="Id" />
-              <TextField source="pet_id" label="Pet Id" />
-              <TextField source="pet_breed_id" label="Pet Breed Id" />
+              <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id"><TextField source="name" /></ReferenceField>
+              <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
       </>

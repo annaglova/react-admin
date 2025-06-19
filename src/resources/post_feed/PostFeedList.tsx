@@ -10,7 +10,9 @@ export const PostFeedList = () => (
     <Datagrid rowClick="show">
       <TextField source="id" label="Id" />
       <TextField source="name" label="Name" />
-      <TextField source="pet_id" label="Pet Id" />
+      <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id">
+        <TextField source="name" />
+      </ReferenceField>
       <ReferenceField source="account_id" reference="account" label="Account Id">
         <TextField source="name" />
       </ReferenceField>
@@ -20,7 +22,9 @@ export const PostFeedList = () => (
       <ReferenceField source="litter_id" reference="litter" label="Litter Id">
         <TextField source="name" />
       </ReferenceField>
-      <TextField source="pet_breed_id" label="Pet Breed Id" />
+      <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id">
+        <TextField source="name" />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

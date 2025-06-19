@@ -101,14 +101,14 @@ export const CompetitionShow = ({ record }: any) => (
               <ReferenceField source="project_id" reference="project" label="Project Id"><TextField source="name" /></ReferenceField>
               <TextField source="full_project_name" label="Full Project Name" />
               <ReferenceField source="litter_id" reference="litter" label="Litter Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_id" label="Pet Id" />
+              <ReferenceField source="pet_id" reference="pet_manchester_terrier_toy" label="Pet Id"><TextField source="name" /></ReferenceField>
               <BooleanField source="is_template" label="Is Template" />
               <TextField source="owner_role_id" label="Owner Role Id" />
               <DateField source="remote_created_on" label="Remote Created On" />
               <ReferenceField source="competition_backup_id" reference="competition_backup" label="Competition Backup Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="issue_type_id" reference="issue_type" label="Issue Type Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="user_quest_id" reference="user_quest" label="User Quest Id"><TextField source="name" /></ReferenceField>
-              <TextField source="pet_breed_id" label="Pet Breed Id" />
+              <ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy" label="Pet Breed Id"><TextField source="name" /></ReferenceField>
           </Datagrid>
         </ReferenceManyField>
       </>

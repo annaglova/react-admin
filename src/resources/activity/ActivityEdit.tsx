@@ -95,7 +95,9 @@ export const ActivityEdit = () => (
           <ReferenceInput source="litter_id" reference="litter">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_id"  />
+          <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <BooleanInput source="is_template"  />
           <TextInput source="owner_role_id"  />
           <DateInput source="remote_created_on"  />
@@ -111,7 +113,9 @@ export const ActivityEdit = () => (
           <ReferenceInput source="user_quest_id" reference="user_quest">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

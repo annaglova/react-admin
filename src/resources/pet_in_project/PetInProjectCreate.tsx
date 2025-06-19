@@ -11,7 +11,9 @@ export const PetInProjectCreate = () => (
         <ReferenceInput source="project_id" reference="project">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <TextInput source="pet_id"  />
+          <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <NumberInput source="number"  />
           <ReferenceInput source="class_id" reference="pet_class">
   <SelectInput optionText="name"  />
@@ -35,7 +37,9 @@ export const PetInProjectCreate = () => (
 </ReferenceInput>
           <DateInput source="date"  />
           <TextInput source="temp_project_name"  />
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

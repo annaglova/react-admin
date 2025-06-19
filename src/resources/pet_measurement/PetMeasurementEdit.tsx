@@ -1,4 +1,4 @@
-import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required } from "react-admin";
+import { BooleanInput, DateInput, NumberInput, ReferenceInput, SelectInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
 export const PetMeasurementEdit = () => (
@@ -10,7 +10,9 @@ export const PetMeasurementEdit = () => (
       <>
         <NumberInput source="day"  />
           <DateInput source="date"  />
-          <TextInput source="pet_id"  />
+          <ReferenceInput source="pet_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
           <ReferenceInput source="measurement_type_id" reference="measurement_type">
   <SelectInput optionText="name"  />
 </ReferenceInput>
@@ -22,7 +24,9 @@ export const PetMeasurementEdit = () => (
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <BooleanInput source="active_synchronization"  />
-          <TextInput source="pet_breed_id"  />
+          <ReferenceInput source="pet_breed_id" reference="pet_manchester_terrier_toy">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

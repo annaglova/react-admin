@@ -15,7 +15,7 @@ export const TitleInPetShow = ({ record }: any) => (
     fieldsLeft={
       <>
         <Labeled label="Title Id" required={false} value={<ReferenceField source="title_id" reference="title"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Pet Id" required={false} value={<TextField source="pet_id" />} />
+        <Labeled label="Pet Id" required={false} value={<ReferenceField source="pet_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Is Confirmed" required={false} value={<BooleanField source="is_confirmed" />} />
         <Labeled label="Date" required={false} value={<DateField source="date" />} />
         <Labeled label="Country Id" required={false} value={<ReferenceField source="country_id" reference="country"><TextField source="name" /></ReferenceField>} />
@@ -26,7 +26,7 @@ export const TitleInPetShow = ({ record }: any) => (
         <Labeled label="Description" required={false} value={<TextField source="description" />} />
         <Labeled label="Amount" required={false} value={<NumberField source="amount" />} />
         <Labeled label="Raw Title" required={false} value={<TextField source="raw_title" />} />
-        <Labeled label="Pet Breed Id" required={false} value={<TextField source="pet_breed_id" />} />
+        <Labeled label="Pet Breed Id" required={false} value={<ReferenceField source="pet_breed_id" reference="pet_manchester_terrier_toy"><TextField source="name" /></ReferenceField>} />
       </>
     }
   />

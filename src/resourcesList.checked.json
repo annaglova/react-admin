@@ -274,5 +274,10 @@
     "user_quest_step",
     "user_settings"
   ],
-  "UNSORTED": []
+  "UNSORTED": [
+    "account_rating_update_queue",
+    "contact_rating_update_queue",
+    "measurement_log",
+    "pet_rating_update_queue"
+  ]
 }

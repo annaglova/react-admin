@@ -3,6 +3,7 @@ import { BooleanField, Datagrid, DateField, NumberField, Pagination, ReferenceFi
 import { Labeled } from "@/components/Labeled";
 import { MainResourceShowLayout } from "@/layouts/MainResourceShowLayout";
 import { ChildCreateButton } from "@/components/ChildCreateButton";
+import { PrettyJsonField } from "@/components/PrettyJsonField";
 
 
 export const BreedShow = ({ record }: any) => (
@@ -34,7 +35,7 @@ export const BreedShow = ({ record }: any) => (
         <Labeled label="Avatar Url" required={false} value={<TextField source="avatar_url" />} />
         <Labeled label="Cover Id" required={false} value={<ReferenceField source="cover_id" reference="cover"><TextField source="name" /></ReferenceField>} />
         <Labeled label="Public Data Id" required={false} value={<ReferenceField source="public_data_id" reference="public_data"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Measurements" required={false} value={<TextField source="measurements" />} />
+        <Labeled label="Measurements" value={<PrettyJsonField source="measurements" label="Measurements" />} />
       </>
     }
     detailsConfigs={
@@ -969,7 +970,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1027,7 +1028,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1085,7 +1086,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1143,7 +1144,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1201,7 +1202,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1259,7 +1260,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1317,7 +1318,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1375,7 +1376,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1433,7 +1434,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1491,7 +1492,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1549,7 +1550,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1607,7 +1608,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1665,7 +1666,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1723,7 +1724,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1781,7 +1782,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1839,7 +1840,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1897,7 +1898,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1955,7 +1956,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2013,7 +2014,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2071,7 +2072,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2129,7 +2130,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2187,7 +2188,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2245,7 +2246,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2303,7 +2304,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2361,7 +2362,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2419,7 +2420,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2477,7 +2478,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2535,7 +2536,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2593,7 +2594,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2651,7 +2652,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2709,7 +2710,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2767,7 +2768,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2825,7 +2826,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2883,7 +2884,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2941,7 +2942,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2999,7 +3000,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3057,7 +3058,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3115,7 +3116,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3173,7 +3174,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3231,7 +3232,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3289,7 +3290,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3347,7 +3348,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3405,7 +3406,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3463,7 +3464,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3521,7 +3522,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3579,7 +3580,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3637,7 +3638,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3695,7 +3696,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3753,7 +3754,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3811,7 +3812,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3869,7 +3870,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3927,7 +3928,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3985,7 +3986,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4043,7 +4044,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4101,7 +4102,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4159,7 +4160,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4217,7 +4218,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4275,7 +4276,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4333,7 +4334,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4391,7 +4392,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4449,7 +4450,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4507,7 +4508,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4565,7 +4566,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4623,7 +4624,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4681,7 +4682,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4739,7 +4740,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4797,7 +4798,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4855,7 +4856,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4913,7 +4914,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4971,7 +4972,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5029,7 +5030,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5087,7 +5088,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5145,7 +5146,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5203,7 +5204,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5261,7 +5262,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5319,7 +5320,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5377,7 +5378,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5435,7 +5436,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5493,7 +5494,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5551,7 +5552,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5609,7 +5610,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5667,7 +5668,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5725,7 +5726,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5783,7 +5784,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5841,7 +5842,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5899,7 +5900,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5957,7 +5958,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6015,7 +6016,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6073,7 +6074,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6131,7 +6132,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6189,7 +6190,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6247,7 +6248,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6305,7 +6306,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6363,7 +6364,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6421,7 +6422,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6479,7 +6480,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6537,7 +6538,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6595,7 +6596,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6653,7 +6654,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6711,7 +6712,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6769,7 +6770,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6827,7 +6828,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6885,7 +6886,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6943,7 +6944,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7001,7 +7002,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7059,7 +7060,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7117,7 +7118,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7175,7 +7176,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7233,7 +7234,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7291,7 +7292,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7349,7 +7350,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7407,7 +7408,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7465,7 +7466,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7523,7 +7524,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7581,7 +7582,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7639,7 +7640,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7697,7 +7698,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7755,7 +7756,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7813,7 +7814,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7871,7 +7872,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7929,7 +7930,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7987,7 +7988,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8045,7 +8046,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8103,7 +8104,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8161,7 +8162,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8219,7 +8220,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8277,7 +8278,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8335,7 +8336,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8393,7 +8394,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8451,7 +8452,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8509,7 +8510,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8567,7 +8568,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8625,7 +8626,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8683,7 +8684,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8741,7 +8742,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8799,7 +8800,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8857,7 +8858,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8915,7 +8916,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8973,7 +8974,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9031,7 +9032,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9089,7 +9090,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9147,7 +9148,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9205,7 +9206,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9263,7 +9264,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9321,7 +9322,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9379,7 +9380,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9437,7 +9438,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9495,7 +9496,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9553,7 +9554,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9611,7 +9612,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9669,7 +9670,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9727,7 +9728,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9785,7 +9786,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9843,7 +9844,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9901,7 +9902,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9959,7 +9960,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10017,7 +10018,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10075,7 +10076,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10133,7 +10134,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10191,7 +10192,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10249,7 +10250,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10307,7 +10308,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10365,7 +10366,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10423,7 +10424,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10481,7 +10482,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10539,7 +10540,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10597,7 +10598,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10655,7 +10656,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10713,7 +10714,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10771,7 +10772,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10829,7 +10830,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10887,7 +10888,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10945,7 +10946,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11003,7 +11004,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11061,7 +11062,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11119,7 +11120,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11177,7 +11178,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11235,7 +11236,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11293,7 +11294,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11351,7 +11352,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11409,7 +11410,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11467,7 +11468,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11525,7 +11526,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11583,7 +11584,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11641,7 +11642,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11699,7 +11700,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11757,7 +11758,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11815,7 +11816,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11873,7 +11874,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11931,7 +11932,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11989,7 +11990,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12047,7 +12048,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12105,7 +12106,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12163,7 +12164,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12221,7 +12222,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12279,7 +12280,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12337,7 +12338,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12395,7 +12396,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12453,7 +12454,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12511,7 +12512,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12569,7 +12570,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12627,7 +12628,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12685,7 +12686,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12743,7 +12744,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12801,7 +12802,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12859,7 +12860,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12917,7 +12918,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12975,7 +12976,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13033,7 +13034,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13091,7 +13092,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13149,7 +13150,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13207,7 +13208,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13265,7 +13266,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13323,7 +13324,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13381,7 +13382,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13439,7 +13440,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13497,7 +13498,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13555,7 +13556,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13613,7 +13614,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13671,7 +13672,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13729,7 +13730,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13787,7 +13788,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13845,7 +13846,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13903,7 +13904,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13961,7 +13962,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14019,7 +14020,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14077,7 +14078,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14135,7 +14136,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14193,7 +14194,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14251,7 +14252,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14309,7 +14310,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14367,7 +14368,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14425,7 +14426,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14483,7 +14484,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14541,7 +14542,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14599,7 +14600,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14657,7 +14658,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14715,7 +14716,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14773,7 +14774,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14831,7 +14832,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14889,7 +14890,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14947,7 +14948,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15005,7 +15006,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15063,7 +15064,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15121,7 +15122,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15179,7 +15180,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15237,7 +15238,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15295,7 +15296,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15353,7 +15354,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15411,7 +15412,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15469,7 +15470,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15527,7 +15528,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15585,7 +15586,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15643,7 +15644,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15701,7 +15702,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15759,7 +15760,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15817,7 +15818,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15875,7 +15876,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15933,7 +15934,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15991,7 +15992,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16049,7 +16050,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16107,7 +16108,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16165,7 +16166,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16223,7 +16224,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16281,7 +16282,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16339,7 +16340,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16397,7 +16398,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16455,7 +16456,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16513,7 +16514,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16571,7 +16572,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16629,7 +16630,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16687,7 +16688,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16745,7 +16746,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16803,7 +16804,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16861,7 +16862,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16919,7 +16920,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16977,7 +16978,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17035,7 +17036,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17093,7 +17094,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17151,7 +17152,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17209,7 +17210,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17267,7 +17268,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17325,7 +17326,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17383,7 +17384,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17441,7 +17442,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17499,7 +17500,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17557,7 +17558,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17615,7 +17616,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17673,7 +17674,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17731,7 +17732,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17789,7 +17790,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17847,7 +17848,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17905,7 +17906,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17963,7 +17964,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18021,7 +18022,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18079,7 +18080,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18137,7 +18138,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18195,7 +18196,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18253,7 +18254,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18311,7 +18312,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18369,7 +18370,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18427,7 +18428,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18485,7 +18486,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18543,7 +18544,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18601,7 +18602,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18659,7 +18660,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18717,7 +18718,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18775,7 +18776,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18833,7 +18834,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18891,7 +18892,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18949,7 +18950,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19007,7 +19008,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19065,7 +19066,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19123,7 +19124,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19181,7 +19182,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19239,7 +19240,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19297,7 +19298,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19355,7 +19356,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19413,7 +19414,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19471,7 +19472,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19529,7 +19530,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19587,7 +19588,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19645,7 +19646,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19703,7 +19704,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19761,7 +19762,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19819,7 +19820,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19877,7 +19878,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19935,7 +19936,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19993,7 +19994,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20051,7 +20052,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20109,7 +20110,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20167,7 +20168,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20225,7 +20226,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20283,7 +20284,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20341,7 +20342,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20399,7 +20400,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20457,7 +20458,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20515,7 +20516,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20573,7 +20574,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20631,7 +20632,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20689,7 +20690,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20747,7 +20748,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20805,7 +20806,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20863,7 +20864,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20921,7 +20922,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20979,7 +20980,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21037,7 +21038,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21095,7 +21096,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21153,7 +21154,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21211,7 +21212,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21269,7 +21270,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21327,7 +21328,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21385,7 +21386,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21443,7 +21444,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21501,7 +21502,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21559,7 +21560,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21617,7 +21618,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21675,7 +21676,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21733,7 +21734,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21791,7 +21792,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21849,7 +21850,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21907,7 +21908,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21965,7 +21966,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22023,7 +22024,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22081,7 +22082,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22139,7 +22140,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22197,7 +22198,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22255,7 +22256,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22313,7 +22314,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22371,7 +22372,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22429,7 +22430,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22487,7 +22488,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22545,7 +22546,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22603,7 +22604,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22661,7 +22662,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22719,7 +22720,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22777,7 +22778,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22835,7 +22836,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22893,7 +22894,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22951,7 +22952,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23009,7 +23010,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23067,7 +23068,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23125,7 +23126,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23183,7 +23184,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23241,7 +23242,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23299,7 +23300,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23357,7 +23358,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23415,7 +23416,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23473,7 +23474,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23531,7 +23532,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23589,7 +23590,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23647,7 +23648,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23705,7 +23706,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23763,7 +23764,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23821,7 +23822,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23879,7 +23880,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23937,7 +23938,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23995,7 +23996,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24053,7 +24054,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24111,7 +24112,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24169,7 +24170,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24227,7 +24228,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24285,7 +24286,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24343,7 +24344,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24401,7 +24402,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24459,7 +24460,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24517,7 +24518,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24575,7 +24576,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24633,7 +24634,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24691,7 +24692,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24749,7 +24750,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24807,7 +24808,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24865,7 +24866,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24923,7 +24924,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24981,7 +24982,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25039,7 +25040,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25097,7 +25098,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25155,7 +25156,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25213,7 +25214,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25271,7 +25272,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25329,7 +25330,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25387,7 +25388,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25445,7 +25446,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25503,7 +25504,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25561,7 +25562,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25619,7 +25620,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25677,7 +25678,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25735,7 +25736,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25793,7 +25794,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25851,7 +25852,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25909,7 +25910,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25967,7 +25968,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26025,7 +26026,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26083,7 +26084,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26141,7 +26142,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26199,7 +26200,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26257,7 +26258,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26315,7 +26316,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26373,7 +26374,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26431,7 +26432,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26489,7 +26490,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26547,7 +26548,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26605,7 +26606,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26663,7 +26664,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26721,7 +26722,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26779,7 +26780,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26837,7 +26838,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26895,7 +26896,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26953,7 +26954,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -27011,7 +27012,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -27069,7 +27070,7 @@ export const BreedShow = ({ record }: any) => (
               <ReferenceField source="public_data_id" reference="public_data" label="Public Data Id"><TextField source="name" /></ReferenceField>
               <NumberField source="weight" label="Weight" />
               <NumberField source="test_int_index" label="Test Int Index" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>

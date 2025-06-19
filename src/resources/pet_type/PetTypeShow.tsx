@@ -2,6 +2,7 @@
 import { BooleanField, DateField, NumberField, ReferenceField, TextField } from "react-admin";
 import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
+import { PrettyJsonField } from "@/components/PrettyJsonField";
 
 
 export const PetTypeShow = ({ record }: any) => (
@@ -22,7 +23,7 @@ export const PetTypeShow = ({ record }: any) => (
     fieldsRight={
       <>
         <Labeled label="Public Data Id" required={false} value={<ReferenceField source="public_data_id" reference="public_data"><TextField source="name" /></ReferenceField>} />
-        <Labeled label="Measurements" required={false} value={<TextField source="measurements" />} />
+        <Labeled label="Measurements" value={<PrettyJsonField source="measurements" label="Measurements" />} />
       </>
     }
   />

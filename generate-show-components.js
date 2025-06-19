@@ -40,8 +40,8 @@ const typeMap = {
   "timestamp with time zone": "DateField",
   date: "DateField",
   boolean: "BooleanField",
-  jsonb: "TextField",
-  json: "TextField",
+  jsonb: "PrettyJsonField",
+  json: "PrettyJsonField",
   "double precision": "NumberField",
   numeric: "NumberField",
 };
@@ -208,6 +208,10 @@ for (const table of ALL_RESOURCES) {
     throw new Error(`Таблиця ${table} не знайдена в MAIN/LOOKUP/CHILD`);
   }
 
+  if (fields.some((f) => ["jsonb", "json"].includes(f.type))) {
+    customImports += `import { PrettyJsonField } from "@/components/PrettyJsonField";\n`;
+  }
+
   // 3. Name/id поля як Labeled (чи null)
   const nameField = fields.find((f) => f.name === "name")
     ? genLabeledField({
@@ -244,6 +248,10 @@ for (const table of ALL_RESOURCES) {
   function genField(col, tableName) {
     const label = labelFor(col.name); // Без додаткової зірочки!
     const type = typeMap[col.type] || "TextField";
+    // Для PrettyJsonField треба явно передавати source і label як пропси
+    if (["PrettyJsonField"].includes(type)) {
+      return `<Labeled label="${label}" value={<PrettyJsonField source="${col.name}" label="${label}" />} />`;
+    }
     return genLabeledField({
       label,
       source: col.name,
@@ -253,7 +261,6 @@ for (const table of ALL_RESOURCES) {
       ref: fkMap[col.name],
     });
   }
-
   const fieldsLeft = leftFields
     .map((col) => genField(col, table))
     .join("\n        ");

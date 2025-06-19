@@ -65,7 +65,7 @@ export const PublicDataShow = ({ record }: any) => (
               <ReferenceField source="account_id" reference="account" label="Account Id"><TextField source="name" /></ReferenceField>
               <TextField source="avatar_url" label="Avatar Url" />
               <ReferenceField source="cover_id" reference="cover" label="Cover Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -153,7 +153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <TextField source="description" label="Description" />
               <TextField source="url" label="Url" />
               <TextField source="avatar_url" label="Avatar Url" />
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -213,7 +213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet_manchester_terrier_toy" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -273,7 +273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -333,7 +333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -393,7 +393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -453,7 +453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -513,7 +513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -573,7 +573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -633,7 +633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -693,7 +693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -753,7 +753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -813,7 +813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -873,7 +873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -933,7 +933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -993,7 +993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1053,7 +1053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1113,7 +1113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1173,7 +1173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1233,7 +1233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1293,7 +1293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1353,7 +1353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1413,7 +1413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1473,7 +1473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1533,7 +1533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1593,7 +1593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1653,7 +1653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1713,7 +1713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1773,7 +1773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1833,7 +1833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1893,7 +1893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -1953,7 +1953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2013,7 +2013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2073,7 +2073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2133,7 +2133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2193,7 +2193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2253,7 +2253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2313,7 +2313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2373,7 +2373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2433,7 +2433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2493,7 +2493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2553,7 +2553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2613,7 +2613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2673,7 +2673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2733,7 +2733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2793,7 +2793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2853,7 +2853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2913,7 +2913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -2973,7 +2973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3033,7 +3033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3093,7 +3093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3153,7 +3153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3213,7 +3213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3273,7 +3273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3333,7 +3333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3393,7 +3393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3453,7 +3453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3513,7 +3513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3573,7 +3573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3633,7 +3633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3693,7 +3693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3753,7 +3753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3813,7 +3813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3873,7 +3873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3933,7 +3933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -3993,7 +3993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4053,7 +4053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4113,7 +4113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4173,7 +4173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4233,7 +4233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4293,7 +4293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4353,7 +4353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4413,7 +4413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4473,7 +4473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4533,7 +4533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4593,7 +4593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4653,7 +4653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4713,7 +4713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4773,7 +4773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4833,7 +4833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4893,7 +4893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -4953,7 +4953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5013,7 +5013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5073,7 +5073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5133,7 +5133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5193,7 +5193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5253,7 +5253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5313,7 +5313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5373,7 +5373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5433,7 +5433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5493,7 +5493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5553,7 +5553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5613,7 +5613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5673,7 +5673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5733,7 +5733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5793,7 +5793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5853,7 +5853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5913,7 +5913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -5973,7 +5973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6033,7 +6033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6093,7 +6093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6153,7 +6153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6213,7 +6213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6273,7 +6273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6333,7 +6333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6393,7 +6393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6453,7 +6453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6513,7 +6513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6573,7 +6573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6633,7 +6633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6693,7 +6693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6753,7 +6753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6813,7 +6813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6873,7 +6873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6933,7 +6933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -6993,7 +6993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7053,7 +7053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7113,7 +7113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7173,7 +7173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7233,7 +7233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7293,7 +7293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7353,7 +7353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7413,7 +7413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7473,7 +7473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7533,7 +7533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7593,7 +7593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7653,7 +7653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7713,7 +7713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7773,7 +7773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7833,7 +7833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7893,7 +7893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -7953,7 +7953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8013,7 +8013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8073,7 +8073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8133,7 +8133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8193,7 +8193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8253,7 +8253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8313,7 +8313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8373,7 +8373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8433,7 +8433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8493,7 +8493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8553,7 +8553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8613,7 +8613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8673,7 +8673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8733,7 +8733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8793,7 +8793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8853,7 +8853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8913,7 +8913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -8973,7 +8973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9033,7 +9033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9093,7 +9093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9153,7 +9153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9213,7 +9213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9273,7 +9273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9333,7 +9333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9393,7 +9393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9453,7 +9453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9513,7 +9513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9573,7 +9573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9633,7 +9633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9693,7 +9693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9753,7 +9753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9813,7 +9813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9873,7 +9873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9933,7 +9933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -9993,7 +9993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10053,7 +10053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10113,7 +10113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10173,7 +10173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10233,7 +10233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10293,7 +10293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10353,7 +10353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10413,7 +10413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10473,7 +10473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10533,7 +10533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10593,7 +10593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10653,7 +10653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10713,7 +10713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10773,7 +10773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10833,7 +10833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10893,7 +10893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -10953,7 +10953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11013,7 +11013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11073,7 +11073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11133,7 +11133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11193,7 +11193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11253,7 +11253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11313,7 +11313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11373,7 +11373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11433,7 +11433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11493,7 +11493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11553,7 +11553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11613,7 +11613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11673,7 +11673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11733,7 +11733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11793,7 +11793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11853,7 +11853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11913,7 +11913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -11973,7 +11973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12033,7 +12033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12093,7 +12093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12153,7 +12153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12213,7 +12213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12273,7 +12273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12333,7 +12333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12393,7 +12393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12453,7 +12453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12513,7 +12513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12573,7 +12573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12633,7 +12633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12693,7 +12693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12753,7 +12753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12813,7 +12813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12873,7 +12873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12933,7 +12933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -12993,7 +12993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13053,7 +13053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13113,7 +13113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13173,7 +13173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13233,7 +13233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13293,7 +13293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13353,7 +13353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13413,7 +13413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13473,7 +13473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13533,7 +13533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13593,7 +13593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13653,7 +13653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13713,7 +13713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13773,7 +13773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13833,7 +13833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13893,7 +13893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -13953,7 +13953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14013,7 +14013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14073,7 +14073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14133,7 +14133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14193,7 +14193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14253,7 +14253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14313,7 +14313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14373,7 +14373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14433,7 +14433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14493,7 +14493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14553,7 +14553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14613,7 +14613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14673,7 +14673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14733,7 +14733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14793,7 +14793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14853,7 +14853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14913,7 +14913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -14973,7 +14973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15033,7 +15033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15093,7 +15093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15153,7 +15153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15213,7 +15213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15273,7 +15273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15333,7 +15333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15393,7 +15393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15453,7 +15453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15513,7 +15513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15573,7 +15573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15633,7 +15633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15693,7 +15693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15753,7 +15753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15813,7 +15813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15873,7 +15873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15933,7 +15933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -15993,7 +15993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16053,7 +16053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16113,7 +16113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16173,7 +16173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16233,7 +16233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16293,7 +16293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16353,7 +16353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16413,7 +16413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16473,7 +16473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16533,7 +16533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16593,7 +16593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16653,7 +16653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16713,7 +16713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16773,7 +16773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16833,7 +16833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16893,7 +16893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -16953,7 +16953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17013,7 +17013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17073,7 +17073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17133,7 +17133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17193,7 +17193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17253,7 +17253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17313,7 +17313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17373,7 +17373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17433,7 +17433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17493,7 +17493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17553,7 +17553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17613,7 +17613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17673,7 +17673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17733,7 +17733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17793,7 +17793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17853,7 +17853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17913,7 +17913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -17973,7 +17973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18033,7 +18033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18093,7 +18093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18153,7 +18153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18213,7 +18213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18273,7 +18273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18333,7 +18333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18393,7 +18393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18453,7 +18453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18513,7 +18513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18573,7 +18573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18633,7 +18633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18693,7 +18693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18753,7 +18753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18813,7 +18813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18873,7 +18873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18933,7 +18933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -18993,7 +18993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19053,7 +19053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19113,7 +19113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19173,7 +19173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19233,7 +19233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19293,7 +19293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19353,7 +19353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19413,7 +19413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19473,7 +19473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19533,7 +19533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19593,7 +19593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19653,7 +19653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19713,7 +19713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19773,7 +19773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19833,7 +19833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19893,7 +19893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -19953,7 +19953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20013,7 +20013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20073,7 +20073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20133,7 +20133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20193,7 +20193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20253,7 +20253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20313,7 +20313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20373,7 +20373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20433,7 +20433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20493,7 +20493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20553,7 +20553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20613,7 +20613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20673,7 +20673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20733,7 +20733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20793,7 +20793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20853,7 +20853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20913,7 +20913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -20973,7 +20973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21033,7 +21033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21093,7 +21093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21153,7 +21153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21213,7 +21213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21273,7 +21273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21333,7 +21333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21393,7 +21393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21453,7 +21453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21513,7 +21513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21573,7 +21573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21633,7 +21633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21693,7 +21693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21753,7 +21753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21813,7 +21813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21873,7 +21873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21933,7 +21933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -21993,7 +21993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22053,7 +22053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22113,7 +22113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22173,7 +22173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22233,7 +22233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22293,7 +22293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22353,7 +22353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22413,7 +22413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22473,7 +22473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22533,7 +22533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22593,7 +22593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22653,7 +22653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22713,7 +22713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22773,7 +22773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22833,7 +22833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22893,7 +22893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -22953,7 +22953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23013,7 +23013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23073,7 +23073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23133,7 +23133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23193,7 +23193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23253,7 +23253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23313,7 +23313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23373,7 +23373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23433,7 +23433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23493,7 +23493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23553,7 +23553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23613,7 +23613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23673,7 +23673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23733,7 +23733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23793,7 +23793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23853,7 +23853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23913,7 +23913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -23973,7 +23973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24033,7 +24033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24093,7 +24093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24153,7 +24153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24213,7 +24213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24273,7 +24273,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24333,7 +24333,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24393,7 +24393,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24453,7 +24453,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24513,7 +24513,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24573,7 +24573,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24633,7 +24633,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24693,7 +24693,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24753,7 +24753,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24813,7 +24813,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24873,7 +24873,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24933,7 +24933,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -24993,7 +24993,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25053,7 +25053,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25113,7 +25113,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25173,7 +25173,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25233,7 +25233,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25293,7 +25293,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25353,7 +25353,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25413,7 +25413,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25473,7 +25473,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25533,7 +25533,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25593,7 +25593,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25653,7 +25653,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25713,7 +25713,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25773,7 +25773,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25833,7 +25833,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25893,7 +25893,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -25953,7 +25953,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26013,7 +26013,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26073,7 +26073,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26133,7 +26133,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26193,7 +26193,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26253,7 +26253,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26313,7 +26313,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26373,7 +26373,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26433,7 +26433,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26493,7 +26493,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26553,7 +26553,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26613,7 +26613,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26673,7 +26673,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26733,7 +26733,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26793,7 +26793,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26853,7 +26853,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26913,7 +26913,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -26973,7 +26973,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -27033,7 +27033,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -27093,7 +27093,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -27153,7 +27153,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>
@@ -27213,7 +27213,7 @@ export const PublicDataShow = ({ record }: any) => (
               <NumberField source="test_int_index" label="Test Int Index" />
               <ReferenceField source="mother_breed_id" reference="pet" label="Mother Breed Id"><TextField source="name" /></ReferenceField>
               <ReferenceField source="father_breed_id" reference="pet" label="Father Breed Id"><TextField source="name" /></ReferenceField>
-              <TextField source="measurements" label="Measurements" />
+              <PrettyJsonField source="measurements" label="Measurements" />
           </Datagrid>
         </ReferenceManyField>
       </>

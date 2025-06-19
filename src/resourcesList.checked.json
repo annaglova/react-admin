@@ -278,6 +278,7 @@
     "account_rating_update_queue",
     "contact_rating_update_queue",
     "measurement_log",
-    "pet_rating_update_queue"
+    "pet_rating_update_queue",
+    "temp_pet_with_titles"
   ]
 }

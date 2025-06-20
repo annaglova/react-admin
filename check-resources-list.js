@@ -88,7 +88,6 @@ async function main() {
     `,
       }
     );
-
     if (partErr) throw partErr;
 
     const partitionNames = toLowerSet(
@@ -114,7 +113,25 @@ async function main() {
       (t) => !allManual.has(t.toLowerCase())
     );
 
-    // Виводимо UNSORTED у лог
+    // 5. Визначаємо DELETED — що є в ручному лісті, але нема в БД
+    const allDbSet = toLowerSet(allTableNames);
+
+    function findDeleted(manualSet) {
+      return Array.from(manualSet).filter((name) => !allDbSet.has(name));
+    }
+
+    const deletedMain = findDeleted(manualMain);
+    const deletedLookup = findDeleted(manualLookup);
+    const deletedChild = findDeleted(manualChild);
+
+    // Можна групувати ось так (зручно для видалення з різних груп)
+    const DELETED = {
+      MAIN: deletedMain.sort(),
+      LOOKUP: deletedLookup.sort(),
+      CHILD: deletedChild.sort(),
+    };
+
+    // 6. Виводимо результати
     if (unsortedTables.length) {
       console.log(
         "❗️Знайдено таблиці, яких немає у ручному списку (UNSORTED):",
@@ -124,10 +141,20 @@ async function main() {
       console.log("✔️ Всі таблиці враховані у ручному списку.");
     }
 
-    // (опціонально) Записати у файл новий список із UNSORTED
+    if (DELETED.MAIN.length || DELETED.LOOKUP.length || DELETED.CHILD.length) {
+      console.log(
+        "❗️DELETED (відсутні в БД, але є в ручному списку):",
+        DELETED
+      );
+    } else {
+      console.log("✔️ Всі ресурси ручного списку реально є в БД.");
+    }
+
+    // 7. Записуємо у файл
     const outputList = {
       ...manualResources,
       UNSORTED: unsortedTables.sort(),
+      DELETED,
     };
 
     fs.writeFileSync(

@@ -301,11 +301,6 @@ export const CustomMenu = () => (
     {/* Contact */}
     <MenuSection title="Contact" />
     <Menu.Item
-      to="/contact_decision_role"
-      primaryText="Contact Decision Roles*"
-      leftIcon={<PeopleIcon />}
-    />
-    <Menu.Item
       to="/contact_relationship_type"
       primaryText="Contact Relationship Types*"
       leftIcon={<PeopleIcon />}
@@ -331,11 +326,6 @@ export const CustomMenu = () => (
       leftIcon={<PeopleIcon />}
     />
     <Menu.Item
-      to="/department"
-      primaryText="Departments*"
-      leftIcon={<CategoryIcon />}
-    />
-    <Menu.Item
       to="/dependency_category"
       primaryText="Dependency Categories*"
       leftIcon={<CategoryIcon />}
@@ -346,14 +336,8 @@ export const CustomMenu = () => (
       leftIcon={<CategoryIcon />}
     />
     <Menu.Item
-      to="/employee_job"
-      primaryText="Employee Jobs*"
-      leftIcon={<CategoryIcon />}
-    />
-    <Menu.Item to="/job" primaryText="Jobs*" leftIcon={<CategoryIcon />} />
-    <Menu.Item
-      to="/job_change_reason"
-      primaryText="Job Change Reasons*"
+      to="/contact_role"
+      primaryText="Contact Roles*"
       leftIcon={<CategoryIcon />}
     />
     {/* Account */}
@@ -809,11 +793,6 @@ export const CustomMenu = () => (
     <Menu.Item
       to="/time_zone"
       primaryText="Time Zones*"
-      leftIcon={<TimelineIcon />}
-    />
-    <Menu.Item
-      to="/rating_type"
-      primaryText="Rating type*"
       leftIcon={<TimelineIcon />}
     />
   </Menu>

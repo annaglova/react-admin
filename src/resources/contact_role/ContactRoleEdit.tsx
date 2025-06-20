@@ -1,10 +1,10 @@
 import { TextInput, required } from "react-admin";
 import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
 
-export const JobEdit = () => (
+export const ContactRoleEdit = () => (
   <ResourceEditLayout
     name={
-      <>{<TextInput source="name" validate={required()} />}</>
+      <>{<TextInput source="name"  />}</>
     }
     fieldsLeft={
       <>

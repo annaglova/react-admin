@@ -4,7 +4,7 @@ import { Labeled } from "@/components/Labeled";
 import { LookupResourceShowLayout } from "@/layouts/LookupResourceShowLayout";
 
 
-export const RatingTypeShow = ({ record }: any) => (
+export const ContactRoleShow = ({ record }: any) => (
   <LookupResourceShowLayout
     name={
       <Labeled label="Name" required={false} value={<TextField source="name" />} />

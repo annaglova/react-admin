@@ -1,8 +1,8 @@
 import { TextInput, required } from "react-admin";
-import { ResourceEditLayout } from "@/layouts/ResourceEditLayout";
+import { ResourceCreateLayout } from "@/layouts/ResourceCreateLayout";
 
-export const JobChangeReasonEdit = () => (
-  <ResourceEditLayout
+export const ContactRoleCreate = () => (
+  <ResourceCreateLayout
     name={
       <>{<TextInput source="name"  />}</>
     }

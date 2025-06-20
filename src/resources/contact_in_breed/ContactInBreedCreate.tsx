@@ -14,12 +14,15 @@ export const ContactInBreedCreate = () => (
           <ReferenceInput source="contact_id" reference="contact">
   <SelectInput optionText="name"  />
 </ReferenceInput>
+          <NumberInput source="rating"  />
       </>
     }
     fieldsRight={
       <>
-        <NumberInput source="rating"  />
-          <NumberInput source="place"  />
+        <NumberInput source="place"  />
+          <ReferenceInput source="contact_role_id" reference="contact_role">
+  <SelectInput optionText="name"  />
+</ReferenceInput>
       </>
     }
   />

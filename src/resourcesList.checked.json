@@ -277,8 +277,10 @@
   "UNSORTED": [
     "account_rating_update_queue",
     "contact_rating_update_queue",
+    "contact_role",
     "measurement_log",
     "pet_rating_update_queue",
+    "pet_self_rating_update_queue",
     "temp_pet_with_titles"
   ]
 }

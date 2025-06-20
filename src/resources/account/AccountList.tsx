@@ -73,7 +73,6 @@ export const AccountList = () => (
       <TextField source="duplicate_id" label="Duplicate Id" />
       <TextField source="avatar_url" label="Avatar Url" />
       <BooleanField source="has_kennel_name" label="Has Kennel Name" />
-      <NumberField source="rating" label="Rating" />
       <DateField source="since" label="Since" />
       <BooleanField source="verfied" label="Verfied" />
       <BooleanField source="verified" label="Verified" />
@@ -81,11 +80,10 @@ export const AccountList = () => (
         <TextField source="name" />
       </ReferenceField>
       <DateField source="company_foundation_date" label="Company Foundation Date" />
-      <NumberField source="rating_placement_in_breed" label="Rating Placement In Breed" />
       <ReferenceField source="cover_id" reference="cover" label="Cover Id">
         <TextField source="name" />
       </ReferenceField>
-      <NumberField source="lead_conversion_score" label="Lead Conversion Score" />
+      <TextField source="measurements" label="Measurements" />
     </Datagrid>
   </List>
 );

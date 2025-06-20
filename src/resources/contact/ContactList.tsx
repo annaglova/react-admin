@@ -14,9 +14,6 @@ export const ContactList = () => (
       <ReferenceField source="account_id" reference="account" label="Account Id">
         <TextField source="name" />
       </ReferenceField>
-      <ReferenceField source="owner_id" reference="contact" label="Owner Id">
-        <TextField source="name" />
-      </ReferenceField>
       <TextField source="dear" label="Dear" />
       <ReferenceField source="salutation_type_id" reference="contact_salutation_type" label="Salutation Type Id">
         <TextField source="name" />
@@ -24,17 +21,7 @@ export const ContactList = () => (
       <ReferenceField source="gender_id" reference="gender" label="Gender Id">
         <TextField source="name" />
       </ReferenceField>
-      <ReferenceField source="decision_role_id" reference="contact_decision_role" label="Decision Role Id">
-        <TextField source="name" />
-      </ReferenceField>
       <ReferenceField source="type_id" reference="contact_type" label="Type Id">
-        <TextField source="name" />
-      </ReferenceField>
-      <ReferenceField source="job_id" reference="job" label="Job Id">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="job_title" label="Job Title" />
-      <ReferenceField source="department_id" reference="department" label="Department Id">
         <TextField source="name" />
       </ReferenceField>
       <DateField source="birth_date" label="Birth Date" />
@@ -94,17 +81,13 @@ export const ContactList = () => (
       </ReferenceField>
       <TextField source="duplicate_id" label="Duplicate Id" />
       <TextField source="avatar_url" label="Avatar Url" />
-      <ReferenceField source="promote_breed_id" reference="breed" label="Promote Breed Id">
-        <TextField source="name" />
-      </ReferenceField>
       <ReferenceField source="verification_status_id" reference="verification_status" label="Verification Status Id">
         <TextField source="name" />
       </ReferenceField>
       <ReferenceField source="cover_id" reference="cover" label="Cover Id">
         <TextField source="name" />
       </ReferenceField>
-      <NumberField source="rating" label="Rating" />
-      <NumberField source="lead_conversion_score" label="Lead Conversion Score" />
+      <TextField source="measurements" label="Measurements" />
     </Datagrid>
   </List>
 );

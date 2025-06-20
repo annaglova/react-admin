@@ -12,9 +12,6 @@ export const ContactCreate = () => (
           <ReferenceInput source="account_id" reference="account">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <ReferenceInput source="owner_id" reference="contact">
-  <SelectInput optionText="name"  />
-</ReferenceInput>
           <TextInput source="dear"  />
           <ReferenceInput source="salutation_type_id" reference="contact_salutation_type">
   <SelectInput optionText="name"  />
@@ -22,17 +19,7 @@ export const ContactCreate = () => (
           <ReferenceInput source="gender_id" reference="gender">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <ReferenceInput source="decision_role_id" reference="contact_decision_role">
-  <SelectInput optionText="name"  />
-</ReferenceInput>
           <ReferenceInput source="type_id" reference="contact_type">
-  <SelectInput optionText="name"  />
-</ReferenceInput>
-          <ReferenceInput source="job_id" reference="job">
-  <SelectInput optionText="name"  />
-</ReferenceInput>
-          <TextInput source="job_title"  />
-          <ReferenceInput source="department_id" reference="department">
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <DateInput source="birth_date"  />
@@ -63,12 +50,12 @@ export const ContactCreate = () => (
           <TextInput source="notes"  />
           <TextInput source="facebook"  />
           <TextInput source="linked_in"  />
+          <TextInput source="twitter"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="twitter"  />
-          <TextInput source="facebook_id"  />
+        <TextInput source="facebook_id"  />
           <TextInput source="linked_in_id"  />
           <TextInput source="twitter_id"  />
           <TextInput source="contact_photo"  />
@@ -96,17 +83,13 @@ export const ContactCreate = () => (
 </ReferenceInput>
           <TextInput source="duplicate_id"  />
           <TextInput source="avatar_url"  />
-          <ReferenceInput source="promote_breed_id" reference="breed">
-  <SelectInput optionText="name"  />
-</ReferenceInput>
           <ReferenceInput source="verification_status_id" reference="verification_status">
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <ReferenceInput source="cover_id" reference="cover">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="rating"  />
-          <NumberInput source="lead_conversion_score"  />
+          <TextInput source="measurements"  />
       </>
     }
   />

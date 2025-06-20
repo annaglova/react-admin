@@ -65,6 +65,27 @@ function fillCustom(custom = {}) {
   };
 }
 
+// Запит повертає всі партиції у public (без індексів)
+async function getPartitionNames() {
+  const { data: partitions, error } = await supabase.rpc("execute_sql_select", {
+    sql: `
+        SELECT c.relname AS partition
+        FROM pg_inherits
+        JOIN pg_class c ON pg_inherits.inhrelid = c.oid
+        JOIN pg_namespace n ON c.relnamespace = n.oid
+        WHERE n.nspname = 'public'
+          AND c.relkind = 'r'
+      `,
+  });
+  if (error) throw error;
+  // Можемо зробити lower-case set для зручності
+  return new Set(
+    (partitions || [])
+      .map((row) => row.result?.partition?.toLowerCase())
+      .filter(Boolean)
+  );
+}
+
 function loadIfExists(file) {
   try {
     return JSON.parse(fs.readFileSync(file, "utf-8"));
@@ -74,6 +95,7 @@ function loadIfExists(file) {
 }
 
 (async () => {
+  const partitionNames = await getPartitionNames();
   for (const table of ALL_RESOURCES) {
     // 1. Колонки таблиці
     const { data: columns, error: colErr } = await supabase.rpc(
@@ -118,7 +140,9 @@ function loadIfExists(file) {
       }
       // Для кожної дочірньої таблиці — також поля з типами і FK
       for (const [child, fkColumns] of Object.entries(map)) {
-        // Всі поля для дочірньої
+        // Пропускаємо, якщо це партиція (імʼя в нижньому регістрі)
+        if (partitionNames.has(child.toLowerCase())) continue;
+
         const { data: childCols } = await supabase.rpc("get_table_columns", {
           tablename: child,
         });

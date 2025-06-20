@@ -48,12 +48,12 @@ export const AccountCreate = () => (
           <TextInput source="notes"  />
           <TextInput source="logo"  />
           <TextInput source="alternative_name"  />
-          <TextInput source="gpsn"  />
       </>
     }
     fieldsRight={
       <>
-        <TextInput source="gpse"  />
+        <TextInput source="gpsn"  />
+          <TextInput source="gpse"  />
           <NumberInput source="completeness"  />
           <TextInput source="aum"  />
           <TextInput source="trim_code"  />
@@ -75,7 +75,6 @@ export const AccountCreate = () => (
           <TextInput source="duplicate_id"  />
           <TextInput source="avatar_url"  />
           <BooleanInput source="has_kennel_name"  />
-          <NumberInput source="rating"  />
           <DateInput source="since"  />
           <BooleanInput source="verfied"  />
           <BooleanInput source="verified"  />
@@ -83,11 +82,10 @@ export const AccountCreate = () => (
   <SelectInput optionText="name"  />
 </ReferenceInput>
           <DateInput source="company_foundation_date"  />
-          <NumberInput source="rating_placement_in_breed"  />
           <ReferenceInput source="cover_id" reference="cover">
   <SelectInput optionText="name"  />
 </ReferenceInput>
-          <NumberInput source="lead_conversion_score"  />
+          <TextInput source="measurements"  />
       </>
     }
   />

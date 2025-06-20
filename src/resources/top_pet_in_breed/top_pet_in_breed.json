@@ -1,46 +1,28 @@
 {
   "fields": [
     {
-      "name": "id",
-      "type": "uuid"
-    },
-    {
-      "name": "created_on",
-      "type": "timestamp without time zone"
-    },
-    {
-      "name": "created_by_id",
-      "type": "uuid"
-    },
-    {
-      "name": "modified_on",
-      "type": "timestamp without time zone"
-    },
-    {
-      "name": "modified_by_id",
-      "type": "uuid"
-    },
-    {
-      "name": "name",
-      "type": "character varying"
-    },
-    {
       "name": "breed_id",
-      "type": "uuid",
-      "isFk": true,
-      "ref": "breed"
+      "type": "uuid"
     },
     {
       "name": "pet_id",
-      "type": "uuid",
-      "isFk": true,
-      "ref": "pet_manchester_terrier_toy"
+      "type": "uuid"
     },
     {
-      "name": "pet_breed_id",
-      "type": "uuid",
-      "isFk": true,
-      "ref": "pet_manchester_terrier_toy"
+      "name": "placement",
+      "type": "integer"
+    },
+    {
+      "name": "period_start",
+      "type": "date"
+    },
+    {
+      "name": "period_end",
+      "type": "date"
+    },
+    {
+      "name": "rating",
+      "type": "numeric"
     }
   ],
   "detailsTabs": [],
@@ -51,5 +33,5 @@
     "editFields": [],
     "showDetailsTabs": []
   },
-  "metaUpdatedAt": "2025-06-19T12:06:14.227Z"
+  "metaUpdatedAt": "2025-06-20T15:38:59.359Z"
 }
